@@ -1,0 +1,96 @@
+{
+  "project": {
+    "name": "EvoIntTracker",
+    "quality": 1
+ },
+  "loader": {
+    "info": "data/info.md",
+    "timeline": "data/timeline.csv",
+    "items": "data/data.csv",
+    "tsne": "data/tsne.csv",
+    "textures": {
+      "medium": {
+        "size": 256,
+        "url": "data/images/sprites/spritesheet.json"
+      },
+      "detail": {
+        "size": 1024,
+        "url": "data/images/1024/"
+      },
+      "big": {
+        "size": 4096,
+        "url": "data/images/4096/"
+      }
+    }
+  },
+  "style": {
+    "fontColor": "#09BE79",
+    "fontColorActive": "#eae2cb",
+    "fontBackground": "#044E31",
+    "textShadow": "1px 1px 0px #044E31",
+    "canvasBackground": "#2B2B2B",
+    "timelineBackground": "#0AD688",
+    "timelineFontColor": "#000",
+    "backgroundHeader": "#035151",
+    "fontColorHeader": "#f8774f",
+    "detailBackground": "#CCC",
+    "infoBackground": "#33444c",
+    "infoFontColor": "#fff",
+    "searchbarBackground": "#295b71"
+  },
+  "projection": {
+    "columns": 8
+  },
+  "detail": {
+    "structure": [
+      {
+        "name": "Year",
+        "source": "_year",
+        "display": "column",
+        "type": "text"
+      },
+      {
+        "name": "Title",
+        "source": "_title",
+        "display": "column",
+        "type": "text"
+      },
+      {
+        "name": "Authors",
+        "source": "_authors",
+        "display": "column",
+        "type": "text"
+      },
+      {
+        "name": "Keywords",
+        "source": "_keywords",
+        "display": "column",
+        "type": "array"
+      },
+      {
+        "name": "Id",
+        "source": "_id",
+        "display": "column",
+        "type": "text"
+      },
+      {
+        "name": "Fulltext",
+        "source": "_display_path_to_pdf",
+        "display": "column",
+        "type": "link"
+      },
+      {
+        "name": "Fulltext on ..",
+        "source": "_origin_path",
+        "display": "column",
+        "type": "link"
+      },
+      {
+        "name": "Abstract",
+        "source": "_abstract",
+        "display": "wide",
+        "type": "text"
+      }
+    ]
+  }
+}
