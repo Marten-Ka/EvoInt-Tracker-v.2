@@ -15,7 +15,7 @@
 	button {
 		max-height: fit-content;
 		height: fit-content;
-		@apply p-2 bg-gray-900 rounded-md shadow-md transition-all duration-150;
+		@apply p-2 border border-gray-900 rounded-md transition-all duration-150;
 	}
 	button:hover {
 		@apply bg-opacity-50 scale-105;

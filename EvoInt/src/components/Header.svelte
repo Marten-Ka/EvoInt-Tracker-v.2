@@ -3,7 +3,8 @@
 </script>
 
 <header>
-	<img src="logo.png" width="200px" alt="EvoInt-Logo" />
+	<!--<img src="logo.png" width="200px" alt="EvoInt-Logo" />-->
+	<p>EvoInt</p>
 	<div id="navigation">
 		<NavigationButton text="Tutorial" href="tutorial" />
 		<NavigationButton text="Über uns" href="about_us" />
@@ -12,7 +13,7 @@
 
 <style lang="postcss">
 	header {
-		@apply font-evoint p-4 w-full flex items-center gap-5 bg-gray-800 text-gray-200;
+		@apply font-evoint p-4 w-full flex items-center gap-5 bg-black text-gray-200;
 	}
 
 	p {
