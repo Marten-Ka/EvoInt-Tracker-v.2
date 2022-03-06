@@ -1,9 +1,11 @@
 <script lang="ts">
-	import Button from '../components/Button.svelte';
 	import { goto } from '$app/navigation';
+	import Saos from 'saos';
+	import RedirectButton from '../components/RedirectButton.svelte';
 	import Header from '../components/Header.svelte';
 	import Icon from '../components/Icon.svelte';
 	import InformationTile from '../components/InformationTile.svelte';
+	import AnimationContainer from '../components/AnimationContainer.svelte';
 
 	let name: string = 'Test';
 	let show: boolean = false;
@@ -76,13 +78,36 @@
 			<Icon icon="trending-up" size="32px" />
 			<Icon icon="search" size="32px" />
 		</div>
-		<img
-			slot="right_slot"
-			src="../static/vikusViewer.png"
-			alt="vikus_viewer"
-			class="rounded-3xl shadow-2xl"
-		/>
+		<div slot="right_slot">
+			<AnimationContainer from_right>
+				<img src="../static/vikusViewer.png" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+			</AnimationContainer>
+		</div>
 	</InformationTile>
+	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-20">
+		<div slot="content" class="text-gray-400 text-2xl">
+			Daten ohne Kontext bringen meist keinen Nutzen. Dadurch haben wir es uns zur Aufgabe gemacht
+			einen Zusammenhang zwischen den großen Datenmengen zu schaffen. <br /> Durch NLP
+			<span class="font-mono text-xl">(Natural Language Processing)</span> analysieren wir verschiedenste
+			Trends in der Geschichte.
+		</div>
+		<div slot="left_slot" class="mt-2 ml-4 flex flex-row-reverse gap-5">
+			<Icon icon="list" size="32px" />
+			<Icon icon="layers" size="32px" />
+			<Icon icon="database" size="32px" />
+		</div>
+		<div slot="right_slot">
+			<AnimationContainer>
+				<img src="../static/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+			</AnimationContainer>
+		</div>
+	</InformationTile>
+
+	<div class="flex flex-col gap-5">
+		<RedirectButton text="Zum Tutorial" href="tutorial" />
+		<RedirectButton text="Zum Vikus Viewer" href="vikus" />
+	</div>
+
 	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-20">
 		<div slot="content" class="text-gray-400 text-2xl">
 			Daten ohne Kontext bringen meist keinen Nutzen. Dadurch haben wir es uns zur Aufgabe gemacht
@@ -106,8 +131,8 @@
 
 <style lang="postcss">
 	.background-lightning {
-		@apply absolute top-full w-full shadow-white shadow-2xl;
-		box-shadow: 120px 80px 40px 20px #0ff;
+		@apply absolute top-full w-full shadow-white shadow-2xl z-50;
+		box-shadow: 0px 0px 180px 10px #fff;
 	}
 
 	.arrow {
@@ -136,5 +161,16 @@
 
 	.section {
 		@apply absolute top-full w-full pb-10 flex flex-col gap-y-60 items-center bg-gray-900;
+	}
+
+	@keyframes -global-from-left {
+		0% {
+			transform: translateX(-10vw);
+			opacity: 0;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
 	}
 </style>

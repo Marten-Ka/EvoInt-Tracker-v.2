@@ -9,7 +9,7 @@ def order_by_id(dct):
 
 
 def create_data_csv(dct):
-    with open('../vikus-viewer/data/data.csv', 'w', newline='') as csvfile:
+    with open('../vikus-viewer/data/data.csv', 'w', newline='', encoding="utf-8") as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csvwriter.writerow(['keywords'] +
                            ['year'] +

@@ -1,4 +1,5 @@
 from Publication import publications, Publication, get_keywords_from_csv
+from collections import OrderedDict
 from Vikus_writer import create_data_csv, read_data_csv
 from Year import years, Year
 from urllib.request import urlopen
@@ -59,7 +60,7 @@ def is_link_to_volume(link: str):
     print(year)
     return year[:4].isdigit()
 
-
+# URLs, wo man Daten downloaden kann
 def get_available_volumes(index_page_url=None):
     result = set()
     if index_page_url is None:
@@ -135,10 +136,13 @@ def download_from_single_volume_years():
                                           origin_path=current_link,
                                           path_to_pdf=path_to_pdf)
 
-                download(publication)
+                to_download = OrderedDict()
+                to_download[0] = publication
+                download(to_download)
 
                 # TODO: new Method 'add_to_data_csv(publication)'
-                create_data_csv(publications)
+                
+    create_data_csv(publications)
 
 
 # TODO: actually use var output_path on save
@@ -159,13 +163,13 @@ def create_vikus_textures_and_sprites():
     os.system("vikus-viewer-script 'data/thumbnails/*.png' --output '../vikus-viewer/data/images' --spriteSize 90")
 
 
-# download_from_single_volume_years()
+download_from_single_volume_years()
 
 read_data_csv()
 # download()
-# create_data_csv(publications)
-# pdf_to_thumbnail(publications)
-# create_vikus_textures_and_sprites()
+create_data_csv(publications)
+pdf_to_thumbnail(publications)
+create_vikus_textures_and_sprites()
 
 # get_keywords_from_csv()
 for publication in publications.values():
