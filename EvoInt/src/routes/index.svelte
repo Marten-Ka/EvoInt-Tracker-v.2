@@ -106,27 +106,8 @@
 	<div class="flex flex-col gap-5">
 		<RedirectButton text="Zum Tutorial" href="tutorial" />
 		<RedirectButton text="Zum Vikus Viewer" href="vikus" />
+		<RedirectButton text="Zum NLP-Playground" href="nlp" />
 	</div>
-
-	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-20">
-		<div slot="content" class="text-gray-400 text-2xl">
-			Daten ohne Kontext bringen meist keinen Nutzen. Dadurch haben wir es uns zur Aufgabe gemacht
-			einen Zusammenhang zwischen den großen Datenmengen zu schaffen. <br /> Durch NLP
-			<span class="font-mono text-xl">(Natural Language Processing)</span> analysieren wir verschiedenste
-			Trends in der Geschichte.
-		</div>
-		<div slot="left_slot" class="mt-2 ml-4 flex flex-row-reverse gap-5">
-			<Icon icon="list" size="32px" />
-			<Icon icon="layers" size="32px" />
-			<Icon icon="database" size="32px" />
-		</div>
-		<img
-			slot="right_slot"
-			src="../static/NLP.jpg"
-			alt="vikus_viewer"
-			class="rounded-3xl shadow-2xl"
-		/>
-	</InformationTile>
 </div>
 
 <style lang="postcss">

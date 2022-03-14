@@ -4,6 +4,9 @@ node_modules/
 vikus-viewer/datas
 vikus-viewer/data/fulltext
 vikus-viewer/data/images
+vikus-viewer/data/data.csv
+vikus-viewer/data/data1.csv
+vikus-viewer/node_modules
 
 # vikus-viewer-script
 vikus-viewer-script/node_modules

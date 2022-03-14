@@ -4,11 +4,17 @@
 	export let from_right: boolean = false;
 	export let time: string = '3s';
 	export let delay: string = '0s';
+	export let oneTimeDelay: boolean = true;
+
+	function handleObserver() {
+		if (oneTimeDelay) delay = '0s';
+	}
 
 	// animation: name duration (1s, 2s, 3s, ...) function (linear, cubic-bezier, ...) delay (1s, 2s, 3s, ...) iteration-count (1, 2, 3, infinite) direction (reverse, both, ...)
 </script>
 
 <Saos
+	on:update={handleObserver}
 	animation={`${
 		from_right ? 'from-right' : 'from-left'
 	} ${time} cubic-bezier(0, 0, 0.2, 1) ${delay} both`}

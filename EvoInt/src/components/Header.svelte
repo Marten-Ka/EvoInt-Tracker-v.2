@@ -9,11 +9,11 @@
 </script>
 
 <header>
-	<!--<img src="logo.png" width="200px" alt="EvoInt-Logo" />-->
-	<p on:click={onHome}>EvoInt</p>
+	<img src="Logo.png" alt="EvoInt-Logo" width="159px" on:click={onHome} />
 	<div id="navigation">
 		<NavigationButton text="Tutorial" href="tutorial" />
 		<NavigationButton text="Über uns" href="about_us" />
+		<NavigationButton text="Timeline" href="timeline" />
 	</div>
 </header>
 
@@ -22,8 +22,8 @@
 		@apply font-evoint p-4 w-full flex items-center gap-5 bg-black text-gray-200;
 	}
 
-	p {
-		@apply text-3xl hover:cursor-pointer;
+	img {
+		@apply hover:cursor-pointer;
 	}
 
 	#navigation {

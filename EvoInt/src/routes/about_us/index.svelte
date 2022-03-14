@@ -71,24 +71,24 @@
 				<div class="flex gap-2">
 					<TeamMemberCard
 						icons={['code', 'layout']}
-						name="Denis Knecht"
+						name="Marten Kaffler"
 						description="Entwickler, Design, Backend"
 					/>
 					<TeamMemberCard
 						icons={['code', 'layout']}
-						name="Robert Witzke"
+						name="Denis Knecht"
 						description="Entwickler, Design, Backend"
 					/>
 				</div>
 				<div class="flex gap-2">
 					<TeamMemberCard
 						icons={['code', 'layout']}
-						name="Marten Kaffler"
+						name="Hamid Omar"
 						description="Entwickler, Design, Backend"
 					/>
 					<TeamMemberCard
 						icons={['code', 'layout']}
-						name="Hamid"
+						name="Robert Witzke"
 						description="Entwickler, Design, Backend"
 					/>
 				</div>

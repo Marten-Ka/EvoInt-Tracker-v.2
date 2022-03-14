@@ -124,6 +124,7 @@ def get_keywords_from_csv():
             print(csv_title)
             pub = get_publication_by_title(csv_title)
             if pub:
+                pass
                 print(f'{pub.title} - {csv_title}')
 
 # def save_backup():
@@ -155,4 +156,4 @@ def sample():
 # sample()
 # save_backup()
 # restore_backup()
-get_keywords_from_csv()
+# get_keywords_from_csv()

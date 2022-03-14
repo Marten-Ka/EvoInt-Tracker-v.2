@@ -30,6 +30,6 @@
 		@apply p-5 flex justify-center items-center bg-black bg-opacity-20 border-2 border-transparent hover:border-gray-800 hover:scale-110 rounded-lg text-gray-400 hover:text-gray-300 uppercase font-bold transition-all duration-300 select-none;
 	}
 	.letter {
-		@apply p-0.5 text-6xl hover:scale-125 rounded-lg transition-all;
+		@apply p-0.5 text-6xl rounded-lg transition-all;
 	}
 </style>
