@@ -3,6 +3,7 @@
 	import AnimationContainer from '../../components/AnimationContainer.svelte';
 	import Icon from '../../components/Icon.svelte';
 	import TeamMemberCard from './_TeamMemberCard.svelte';
+import Footer from '../../components/Footer.svelte';
 </script>
 
 <Header />
@@ -138,6 +139,8 @@
 		</div>
 	</div>
 </div>
+
+<Footer />
 
 <style lang="postcss">
 	h1 {

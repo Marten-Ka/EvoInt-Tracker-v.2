@@ -2,10 +2,10 @@
 	import Header from '../../components/Header.svelte';
 	import AnimationContainer from '../../components/AnimationContainer.svelte';
 	import TutorialRedirectButton from './_TutorialRedirectButton.svelte';
+import Footer from '../../components/Footer.svelte';
 
 	const redirects = [
-		{ text: 'Wie fange ich an?', href: 'tutorial/start', icon: 'help-circle' },
-		{ text: 'Vikus Viewer', href: 'tutorial/vikus_viewer', icon: 'search' },
+		{ text: 'Wie funktioniert der EvoInt-Tracker?', href: 'tutorial/start', icon: 'help-circle' },
 		{ text: 'Künstliche Intelligenz', href: 'tutorial/ki', icon: 'cpu' },
 		{ text: 'Machine Learning', href: 'tutorial/ml', icon: 'book-open' },
 		{ text: 'Natural Language Processing', href: 'tutorial/nlp', icon: 'message-square' },
@@ -15,7 +15,7 @@
 
 <Header />
 
-<div class="flex flex-col text-center justify-center items-center mt-20">
+<div class="flex flex-col text-center justify-center items-center mt-20 mb-96">
 	<h1
 		class="mb-20 text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
@@ -30,6 +30,8 @@
 		{/each}
 	</div>
 </div>
+
+<Footer />
 
 <style lang="postcss">
 </style>

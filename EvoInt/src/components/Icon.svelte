@@ -3,7 +3,7 @@
 
 	export let icon: string;
 	export let size: string = '24px';
-	export let stroke_width: number = 2;
+	export let stroke_width: string = "2";
 	export let color: string = '#FFF';
 	export let fill_color: string = 'none';
 	export let settings: object = {};

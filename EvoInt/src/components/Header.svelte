@@ -11,9 +11,9 @@
 <header>
 	<img src="Logo.png" alt="EvoInt-Logo" width="159px" on:click={onHome} />
 	<div id="navigation">
-		<NavigationButton text="Tutorial" href="tutorial" />
-		<NavigationButton text="Über uns" href="about_us" />
-		<NavigationButton text="Timeline" href="timeline" />
+		<NavigationButton text="Tutorial" href="/tutorial" />
+		<NavigationButton text="Über uns" href="/about_us" />
+		<NavigationButton text="Timeline" href="/timeline" />
 	</div>
 </header>
 

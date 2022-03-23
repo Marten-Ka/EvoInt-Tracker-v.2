@@ -6,6 +6,7 @@
 	import Icon from '../components/Icon.svelte';
 	import InformationTile from '../components/InformationTile.svelte';
 	import AnimationContainer from '../components/AnimationContainer.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	let name: string = 'Test';
 	let show: boolean = false;
@@ -104,11 +105,15 @@
 	</InformationTile>
 
 	<div class="flex flex-col gap-5">
-		<RedirectButton text="Zum Tutorial" href="tutorial" />
-		<RedirectButton text="Zum Vikus Viewer" href="vikus" />
-		<RedirectButton text="Zum NLP-Playground" href="nlp" />
+		<RedirectButton text="Zum Tutorial" href="/tutorial" />
+		<RedirectButton text="Zum Vikus Viewer" href="/vikus-viewer" />
+		<RedirectButton text="Zum NLP-Playground" href="/nlp" />
 	</div>
+	
+	<Footer />
+
 </div>
+
 
 <style lang="postcss">
 	.background-lightning {
@@ -141,7 +146,7 @@
 	}
 
 	.section {
-		@apply absolute top-full w-full pb-10 flex flex-col gap-y-60 items-center bg-gray-900;
+		@apply absolute top-full w-full flex flex-col gap-y-60 items-center bg-gray-900;
 	}
 
 	@keyframes -global-from-left {

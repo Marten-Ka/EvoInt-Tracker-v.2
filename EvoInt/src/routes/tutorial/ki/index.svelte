@@ -5,7 +5,7 @@
 
 <Header />
 
-<p>NLP</p>
+<p>KI</p>
 
 <Footer />
 
