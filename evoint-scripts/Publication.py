@@ -63,23 +63,32 @@ KEYWORDS = [
 
 
 class Publication:
-    def __init__(self, pub_id, title, year, origin_path, path_to_pdf, authors=None):
-        self.id = pub_id
+    def __init__(self, publication_id, title, year, origin_path, path_to_pdf, authors=None):
+        self.id = publication_id
         self.title = title
         self.authors = authors
         self.keywords = []
         self.year = year
         self.origin_path = origin_path
         self.path_to_pdf = path_to_pdf
-
+        
         self.add_to_publications()
 
     def add_to_publications(self):
         publications[self.id] = self
+        
+    def get_pdf_link(self):
+        return self.origin_path
+    
+    def get_path_to_pdf(self):
+        return self.path_to_pdf
+    
+    def get_encoded_title(self):
+        return self.title.encode('utf8')
 
     def fulltext(self, path=None):
         if path is None:
-            path = self.path_to_pdf
+            path = self.get_path_to_pdf()
         result = ""
         try:
             doc = fitz.open(path)

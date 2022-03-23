@@ -1,73 +1,88 @@
-from Publication import publications, Publication, get_keywords_from_csv
+import sys
 from collections import OrderedDict
-from Vikus_writer import create_data_csv, read_data_csv, add_to_data_csv, clear_data_csv, get_last_publication_link, get_publication_information_by_link, close_csv_file_reader
-from Year import years, Year
 from urllib.request import urlopen
 import urllib.parse
 from urllib.parse import urlparse
 import os
-from bs4 import BeautifulSoup
 from pathlib import Path
-
+from bs4 import BeautifulSoup
 from time import time
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
-import sys
 
+from Publication import publications, Publication, get_keywords_from_csv
+from Vikus_writer import create_data_csv, read_data_csv, add_to_data_csv, clear_data_csv, get_last_publication_link, get_last_valid_publication, get_last_valid_publication_link, get_publication_information_by_link, close_csv_file_reader
+from Year import years, Year
+
+#
+# Every n downloads the progress will be printed.
+# If None every single download the progress will be printed.
+# 
+PRINT_PROGRESS_STEP = None
+
+IJCAI_URL = "https://www.ijcai.org/past_proceedings/"
+
+VIKUS_VIEWER_PATH = "../vikus-viewer/"
+
+VIKUS_VIEWER_DATA_PATH = VIKUS_VIEWER_PATH + "data/"
+VIKUS_VIEWER_DATA_IMAGES_PATH = VIKUS_VIEWER_DATA_PATH + "images/"
+
+VIKUS_VIEWER_DATA_FULLTEXT_PATH = VIKUS_VIEWER_DATA_PATH + "fulltext/"
+VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH = VIKUS_VIEWER_DATA_FULLTEXT_PATH + "pdf/"
 
 def parse_title(title):
-    title = title.replace('\n', ' ')
-    title = title.replace('\t', ' ')
-    title = title.replace('  ', ' ')
-    title = title.strip()
-    return title
+    #title = title.replace('\n', ' ')
+    #title = title.replace('\t', ' ')
+    #title = title.replace('  ', ' ')
+    #title = title.strip()
+    return title.replace('\n', ' ').replace('\t', ' ').replace('  ', ' ').strip()
 
-
+# searches for the next available id
 def next_pub_id():
     ids = [int(pub_id) for pub_id in publications.keys()]
     ids.sort()
     result = str(ids[-1] + 1) if len(ids) > 0 else '0'
     return result.zfill(4)
 
-def download_publications(pubs=None):
-    if pubs is None:
-        pubs = publications
-    total = len(pubs.values())
-    for key, pub in pubs.items():
-        # check if file is already downloaded
-        if Path(pub.path_to_pdf).is_file():
-            continue
-        try:
-            print(f'{str(round((float(key)/total) * 100, 2))}% ({key}/{total}) - Downloading Publication "{pub.title}" \n\tfrom {pub.origin_path}\n')
-            response = urlopen(pub.origin_path)
-            # TODO: path_to_pdf has to start at data/..., so add vikus-viewer/ here
-            os.makedirs(pub.path_to_pdf[:-8], exist_ok=True)
-            file = open(pub.path_to_pdf, 'wb')
-            file.write(response.read())
-            file.close()
-        except HTTPError:
-            print("error writing file: " + pub.origin_path)
-            continue
-        except TimeoutError:
-            print("TimeoutError")
-            continue
+def get_id_from_link(link):
+    id = link.split('/')  # https://www.ijcai.org/proceedings/2020/0085.pdf
+    id = id[len(id) - 1]  # 0085.pdf
+    id = id[0:id.find('.')] # 0085
+    return id
+    
         
 def download_publication(publication):
     
-    if Path(publication.path_to_pdf).is_file():
+    #
+    # If PDF already exists -> don't download again
+    # unless it has a size of 0
+    #
+    if Path(publication.get_path_to_pdf()).is_file():
+        
+        #
+        # We need to check if the file size is
+        # greater than zero, because then the file
+        # could not be downloaded properly.
+        # For example when exiting the script when downloading.
+        #
+        file_size = os.path.getsize(publication.get_path_to_pdf())
+        if file_size > 0:
+            return
+        
         return
+    
         
     try:
-        print(f'Downloading Publication "{publication.title}" \n\t\tfrom {publication.origin_path}\n')
-        response = urlopen(publication.origin_path)
+        #print(f'Downloading publication "{publication.title}" \n\t\tfrom {publication.origin_path}\n')
+        response = urlopen(publication.get_pdf_link())
         # TODO: path_to_pdf has to start at data/..., so add vikus-viewer/ here
-        os.makedirs(publication.path_to_pdf[:-8], exist_ok=True)
-        file = open(publication.path_to_pdf, 'wb')
+        os.makedirs(publication.get_path_to_pdf()[:-8], exist_ok=True)
+        file = open(publication.get_path_to_pdf(), 'wb')
         file.write(response.read())
         file.close()
     except HTTPError:
-        print("error writing file: " + publication.origin_path)
+        print("Error writing file: " + publication.get_pdf_link())
     except TimeoutError:
         print("TimeoutError")
 
@@ -78,12 +93,16 @@ def is_link_to_volume(link: str):
     # print(year)
     return year[:4].isdigit()
 
-# URLs, wo man Daten downloaden kann
-def get_available_volumes(index_page_url=None):
+#
+# Parses every available year in the given URL.
+# Returns a sorted set (starting with "newest" year)
+#
+
+def get_available_volumes():
+    
     result = set()
-    if index_page_url is None:
-        index_page_url = "https://www.ijcai.org/past_proceedings/"
-    response = urlopen(index_page_url)
+    
+    response = urlopen(IJCAI_URL)
     page_source = response.read()
     soup = BeautifulSoup(page_source, 'html.parser')
     content = soup.find('div', 'content')
@@ -92,16 +111,14 @@ def get_available_volumes(index_page_url=None):
         if current_link.split("/")[-1] == "2017":
             current_link = current_link + "/"
         if is_link_to_volume(current_link):
-            # if index_page_url not in current_link:
-            #     current_link = urllib.parse.urljoin(index_page_url, current_link)
             if current_link not in result:
                 result.add(current_link)
     return sorted(result, reverse=True)
 
 def download_from_single_volume_years():
     
-    if not Path("../vikus-viewer/data/data.csv").is_file():
-        with open("../vikus-viewer/data/data.csv", "w") as f:
+    if not Path(VIKUS_VIEWER_DATA_PATH + "data.csv").is_file():
+        with open(VIKUS_VIEWER_DATA_PATH + "data.csv", "w") as f: # create file
             pass
 
     # clear_data_csv()
@@ -112,10 +129,9 @@ def download_from_single_volume_years():
     
     pdf_count_0722 = 0
 
-    base_pdf_path = '../vikus-viewer/data/fulltext/pdf/'
-    base_url = "https://www.ijcai.org/past_proceedings/"
+    base_pdf_path = VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH
 
-    available_volumes = get_available_volumes(base_url)
+    available_volumes = get_available_volumes()
     #print('\n'.join(available_volumes))
 
     for volume_link in available_volumes:
@@ -130,6 +146,7 @@ def download_from_single_volume_years():
         response = urlopen(volume_link)  # opens the URL
         page_source = response.read()
         soup = BeautifulSoup(page_source, 'html.parser')
+        print(f'[{year}] - Parsing website ({volume_link})...')
         for link in soup.find_all('a'):
             current_link = link.get('href')
             
@@ -140,11 +157,13 @@ def download_from_single_volume_years():
 
                 if not urlparse(current_link).scheme:
                     current_link = 'https://' + current_link
-                    
-                pub_id = next_pub_id()
+                
+                publication_id = next_pub_id()
+                #publication_id = get_id_from_link(current_link)
+                
                 title = parse_title(link.text)
                 if title == "here" or current_link == f'https://www.ijcai.org/proceedings/{year}/preface.pdf':
-                    return
+                    continue
 
                 authors = ""
 
@@ -156,36 +175,52 @@ def download_from_single_volume_years():
                         title = parse_title(title.text)
                         authors = paper_wrapper.find("div", "authors").text
                 
+                #
+                # Skip the first entry with this title,
+                # because it is an duplicate of the last entry.
+                # This is an error on the website.
+                #
                 if title == "Self-Adaptive Swarm System (SASS)":
                     pdf_count_0722 += 1
                     if pdf_count_0722 == 1:
                         continue
                     
-                #
-                # If the last publication, which is in the data.csv, was already reached, then we can only
-                # download the next publications.
-                # Because of that, we don't need to download publications, we already downloaded.
-                #
-                if last_publication_reached:
-                    create_new_publication(current_link, base_pdf_path, year, pub_id, title, authors)
-                else:
+                last_publication_reached = create_publication(last_publication_reached, get_last_publication_link, publication_id, year, title, authors, current_link)
                     
-                    #
-                    # We try to create a publication from the data in the data.csv.
-                    # If it fails, because the data row was not found, we create the
-                    # publication with the link.
-                    #
-                    
-                    success = create_available_publication(current_link, year)
-                    
-                    if not success:
-                        create_new_publication(current_link, base_pdf_path, year, pub_id, title, authors)
-                
-                if get_last_publication_link == current_link:
-                    last_publication_reached = True
-                    close_csv_file_reader()
+        print(f'[{year}] - Loaded and downloaded all PDFs!')
 
     #create_data_csv(publications)
+
+def create_publication(last_publication_reached, get_last_publication_link, publication_id, year, title, authors, current_link):
+    
+    #
+    # If the last publication, which is in the data.csv, was already reached, then we can only
+    # download the next publications.
+    # Because of that, we don't need to download publications, we already downloaded.
+    #
+    
+    publication = None
+    
+    if last_publication_reached:
+        publication = create_new_publication(publication_id, title, authors, year, current_link)
+    else:
+        
+        #
+        # We try to create a publication from the data in the data.csv.
+        # If it fails, because the data row was not found, we create the
+        # publication with the link.
+        #
+        
+        publication = create_available_publication(current_link, year)
+        
+        if publication == None:
+            publication = create_new_publication(publication_id, title, authors, year, current_link)
+
+    if get_last_publication_link == current_link:
+        last_publication_reached = True
+        close_csv_file_reader()
+    
+    return last_publication_reached
 
 #
 # Tries to create a publication object from data.csv-entry
@@ -193,51 +228,44 @@ def download_from_single_volume_years():
 #
 def create_available_publication(current_link, year):
     
-    publication_information = get_publication_information_by_link(current_link)
+    data_row = get_publication_information_by_link(current_link)
     
-    if publication_information == None:
-        print(f'Tried to create publication with link "{current_link}" (from data.csv), but no information was available.')
-        return False
+    if data_row == None:
+        return None
     else:
+
+        if(PRINT_PROGRESS_STEP == None or (int(data_row.id) % PRINT_PROGRESS_STEP == 0)):
+            print(f'[{year}] - [{data_row.id}] Creating publication "{data_row.get_encoded_title()}" (from data.csv) [{current_link}]')
         
-        pub_id = publication_information[2]
-        title = publication_information[3]
-        #if(int(pub_id) % 50 == 0):
-        #    print(f'{year}: [{pub_id}] Creating publication "{title}" (from data.csv)')
-        print(f'{year}: [{pub_id}] Creating publication "{title}" (from data.csv) [{current_link}]')
-        Publication(pub_id=pub_id,
-                    title=title,
-                    authors=publication_information[4],
-                    year=publication_information[1],
-                    origin_path=publication_information[6],
-                    path_to_pdf=publication_information[8])
-        return True
+        publication = create_publication_object(data_row.id, data_row.title, data_row.authors, data_row.year, data_row.get_pdf_link())
+        return publication
 
 #
 # Creates a publication object from a link
 #
-def create_new_publication(current_link, base_pdf_path, year, pub_id, title, authors):
+def create_new_publication(publication_id, title, authors, year, current_link):
 
-    path_to_pdf = base_pdf_path + str(year) + '/' + str(pub_id) + '.pdf'
     encoded_title = title.encode('utf8')
-    #if(int(pub_id) % 50 == 0):
-    #    print(f'{year}: [{pub_id}] Creating publication "{encoded_title}" (from {current_link})')
-    print(f'{year}: [{pub_id}] Creating publication "{encoded_title}" (from {current_link})')
-    publication = Publication(pub_id=pub_id,
-                                title=title,
-                                authors=authors,
-                                year=year,
-                                origin_path=current_link,
-                                path_to_pdf=path_to_pdf)
-    
-    #to_download = OrderedDict()
-    #to_download[0] = publication
-    #download(to_download)
+    if(PRINT_PROGRESS_STEP == None or (int(global_id) % PRINT_PROGRESS_STEP == 0)):
+        print(f'[{year}] - [{publication_id}] Creating publication "{encoded_title}" (from {current_link})')
+
+    publication = create_publication_object(publication_id, title, authors, year, current_link)
     
     download_publication(publication)
 
     add_to_data_csv(publication)
     pdf_to_thumbnail(publication)
+    
+    return publication
+    
+def create_publication_object(publication_id, title, authors, year, current_link):
+    path_to_pdf = VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH + str(year) + '/' + str(publication_id) + '.pdf'
+    return Publication(publication_id=publication_id,
+                        title=title,
+                        authors=authors,
+                        year=year,
+                        origin_path=current_link,
+                        path_to_pdf=path_to_pdf)
 
 # Create thumbnail for multiple publications
 def pdfs_to_thumbnail(dct):
@@ -253,11 +281,12 @@ def pdf_to_thumbnail(publication):
     # Create thumbnail folder if it does NOT exist
     Path(directory_path).mkdir(parents=True, exist_ok=True)
 
-    path = Path(publication.path_to_pdf)
+    path = Path(publication.get_path_to_pdf())
     output_path = Path('data/thumbnails/' + str(publication.id) + '.png')
+    
     # If the PDF file exists and the thumbnail does NOT exist, then create the thumbnail
     if path.is_file() and not output_path.is_file():
-        print(f'{publication.id} - Creating Thumbnail for Publication "{publication.title}"')
+        print(f'{publication.id} - Creating thumbnail for publication "{publication.title}"')
         try:
             page = convert_from_path(path, 200, first_page=1, last_page=1)
 
@@ -274,24 +303,25 @@ def pdf_to_thumbnail(publication):
     # create_vikus_textures_and_sprites_for_publication(publication)
 
 def create_vikus_textures_and_sprites_for_publication(publication):
+    create_vikus_viewer_textures_and_sprites(str(publication.id))
 
-    directory_path = '../vikus-viewer/data/images'
+def create_all_vikus_textures_and_sprites():
+    create_vikus_textures_and_sprites("*")
+    
+def create_vikus_textures_and_sprites(files):
+    
+    directory_path = VIKUS_VIEWER_DATA_IMAGES_PATH
 
     # Create images folder if it does NOT exist
     Path(directory_path).mkdir(parents=True, exist_ok=True)
 
-    sprite_path = f'../vikus-viewer/data/images/{publication.id}.png'
+    sprite_path = f'{directory_path}{publication.id}.png'
     if not Path(sprite_path).is_file():
-        os.system(f"vikus-viewer-script 'data/thumbnails/{publication.id}.png' --output '../vikus-viewer/data/images' --spriteSize 90")
-
-def create_vikus_textures_and_sprites():
-    # for pub in publications.values():
-    #     os.system(f'node ../vikus-viewer-script/bin/textures "data/thumbnails/{pub.id}.png" --output "../vikus-viewer/data/images"')
-    # os.system("ulimit -n 16100; node ../vikus-viewer-script/bin/textures 'data/thumbnails/*.png' --output '../vikus-viewer/data/images'")
-    os.system("vikus-viewer-script 'data/thumbnails/*.png' --output '../vikus-viewer/data/images' --spriteSize 90")
-
+        os.system(f"vikus-viewer-script 'data/thumbnails/{files}.png' --output '{directory_path}' --spriteSize 90")
 
 download_from_single_volume_years()
+
+#print(get_last_valid_publication().get_path_to_pdf())
 
 # read_data_csv()
 # download()
@@ -300,8 +330,8 @@ download_from_single_volume_years()
 # create_vikus_textures_and_sprites()
 
 # get_keywords_from_csv()
-for publication in publications.values():
-    # print(publication.id)
-    fulltext = publication.fulltext()
-    publication.set_keywords(fulltext)
+#for publication in publications.values():
+#    # print(publication.id)
+#    fulltext = publication.fulltext()
+#    publication.set_keywords(fulltext)
 # create_data_csv(publications)
