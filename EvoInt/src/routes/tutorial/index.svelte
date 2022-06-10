@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Header from '../../components/Header.svelte';
 	import AnimationContainer from '../../components/AnimationContainer.svelte';
-	import TutorialRedirectButton from './_TutorialRedirectButton.svelte';
-import Footer from '../../components/Footer.svelte';
+	import TutorialRedirectButton from '../../components/_TutorialRedirectButton.svelte';
+	import Footer from '../../components/Footer.svelte';
 
 	const redirects = [
 		{ text: 'Wie funktioniert der EvoInt-Tracker?', href: 'tutorial/start', icon: 'help-circle' },

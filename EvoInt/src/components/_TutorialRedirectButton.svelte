@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import Icon from '../../components/Icon.svelte';
+	import Icon from './Icon.svelte';
 
 	export let text: string;
 	export let href: string;
