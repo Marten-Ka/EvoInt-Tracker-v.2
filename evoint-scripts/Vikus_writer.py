@@ -156,7 +156,7 @@ def write_data_csv_header(csv_writer):
                            ['_display_path_to_pdf'] +
                            ['_path_to_pdf'] +
                            ['_fulltext'])
-        
+
 def write_data_csv_row(csv_writer, publication):
     
     temp_a = publication.get_path_to_pdf().split('/')[-5:]
@@ -167,7 +167,7 @@ def write_data_csv_row(csv_writer, publication):
     
     if data_row == None:
         data_row = DataRow(publication.id, publication.year, publication.title, publication.authors, 'None', keywords, publication.get_pdf_link(), display_path_to_pdf, publication.get_path_to_pdf())
-    
+
     csv_writer.writerow(data_row.to_csv_row())
 
 def add_to_data_csv(publication):

@@ -157,12 +157,6 @@ def get_keywords_from_csv():
 #                         path_to_pdf=temp['path_to_pdf'])
 
 
-def sample():
-    Publication('0001', 'title', '1993', 'origin_path_oh', 'path to some pdf')
-    Publication('0005', 't2itle', '12993', 'or2igin_path_oh', 'pa2th to some pdf')
-
-
-# sample()
 # save_backup()
 # restore_backup()
 # get_keywords_from_csv()

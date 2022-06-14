@@ -1,0 +1,35 @@
+{
+  "name": "vikus-viewer-script",
+  "version": "2.0.3",
+  "description": "Preprocessing scripts for vikus-viewer",
+  "author": {
+    "name": "Christopher Pietsch",
+    "url": "https://chrispie.com"
+  },
+  "keywords": [
+    "vikus-viewer",
+    "vikus-viewer-script",
+    "resize"
+  ],
+  "homepage": "https://github.com/cpietsch/vikus-viewer-script",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cpietsch/vikus-viewer-script.git"
+  },
+  "bin": {
+    "vikus-viewer-script": "bin/textures"
+  },
+  "main": "src/index.js",
+  "scripts": {},
+  "engines": {
+    "node": ">=17.0.0"
+  },
+  "dependencies": {
+    "@mapbox/shelf-pack": "^3.2.0",
+    "sharpsheet": "^0.0.6",
+    "glob": "^7.2.0",
+    "sharp": "^0.29.3",
+    "yargs": "^15.1.0"
+  }
+}
