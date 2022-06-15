@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 from time import time
 import fitz
 from PIL import Image
+import json
+from datetime import datetime
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
@@ -425,7 +427,7 @@ def get_pdf_information(year, link_tag, origin_title):
                     authors += remove_dots_and_numbers_at_end(author_text) + ' '
             
         else:
-            raise f'Year {year} not implemented!'
+            raise Exception(f'Year {year} not implemented!')
             
         valid_publication = True
         
@@ -666,19 +668,41 @@ def sprite_file_state(publication):
 
 def get_abstract_of_pdf(pdf_path):
     doc = fitz.open(pdf_path)
-    page = doc.load_page(0)
-    page_dict = page.get_text('dict')
-    abstract_header_pdf_number = find_abstract_header_pdf_number(page_dict)
-    #print(abstract_header_pdf_number)
-    abstract_text_node = page_dict['blocks'][abstract_header_pdf_number + 1] # +1, because next node
-    abstract_text = concat_pdf_section_text(abstract_text_node)
-    #print(abstract_text)
+    
+    abstract_header_pdf_number = None
+    abstract_text = ''
+    
+    for page_number in range(doc.page_count):
+        
+        page = doc.load_page(page_number)
+        page_dict = page.get_text('dict')
+        abstract_header_pdf_number = find_abstract_header_pdf_number(page_dict)
+        #print(f'PDF Number: {abstract_header_pdf_number}')
+        if abstract_header_pdf_number == None:
+            continue
+        
+        abstract_text_node = page_dict['blocks'][abstract_header_pdf_number + 1] # +1, because next node
+        abstract_text = concat_pdf_section_text(abstract_text_node)
+        break
+        
+    if abstract_header_pdf_number == None:
+        return None
+        
     return abstract_text
     
     
 def find_abstract_header_pdf_number(page_dict):
     for i in range(len(page_dict['blocks'])):
+        
         node = page_dict['blocks'][i]
+        
+        if('lines' not in node or len(node['lines']) == 0):
+            return None
+        if('spans' not in node['lines'][0] or len(node['lines'][0]['spans']) == 0):
+            return None
+        if('text' not in node['lines'][0]['spans'][0]):
+            return None
+                
         if(node['lines'][0]['spans'][0]['text'].lower().strip() == 'abstract'):
             return int(node['number'])
     
@@ -688,36 +712,27 @@ def concat_pdf_section_text(node):
     
     for i in range(len(node['lines'])):
         for j in range(len(node['lines'][i]['spans'])):
-            text += node['lines'][i]['spans'][j]['text']
+            text += node['lines'][i]['spans'][j]['text'] + ' '
     
     text = text.replace('-', '') # maybe not a good idea, because "tracking-by-detection" --> "trackingbydetection"
     return text
 
-#
-# Error:
-# File: D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf\2020\0795.pdf
-#------------ ABSTRACT -----------------
-#
-#Traceback (most recent call last):
-#  File "D:\Studium\Semester4\Studienprojekt\EvoInt-Tracker-v.2\evoint-scripts\Downloader.py", line 722, in <module>
-#    abstract_test()
-#  File "D:\Studium\Semester4\Studienprojekt\EvoInt-Tracker-v.2\evoint-scripts\Downloader.py", line 704, in abstract_test
-#    print(get_abstract_of_pdf(file_path))
-#  File "D:\Studium\Semester4\Studienprojekt\EvoInt-Tracker-v.2\evoint-scripts\Downloader.py", line 673, in get_abstract_of_pdf
-#    abstract_text_node = page_dict['blocks'][abstract_header_pdf_number + 1] # +1, because next node
-#TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
-#
-#
-#
-def abstract_test():
+def test_extract_abstracts():
+
+    date = str(datetime.now())
+    date = date.replace(' ', 'T').replace(':', '-')
     
     for root, dirs, files in os.walk('D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf', topdown=True):
         dirs.sort(reverse=True)
         for name in files:
             file_path = os.path.join(root, name)
-            print(f'File: {file_path}')
-            print(f'------------ ABSTRACT -----------------\n')
-            print(get_abstract_of_pdf(file_path))
+            file_path = file_path.replace('\\', '/')
+
+            abstract_text = get_abstract_of_pdf(file_path)
+            
+            if abstract_text == None:
+                with open(f'./debug/extract_abstract_errors_{date}.txt', 'a') as file:
+                    file.write(file_path + '\n')
             
             if False:
                 doc = fitz.open(file_path)
@@ -735,7 +750,11 @@ def abstract_test():
                     
                 img.close()
             
-abstract_test()
+test_extract_abstracts()
+#get_abstract_of_pdf('D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf/2020/0795.pdf')
+
+# not the full abstract
+#print(get_abstract_of_pdf('D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf/1995/8486.pdf'))
 
 #
 # TODO:
