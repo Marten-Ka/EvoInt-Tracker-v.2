@@ -395,10 +395,5 @@
 	p {
 		@apply text-2xl text-gray-400;
 	}
-	li {
-		@apply flex items-center gap-2;
-	}
-	li > p {
-		@apply text-white font-bold;
-	}
+
 </style>

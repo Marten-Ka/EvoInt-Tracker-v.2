@@ -13,9 +13,9 @@
 	} justify-between items-center ${className}`}
 >
 	<div class={`w-1/2 max-w-2xl flex flex-col ${right_side && 'text-right'} gap-2`}>
-		<p class="text-5xl font-bold uppercase text-gray-100">{title}</p>
+		<p class="text-5xl mb-4 font-bold uppercase text-gray-100">{title}</p>
 		{#if content}
-			<p class="text-2xl text-gray-400">{content}</p>
+			<p class="text-2xl text-justify text-gray-400">{content}</p>
 		{:else}
 			<slot name="content" />
 		{/if}

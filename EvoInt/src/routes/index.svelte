@@ -136,7 +136,7 @@
 						<p class="text-gray-500 mb-4">
 							<small
 								>veröffentlicht am <u>24.05.2022</u> von
-								<a href="" class="text-gray-900">Robert Witzke</a></small
+								<p class="text-gray-900">Robert Witzke</p></small
 							>
 						</p>
 						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
@@ -180,7 +180,7 @@
 						<p class="text-gray-500 mb-4">
 							<small
 								>Veröffentlicht am <u>01.06.2022</u> von
-								<a href="" class="text-gray-900">Hamid Omar</a></small
+								<p class="text-gray-900">Hamid Omar</p></small
 							>
 						</p>
 						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
@@ -224,7 +224,7 @@
 						<p class="text-gray-500 mb-4">
 							<small
 								>Veröffentlicht am <u>21.06.2022</u> von
-								<a href="" class="text-gray-900">Marten Kaffler</a>
+								<p class="text-gray-900">Marten Kaffler</p>
 							</small>
 						</p>
 						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
