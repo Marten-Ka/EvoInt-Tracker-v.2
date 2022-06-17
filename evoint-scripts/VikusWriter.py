@@ -7,6 +7,7 @@ from pathlib import Path
 
 from Publication import publications, Publication
 from DataRow import data_rows, get_data_row, create_from_row, DataRow
+import Downloader
 
 #
 # data.csv
@@ -42,10 +43,6 @@ def get_data_csv_path():
 def check_file_empty(path_of_file):
     #Checking if file exist and it is empty
     return os.path.exists(path_of_file) and os.stat(path_of_file).st_size == 0
-
-def order_by_id(dct):
-    publications_list = [p for p in dct.values()]
-    return sorted(list(publications_list), key=lambda x: int(x.id), reverse=False)
 
 def clear_data_csv():
     with open(get_data_csv_path(), 'w') as f:
@@ -88,7 +85,8 @@ def get_publication_information_by_link(link):
     if len(get_data_rows()) == 0 or (len(publications) + 1) >= len(get_data_rows()):
         return None
 
-    data_row = get_data_row(len(publications))
+    encoded_link = Downloader.string_encoding(link)
+    data_row = get_data_row(encoded_link)
     
     if data_row.get_pdf_link() == link:
         return data_row
@@ -99,49 +97,6 @@ def get_publication_information_by_link(link):
                 return get_data_row(row[2]) # row[2] -> id
     
     return None
-
-def get_last_publication_link():
-    
-    # TODO: nicht https://www.ijcai.org/proceedings/2021/0001.pdf returnen, sondern None und dann im Downloader gucken ob ein Link existiert
-    
-    try:
-        
-        if len(get_data_rows()) == 0:
-            return "https://www.ijcai.org/proceedings/2021/0001.pdf"
-        
-        return get_data_row(len(get_data_rows()) - 1).get_pdf_link()
-    except Exception as e:
-        print(f'Error while getting last publication information. {e}')
-    
-    return "https://www.ijcai.org/proceedings/2021/0001.pdf"
-
-def get_last_valid_publication():
-    
-    if len(get_data_rows()) == 0:
-        return None
-
-    max_index = len(get_data_rows()) - 1
-
-    for i in reversed(range(max_index + 1)):
-        
-        data_row = get_data_row(i)
-        path_to_pdf = data_row.get_path_to_pdf()
-        file_size = os.path.getsize(path_to_pdf)
-        print(path_to_pdf, file_size)
-        
-        if file_size > 0:
-            return data_row
-        
-    return None
-
-def get_last_valid_publication_link():
-    
-    data_row = get_last_valid_publication()
-
-    if data_row == None:
-        return None
-    else:
-        return publication_entry.get_pdf_link()
 
 def write_data_csv_header(csv_writer):
     
@@ -186,12 +141,8 @@ def create_data_csv(dct):
         csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         write_data_csv_header(csv_writer)
         
-        for publication in order_by_id(dct):
+        for publication in list(publications):
             write_data_csv_row(csv_writer, publication)
-            # print(publication.id)
-
-
-# TODO: create_timeline_csv(dct_years):
 
 
 def read_data_csv():
@@ -215,12 +166,6 @@ def save_backup():
 
 def restore_backup():
     read_data_csv()
-
-
-def sample():
-    Publication('0001', 'title', '1993', 'origin_path_oh', 'path to some pdf')
-    Publication('0005', 't2itle', '12993', 'or2igin_path_oh', 'pa2th to some pdf')
-
 
 #csv.field_size_limit(sys.maxsize)
 # sample()
