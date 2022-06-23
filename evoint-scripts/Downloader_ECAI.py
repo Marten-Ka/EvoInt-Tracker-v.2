@@ -76,11 +76,8 @@ class ECAIPublicationIterator:
 
     def __next__(self):
         if self.count < self.max_length:
+            publication = process_single_publication(self.data[self.count])
             self.count = self.count + 1
-            return process_single_publication(self.data[self.count - 1])
+            return publication
         else:
-            return None
-
-
-if __name__ == '__main__':
-    pass
+            raise StopIteration

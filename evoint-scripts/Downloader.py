@@ -19,8 +19,6 @@ from VikusWriter import add_to_data_csv
 #
 PRINT_PROGRESS_STEP = 1000
 
-IJCAI_URL = "https://www.ijcai.org/past_proceedings/"
-
 VIKUS_VIEWER_PATH = "../vikus-viewer/"
 
 VIKUS_VIEWER_DATA_PATH = VIKUS_VIEWER_PATH + "data/"
@@ -86,7 +84,7 @@ def download_publication(publication):
         # We need to check if the file size is
         # greater than zero, because then the file
         # could not be downloaded properly.
-        # For example when exiting the script when downloading.
+        # For example when exiting the script when currently downloading.
         #
         file_size = os.path.getsize(publication.get_path_to_pdf())
         if file_size > 0:

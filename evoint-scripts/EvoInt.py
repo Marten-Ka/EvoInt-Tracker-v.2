@@ -1,10 +1,11 @@
 from __future__ import print_function, unicode_literals
-from PyInquirer import prompt, print_json, Separator
+from PyInquirer import prompt, Separator
 
 from alive_progress import alive_bar
 
 from examples import custom_style_2
 
+from Downloader_IJCAI import iterator_download_publications_for_year, get_available_volumes_per_year, get_supported_years
 from Downloader_ECAI import iterator_process_all_publications
 
 
@@ -56,16 +57,47 @@ def download():
 
     iterator = None
 
-    if answers['source'] == 'ECAI':
+    if answers['source'] == 'IJCAI':
+
+        yearAnswer = askIJCAIYear()
+
+        if yearAnswer == 'Back':
+            download()
+        else:
+            iterator = iterator_download_publications_for_year(yearAnswer)
+            with alive_bar(dual_line=True, title='Processing data from IJCAI') as bar:
+                for publication in iterator:
+                    bar.text(f'Processing publication: {publication.title}')
+                    bar()
+                bar.title('Processed data from IJCAI')
+
+    elif answers['source'] == 'ECAI':
         iterator = iterator_process_all_publications()
 
-    publication = next(iterator)
+        with alive_bar(iterator.max_length, dual_line=True, title='Processing data from ECAI') as bar:
+            for publication in iterator:
+                bar.text(f'Processing publication: {publication.title}')
+                bar()
+            bar.title('Processed data from ECAI')
 
-    with alive_bar(iterator.max_length, dual_line=True, title='Processing data from ECAI', ctrl_c=True) as bar:
-        for publication in iterator:
-            bar.text(f'Processing publication: {publication.title}')
-            bar()
-        bar.title('Processed data from ECAI')
+    download()
+
+
+def askIJCAIYear():
+    answers = prompt({
+        'type': 'list',
+        'name': 'year',
+        'message': 'Select a year you want to download:',
+        'choices': get_supported_years() + [Separator(), 'Back']
+    }, style=custom_style_2)
+    return answers['year']
+
+
+def create_year_choices():
+    choices = []
+    for year in get_supported_years():
+        choices.append(year)
+    return choices
 
 
 if __name__ == '__main__':
