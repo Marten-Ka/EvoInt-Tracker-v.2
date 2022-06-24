@@ -10,9 +10,9 @@
 		{ text: '1. Der Begriff der Künstlichen Intelligenz', href: '#part-one', icon: 'terminal' },
 		{ text: '2. Die historische Entwicklung von KI', href: '#part-two', icon: 'terminal' },
 		{ text: '3. Die Arten von KI', href: '#part-three', icon: 'terminal' },
-		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-three', icon: 'terminal' },
-		{ text: '5. Anwendungsgebiete', href: '#part-three', icon: 'terminal' },
-		{ text: '6. Fazit', href: '#part-three', icon: 'terminal' }
+		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-four', icon: 'terminal' },
+		{ text: '5. Anwendungsgebiete', href: '#part-five', icon: 'terminal' },
+		{ text: '6. Fazit', href: '#part-six', icon: 'terminal' }
 	];
 </script>
 
@@ -809,6 +809,7 @@
 					<h2 class="text-6xl font-bold mb-6 text-center">4 Typen von KI</h2>
 					<p class="text-2xl text-gray-400 mb-12">
 						In <a
+							class="text-blue-500 underline"
 							href="https://www.govtech.com/computing/understanding-the-four-types-of-artificial-intelligence.html"
 							>diesem Artikel</a
 						>
@@ -878,7 +879,70 @@
 		</section>
 	</div>
 
-	<div class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg">
+	<div id="part-four" class="mt-32">
+		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+			4. Übersicht der wichtigsten Begriffe
+		</h1>
+
+		<div class="flex flex-col justify-center items-center">
+			<div class="w-1/2 mb-16">
+				<h2 class="headline text-3xl font-bold text-gray-100 mb-4">Machine Learning</h2>
+				<p class="text-xl text-gray-200 leading-normal text-justify">
+					<a href="./ml" class="text-blue-500 underline">Machine Learning</a> ist aktuell einer der bedeutendsten
+					Teilbereiche von KI. Mittels Machine Learning werden Systeme/Applikationen geschaffen, die
+					mit Hilfe von Daten lernen, Aufgaben zu erfüllen. Der große Vorteil besteht dabei darin, dass
+					Programmierer nicht mehr tausende Zeilen von Code schreiben müssen. Stattdessen sorgen mathematische
+					Algorithmen dafür, dass das Programm neue Daten automatisch verarbeiten und aus ihnen lernen
+					kann. Im Alltag findet man Machine Learning in vielen verschiedenen Bereichen, wie beispielsweise
+					bei Empfehlungssystemen in Online-Shops oder Streaming-Diensten, Social Media Feeds oder in
+					autonomen Fahrzeugen.
+				</p>
+			</div>
+
+			<div class="w-1/2 mb-16">
+				<h2 class="headline text-3xl font-bold text-gray-100 mb-4">Künstliche neuronale Netze</h2>
+				<p class="text-xl text-gray-200 leading-normal text-justify">
+					Das Konzept der künstlichen neuronalen Netze ist sehr stark angelehnt an ein rudimentäres
+					Bild des menschlichen Gehirns. Mit einem Algorithmus werden verschiedene Schichten
+					verbundener Knotenpunkte (Neuronen) geschaffen, die Informationen untereinander
+					austauschen. Dabei gibt es Eingangs- und Ausgangsneuronen, zwischen denen sich mehrere
+					Zwischenneuronen befinden. Lernt die KI etwas dazu, verknüpfen sich die Eingangsneuronen
+					über die Zwischenneuronen mit den Ausgangsneuronen. Erweist sich eine Neuronenverbindung
+					als sehr bedeutsam und führt diese oft zur richtigen Vorhersage, erhöht sich die
+					Gewichtung der Informationsverknüpfung und festigt sich dadurch (wie im menschlichen
+					Gehirn). Revidiert sich eine Entscheidung, so wird die Gewichtung der Verbindung
+					geschwächt und andere Kanten geraten in den Vordergrund. Auf diese Art und Weise kann eine
+					KI Entscheidungen immer wieder hinterfragen und so lernen, um immer besser in dem
+					jeweiligen Anwendungsgebiet zu werden.
+				</p>
+				<div class="flex justify-center items-center">
+					<img
+						src="https://t3n.de/magazin/wp-content/uploads/2018/11/neuronale-netze-grafik-620x268.png"
+						alt="Neuronales Netz"
+						class="rounded-lg my-8"
+					/>
+				</div>
+			</div>
+
+			<div class="w-1/2 mb-16">
+				<h2 class="headline text-3xl font-bold text-gray-100 mb-4">Machine Learning</h2>
+				<p class="text-xl text-gray-200 leading-normal text-justify">
+					<a href="./ml" class="text-blue-500 underline">Machine Learning</a> ist aktuell einer der bedeutendsten
+					Teilbereiche von KI. Mittels Machine Learning werden Systeme/Applikationen geschaffen, die
+					mit Hilfe von Daten lernen, Aufgaben zu erfüllen. Der große Vorteil besteht dabei darin, dass
+					Programmierer nicht mehr tausende Zeilen von Code schreiben müssen. Stattdessen sorgen mathematische
+					Algorithmen dafür, dass das Programm neue Daten automatisch verarbeiten und aus ihnen lernen
+					kann. Im Alltag findet man Machine Learning in vielen verschiedenen Bereichen, wie beispielsweise
+					bei Empfehlungssystemen in Online-Shops oder Streaming-Diensten, Social Media Feeds oder in
+					autonomen Fahrzeugen.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg"
+	>
 		<div
 			class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
 		>
