@@ -31,11 +31,29 @@ global_id = 0
 debug = False
 
 
+def get_supported_years() -> list[str]:
+    return ["2021", "2020", "2019", "2018", "2017", "2016", "2015", "2013", "2011", "2009", "2007", "2005", "2003", "1999", "1997", "1995", "1993"]
+
+
+def get_years_with_downloaded_pdf_data() -> dict[str, int]:
+
+    years = {}
+    for year in get_supported_years():
+        folder = Path(get_year_folder_path(year))
+        if folder.is_dir():
+            pdf_count = 0
+            for file in folder.glob("*"):
+                if file.is_file() and file.suffix == ".pdf":
+                    pdf_count += 1
+            years[year] = pdf_count
+
+    return years
+
+
 def get_year_folder_path(year):
     return f'{VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH}{year}/'
 
-
-def string_encoding(s):
+def encode_string(s):
     string_bytes = base64.b64encode(s.encode('utf-8'))
     return str(string_bytes, 'utf-8')
 
@@ -43,7 +61,7 @@ def string_encoding(s):
 def process_publication(title, authors, year, pdf_link):
 
     # base64-encoding to always have a suitable file name for the pdf file
-    publication_id = string_encoding(pdf_link)
+    publication_id = encode_string(pdf_link)
 
     if(debug):
         encoded_title = title.encode('utf8')

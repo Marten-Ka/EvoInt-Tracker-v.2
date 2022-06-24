@@ -8,22 +8,6 @@ from Publication import publications, Publication
 from DataRow import data_rows, get_data_row, create_from_row, DataRow
 import Downloader
 
-#
-# data.csv
-# --------
-#
-# 0  = global_id
-# 1  = id
-# 2  = year
-# 3  = title
-# 4  = authors
-# 5  = abstract
-# 6  = keywords
-# 7  = pdf_link
-# 8  = path_to_pdf
-# 9 = fulltext
-#
-
 csv.field_size_limit(10000000)
 
 csv_file = None
@@ -93,7 +77,7 @@ def get_publication_information_by_link(link):
     if len(get_data_rows()) == 0 or (len(publications) + 1) >= len(get_data_rows()):
         return None
 
-    encoded_link = Downloader.string_encoding(link)
+    encoded_link = Downloader.encode_string(link)
     data_row = get_data_row(encoded_link)
 
     if data_row.get_pdf_link() == link:
@@ -151,7 +135,7 @@ def add_to_data_csv(publication):
         # print(publication.id)
 
 
-def create_data_csv(dct):
+def create_data_csv():
     with open(get_data_csv_path(), 'w', newline='', encoding="utf-8") as csvfile:
         csv_writer = csv.writer(csvfile, delimiter=',',
                                 quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -172,10 +156,6 @@ def read_data_csv():
                         year=line['year'],
                         origin_path=line['_origin_path'],
                         path_to_pdf=line['_path_to_pdf'])
-
-
-def save_backup():
-    create_data_csv(publications)
 
 
 def restore_backup():
