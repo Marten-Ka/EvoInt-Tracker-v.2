@@ -7,15 +7,17 @@ from collections import Counter
 
 data_rows = OrderedDict()
 
-def get_data_row(index):
 
-    if int(index) >= len(data_rows):
+def get_data_row(id):
+    if id in data_rows:
+        return data_rows[id]
+    else:
         return None
-    
-    return data_rows[int(index)]
+
 
 def create_from_row(row):
     return DataRow(row[2], row[1], row[3], row[4], row[5], row[0], row[6], row[7], row[8])
+
 
 class DataRow:
     def __init__(self, publication_id, year, title, authors, abstract, keywords, origin_path, display_path_to_pdf, path_to_pdf):
@@ -28,28 +30,18 @@ class DataRow:
         self.origin_path = origin_path
         self.display_path_to_pdf = display_path_to_pdf
         self.path_to_pdf = path_to_pdf
-        
+
         self.add_to_rows()
 
     def add_to_rows(self):
-        data_rows[int(self.id)] = self
-        
+        data_rows[self.id] = self
+
     def get_pdf_link(self):
         return self.origin_path
-    
+
     def get_path_to_pdf(self):
         return self.path_to_pdf
-    
-    def get_local_year_id(self):
-        
-        year_directory_path = f'../vikus-viewer/data/fulltext/pdf/{self.year}'
-        year_directory = os.listdir(year_directory_path)
-        
-        first_file = year_directory[0]
-        first_id = int(first_file[0:first_file.find('.')])
-        
-        return int(self.id) - first_id
-    
+
     def get_encoded_title(self):
         return self.title.encode('utf8')
 
@@ -65,10 +57,11 @@ class DataRow:
         except:
             print(f'{self.id} - no fulltext')
 
-        result = result.replace('International Joint Conference on Artificial Intelligence', ' ')
+        result = result.replace(
+            'International Joint Conference on Artificial Intelligence', ' ')
         # keyword 'artificial intelligence' would be in every publication. so the title of the conference needs to be removed
         return result.lower()
-    
+
     def filter_symbols(self, text):
         return re.sub(r'[.!?*+&%",;:\'`´’‘”“()\[\]{}]', ' ', text)
 

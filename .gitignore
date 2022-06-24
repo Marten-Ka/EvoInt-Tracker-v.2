@@ -18,6 +18,7 @@ vikus-viewer-script/images/data
 /evoint-scripts/.vscode
 /evoint-scripts/publications_backup.json
 /evoint-scripts/data/
+/evoint-scripts/debug/
 /evoint-scripts/ai/preprocessedReviews.csv
 /evoint-scripts/ai/TF-IDF/0_data.csv
 # from https://github.com/github/gitignore/blob/master/Python.gitignore
