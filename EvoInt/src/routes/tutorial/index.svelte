@@ -8,8 +8,7 @@
 		{ text: 'Wie funktioniert der EvoInt-Tracker?', href: 'tutorial/start', icon: 'help-circle' },
 		{ text: 'Künstliche Intelligenz', href: 'tutorial/ki', icon: 'cpu' },
 		{ text: 'Machine Learning', href: 'tutorial/ml', icon: 'book-open' },
-		{ text: 'Natural Language Processing', href: 'tutorial/nlp', icon: 'message-square' },
-		{ text: 'Data Science', href: 'tutorial/ds', icon: 'database' }
+		{ text: 'Natural Language Processing', href: 'tutorial/nlp', icon: 'message-square' }
 	];
 </script>
 

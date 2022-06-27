@@ -10,9 +10,9 @@
 		{ text: '1. Der Begriff der Künstlichen Intelligenz', href: '#part-one', icon: 'terminal' },
 		{ text: '2. Die historische Entwicklung von KI', href: '#part-two', icon: 'terminal' },
 		{ text: '3. Die Arten von KI', href: '#part-three', icon: 'terminal' },
-		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-three', icon: 'terminal' },
-		{ text: '5. Anwendungsgebiete', href: '#part-three', icon: 'terminal' },
-		{ text: '6. Fazit', href: '#part-three', icon: 'terminal' }
+		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-four', icon: 'terminal' },
+		{ text: '5. Anwendungsgebiete', href: '#part-five', icon: 'terminal' },
+		{ text: '6. Fazit', href: '#part-six', icon: 'terminal' }
 	];
 </script>
 
@@ -809,8 +809,9 @@
 					<h2 class="text-6xl font-bold mb-6 text-center">4 Typen von KI</h2>
 					<p class="text-2xl text-gray-400 mb-12">
 						In <a
+							class="text-blue-500 underline"
 							href="https://www.govtech.com/computing/understanding-the-four-types-of-artificial-intelligence.html"
-							>diesem Artikel</a
+							class="text-blue-500 underline">diesem Artikel</a
 						>
 						erklärte Arend Hintze, ein Assistenzprofessor für integrative Biologie, Computerwissenschaft
 						und Ingenieurwesen an der Michigan State University, dass KI in vier Arten unterteilt werden
@@ -878,7 +879,397 @@
 		</section>
 	</div>
 
-	<div class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg">
+	<div id="part-four" class="mt-32">
+		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+			4. Übersicht der wichtigsten Begriffe
+		</h1>
+
+		<div class="flex flex-col justify-center items-center">
+			<div class="w-1/2 mb-16">
+				<h2 class="headline text-3xl font-bold text-gray-100 mb-4">Machine Learning</h2>
+				<p class="text-xl text-gray-200 leading-normal text-justify">
+					<a href="./ml" class="text-blue-500 underline">Machine Learning</a> ist aktuell einer der bedeutendsten
+					Teilbereiche von KI. Mittels Machine Learning werden Systeme/Applikationen geschaffen, die
+					mit Hilfe von Daten lernen, Aufgaben zu erfüllen. Der große Vorteil besteht dabei darin, dass
+					Programmierer nicht mehr tausende Zeilen von Code schreiben müssen. Stattdessen sorgen mathematische
+					Algorithmen dafür, dass das Programm neue Daten automatisch verarbeiten und aus ihnen lernen
+					kann. Im Alltag findet man Machine Learning in vielen verschiedenen Bereichen, wie beispielsweise
+					bei Empfehlungssystemen in Online-Shops oder Streaming-Diensten, Social Media Feeds oder in
+					autonomen Fahrzeugen.
+				</p>
+			</div>
+
+			<div class="w-1/2 mb-16">
+				<h2 class="headline text-3xl font-bold text-gray-100 mb-4">Künstliche neuronale Netze</h2>
+				<p class="text-xl text-gray-200 leading-normal text-justify">
+					Das Konzept der künstlichen neuronalen Netze ist sehr stark angelehnt an ein rudimentäres
+					Bild des menschlichen Gehirns. Mit einem Algorithmus werden verschiedene Schichten
+					verbundener Knotenpunkte (Neuronen) geschaffen, die Informationen untereinander
+					austauschen. Dabei gibt es Eingangs- und Ausgangsneuronen, zwischen denen sich mehrere
+					Zwischenneuronen befinden. Lernt die KI etwas dazu, verknüpfen sich die Eingangsneuronen
+					über die Zwischenneuronen mit den Ausgangsneuronen. Erweist sich eine Neuronenverbindung
+					als sehr bedeutsam und führt diese oft zur richtigen Vorhersage, erhöht sich die
+					Gewichtung der Informationsverknüpfung und festigt sich dadurch (wie im menschlichen
+					Gehirn). Revidiert sich eine Entscheidung, so wird die Gewichtung der Verbindung
+					geschwächt und andere Kanten geraten in den Vordergrund. Auf diese Art und Weise kann eine
+					KI Entscheidungen immer wieder hinterfragen und so lernen, um immer besser in dem
+					jeweiligen Anwendungsgebiet zu werden.
+				</p>
+				<div class="flex justify-center items-center">
+					<img
+						src="https://t3n.de/magazin/wp-content/uploads/2018/11/neuronale-netze-grafik-620x268.png"
+						alt="Neuronales Netz"
+						class="rounded-lg my-8"
+					/>
+				</div>
+			</div>
+
+			<div class="w-1/2 mb-16">
+				<h2 class="headline text-3xl font-bold text-gray-100 mb-4">Machine Learning</h2>
+				<p class="text-xl text-gray-200 leading-normal text-justify">
+					<a href="./ml" class="text-blue-500 underline">Machine Learning</a> ist aktuell einer der bedeutendsten
+					Teilbereiche von KI. Mittels Machine Learning werden Systeme/Applikationen geschaffen, die
+					mit Hilfe von Daten lernen, Aufgaben zu erfüllen. Der große Vorteil besteht dabei darin, dass
+					Programmierer nicht mehr tausende Zeilen von Code schreiben müssen. Stattdessen sorgen mathematische
+					Algorithmen dafür, dass das Programm neue Daten automatisch verarbeiten und aus ihnen lernen
+					kann. Im Alltag findet man Machine Learning in vielen verschiedenen Bereichen, wie beispielsweise
+					bei Empfehlungssystemen in Online-Shops oder Streaming-Diensten, Social Media Feeds oder in
+					autonomen Fahrzeugen.
+				</p>
+	<div id="part-five" class="grid mt-32">
+		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+			5. Anwendungsgebiete
+		</h1>
+
+		<div class="grid justify-center items-center justify-self-center w-3/4">
+			<div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg object-scale-down" src="../../../static/Robotik.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Robotik
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
+							übernehmen sie beispielsweise einen Großteil der Fertigung in der Autobranche.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img
+						class="rounded-t-lg object-scale-down"
+						src="../../../static/Suchmaschine.jpg"
+						alt=""
+					/>
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Suchmaschinen
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
+							relevante Inhalte bereitzustellen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Sprachassistenten.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Sprachassistenten
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
+							natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img
+						class="rounded-t-lg object-scale-down"
+						src="../../../static/Empfehlungsdienste.jpg"
+						alt=""
+					/>
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Social Media
+						</h5>
+
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle KI-basiert.
+							Sie lernen von dem Nutzerverhalten und passen so den Feed an.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Spam-Filter.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Spam-Filter
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der Mail-Anbieter
+							gelöscht, bevor sie überhaupt in das Postfach gelangen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Personal_Content.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Persönliche Inhalte
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten im
+							Internet und schlagen so personalisierte Inhalte vor.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Chatbot.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Chatbot
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
+							wichtigsten Informationen des Kundenproblems erfragen und analysieren.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Content-Moderation.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Inhaltsverwaltung
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
+							Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und zu
+							löschen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Gesichtserkennung.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Gesichtserkennung
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
+							um Gesichter und weitere Informationen zu erkennen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+				>
+					<img class="rounded-t-lg" src="../../../static/Mobilität.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Mobilität
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer auch
+							mit Einparkhilfen oder dem Halten der Fahrspur.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg"
+	>
 		<div
 			class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
 		>
