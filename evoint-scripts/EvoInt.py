@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 from alive_progress import alive_bar
 
-from Downloader import get_supported_years, get_years_with_downloaded_pdf_data
+from Downloader import delete_year as downloader_remove_year, delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data
 from Downloader_IJCAI import iterator_download_publications_for_year, get_available_volumes_per_year, get_supported_ijcai_years
 from Downloader_ECAI import iterator_process_all_publications
 
@@ -32,14 +32,14 @@ def main():
     answers = prompt(questions)
 
     if answers['action'] == 'Start downloading':
-        download()
+        prompt_download()
     elif answers['action'] == 'Delete data':
-        delete_options()
+        prompt_delete_options()
     elif answers['action'] == 'Exit':
         exit()
 
 
-def delete_options():
+def prompt_delete_options():
 
     choices = []
 
@@ -48,13 +48,14 @@ def delete_options():
         csv_file_option_name += ' (does not exist)'
 
     # TODO: disabled does not work
-    choices.append({
-        "name": csv_file_option_name,
-        "value": 'CSV file',
-        "disabled": not Path('../vikus-viewer/data/data.csv').exists()
-    })
 
-    choices.extend(["PDF files", "Thumbnails", "Sprites", Separator(), "Back"])
+    choices.append(Choice('CSV file', csv_file_option_name,
+                   Path('../vikus-viewer/data/data.csv').exists()))
+
+    choices.append(
+        Choice('Thumbnails', f'Thumbnails ({get_thumbnail_count()}x)'))
+
+    choices.extend(["PDF files", "Sprites", Separator(), "Back"])
 
     questions = {
         'type': 'list',
@@ -65,18 +66,41 @@ def delete_options():
     answers = prompt(questions)
 
     if answers['action'] == 'CSV file':
-        delete_csv_file()
+        if Path('../vikus-viewer/data/data.csv').exists():
+            prompt_delete_csv_file()
+        else:
+            print("No data.csv file was found!")
+            prompt_delete_options()
     elif answers['action'] == 'PDF files':
-        delete_year()
+        prompt_delete_year()
     elif answers['action'] == 'Thumbnails':
-        pass
+        prompt_delete_thumbnails()
     elif answers['action'] == 'Sprites':
         pass
     elif answers['action'] == 'Back':
         main()
 
 
-def delete_csv_file():
+def prompt_delete_thumbnails():
+
+    thumbnail_count = get_thumbnail_count()
+
+    if thumbnail_count > 0:
+        answers = prompt({
+            'type': 'confirm',
+            'name': 'delete',
+            'message': f'Do you really want to delete {get_thumbnail_count()} thumbnails?'
+        })
+
+        if answers['delete'] == True:
+            delete_all_thumbnails()
+    else:
+        print('No thumbnails found!')
+
+    prompt_delete_options()
+
+
+def prompt_delete_csv_file():
 
     print("If you delete the CSV file, the Vikus Viewer will not have any data.")
     print("Therefore no data can be displayed and you need to create a new CSV file.")
@@ -93,8 +117,10 @@ def delete_csv_file():
         else:
             print('No data.csv file was found!')
 
+    prompt_delete_options()
 
-def delete_year():
+
+def prompt_delete_year():
 
     choices = []
     for _, (year, count) in enumerate(get_years_with_downloaded_pdf_data().items()):
@@ -112,12 +138,29 @@ def delete_year():
     }
 
     answers = prompt(questions)
+    year = answers['year']
 
-    if answers['year'] == 'Back':
-        delete_options()
+    if year == 'Back':
+        prompt_delete_options()
+        return
+
+    pdf_count = get_years_with_downloaded_pdf_data()[year]
+
+    confirm = prompt({
+        'type': 'confirm',
+        'name': 'delete',
+        'message': f'Do you really want to delete {pdf_count} PDF files of year {year}?'
+    })
+
+    if confirm['delete'] == True:
+        downloader_remove_year(year)
+        print(
+            f'Successfully deleted {pdf_count} PDFs from year {year}!')
+
+    prompt_delete_options()
 
 
-def download():
+def prompt_download():
     answers = prompt({
         'type': 'list',
         'name': 'source',
@@ -130,39 +173,38 @@ def download():
         ]
     })
 
-    if answers['source'] == 'Back':
+    source = answers['source']
+    if source == 'Back':
         main()
         return
 
     iterator = None
+    max_iterations = None
 
-    if answers['source'] == 'IJCAI':
+    if source == 'IJCAI':
 
-        yearAnswer = askIJCAIYear()
+        year_answer = prompt_ijcai_year()
 
-        if yearAnswer == 'Back':
-            download()
+        if year_answer == 'Back':
+            prompt_download()
+            return
         else:
-            iterator = iterator_download_publications_for_year(yearAnswer)
-            with alive_bar(dual_line=True, title='Processing data from IJCAI') as bar:
-                for publication in iterator:
-                    bar.text(f'Processing publication: {publication.title}')
-                    bar()
-                bar.title('Processed data from IJCAI')
+            iterator = iterator_download_publications_for_year(year_answer)
 
-    elif answers['source'] == 'ECAI':
+    elif source == 'ECAI':
         iterator = iterator_process_all_publications()
+        max_iterations = iterator.max_length
 
-        with alive_bar(iterator.max_length, dual_line=True, title='Processing data from ECAI') as bar:
-            for publication in iterator:
-                bar.text(f'Processing publication: {publication.title}')
-                bar()
-            bar.title('Processed data from ECAI')
+    with alive_bar(total=max_iterations, dual_line=True, title=f'Processing data from {source}') as bar:
+        for publication in iterator:
+            bar.text(f'Processing publication: {publication.title}')
+            bar()
+        bar.title(f'Processed data from {source}')
 
-    download()
+    prompt_download()
 
 
-def askIJCAIYear():
+def prompt_ijcai_year():
     answers = prompt({
         'type': 'list',
         'name': 'year',

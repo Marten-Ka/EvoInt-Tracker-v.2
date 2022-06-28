@@ -6,7 +6,7 @@ from pathlib import Path
 
 from Publication import publications, Publication
 from DataRow import data_rows, get_data_row, create_from_row, DataRow
-import Downloader
+from slugify import slugify
 
 csv.field_size_limit(10000000)
 
@@ -77,7 +77,7 @@ def get_publication_information_by_link(link):
     if len(get_data_rows()) == 0 or (len(publications) + 1) >= len(get_data_rows()):
         return None
 
-    encoded_link = Downloader.encode_string(link)
+    encoded_link = slugify(link)
     data_row = get_data_row(encoded_link)
 
     if data_row.get_pdf_link() == link:

@@ -1,11 +1,12 @@
 
 from urllib.request import urlopen
 import os
+import shutil
 from subprocess import DEVNULL, STDOUT, check_call
 from pathlib import Path
 import fitz
 from datetime import datetime
-import base64
+from slugify import slugify
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
@@ -18,6 +19,8 @@ from VikusWriter import add_to_data_csv
 # If None every single download the progress will be printed.
 #
 PRINT_PROGRESS_STEP = 1000
+
+THUMBNAIL_PATH = "./data/thumbnails/"
 
 VIKUS_VIEWER_PATH = "../vikus-viewer/"
 
@@ -53,15 +56,22 @@ def get_years_with_downloaded_pdf_data() -> dict[str, int]:
 def get_year_folder_path(year):
     return f'{VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH}{year}/'
 
-def encode_string(s):
-    string_bytes = base64.b64encode(s.encode('utf-8'))
-    return str(string_bytes, 'utf-8')
+
+def delete_year(year):
+    shutil.rmtree(get_year_folder_path(year))
+
+
+def delete_all_thumbnails():
+    shutil.rmtree(THUMBNAIL_PATH)
+
+
+def get_thumbnail_count():
+    return len(os.listdir(THUMBNAIL_PATH))
 
 
 def process_publication(title, authors, year, pdf_link):
 
-    # base64-encoding to always have a suitable file name for the pdf file
-    publication_id = encode_string(pdf_link)
+    publication_id = slugify(pdf_link)
 
     if(debug):
         encoded_title = title.encode('utf8')
