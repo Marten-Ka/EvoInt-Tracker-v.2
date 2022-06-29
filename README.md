@@ -59,12 +59,7 @@
 - Add the path to the "bin" folder inside the "Library" folder to the PATH environment variable
 - Make sure that the installation was successful by repeating Step 3.1
 
-# Step 5 (deprecated):
-
-- Install Python-Poppler (https://cbrunet.net/python-poppler/installation.html)
-- Run: "python setup.py install --install-lib C:/Users/dknecht/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages"
-
-# Step 6:
+# Step 5:
 
 - Open the console in the main folder
 - Type "pip install -r requirements.txt" to download all dependencies
