@@ -10,6 +10,7 @@ from alive_progress import alive_bar
 from Downloader import delete_year as downloader_remove_year, delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data
 from Downloader_IJCAI import iterator_download_publications_for_year, get_available_volumes_per_year, get_supported_ijcai_years
 from Downloader_ECAI import iterator_process_all_publications
+from VikusWriter import clean_data_csv
 
 
 def main():
@@ -22,7 +23,7 @@ def main():
             'choices': [
                 'Start downloading',
                 'Delete data',
-                'Rebuild CSV file',
+                'Clean CSV file',
                 Separator(),
                 'Exit'
             ]
@@ -35,8 +36,22 @@ def main():
         prompt_download()
     elif answers['action'] == 'Delete data':
         prompt_delete_options()
+    elif answers['action'] == 'Clean CSV file':
+        prompt_clean_csv()
     elif answers['action'] == 'Exit':
         exit()
+
+
+def prompt_clean_csv():
+    print('This action will delete entries of publications, if the')
+    print('associated PDF file does not exist anymore.')
+    answers = prompt({
+        'type': 'confirm',
+        'name': 'clean',
+        'message': f'Do you really want to clean the data.csv-file?'
+    })
+    if answers['clean'] == True:
+        clean_data_csv()
 
 
 def prompt_delete_options():

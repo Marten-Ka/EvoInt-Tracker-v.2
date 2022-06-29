@@ -2,6 +2,7 @@
 
 import os
 import csv
+import pandas as pd
 from pathlib import Path
 
 from Publication import publications, Publication
@@ -23,7 +24,12 @@ def get_data_csv_path():
 
     return csv_path
 
-# Checking the file exists or not
+
+def clean_csv_file():
+    reader = get_csv_file_reader()
+
+    for row in reader:
+        pass
 
 
 def check_file_empty(path_of_file):
@@ -31,9 +37,31 @@ def check_file_empty(path_of_file):
     return os.path.exists(path_of_file) and os.stat(path_of_file).st_size == 0
 
 
-def clear_data_csv():
-    with open(get_data_csv_path(), 'w') as f:
-        pass
+def check_file_exists_and_has_content(path_of_file):
+    return os.path.exists(path_of_file) and os.stat(path_of_file).st_size > 0
+
+
+def filter_empty_pdf_files(paths):
+
+    result = []
+    for path in paths:
+        result.append(check_file_exists_and_has_content(path))
+    return result
+
+
+def clean_data_csv():
+
+    csv_file_path = get_data_csv_path()
+    csv_file_size_before_filter = os.stat(csv_file_path).st_size
+    df = pd.read_csv(csv_file_path)
+    df = df[filter_empty_pdf_files(df._path_to_pdf)]
+    df.to_csv(csv_file_path)
+    csv_file_size_after_filter = os.stat(csv_file_path).st_size
+    if csv_file_size_before_filter == csv_file_size_after_filter:
+        print("There was nothing to clean in the data.csv-file.")
+    else:
+        print(
+            f"The file is now {csv_file_size_before_filter - csv_file_size_after_filter} bytes smaller.")
 
 
 def open_csv_file_reader():

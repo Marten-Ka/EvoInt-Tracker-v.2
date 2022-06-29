@@ -134,7 +134,7 @@ def download_publication(publication):
         file.close()
 
     except HTTPError:
-        print("Error writing file: " + publication.get_pdf_link())
+        print("Could not download PDF: " + publication.get_pdf_link())
     except TimeoutError:
         print("TimeoutError")
 
