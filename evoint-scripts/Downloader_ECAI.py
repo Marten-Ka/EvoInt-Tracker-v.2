@@ -45,22 +45,24 @@ def iterator_process_all_publications():
 def get_all_valid_link_tags():
 
     link_tags = []
-    url = 'https://digital.ecai2020.eu/accepted-papers-main-conference/'
+    urls = ['https://digital.ecai2020.eu/accepted-papers-main-conference/',
+            'https://digital.ecai2020.eu/accepted-papers-pais/']
 
-    response = urlopen(url)
-    page_source = response.read()
-    soup = BeautifulSoup(page_source, 'html.parser')
+    for url in urls:
+        response = urlopen(url)
+        page_source = response.read()
+        soup = BeautifulSoup(page_source, 'html.parser')
 
-    for link in soup.find_all('a'):
+        for link in soup.find_all('a'):
 
-        pdf_link = link.get('href')  # e.g. /papers/11_paper.pdf
+            pdf_link = link.get('href')  # e.g. /papers/11_paper.pdf
 
-        if(pdf_link == None):
-            continue
-        if(not pdf_link.startswith('/papers/')):
-            continue
+            if(pdf_link == None):
+                continue
+            if(not pdf_link.startswith('/papers/')):
+                continue
 
-        link_tags.append(link)
+            link_tags.append(link)
 
     return link_tags
 
