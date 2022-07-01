@@ -9,7 +9,8 @@ from alive_progress import alive_bar
 
 from Downloader import delete_year as downloader_remove_year, delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data
 from Downloader_IJCAI import iterator_download_publications_for_year, get_available_volumes_per_year, get_supported_ijcai_years
-from Downloader_ECAI import iterator_process_all_publications
+from Downloader_ECAI import ecai_iterator_process_all_publications
+from Downloader_AAAI import aaai_iterator_process_all_publications
 from VikusWriter import clean_data_csv
 
 
@@ -183,6 +184,7 @@ def prompt_download():
         'choices': [
             'IJCAI',
             'ECAI',
+            'AAAI',
             Separator(),
             'Back'
         ]
@@ -207,7 +209,11 @@ def prompt_download():
             iterator = iterator_download_publications_for_year(year_answer)
 
     elif source == 'ECAI':
-        iterator = iterator_process_all_publications()
+        iterator = ecai_iterator_process_all_publications()
+        max_iterations = iterator.max_length
+
+    elif source == 'AAAI':
+        iterator = aaai_iterator_process_all_publications()
         max_iterations = iterator.max_length
 
     with alive_bar(total=max_iterations, dual_line=True, title=f'Processing data from {source}') as bar:
