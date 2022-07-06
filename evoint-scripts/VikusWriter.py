@@ -25,13 +25,6 @@ def get_data_csv_path():
     return csv_path
 
 
-def clean_csv_file():
-    reader = get_csv_file_reader()
-
-    for row in reader:
-        pass
-
-
 def check_file_empty(path_of_file):
     # Checking if file exist and it is empty
     return os.path.exists(path_of_file) and os.stat(path_of_file).st_size == 0
@@ -53,12 +46,15 @@ def clean_data_csv():
 
     csv_file_path = get_data_csv_path()
     csv_file_size_before_filter = os.stat(csv_file_path).st_size
-    df = pd.read_csv(csv_file_path)
+    df = pd.read_csv(csv_file_path, index_col=2)
     df = df[filter_empty_pdf_files(df._path_to_pdf)]
     df.to_csv(csv_file_path)
     csv_file_size_after_filter = os.stat(csv_file_path).st_size
     if csv_file_size_before_filter == csv_file_size_after_filter:
         print("There was nothing to clean in the data.csv-file.")
+    elif csv_file_size_before_filter < csv_file_size_after_filter:
+        print(
+            f'Oops! The file is now {csv_file_size_after_filter - csv_file_size_before_filter} bytes bigger than before. Something went wrong!')
     else:
         print(
             f"The file is now {csv_file_size_before_filter - csv_file_size_after_filter} bytes smaller.")

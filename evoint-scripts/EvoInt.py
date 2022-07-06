@@ -10,7 +10,7 @@ from alive_progress import alive_bar
 from Downloader import delete_year as downloader_remove_year, delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data
 from Downloader_IJCAI import iterator_download_publications_for_year, get_available_volumes_per_year, get_supported_ijcai_years
 from Downloader_ECAI import ecai_iterator_process_all_publications
-from Downloader_AAAI import aaai_iterator_process_all_publications
+from Downloader_AAAI import aaai_iterator_process_publications, get_supported_aaai_years
 from VikusWriter import clean_data_csv
 
 
@@ -44,8 +44,7 @@ def main():
 
 
 def prompt_clean_csv():
-    print('This action will delete entries of publications, if the')
-    print('associated PDF file does not exist anymore.')
+    print('This action will delete entries of publications, if the associated PDF file does not exist anymore.')
     answers = prompt({
         'type': 'confirm',
         'name': 'clean',
@@ -200,7 +199,7 @@ def prompt_download():
 
     if source == 'IJCAI':
 
-        year_answer = prompt_ijcai_year()
+        year_answer = prompt_year(get_supported_ijcai_years())
 
         if year_answer == 'Back':
             prompt_download()
@@ -213,24 +212,30 @@ def prompt_download():
         max_iterations = iterator.max_length
 
     elif source == 'AAAI':
-        iterator = aaai_iterator_process_all_publications()
-        max_iterations = iterator.max_length
+        year_answer = prompt_year(get_supported_aaai_years())
+
+        if year_answer == 'Back':
+            prompt_download()
+            return
+        else:
+            iterator = aaai_iterator_process_publications(year_answer)
 
     with alive_bar(total=max_iterations, dual_line=True, title=f'Processing data from {source}') as bar:
         for publication in iterator:
-            bar.text(f'Processing publication: {publication.title}')
+            bar.text(
+                f'Processing publication: {publication.title}')
             bar()
         bar.title(f'Processed data from {source}')
 
     prompt_download()
 
 
-def prompt_ijcai_year():
+def prompt_year(years):
     answers = prompt({
         'type': 'list',
         'name': 'year',
         'message': 'Select a year you want to download:',
-        'choices': get_supported_ijcai_years() + [Separator(), 'Back']
+        'choices': years + [Separator(), 'Back']
     })
     return answers['year']
 

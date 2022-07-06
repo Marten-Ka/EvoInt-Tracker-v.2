@@ -71,6 +71,14 @@ def get_thumbnail_count():
 
 def process_publication(title, authors, year, pdf_link):
 
+    # if year = 18 --> make it to 2018
+    if(isinstance(year, int) and year < 1000):
+        year = str(2000 + year)
+    elif(isinstance(year, str) and len(year) == 3):
+        year = "2" + year
+    elif(isinstance(year, str) and len(year) == 2):
+        year = "20" + year
+
     publication_id = slugify(pdf_link)
 
     if(debug):
