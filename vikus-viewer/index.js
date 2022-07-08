@@ -2,19 +2,13 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const path = require('path');
 const fs = require('fs');
 const port = 8080;
-// Use the whole root as static files to be able to serve the html file and
-// the build folder
 
-app.use("/vikus-viewer",express.static(path.join(__dirname, '/')));
-// Send html on '/'path
+app.use(express.static(__dirname));
 
-
-
-app.get('/vikus', (req, res) => {
-    const html = fs.readFileSync("./html.html", "utf8")
+app.get('/vikus_viewer', (_, res) => {
+    const html = fs.readFileSync("./index.html", "utf8")
     res.send(html);
 })
 

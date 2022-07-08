@@ -18,6 +18,8 @@
 	function navHelp() {
 		goto('/help');
 	}
+
+	const VIKUS_VIEWER_URL = 'http://localhost:8080/vikus_viewer';
 </script>
 
 <Header />
@@ -246,7 +248,7 @@
 
 	<div class="flex flex-col gap-5">
 		<RedirectButton text="Zum Tutorial" href="/tutorial" />
-		<RedirectButton text="Zum Vikus Viewer" href="/vikus-viewer" />
+		<RedirectButton text="Zum Vikus Viewer" href={VIKUS_VIEWER_URL} />
 		<RedirectButton text="Zum NLP-Playground" href="/nlp" />
 	</div>
 
