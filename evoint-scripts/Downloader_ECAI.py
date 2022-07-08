@@ -4,17 +4,20 @@ from urllib.request import urlopen
 
 from Downloader import process_publication
 
+URLS = ['https://digital.ecai2020.eu/accepted-papers-main-conference/',
+        'https://digital.ecai2020.eu/accepted-papers-pais/']
+
 
 def process_all_publications():
 
-    url = 'https://digital.ecai2020.eu/accepted-papers-main-conference/'
+    for url in URLS:
 
-    response = urlopen(url)
-    page_source = response.read()
-    soup = BeautifulSoup(page_source, 'html.parser')
+        response = urlopen(url)
+        page_source = response.read()
+        soup = BeautifulSoup(page_source, 'html.parser')
 
-    for link in soup.find_all('a'):
-        process_single_publication(link)
+        for link in soup.find_all('a'):
+            process_single_publication(link)
 
 
 def process_single_publication(link):
@@ -36,7 +39,7 @@ def process_single_publication(link):
     return process_publication(title, authors, 2020, pdf_link)
 
 
-def iterator_process_all_publications():
+def ecai_iterator_process_all_publications():
 
     link_tags = get_all_valid_link_tags()
     return ECAIPublicationIterator(link_tags)
@@ -45,22 +48,22 @@ def iterator_process_all_publications():
 def get_all_valid_link_tags():
 
     link_tags = []
-    url = 'https://digital.ecai2020.eu/accepted-papers-main-conference/'
 
-    response = urlopen(url)
-    page_source = response.read()
-    soup = BeautifulSoup(page_source, 'html.parser')
+    for url in URLS:
+        response = urlopen(url)
+        page_source = response.read()
+        soup = BeautifulSoup(page_source, 'html.parser')
 
-    for link in soup.find_all('a'):
+        for link in soup.find_all('a'):
 
-        pdf_link = link.get('href')  # e.g. /papers/11_paper.pdf
+            pdf_link = link.get('href')  # e.g. /papers/11_paper.pdf
 
-        if(pdf_link == None):
-            continue
-        if(not pdf_link.startswith('/papers/')):
-            continue
+            if(pdf_link == None):
+                continue
+            if(not pdf_link.startswith('/papers/')):
+                continue
 
-        link_tags.append(link)
+            link_tags.append(link)
 
     return link_tags
 
@@ -76,11 +79,8 @@ class ECAIPublicationIterator:
 
     def __next__(self):
         if self.count < self.max_length:
+            publication = process_single_publication(self.data[self.count])
             self.count = self.count + 1
-            return process_single_publication(self.data[self.count - 1])
+            return publication
         else:
-            return None
-
-
-if __name__ == '__main__':
-    pass
+            raise StopIteration

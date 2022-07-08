@@ -1,11 +1,12 @@
 
 from urllib.request import urlopen
 import os
+import shutil
 from subprocess import DEVNULL, STDOUT, check_call
 from pathlib import Path
 import fitz
 from datetime import datetime
-import base64
+from slugify import slugify
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
@@ -19,7 +20,7 @@ from VikusWriter import add_to_data_csv
 #
 PRINT_PROGRESS_STEP = 1000
 
-IJCAI_URL = "https://www.ijcai.org/past_proceedings/"
+THUMBNAIL_PATH = "./data/thumbnails/"
 
 VIKUS_VIEWER_PATH = "../vikus-viewer/"
 
@@ -33,19 +34,52 @@ global_id = 0
 debug = False
 
 
+def get_supported_years() -> list[str]:
+    return ["2021", "2020", "2019", "2018", "2017", "2016", "2015", "2013", "2011", "2009", "2007", "2005", "2003", "1999", "1997", "1995", "1993"]
+
+
+def get_years_with_downloaded_pdf_data() -> dict[str, int]:
+
+    years = {}
+    for year in get_supported_years():
+        folder = Path(get_year_folder_path(year))
+        if folder.is_dir():
+            pdf_count = 0
+            for file in folder.glob("*"):
+                if file.is_file() and file.suffix == ".pdf":
+                    pdf_count += 1
+            years[year] = pdf_count
+
+    return years
+
+
 def get_year_folder_path(year):
     return f'{VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH}{year}/'
 
 
-def string_encoding(s):
-    string_bytes = base64.b64encode(s.encode('utf-8'))
-    return str(string_bytes, 'utf-8')
+def delete_year(year):
+    shutil.rmtree(get_year_folder_path(year))
+
+
+def delete_all_thumbnails():
+    shutil.rmtree(THUMBNAIL_PATH)
+
+
+def get_thumbnail_count():
+    return len(os.listdir(THUMBNAIL_PATH))
 
 
 def process_publication(title, authors, year, pdf_link):
 
-    # base64-encoding to always have a suitable file name for the pdf file
-    publication_id = string_encoding(pdf_link)
+    # if year = 18 --> make it to 2018
+    if(isinstance(year, int) and year < 1000):
+        year = str(2000 + year)
+    elif(isinstance(year, str) and len(year) == 3):
+        year = "2" + year
+    elif(isinstance(year, str) and len(year) == 2):
+        year = "20" + year
+
+    publication_id = slugify(pdf_link)
 
     if(debug):
         encoded_title = title.encode('utf8')
@@ -86,7 +120,7 @@ def download_publication(publication):
         # We need to check if the file size is
         # greater than zero, because then the file
         # could not be downloaded properly.
-        # For example when exiting the script when downloading.
+        # For example when exiting the script when currently downloading.
         #
         file_size = os.path.getsize(publication.get_path_to_pdf())
         if file_size > 0:
@@ -108,7 +142,7 @@ def download_publication(publication):
         file.close()
 
     except HTTPError:
-        print("Error writing file: " + publication.get_pdf_link())
+        print("Could not download PDF: " + publication.get_pdf_link())
     except TimeoutError:
         print("TimeoutError")
 

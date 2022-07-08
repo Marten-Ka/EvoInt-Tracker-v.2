@@ -14,6 +14,9 @@ vikus-viewer-script/.DS_Store
 vikus-viewer-script/package-lock.json
 vikus-viewer-script/images/data
 
+#some-papers
+/some-papers
+
 # evoint-scripts
 /evoint-scripts/.vscode
 /evoint-scripts/publications_backup.json
