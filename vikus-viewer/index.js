@@ -14,5 +14,5 @@ app.get('/vikus_viewer', (_, res) => {
 
 // Create the server and listen on port
 http.createServer(app).listen(port, () => {
-    console.log(`Server running on localhost:${port}`);
+    console.log(`Server running on http://localhost:${port}`);
 });

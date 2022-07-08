@@ -811,7 +811,7 @@
 						In <a
 							class="text-blue-500 underline"
 							href="https://www.govtech.com/computing/understanding-the-four-types-of-artificial-intelligence.html"
-							class="text-blue-500 underline">diesem Artikel</a
+							>diesem Artikel</a
 						>
 						erklärte Arend Hintze, ein Assistenzprofessor für integrative Biologie, Computerwissenschaft
 						und Ingenieurwesen an der Michigan State University, dass KI in vier Arten unterteilt werden
@@ -936,398 +936,401 @@
 					bei Empfehlungssystemen in Online-Shops oder Streaming-Diensten, Social Media Feeds oder in
 					autonomen Fahrzeugen.
 				</p>
-	<div id="part-five" class="grid mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			5. Anwendungsgebiete
-		</h1>
+			</div>
+		</div>
+		<div id="part-five" class="grid mt-32">
+			<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+				5. Anwendungsgebiete
+			</h1>
 
-		<div class="grid justify-center items-center justify-self-center w-3/4">
-			<div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg object-scale-down" src="../../../static/Robotik.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Robotik
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
-							übernehmen sie beispielsweise einen Großteil der Fertigung in der Autobranche.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+			<div class="grid justify-center items-center justify-self-center w-3/4">
+				<div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg object-scale-down" src="../../../static/Robotik.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Robotik
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
+								übernehmen sie beispielsweise einen Großteil der Fertigung in der Autobranche.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img
-						class="rounded-t-lg object-scale-down"
-						src="../../../static/Suchmaschine.jpg"
-						alt=""
-					/>
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Suchmaschinen
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
-							relevante Inhalte bereitzustellen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img
+							class="rounded-t-lg object-scale-down"
+							src="../../../static/Suchmaschine.jpg"
+							alt=""
+						/>
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Suchmaschinen
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
+								relevante Inhalte bereitzustellen.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Sprachassistenten.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Sprachassistenten
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
-							natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Sprachassistenten.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Sprachassistenten
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
+								natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img
-						class="rounded-t-lg object-scale-down"
-						src="../../../static/Empfehlungsdienste.jpg"
-						alt=""
-					/>
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Social Media
-						</h5>
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img
+							class="rounded-t-lg object-scale-down"
+							src="../../../static/Empfehlungsdienste.jpg"
+							alt=""
+						/>
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Social Media
+							</h5>
 
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle KI-basiert.
-							Sie lernen von dem Nutzerverhalten und passen so den Feed an.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle
+								KI-basiert. Sie lernen von dem Nutzerverhalten und passen so den Feed an.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Spam-Filter.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Spam-Filter
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der Mail-Anbieter
-							gelöscht, bevor sie überhaupt in das Postfach gelangen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Spam-Filter.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Spam-Filter
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der
+								Mail-Anbieter gelöscht, bevor sie überhaupt in das Postfach gelangen.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Personal_Content.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Persönliche Inhalte
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten im
-							Internet und schlagen so personalisierte Inhalte vor.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Personal_Content.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Persönliche Inhalte
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten
+								im Internet und schlagen so personalisierte Inhalte vor.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Chatbot.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Chatbot
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
-							wichtigsten Informationen des Kundenproblems erfragen und analysieren.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Chatbot.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Chatbot
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
+								wichtigsten Informationen des Kundenproblems erfragen und analysieren.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Content-Moderation.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Inhaltsverwaltung
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
-							Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und zu
-							löschen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Content-Moderation.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Inhaltsverwaltung
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
+								Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und
+								zu löschen.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Gesichtserkennung.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Gesichtserkennung
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
-							um Gesichter und weitere Informationen zu erkennen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Gesichtserkennung.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Gesichtserkennung
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
+								um Gesichter und weitere Informationen zu erkennen.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div
-					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-				>
-					<img class="rounded-t-lg" src="../../../static/Mobilität.jpg" alt="" />
-					<div class="p-5">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-							Mobilität
-						</h5>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-							Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer auch
-							mit Einparkhilfen oder dem Halten der Fahrspur.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
+					<div
+						class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+					>
+						<img class="rounded-t-lg" src="../../../static/Mobilität.jpg" alt="" />
+						<div class="p-5">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Mobilität
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+								Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer
+								auch mit Einparkhilfen oder dem Halten der Fahrspur.
+							</p>
+							<a
+								href="#part-one"
+								class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 							>
-						</a>
+								Read more
+								<svg
+									class="ml-2 -mr-1 w-4 h-4"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										fill-rule="evenodd"
+										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/></svg
+								>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div
-		class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg"
-	>
 		<div
-			class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
+			class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg"
 		>
-			<h1>
-				Support the <h1
-					class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 drop-shadow-lg"
-				>
-					author!
+			<div
+				class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
+			>
+				<h1>
+					Support the <h1
+						class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 drop-shadow-lg"
+					>
+						author!
+					</h1>
 				</h1>
-			</h1>
-		</div>
-		<div class="flex flex-col md:flex-row md:max-w-xl ">
-			<div class="w-full text-center m-6 p-8">
-				<img
-					src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
-					class="rounded-full w-32 mb-4 mx-auto"
-					alt="Avatar"
-				/>
-				<h5 class="text-xl font-medium leading-tight mb-2">Robert Witzke</h5>
-				<p class="text-gray-500 mb-2">Web designer</p>
-				<ul class="list-inside flex mx-auto justify-center">
-					<a href="#!" class="px-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 496 512"
-							class="w-4 h-4 text-blue-600"
-						>
-							<path
-								fill="currentColor"
-								d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-							/>
-						</svg>
-					</a>
-					<a href="#!" class="px-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512"
-							class="w-4 h-4 text-blue-600"
-						>
-							<path
-								fill="currentColor"
-								d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-							/>
-						</svg>
-					</a>
-					<a href="#!" class="px-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 448 512"
-							class="w-4 h-4 text-blue-600"
-						>
-							<path
-								fill="currentColor"
-								d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-							/>
-						</svg>
-					</a>
-				</ul>
+			</div>
+			<div class="flex flex-col md:flex-row md:max-w-xl ">
+				<div class="w-full text-center m-6 p-8">
+					<img
+						src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+						class="rounded-full w-32 mb-4 mx-auto"
+						alt="Avatar"
+					/>
+					<h5 class="text-xl font-medium leading-tight mb-2">Robert Witzke</h5>
+					<p class="text-gray-500 mb-2">Web designer</p>
+					<ul class="list-inside flex mx-auto justify-center">
+						<a href="#!" class="px-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 496 512"
+								class="w-4 h-4 text-blue-600"
+							>
+								<path
+									fill="currentColor"
+									d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+								/>
+							</svg>
+						</a>
+						<a href="#!" class="px-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								class="w-4 h-4 text-blue-600"
+							>
+								<path
+									fill="currentColor"
+									d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+								/>
+							</svg>
+						</a>
+						<a href="#!" class="px-2">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 448 512"
+								class="w-4 h-4 text-blue-600"
+							>
+								<path
+									fill="currentColor"
+									d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+								/>
+							</svg>
+						</a>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
