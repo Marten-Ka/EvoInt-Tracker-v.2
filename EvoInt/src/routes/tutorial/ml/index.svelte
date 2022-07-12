@@ -781,24 +781,24 @@
       <div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
           <img
-            class="rounded-t-lg object-scale-down"
+            class="rounded-t-lg h-full"
             src="../../../static/Suchmaschine.jpg"
             alt=""
           />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Suchmaschinen
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
+            <p class="mb-3 font-normal text-gray-400">
+              ML ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
               relevante Inhalte bereitzustellen.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -816,20 +816,20 @@
           </div>
         </div>
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
-          <img class="rounded-t-lg" src="../../../static/Sprachassistenten.jpg" alt="" />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <img class="rounded-t-lg h-full" src="../../../static/Sprachassistenten.jpg" alt="" />
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Sprachassistenten
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-400">
               Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
               natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -847,25 +847,25 @@
           </div>
         </div>
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
           <img
-            class="rounded-t-lg object-scale-down"
+            class="rounded-t-lg h-full"
             src="../../../static/Empfehlungsdienste.jpg"
             alt=""
           />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Social Media
             </h5>
 
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle
-              KI-basiert. Sie lernen von dem Nutzerverhalten und passen so den Feed an.
+            <p class="mb-3 font-normal text-gray-400">
+              Die Algorithmen hinter den Empfehlungssystemen von Social Media werden alle
+              ML-basiert. Sie lernen von dem Nutzerverhalten und passen so den Feed an.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -884,20 +884,20 @@
         </div>
       
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
-          <img class="rounded-t-lg" src="../../../static/Personal_Content.jpg" alt="" />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <img class="rounded-t-lg h-full" src="../../../static/Personal_Content.jpg" alt="" />
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Persönliche Inhalte
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten
+            <p class="mb-3 font-normal text-gray-400">
+              Ob Werbungen oder vorgeschlagene Sucheinträge - ML Algorithmen analysieren das Nutzerverhalten
               im Internet und schlagen so personalisierte Inhalte vor.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -915,20 +915,20 @@
           </div>
         </div>
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
-          <img class="rounded-t-lg" src="../../../static/Chatbot.jpg" alt="" />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <img class="rounded-t-lg h-full" src="../../../static/Chatbot.jpg" alt="" />
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Chatbot
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-400">
               Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
               wichtigsten Informationen des Kundenproblems erfragen und analysieren.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -946,21 +946,21 @@
           </div>
         </div>
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
-          <img class="rounded-t-lg" src="../../../static/Content-Moderation.jpg" alt="" />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <img class="rounded-t-lg h-full" src="../../../static/Content-Moderation.jpg" alt="" />
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Inhaltsverwaltung
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-400">
               Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
-              Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und
+              Herausforderungen. ML Algorithmen untersützen dabei, Hasskomentare o.Ä. zu identifizieren und
               zu löschen.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -978,20 +978,20 @@
           </div>
         </div>
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
-          <img class="rounded-t-lg" src="../../../static/Gesichtserkennung.jpg" alt="" />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <img class="rounded-t-lg h-full" src="../../../static/Gesichtserkennung.jpg" alt="" />
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Gesichtserkennung
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
+            <p class="mb-3 font-normal text-gray-400">
+              Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen ML Algorithmen zum Einsatz,
               um Gesichter und weitere Informationen zu erkennen.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
@@ -1009,20 +1009,20 @@
           </div>
         </div>
         <div
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+          class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
         >
-          <img class="rounded-t-lg" src="../../../static/Mobilität.jpg" alt="" />
-          <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <img class="rounded-t-lg h-full" src="../../../static/Mobilität.jpg" alt="" />
+          <div class="p-5  grid content-between row-span-2">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
               Mobilität
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer
+            <p class="mb-3 font-normal text-gray-400">
+              Autonome Fahrzeuge sind nur die Spitze des Eisberges - ML Algorithmen unterstützt den Fahrer
               auch mit Einparkhilfen oder dem Halten der Fahrspur.
             </p>
             <a
               href="#part-one"
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             >
               Read more
               <svg
