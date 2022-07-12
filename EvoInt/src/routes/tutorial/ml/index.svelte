@@ -160,11 +160,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
-								alt="Turingmaschine"
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
+                  alt="Turingmaschine"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1952: Samuel's Checker Player</div>
 								<p class="text-gray-700 text-base">
@@ -223,11 +228,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
-								alt="Perzeptron "
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
+                  alt="Perzeptron "
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1957: Der Perzeptron</div>
 								<p class="text-gray-700 text-base">
@@ -287,11 +297,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
-								alt="Der Nearest-Neighbor-Algorithmus"
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
+                  alt="Der Nearest-Neighbor-Algorithmus"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1967: Der Nearest Neighbor Algorithmus </div>
 								<p class="text-gray-700 text-base">
@@ -349,11 +364,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="	https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
-								alt="AI vs ML"
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
+                  alt="AI vs ML"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1970er: KI und ML trennen sich</div>
 								<p class="text-gray-700 text-base">
@@ -412,11 +432,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="	https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
-								alt="Boosting"
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
+                  alt="Boosting"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1990: Boosting-Algorithmen</div>
 								<p class="text-gray-700 text-base">
@@ -474,11 +499,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
-								alt="Spracherkennung"
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
+                  alt="Spracherkennung"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1997: Spracherkennungssysteme</div>
 								<p class="text-gray-700 text-base">
@@ -538,11 +568,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
-								alt="Gesichtserkennung"
-							/>
+              <div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
+                  alt="Gesichtserkennung"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006: Bessere Gesichtserkennungsalgorithmen</div>
 								<p class="text-gray-700 text-base">
@@ -601,11 +636,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
-								alt="ML Jetzt vs Zukunft"
-							/>
+							<div class="relative ">
+                <img
+                  class="w-full block h-auto"
+                  src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
+                  alt="ML Jetzt vs Zukunft"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
+                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006-20xx: ML Jetzt vs. Zukunft</div>
 								<p class="text-gray-700 text-base">

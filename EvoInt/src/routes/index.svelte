@@ -121,53 +121,9 @@
 							data-mdb-ripple-color="light"
 						>
 							<img
-								src="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg"
+								src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg"
 								class="h-72"
 								alt="KI"
-							/>
-							<a href="/tutorial/ki">
-								<div
-									class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-									style="background-color: rgba(251, 251, 251, 0.15)"
-								/>
-							</a>
-						</div>
-					</div>
-					<div class="flex flex-col justify-center p-6">
-						<h5 class="font-bold text-2xl mb-3">Künstliche Intelligenz</h5>
-						<p class="text-gray-500 mb-4">
-							<small
-								>veröffentlicht am <u>24.05.2022</u> von
-								<p class="text-gray-900">Robert Witzke</p></small
-							>
-						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
-							Erfahre mehr rund um das Thema Künstliche Intelligenz - von der Begriffsklärung über
-							die Historie bis hin zu aktuellen Themen wie Deep Learning.
-						</p>
-						<a
-							href="/tutorial/ki"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-							class="inline-block px-6 py-2.5 w-auto place-self-center bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-							>Read more</a
-						>
-					</div>
-				</div>
-			</div>
-
-			<div class="mb-6 lg:mb-0">
-				<div class="relative block bg-white rounded-lg shadow-lg">
-					<div class="flex justify-center">
-						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-						>
-							<img
-								src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg"
-								class="h-96"
-								alt="ML"
 							/>
 							<a href="/tutorial/ml">
 								<div
@@ -191,6 +147,50 @@
 						</p>
 						<a
 							href="/tutorial/ml"
+							data-mdb-ripple="true"
+							data-mdb-ripple-color="light"
+							class="inline-block px-6 py-2.5 w-auto place-self-center bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+							>Read more</a
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-6 lg:mb-0">
+				<div class="relative block bg-white rounded-lg shadow-lg">
+					<div class="flex justify-center">
+						<div
+							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+							data-mdb-ripple="true"
+							data-mdb-ripple-color="light"
+						>
+              <img
+                src="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg"
+                class="h-96"
+                alt="KI"
+              />
+							<a href="/tutorial/ki">
+								<div
+									class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+									style="background-color: rgba(251, 251, 251, 0.15)"
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-col justify-center p-6">
+						<h5 class="font-bold text-2xl mb-3">Künstliche Intelligenz</h5>
+						<p class="text-gray-500 mb-4">
+							<small
+								>veröffentlicht am <u>24.05.2022</u> von
+								<p class="text-gray-900">Robert Witzke</p></small
+							>
+						</p>
+						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
+							Erfahre mehr rund um das Thema Künstliche Intelligenz - von der Begriffsklärung über
+							die Historie bis hin zu aktuellen Themen wie Deep Learning.
+						</p>
+						<a
+							href="/tutorial/ki"
 							data-mdb-ripple="true"
 							data-mdb-ripple-color="light"
 							class="inline-block px-6 py-2.5 w-auto place-self-center bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"

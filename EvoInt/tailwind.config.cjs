@@ -7,6 +7,7 @@ module.exports = {
       },
       margin: {
         '430px': '430px',
+        '0.5px': '0.5px',
       },
     },
   },
