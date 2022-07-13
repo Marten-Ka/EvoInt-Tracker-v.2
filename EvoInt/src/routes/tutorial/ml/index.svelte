@@ -160,14 +160,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
                   alt="Turingmaschine"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                  Quelle: Micro Medium
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -228,14 +228,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
                   alt="Perzeptron "
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Micro Medium
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -297,14 +297,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
                   alt="Der Nearest-Neighbor-Algorithmus"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Micro Medium
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -364,14 +364,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
                   alt="AI vs ML"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: CDN Images
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -432,14 +432,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
                   alt="Boosting"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: ECMWF
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -499,14 +499,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
                   alt="Spracherkennung"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Recfaces
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -568,14 +568,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative ">
+              <div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
                   alt="Gesichtserkennung"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Handelskraft
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -636,14 +636,14 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative ">
+							<div class="relative group">
                 <img
                   class="w-full block h-auto"
                   src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
                   alt="ML Jetzt vs Zukunft"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left hover:opacity-80 w-full border-[0.5px] rounded-t">
-                  <p class="bg-gray-200 text-gray-700 px-6 py-1 ">Quelle: Google</p>
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                  Quelle: Informatec
                 </div>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
@@ -667,7 +667,7 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-                    Selbstfahrenden Fahrzeuge
+                    Autonomes Fahren
 									</span>
 								</div>
 								<div>

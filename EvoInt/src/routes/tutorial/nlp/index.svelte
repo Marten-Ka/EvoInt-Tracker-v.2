@@ -7,11 +7,11 @@
 	import Icon from '../../../components/Icon.svelte';
 
 	const redirects = [
-		{ text: '1. Der Begriff der Natural Language Processing', href: '#part-one', icon: 'terminal' },
-		{ text: '2. Die historische Entwicklung von NLP', href: '#part-two', icon: 'terminal' },
-		{ text: '3. Die Arten von NLP', href: '#part-three', icon: 'terminal' },
+		{ text: '1. Der Begriff der Machine Learning', href: '#part-one', icon: 'terminal' },
+		{ text: '2. Die historische Entwicklung von ML', href: '#part-two', icon: 'terminal' },
+		{ text: '3. Die Arten von ML', href: '#part-three', icon: 'terminal' },
 		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-three', icon: 'terminal' },
-    { text: '5. Anwendungsgebiete von NLP', href: '#part-five', icon: 'terminal' },
+    { text: '5. Anwendungsgebiete von ML', href: '#part-five', icon: 'terminal' },
 	];
 </script>
 <Header />
@@ -20,7 +20,7 @@
 	<h1
 		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
-    Natural Language Processing
+		Machine Learning
 	</h1>
 	<h2 class="mt-2 mb-32 text-3xl font-semibold text-gray-400 uppercase">
 		Von den Anfängen bis heute
@@ -38,7 +38,7 @@
 <div class="flex flex-col  mt-32">
 	<div id="part-one" class="mt-32">
 		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			1. Der Begriff der Natural Language Processing
+			1. Der Begriff der Machine Learning
 		</h1>
 
 		<section
@@ -136,7 +136,7 @@
 
 	<div id="part-two" class="mt-32">
 		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			2. Die historische Entwicklung von NLP
+			2. Die historische Entwicklung von ML
 		</h1>
 
 		<div class="flex flex-col items-center">
@@ -160,11 +160,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
-								alt="Turingmaschine"
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
+                  alt="Turingmaschine"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                  Quelle: Micro Medium
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1952: Samuel's Checker Player</div>
 								<p class="text-gray-700 text-base">
@@ -223,11 +228,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
-								alt="Perzeptron "
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
+                  alt="Perzeptron "
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Micro Medium
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1957: Der Perzeptron</div>
 								<p class="text-gray-700 text-base">
@@ -287,11 +297,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
-								alt="Der Nearest-Neighbor-Algorithmus"
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
+                  alt="Der Nearest-Neighbor-Algorithmus"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Micro Medium
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1967: Der Nearest Neighbor Algorithmus </div>
 								<p class="text-gray-700 text-base">
@@ -349,11 +364,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="	https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
-								alt="AI vs ML"
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
+                  alt="AI vs ML"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: CDN Images
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1970er: KI und ML trennen sich</div>
 								<p class="text-gray-700 text-base">
@@ -412,11 +432,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="	https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
-								alt="Boosting"
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
+                  alt="Boosting"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: ECMWF
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1990: Boosting-Algorithmen</div>
 								<p class="text-gray-700 text-base">
@@ -474,11 +499,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
-								alt="Spracherkennung"
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
+                  alt="Spracherkennung"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Recfaces
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1997: Spracherkennungssysteme</div>
 								<p class="text-gray-700 text-base">
@@ -538,11 +568,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
-								alt="Gesichtserkennung"
-							/>
+              <div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
+                  alt="Gesichtserkennung"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Handelskraft
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006: Bessere Gesichtserkennungsalgorithmen</div>
 								<p class="text-gray-700 text-base">
@@ -601,11 +636,16 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<img
-								class="w-full"
-								src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
-								alt="ML Jetzt vs Zukunft"
-							/>
+							<div class="relative group">
+                <img
+                  class="w-full block h-auto"
+                  src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
+                  alt="ML Jetzt vs Zukunft"
+                />
+                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                  Quelle: Informatec
+                </div>
+              </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006-20xx: ML Jetzt vs. Zukunft</div>
 								<p class="text-gray-700 text-base">
@@ -627,7 +667,7 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-                    Selbstfahrenden Fahrzeuge
+                    Autonomes Fahren
 									</span>
 								</div>
 								<div>
@@ -651,7 +691,7 @@
 
 	<div id="part-three" class="mt-32">
 		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			3. Die Arten von NLP
+			3. Die Arten von ML
 		</h1>
     <div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
       <span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
@@ -710,9 +750,9 @@
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
 				<div class="text-center w-1/2">
-					<h2 class="text-6xl font-bold mb-6 text-center">4 Übersicht der wichtigsten NLP Begriffe</h2>
+					<h2 class="text-6xl font-bold mb-6 text-center">4 Übersicht der wichtigsten ML Begriffe</h2>
 					<p class="text-2xl text-gray-400 mb-12">
-            Hier wird auf einige wichtige Begriffe im Bereich NLP eingegangen:
+            Hier wird auf einige wichtige Begriffe im Bereich ML eingegangen:
 				</div>
 			</div>
 
@@ -1062,8 +1102,8 @@
 					class="rounded-full w-32 mb-4 mx-auto"
 					alt="Avatar"
 				/>
-				<h5 class="text-xl font-medium leading-tight mb-2">Marten Kaffler</h5>
-				<p class="text-gray-500 mb-2">Volleyball Spieler</p>
+				<h5 class="text-xl font-medium leading-tight mb-2">Hamid Omar</h5>
+				<p class="text-gray-500 mb-2">Web designer</p>
 				<ul class="list-inside flex mx-auto justify-center">
 					<a href="#!" class="px-2">
 						<svg
