@@ -11,7 +11,7 @@
 		{ text: '2. Die historische Entwicklung von KI', href: '#part-two', icon: 'terminal' },
 		{ text: '3. Die Arten von KI', href: '#part-three', icon: 'terminal' },
 		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-four', icon: 'terminal' },
-		{ text: '5. Fazit', href: '#part-six', icon: 'terminal' }
+		{ text: '5. Anwendungsgebiete', href: '#part-five', icon: 'terminal' }
 	];
 </script>
 
@@ -127,7 +127,7 @@
 		</section>
 
 		<div class="flex flex-col justify-center items-center text-center">
-			<div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
+			<div class="flex flex-col mt-8 mb-12 justify-center items-center text-center">
 				<span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
 					Tatsächlich ist der Begriff der Künstlichen Intelligenz (KI) bisher nicht eindeutig
 					geklärt, weshalb es auch keine eindeutige Definition gibt. Das hängt sehr eng damit
@@ -136,6 +136,16 @@
 					mit denen sich das Thema gut eingrenzen lässt. Diese Seite soll dazu dienen, einen
 					Überblick rund um das Thema KI zu schaffen - von den Anfängen bis zur heutigen Zeit.
 				</span>
+			</div>
+			<div class="max-w-4xl p-4 mb-12 text-gray-800 bg-white rounded-lg shadow">
+				<div class="mb-2">
+					<div class="h-3 text-3xl text-left text-gray-600">“</div>
+					<p class="px-4 text-xl text-center text-gray-600">
+						KI ist wahrscheinlich das Beste oder das Schlimmste, was der Menschheit passieren kann.
+					</p>
+					<div class="h-3 text-3xl text-right text-gray-600">”</div>
+					<p class="px-4 text-md text-center text-gray-600">- Stephen Hawking</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -829,9 +839,7 @@
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
 				<div class="text-center w-1/2">
-					<h2 class="text-6xl font-bold mb-6 text-center">
-						4 Typen von KI
-					</h2>
+					<h2 class="text-6xl font-bold mb-6 text-center">4 Typen von KI</h2>
 					<p class="text-2xl text-gray-400 mb-12">
 						In <a
 							class="text-blue-500 underline"
@@ -1147,7 +1155,7 @@
 						</a>
 					</div>
 				</div>
-                <div
+				<div
 					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
 				>
 					<img class="rounded-t-lg h-full" src="../../../static/Gesichtserkennung.jpg" alt="" />
@@ -1176,7 +1184,7 @@
 						</a>
 					</div>
 				</div>
-                <div
+				<div
 					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
 				>
 					<img class="rounded-t-lg h-full" src="../../../static/Mobilität.jpg" alt="" />

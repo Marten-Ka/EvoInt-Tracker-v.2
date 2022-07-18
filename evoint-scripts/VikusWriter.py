@@ -2,27 +2,12 @@
 
 import os
 import csv
+import pandas as pd
 from pathlib import Path
 
 from Publication import publications, Publication
 from DataRow import data_rows, get_data_row, create_from_row, DataRow
-import Downloader
-
-#
-# data.csv
-# --------
-#
-# 0  = global_id
-# 1  = id
-# 2  = year
-# 3  = title
-# 4  = authors
-# 5  = abstract
-# 6  = keywords
-# 7  = pdf_link
-# 8  = path_to_pdf
-# 9 = fulltext
-#
+from slugify import slugify
 
 csv.field_size_limit(10000000)
 
@@ -39,17 +24,40 @@ def get_data_csv_path():
 
     return csv_path
 
-# Checking the file exists or not
-
 
 def check_file_empty(path_of_file):
     # Checking if file exist and it is empty
     return os.path.exists(path_of_file) and os.stat(path_of_file).st_size == 0
 
 
-def clear_data_csv():
-    with open(get_data_csv_path(), 'w') as f:
-        pass
+def check_file_exists_and_has_content(path_of_file):
+    return os.path.exists(path_of_file) and os.stat(path_of_file).st_size > 0
+
+
+def filter_empty_pdf_files(paths):
+
+    result = []
+    for path in paths:
+        result.append(check_file_exists_and_has_content(path))
+    return result
+
+
+def clean_data_csv():
+
+    csv_file_path = get_data_csv_path()
+    csv_file_size_before_filter = os.stat(csv_file_path).st_size
+    df = pd.read_csv(csv_file_path, index_col=2)
+    df = df[filter_empty_pdf_files(df._path_to_pdf)]
+    df.to_csv(csv_file_path)
+    csv_file_size_after_filter = os.stat(csv_file_path).st_size
+    if csv_file_size_before_filter == csv_file_size_after_filter:
+        print("There was nothing to clean in the data.csv-file.")
+    elif csv_file_size_before_filter < csv_file_size_after_filter:
+        print(
+            f'Oops! The file is now {csv_file_size_after_filter - csv_file_size_before_filter} bytes bigger than before. Something went wrong!')
+    else:
+        print(
+            f"The file is now {csv_file_size_before_filter - csv_file_size_after_filter} bytes smaller.")
 
 
 def open_csv_file_reader():
@@ -93,7 +101,7 @@ def get_publication_information_by_link(link):
     if len(get_data_rows()) == 0 or (len(publications) + 1) >= len(get_data_rows()):
         return None
 
-    encoded_link = Downloader.string_encoding(link)
+    encoded_link = slugify(link)
     data_row = get_data_row(encoded_link)
 
     if data_row.get_pdf_link() == link:
@@ -151,7 +159,7 @@ def add_to_data_csv(publication):
         # print(publication.id)
 
 
-def create_data_csv(dct):
+def create_data_csv():
     with open(get_data_csv_path(), 'w', newline='', encoding="utf-8") as csvfile:
         csv_writer = csv.writer(csvfile, delimiter=',',
                                 quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -172,10 +180,6 @@ def read_data_csv():
                         year=line['year'],
                         origin_path=line['_origin_path'],
                         path_to_pdf=line['_path_to_pdf'])
-
-
-def save_backup():
-    create_data_csv(publications)
 
 
 def restore_backup():

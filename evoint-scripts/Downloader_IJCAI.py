@@ -24,7 +24,7 @@ def volume_link_to_year(volume_link):
     return year
 
 
-def get_supported_years() -> list[str]:
+def get_supported_ijcai_years() -> list[str]:
     return ["2021", "2020", "2019", "2018", "2017", "2016", "2015", "2013", "2011", "2009", "2007", "2005", "2003", "1999", "1997", "1995", "1993"]
 
 #

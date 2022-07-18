@@ -34,6 +34,13 @@
     <script src="js/tags.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/modernizr-custom.js"></script>
+    <script>
+      function redirectToStartPage() {
+        const START_PAGE_PORT = 3000;
+        const startPageURL = `${window.location.protocol}//${window.location.hostname}:${START_PAGE_PORT}`;
+        window.location = startPageURL;
+      }
+    </script>
     <!--[if lt IE 9]>
       <script
         src="http://html5shiv.googlecode.com/svn/trunk/html5.js"
@@ -172,6 +179,10 @@ cpietsch@gmail.com
         <div class="outer">
           <div class="inner">
             <div id="infobar" class="infosidebar">
+              <div id="back-button-container" onclick="redirectToStartPage()">
+                <span>👈</span>
+                <button id="back-button">Back to start page</button><br/><br/>
+              </div>
               <span v-html="marked(info)"></span>
               <div class="credit">
                 Powered by
@@ -194,4 +205,28 @@ cpietsch@gmail.com
     <script src="js/sidebars.js"></script>
     <script src="js/viz.js"></script>
   </body>
+  <style>
+    #back-button {
+      display: flex;
+      padding-top: 4px;
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      font-weight: bold;
+      font-family: 'Lato';
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #back-button-container {
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: top;
+      max-width: fit-content;
+      margin-bottom: 1rem;
+    }
+    #back-button-container:hover {
+      color: #ddd;
+    }
+  </style>
 </html>

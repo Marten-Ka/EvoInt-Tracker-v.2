@@ -14,7 +14,7 @@
     <div class="flex flex-col w-full justify-evenly">
         <div class="flex flex-row w-full justify-evenly">
             <div>
-                <img src="Logo.png" alt="EvoInt-Logo" width="220px" on:click={onHome} />
+                <img src="../../static/Logo.png" alt="EvoInt-Logo" width="220px" on:click={onHome} />
                 <p class="vikus">Vikus-Viewer</p>
                 <p class="vikusinfo">Find out more about the Vikus-Viewer:</p>
                 <Button href="https://vikusviewer.fh-potsdam.de/" text="Vikus-Viewer" size="0"/>
@@ -107,24 +107,24 @@
 		@apply font-evoint pt-12 pb-5 w-full h-full flex items-center gap-5 border-t border-white border-opacity-20 bg-gray-900 text-gray-200;
 	}
 
-    .vikus {
-        @apply text-2xl font-bold
-    }
+  .vikus {
+    @apply text-2xl font-bold;
+  }
 
-    .vikusinfo {
-        @apply text-xl font-mono text-gray-400 mb-4
-    }
+  .vikusinfo {
+    @apply text-xl font-mono text-gray-400 mb-4;
+  }
 
 	img {
 		@apply mb-10 hover:cursor-pointer;
 	}
 
-    a {
-        @apply font-mono text-gray-300 hover:text-blue-500 underline
-    }
+  a {
+    @apply font-mono text-gray-300 hover:text-blue-500 underline;
+  }
 
-    p {
-        @apply text-gray-400
-    }
+  p {
+    @apply text-gray-400;
+  }
 
 </style>
