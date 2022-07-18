@@ -11,7 +11,8 @@
 		{ text: '2. Die historische Entwicklung von KI', href: '#part-two', icon: 'terminal' },
 		{ text: '3. Die Arten von KI', href: '#part-three', icon: 'terminal' },
 		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-four', icon: 'terminal' },
-		{ text: '5. Fazit', href: '#part-six', icon: 'terminal' }
+		{ text: '5. Anwendungsgebiete', href: '#part-five', icon: 'terminal' },
+		{ text: '6. Fazit', href: '#part-six', icon: 'terminal' }
 	];
 </script>
 
@@ -119,6 +120,7 @@
 									wie logisches Denken, Lernen, Planen und Kreativität zu imitieren."
 								</p>
 								<p class="font-semibold text-xl mb-2 text-gray-800">Europäisches Parlament</p>
+								<p class="font-semibold text-gray-500 mb-0">US-amerikanischer Informatiker</p>
 							</div>
 						</div>
 					</div>
@@ -166,18 +168,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://anthrowiki.at/images/thumb/a/ad/Model_of_a_Turing_machine.jpg/375px-Model_of_a_Turing_machine.jpg"
-									alt="Turingmaschine"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
-								>
-									Quelle: anthrowiki
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://anthrowiki.at/images/thumb/a/ad/Model_of_a_Turing_machine.jpg/375px-Model_of_a_Turing_machine.jpg"
+								alt="Turingmaschine"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1936: Turingmaschine</div>
 								<p class="text-gray-700 text-base">
@@ -236,18 +231,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://cyfuture.com/blog/wp-content/uploads/2020/04/Dartmouth-Conference-in-1956.jpg"
-									alt="Dartmouth Conference"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: cyfuture
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://cyfuture.com/blog/wp-content/uploads/2020/04/Dartmouth-Conference-in-1956.jpg"
+								alt="Dartmouth Conference"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1956: Der Begriff "KI" entsteht</div>
 								<p class="text-gray-700 text-base">
@@ -306,18 +294,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://moodswag.com/wp-content/uploads/2020/09/Eliza.jpg"
-									alt="ELIZA"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: moodswag
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://moodswag.com/wp-content/uploads/2020/09/Eliza.jpg"
+								alt="ELIZA"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1966: Der erste Chatbot</div>
 								<p class="text-gray-700 text-base">
@@ -375,18 +356,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://www.bibliomedmanager.de/fileadmin/user_upload/alle-Portale/Bilder/TANGO/sp/2018/04/gettyimages_894319072.jpg"
-									alt="MYCIN"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: bibliomedmanager
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://www.bibliomedmanager.de/fileadmin/user_upload/alle-Portale/Bilder/TANGO/sp/2018/04/gettyimages_894319072.jpg"
+								alt="MYCIN"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1972: KI gelangt in die Medizin</div>
 								<p class="text-gray-700 text-base">
@@ -409,7 +383,7 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-										Medizin
+										Praxiseinsatz
 									</span>
 								</div>
 								<div>
@@ -446,18 +420,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://fscl01.fonpit.de/userfiles/7611461/image/AI-artificial-intelligence-robot/AI-robot_12-w810h462.jpg"
-									alt="NETTalk"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: fonpit
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://fscl01.fonpit.de/userfiles/7611461/image/AI-artificial-intelligence-robot/AI-robot_12-w810h462.jpg"
+								alt="NETtalk"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1986: Computer lernt sprechen</div>
 								<p class="text-gray-700 text-base">
@@ -516,18 +483,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/220px-Deep_Blue.jpg"
-									alt="Deep Blue"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: wikimedia
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/220px-Deep_Blue.jpg"
+								alt="Deep Blue"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1997: KI schlägt Schachweltmeister</div>
 								<p class="text-gray-700 text-base">
@@ -587,18 +547,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://www.tanikal.com/wp-content/uploads/2016/12/IBM-Logo-Wallpaper-HD.jpg"
-									alt="IBM"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: tanikal
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://www.tanikal.com/wp-content/uploads/2016/12/IBM-Logo-Wallpaper-HD.jpg"
+								alt="IBM"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2011: "Watson" gewinnt Quizshow</div>
 								<p class="text-gray-700 text-base">
@@ -656,18 +609,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://medsolut.com/wp-content/uploads/2021/05/20210506_MedSolut_AI_Daily-Life_Blog-Article.jpeg"
-									alt="KI im Alltag"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
-								>
-									Quelle: medsolut
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://medsolut.com/wp-content/uploads/2021/05/20210506_MedSolut_AI_Daily-Life_Blog-Article.jpeg"
+								alt="KI im Alltag"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2011-Heute: KI erreicht den Alltag</div>
 								<p class="text-gray-700 text-base">
@@ -727,18 +673,11 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://www.verlagederzukunft.de/wp-content/uploads/2018/12/KI_Algemein_VdZ.jpg"
-									alt="KI der Zukunft"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
-								>
-									Quelle: verlagederzukunft
-								</div>
-							</div>
+							<img
+								class="w-full"
+								src="https://www.verlagederzukunft.de/wp-content/uploads/2018/12/KI_Algemein_VdZ.jpg"
+								alt="KI der Zukunft"
+							/>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">20xx: Die KI der Zukunft</div>
 								<p class="text-gray-700 text-base">
@@ -796,13 +735,13 @@
 			<InformationTile
 				title="Schwache KI"
 				content="Ein KI-System, das nur für die Ausführung einer bestimmten Aufgabe entwickelt und trainiert wurde.
-                Es benötigt meist zusätzliche menschliche Intervention und kann ihr Wissen nicht auf andere Bereiche ausweiten.
-                Beispiele aus dem Alltag sind Sprachassistenten wie Siri und Alexa oder Industrieroboter."
+						Es benötigt meist zusätzliche menschliche Intervention und kann ihr Wissen nicht auf andere Bereiche ausweiten.
+						Beispiele aus dem Alltag sind Sprachassistenten wie Siri und Alexa oder Industrieroboter."
 				class="mt-20"
 			>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img src="../../../static/siri.jpg" alt="siri" class="rounded-3xl shadow-2xl" />
+						<img src="../../../static/siri.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -829,9 +768,7 @@
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
 				<div class="text-center w-1/2">
-					<h2 class="text-6xl font-bold mb-6 text-center">
-						4 Typen von KI
-					</h2>
+					<h2 class="text-6xl font-bold mb-6 text-center">4 Typen von KI</h2>
 					<p class="text-2xl text-gray-400 mb-12">
 						In <a
 							class="text-blue-500 underline"
@@ -913,297 +850,198 @@
 		<div class="grid justify-center items-center justify-self-center w-3/4">
 			<div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Robotik.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Robotik</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg object-scale-down" src="../../../static/Robotik.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Robotik
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
 							übernehmen sie beispielsweise einen Großteil der Fertigung in der Autobranche.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Suchmaschine.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Suchmaschinen</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img
+						class="rounded-t-lg object-scale-down"
+						src="../../../static/Suchmaschine.jpg"
+						alt=""
+					/>
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Suchmaschinen
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
 							relevante Inhalte bereitzustellen.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Sprachassistenten.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Sprachassistenten</h5>
-
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Sprachassistenten.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Sprachassistenten
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
 							natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
-
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Social_Media.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Social Media</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img
+						class="rounded-t-lg object-scale-down"
+						src="../../../static/Social_Media.jpg"
+						alt=""
+					/>
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Social Media
+						</h5>
+
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle KI-basiert.
 							Sie lernen von dem Nutzerverhalten und passen so den Feed an.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Spam-Filter.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Spam-Filter</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Spam-Filter.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Spam-Filter
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der Mail-Anbieter
 							gelöscht, bevor sie überhaupt in das Postfach gelangen.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Personal_Content.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Persönliche Inhalte</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Personal_Content.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Persönliche Inhalte
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten im
 							Internet und schlagen so personalisierte Inhalte vor.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Chatbot.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Chatbot</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Chatbot.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Chatbot
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
 							wichtigsten Informationen des Kundenproblems erfragen und analysieren.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
 				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Content-Moderation.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Inhaltsverwaltung</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Content-Moderation.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Inhaltsverwaltung
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
 							Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und zu
 							löschen.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
-                <div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Gesichtserkennung.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Gesichtserkennung</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Gesichtserkennung.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Gesichtserkennung
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
 							um Gesichter und weitere Informationen zu erkennen.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
 				</div>
-                <div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				<div
+					class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 				>
-					<img class="rounded-t-lg h-full" src="../../../static/Mobilität.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Mobilität</h5>
-						<p class="mb-3 font-normal text-gray-400">
+					<img class="rounded-t-lg" src="../../../static/Mobilität.jpg" alt="" />
+					<div class="p-5">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Mobilität
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer auch
 							mit Einparkhilfen oder dem Halten der Fahrspur.
 						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="part-six" class="mt-32">
+		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">6. Fazit</h1>
+
+		<div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
+			<span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
+				Das Thema der Künstlichen Intelligenz ist aus unserer heutigen Zeit nicht mehr wegzudenken -
+				doch es ist auch ein sehr umstrittenes Thema. KI hat viele Vorteile, besonders im Bereich
+				der Datenanalyse, Statistik und zur Prognose wird sie eingesetzt. All das sind Bereiche, in
+				denen sie sehr gut ist, die aber auch einige Fehler gestatten. Bisher gibt es keine KI, die
+				wirklich zuverlässig in Bereichen wie dem Autonomen Fahren oder der Medizin eingesetzt
+				werden und uns Menschen ersetzen kann. Jedoch wird in fast keinem anderen Bereich so stark
+				geforscht und daher ist es nur eine Frage der Zeit, bis ein endgültiger Beweis für oder
+				gegen die Existenz einer Superintelligenz, die jedes Problem lösen kann, besteht. Schon
+				jetzt greift KI massiv in alle Lebensbereiche ein, jedoch hätte eine Superintelligenz noch
+				ganz andere Ausmaße. Sie könnte die gesamte Medizin, die Gesellschaft, die Politk und die
+				Medizin revolutionieren, wie beispielsweise auch die Demokratie und würde Veränderungen
+				herbeirufen, die niemand vorhersehen kann.
+				<br />
+				<br />
+				KI birgt neben den vielen Vorteilen also auch Risiken und Nachteile. Sie wird unter anderem vom
+				Militär, zum Beispiel in Form von Drohnen, missbraucht und kann so viel Schaden anrichten. Im
+				Bereich der staatlichen Überwachung kommt KI ebenfalls zum Einsatz, besonders in autoritären
+				Regimen hat das jedoch für die Bevölkerung mehr Nach- als Vorteile, da sie nahezu permanent und
+				viel leichter als früher überwacht werden können. Außerdem birgt KI in der Wirtschaft Nachteile
+				für die Menschen, denn viele Jobs werden in naher oder ferner Zukunft durch sie ersetzt werden.
+				Dieses Problem ist kein ausschließliches Zukunftsthema, auch jetzt werden schon viele Aktiengeschäfte
+				und Banktransaktionen vollkommen automatisch abgewickelt. Und auch wenn dadurch wieder neue Arbeitsplätze
+				entstehen, haben diese meist ganz andere Anforderungen und Qualifikationsbedingungen.
+			</span>
+			<div class="max-w-4xl mt-12 p-4 text-gray-800 bg-white rounded-lg shadow">
+				<div class="mb-2">
+					<div class="h-3 text-3xl text-left text-gray-600">“</div>
+					<p class="px-4 text-xl text-center text-gray-600">
+						KI ist wahrscheinlich das Beste oder das Schlimmste, was der Menschheit passieren kann.
+					</p>
+					<div class="h-3 text-3xl text-right text-gray-600">”</div>
+					<p class="px-4 text-md text-center text-gray-600">
+						- Stephen Hawking
+					</p>
 				</div>
 			</div>
 		</div>
@@ -1277,4 +1115,5 @@
 
 <Footer />
 
-<style lang="postcss"></style>
+<style lang="postcss">
+</style>
