@@ -40,6 +40,7 @@
 			color="#111827CC"
 			size="192px"
 			class="hover:cursor-pointer hover:scale-105 transition-all duration-500 hover:translate-y-4"
+			onClick={() => {goto('#page-content')}}
 		/>
 	</div>
 </div>
@@ -70,7 +71,7 @@
 
 <div class="background-lightning" />
 
-<div class="section">
+<div id="page-content" class="section">
 	<InformationTile
 		title="Vikus Viewer"
 		content="Erlebe histrorische Daten auf einem Blick. Erkenne Verläufe, beobachte Trends und untersuche Änderungen."
