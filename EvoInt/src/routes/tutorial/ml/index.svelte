@@ -16,7 +16,7 @@
 </script>
 <Header />
 
-<div class="flex flex-col text-center justify-center items-center w-min mt-20 md:bg-white">
+<div class="flex flex-col text-center justify-center items-center mt-20">
 	<h1
 		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
@@ -59,7 +59,7 @@
 								/>
 							</div>
 							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6">
+								<p class="text-gray-500 text-xl font-semibold italic mb-6  text-center">
 									"Maschinelles Lernen, Machine Learning (ML), ist ein Zweig der künstlichen Intelligenz (KI) und Computerwissenschaft, 
                   der sich auf die Verwendung von Daten und Algorithmen konzentriert, 
                   um die Art und Weise, wie Menschen lernen, zu imitieren und die Genauigkeit schrittweise zu verbessern."
@@ -125,7 +125,7 @@
 
 		<div class="flex flex-col justify-center items-center text-center">
 			<div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
-				<span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
+				<span class="text-2xl w-3/4 text-center leading-relaxed mb-6 text-gray-300">
 					Machine Learning, auf Deutsch: Machinelles Lernen, ist heute für viele Organisationen ein notwendiger Aspekt der modernen Geschäftswelt und Forschung. 
           Es verwendet Algorithmen und neuronale Netzwerkmodelle, um Computersysteme bei der schrittweisen Verbesserung ihrer Leistung zu unterstützen. 
           Diese Seite soll dazu dienen, einen Überblick rund um das Thema ML zu schaffen - von den Anfängen bis zur heutigen Zeit.
@@ -694,7 +694,7 @@
 			3. Die Arten von ML
 		</h1>
     <div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
-      <span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
+      <span class="text-2xl w-3/4 leading-relaxed mb-6 text-gray-300 text-center">
         Es gibt verschiedene Möglichkeiten, ML-Algorithmen zu trainieren, jede mit ihren eigenen Vor- und Nachteilen.
       </span>
     </div>
@@ -757,14 +757,14 @@
 			</div>
 
 			<div
-				class="grid bg-gray-700 rounded-2xl shadow-2xl p-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+				class="grid bg-gray-700 gap-12 rounded-2xl shadow-2xl p-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:gap-x-12"
 			>
 				<div class="mb-12 lg:mb-0">
 					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
 						<Icon icon="tablet" size="24px" />
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Deep Learning</h5>
-					<p class="text-xl text-justify text-gray-300">
+					<p class="text-xl text-justify text-gray-300 break-words">
 						Deep Learning ist eine Anwendung von ML. Deep-Learning-Netzwerke interpretieren Big Data, sowohl unstrukturiert als auch strukturiert, 
             und erkennen Muster in den Daten. Je mehr Daten sie trainieren und aus denen sie lernen können, desto fundierter und genauer werden ihre Entscheidungen sein.
             Ein reales Beispiel dafür wäre Chatbox, je mehr Daten es trainiert, desto besser funktioniert es.
@@ -776,7 +776,7 @@
 						<Icon icon="slack" size="24px" />
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Neuronale Netzwerke</h5>
-					<p class="text-xl text-justify text-gray-300">
+					<p class="text-xl text-justify text-gray-300 break-words">
             Neuronale Netze sind eng mit Deep Learning verwandt. Seine Aufgabe ist es, sequentielle Schichten von Neuronen zu erstellen, die das 
             Verständnis der von einer Maschine gesammelten Daten vertiefen, um eine genaue Analyse zu ermöglichen.
             Ein neuronales Netzwerk besteht aus Schichten von Knoten, denen dann durch Koeffizienten eine Gewichtung zugewiesen, 
@@ -789,7 +789,7 @@
 						<Icon icon="user" size="24px" />
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Regression</h5>
-					<p class="text-xl text-justify text-gray-300">
+					<p class="text-xl text-justify text-gray-300 break-words">
 						Regressionen in ML werden verwendet, um Beziehungen und Korrelationen zwischen verschiedenen Datentypen herzustellen.
             Regressionen können nützlich sein, wenn Ergebnisse basierend auf Daten in der Gegenwart vorhergesagt werden. Wenn sich 
             beispielsweise ein Produkt bei einer bestimmten Personengruppe gut verkauft, kann das Geschäft in Gebieten, in denen diese 
@@ -802,7 +802,7 @@
 						<Icon icon="users" size="24px" />
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Clustering</h5>
-					<p class="text-xl text-justify text-gray-300">
+					<p class="text-xl text-justify text-gray-300 break-words">
 						Clustering, bei dem Datenpunkte nach Merkmalen und Attributen gruppiert werden, ist eine Form des unüberwachten Lernens.
             Clustering kann in mehreren Geschäftsbereichen verwendet werden, z. B. um Kundendemografie und Kaufverhalten in bestimmte 
             Segmente für Targeting und Produktpositionierung zu organisieren.
@@ -818,7 +818,7 @@
     </h1>
 
     <div class="grid justify-center items-center justify-self-center w-3/4">
-      <div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div class="grid gap-12 m-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4">
       
         <div
         class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"

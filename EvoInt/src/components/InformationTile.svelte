@@ -8,11 +8,11 @@
 </script>
 
 <div
-	class={`container w-full flex ${
-		right_side && 'flex-row-reverse'
-	} justify-between items-center ${className}`}
+	class={`container w-full flex gap-12 flex-col xl:flex-row ${
+		right_side && 'flex-col xl:flex-row-reverse text-center'
+	} justify-between items-center text-center ${className}`}
 >
-	<div class={`w-1/2 max-w-2xl flex flex-col ${right_side && 'text-right'} gap-2`}>
+	<div class={`w-1/2 max-w-2xl flex flex-col ${right_side && 'text-center'} gap-2`}>
 		<p class="text-5xl mb-4 font-bold uppercase text-gray-100">{title}</p>
 		{#if content}
 			<p class="text-2xl text-justify text-gray-400">{content}</p>
