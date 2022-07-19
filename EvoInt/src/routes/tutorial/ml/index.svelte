@@ -163,12 +163,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
+                  src="../../../static/samuel.jpeg"
                   alt="Turingmaschine"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                <a href="https://medium.com/ibm-data-ai/the-first-of-its-kind-ai-model-samuels-checkers-playing-program-1b712fa4ab96" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                   Quelle: Micro Medium
-                </div>
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1952: Samuel's Checker Player</div>
@@ -231,12 +231,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
+                  src="../../../perceptron.gif"
                   alt="Perzeptron "
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: Micro Medium
-                </div>
+                <a href="https://medium.com/towards-data-science/what-the-hell-is-perceptron-626217814f53" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Medium
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1957: Der Perzeptron</div>
@@ -300,12 +300,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
+                  src="../../../static/neighbor.png"
                   alt="Der Nearest-Neighbor-Algorithmus"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: Micro Medium
-                </div>
+                <a href="https://towardsdatascience.com/similarity-search-with-ivfpq-9c6348fd4db3" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Towards Data Science
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1967: Der Nearest Neighbor Algorithmus </div>
@@ -367,12 +367,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
+                  src="../../../static/aiki.png"
                   alt="AI vs ML"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: CDN Images
-                </div>
+                <a href="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                  Quelle: Towards AI
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1970er: KI und ML trennen sich</div>
@@ -435,12 +435,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
+                  src="../../../static/boosting.jpg"
                   alt="Boosting"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: ECMWF
-                </div>
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1990: Boosting-Algorithmen</div>
@@ -502,12 +502,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
+                  src="../../../static/speechrecog.jpg"
                   alt="Spracherkennung"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://recfaces.com/articles/what-is-voice-recognition" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Recfaces
-                </div>
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1997: Spracherkennungssysteme</div>
@@ -571,12 +571,12 @@
               <div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
+                  src="../../../static/facerecog.jpeg"
                   alt="Gesichtserkennung"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://www.handelskraft.de/face-recognition-gruseltechnologie-oder-tor-zur-neuen-payment-welt/" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Handelskraft
-                </div>
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006: Bessere Gesichtserkennungsalgorithmen</div>
@@ -639,12 +639,12 @@
 							<div class="relative group">
                 <img
                   class="w-full block h-auto"
-                  src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
+                  src="../../../static/mljetzt.jpg"
                   alt="ML Jetzt vs Zukunft"
                 />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                <a href="https://www.informatec.com/en/machine-learning" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                   Quelle: Informatec
-                </div>
+                </a>
               </div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006-20xx: ML Jetzt vs. Zukunft</div>

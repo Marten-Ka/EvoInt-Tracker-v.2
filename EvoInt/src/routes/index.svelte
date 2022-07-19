@@ -166,7 +166,7 @@
 							data-mdb-ripple-color="light"
 						>
               <img
-                src="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg"
+                src="../../static/homeki.jpg"
                 class="h-96"
                 alt="KI"
               />
