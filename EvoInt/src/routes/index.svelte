@@ -117,14 +117,14 @@
 				<div class="relative block bg-white rounded-lg shadow-lg">
 					<div class="flex justify-center">
 						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+							class="relative group overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
 							data-mdb-ripple="true"
 							data-mdb-ripple-color="light"
 						>
 							<img
-								src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg"
+								src="../../static/homeml.jpg"
 								class="h-72"
-								alt="KI"
+								alt="ML"
 							/>
 							<a href="/tutorial/ml">
 								<div
@@ -132,6 +132,9 @@
 									style="background-color: rgba(251, 251, 251, 0.15)"
 								/>
 							</a>
+              <a href="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg" target="_blank" class="opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                Quelle: Futura Science
+              </a>
 						</div>
 					</div>
 					<div class="flex flex-col justify-center p-6">
@@ -161,12 +164,12 @@
 				<div class="relative block bg-white rounded-lg shadow-lg">
 					<div class="flex justify-center">
 						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+							class="relative group overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
 							data-mdb-ripple="true"
 							data-mdb-ripple-color="light"
 						>
               <img
-                src="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg"
+                src="../../static/homeki.jpg"
                 class="h-96"
                 alt="KI"
               />
@@ -176,6 +179,9 @@
 									style="background-color: rgba(251, 251, 251, 0.15)"
 								/>
 							</a>
+              <a href="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg" target="_blank" class="opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                Quelle: Planet Wissen
+              </a>
 						</div>
 					</div>
 					<div class="flex flex-col justify-center p-6">
@@ -205,12 +211,12 @@
 				<div class="relative block bg-white rounded-lg shadow-lg">
 					<div class="flex justify-center">
 						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+							class="relative group overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
 							data-mdb-ripple="true"
 							data-mdb-ripple-color="light"
 						>
 							<img
-								src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https:%2F%2Fblogs-images.forbes.com%2Fbernardmarr%2Ffiles%2F2019%2F06%2F5-Amazing-Examples-Of-Natural-Language-Processing-NLP-In-Practice-1200x639.jpeg"
+								src="../../static/homenlp.jpeg"
 								class="h-72"
 								alt="NLP"
 							/>
@@ -220,6 +226,9 @@
 									style="background-color: rgba(251, 251, 251, 0.15)"
 								/>
 							</a>
+              <a href="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https:%2F%2Fblogs-images.forbes.com%2Fbernardmarr%2Ffiles%2F2019%2F06%2F5-Amazing-Examples-Of-Natural-Language-Processing-NLP-In-Practice-1200x639.jpeg" target="_blank" class="opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                Quelle: Forbes
+              </a>
 						</div>
 					</div>
 					<div class="flex flex-col justify-center p-6">
