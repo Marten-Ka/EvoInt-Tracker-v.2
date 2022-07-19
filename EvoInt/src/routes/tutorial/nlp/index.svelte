@@ -20,7 +20,7 @@
 	<h1
 		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
-		Machine Learning
+		Natural Language Processing
 	</h1>
 	<h2 class="mt-2 mb-32 text-3xl font-semibold text-gray-400 uppercase">
 		Von den Anfängen bis heute
@@ -38,7 +38,7 @@
 <div class="flex flex-col  mt-32">
 	<div id="part-one" class="mt-32">
 		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			1. Der Begriff der Machine Learning
+			1. Der Begriff der natürlichen Sprachverarbeitung
 		</h1>
 
 		<section
@@ -53,18 +53,17 @@
 								class="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0"
 							>
 								<img
-									src="https://www.ibm.com/design/language/877b208e9d05b37650a70e55867861bd/core_gray60_on_white.svg"
+									src="../../static/Manning_Hirschberg.png"
 									class="rounded-full shadow-md"
-									alt="IBM Cloud Education"
+									alt="Hirschberg and Manning"
 								/>
 							</div>
 							<div class="md:ml-6 place-self-center">
 								<p class="text-gray-500 text-xl font-semibold italic mb-6">
-									"Maschinelles Lernen, Machine Learning (ML), ist ein Zweig der künstlichen Intelligenz (KI) und Computerwissenschaft, 
-                  der sich auf die Verwendung von Daten und Algorithmen konzentriert, 
-                  um die Art und Weise, wie Menschen lernen, zu imitieren und die Genauigkeit schrittweise zu verbessern."
+									"Die Verarbeitung natürlicher Sprache verwendet Computertechniken zum Lernen,
+									Verstehen und Produzieren von Inhalten in menschlicher Sprache."
 								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">IBM Cloud Education</p>
+								<p class="font-semibold text-xl mb-2 text-gray-800">Julia Hirschberg & Christopher D. Manning</p>
 							</div>
 						</div>
 					</div>
