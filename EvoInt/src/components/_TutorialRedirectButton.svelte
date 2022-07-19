@@ -18,7 +18,7 @@
 </script>
 
 <div id="content" on:click={onClick}>
-	<Icon {icon} size="48px" />
+	<Icon {icon} size="32px" />
 	<span class="mr-8" />
 	{#each letters as letter}
 		{#if letter === ' '}
@@ -34,6 +34,6 @@
 		@apply p-5 flex items-center bg-black bg-opacity-20 border-2 border-transparent hover:border-gray-800 hover:scale-110 rounded-lg text-gray-300 uppercase font-bold transition-all duration-300 select-none;
 	}
 	.letter {
-		@apply p-0.5 text-5xl rounded-lg transition-all;
+		@apply p-0.5 text-sm  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl rounded-lg transition-all bg-gray-700 sm:bg-red-500 md:bg-green-500 lg:bg-blue-500 xl:bg-yellow-500 flex flex-col;
 	}
 </style>

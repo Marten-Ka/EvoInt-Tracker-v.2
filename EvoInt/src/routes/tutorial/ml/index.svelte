@@ -16,7 +16,7 @@
 </script>
 <Header />
 
-<div class="flex flex-col text-center justify-center items-center mt-20">
+<div class="flex flex-col text-center justify-center items-center w-min mt-20 md:bg-white">
 	<h1
 		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
