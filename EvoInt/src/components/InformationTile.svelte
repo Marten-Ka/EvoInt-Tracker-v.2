@@ -13,7 +13,7 @@
 	} justify-between items-center text-center ${className}`}
 >
 	<div class={`w-1/2 max-w-2xl flex flex-col ${right_side && 'text-center'} gap-2`}>
-		<p class="text-5xl mb-4 font-bold uppercase text-gray-100">{title}</p>
+		<p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 font-bold uppercase text-gray-100">{title}</p>
 		{#if content}
 			<p class="text-2xl text-justify text-gray-400">{content}</p>
 		{:else}

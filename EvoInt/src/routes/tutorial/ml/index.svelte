@@ -16,13 +16,13 @@
 </script>
 <Header />
 
-<div class="flex flex-col text-center justify-center items-center mt-20">
+<div class="flex flex-col w-fit sm:w-auto  text-center justify-center items-center mt-20">
 	<h1
-		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
+		class="headline text-sm  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
 		Machine Learning
 	</h1>
-	<h2 class="mt-2 mb-32 text-3xl font-semibold text-gray-400 uppercase">
+	<h2 class="mt-2 mb-32 text-sm  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-semibold text-gray-400 uppercase">
 		Von den Anfängen bis heute
 	</h2>
 
@@ -35,9 +35,9 @@
 	</div>
 </div>
 
-<div class="flex flex-col  mt-32">
+<div class="flex flex-col  mt-32 w-fit ">
 	<div id="part-one" class="mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+		<h1 class="headline  text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 md:ml-18 lg:ml-24 uppercase text-gray-100">
 			1. Der Begriff der Machine Learning
 		</h1>
 
@@ -135,7 +135,7 @@
 	</div>
 
 	<div id="part-two" class="mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+		<h1 class="headline w- text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
 			2. Die historische Entwicklung von ML
 		</h1>
 
@@ -690,7 +690,7 @@
 	</div>
 
 	<div id="part-three" class="mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+		<h1 class="headline  text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
 			3. Die Arten von ML
 		</h1>
     <div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
@@ -711,7 +711,7 @@
 			>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img src="../../../static/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+						<img src="../../../static/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl w-96 sm:w-auto" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -726,7 +726,7 @@
 						<img
 							src="../../../static/unsupervised.jpg"
 							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
+							class="rounded-3xl shadow-2xl w-96 sm:w-auto"
 						/>
 					</AnimationContainer>
 				</div>
@@ -741,7 +741,7 @@
     >
       <div slot="right_slot">
         <AnimationContainer from_right>
-          <img src="../../../static/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+          <img src="../../../static/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl w-96 sm:w-auto" />
         </AnimationContainer>
       </div>
     </InformationTile>
@@ -750,7 +750,7 @@
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
 				<div class="text-center w-1/2">
-					<h2 class="text-6xl font-bold mb-6 text-center">4 Übersicht der wichtigsten ML Begriffe</h2>
+					<h2 class=" text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center">4 Übersicht der wichtigsten ML Begriffe</h2>
 					<p class="text-2xl text-gray-400 mb-12">
             Hier wird auf einige wichtige Begriffe im Bereich ML eingegangen:
 				</div>
@@ -813,7 +813,7 @@
 	</div>
 
   <div id="part-five" class="grid mt-32">
-    <h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+    <h1 class="headline  text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
       5. Anwendungsgebiete
     </h1>
 
@@ -1085,7 +1085,7 @@
 
 	<div class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg">
 		<div
-			class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
+			class="text-3xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
 		>
 			<h1>
 				Support the <h1
@@ -1096,7 +1096,7 @@
 			</h1>
 		</div>
 		<div class="flex flex-col md:flex-row md:max-w-xl ">
-			<div class="w-full text-center m-6 p-8">
+			<div class="w-auto text-center m-6 p-8">
 				<img
 					src="https://images.t3n.de/news/wp-content/uploads/2022/03/Anonymous-Maske-1.jpg?class=hero"
 					class="rounded-full w-32 mb-4 mx-auto"

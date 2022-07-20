@@ -27,7 +27,7 @@
             
             <!-- Hier jetzt wie auf der GitHub-Seite eine Matrix von Links erstellen -->
             <div class="mt-20 h-full flex justify-center">
-                <div class="grid grid-cols-3  gap-y-4 gap-x-32 lg:gap-x-8 xl:gap-x-32">
+                <div class="grid grid-cols-3  gap-y-4 gap-x-28 lg:gap-x-8 xl:gap-x-32">
                     <div>
                         <a href="https://vikusviewer.fh-potsdam.de/">Impressum</a>
                     </div>

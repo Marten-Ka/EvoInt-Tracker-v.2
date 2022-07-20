@@ -23,10 +23,10 @@
 	}
 
 	img {
-		@apply hover:cursor-pointer;
+		@apply hover:cursor-pointer w-28 sm:w-32 md:w-36 lg:w-40;
 	}
 
 	#navigation {
-		@apply flex gap-5;
+		@apply flex gap-5 text-xs sm:text-sm md:text-base lg:text-base;
 	}
 </style>
