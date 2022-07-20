@@ -14,7 +14,7 @@ import Header from '../../components/Header.svelte';
       Start
     </div>
     <div
-      class="flex flex-row justify-center items-center gap-12 ml-[430px] black"
+      class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:ml-[430px] black"
     >
       <div
         class="flex justify-center items-center black bg-white z-50 rounded-[100%] w-32 h-32 font-mono text-xl"
@@ -28,7 +28,7 @@ import Header from '../../components/Header.svelte';
     </div>
 
     <div
-      class="flex flex-row justify-center items-center gap-12 mr-[430px] black bg-red"
+      class="flex flex-col-reverse lg:flex-row justify-center items-center gap-12 lg:mr-[430px] black bg-red"
     >
       <a href="" class="block p-6 w-max max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-700">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Noteworthy technology acquisitions 2021</h5>
@@ -42,7 +42,7 @@ import Header from '../../components/Header.svelte';
     </div>
 
     <div
-      class="flex flex-row justify-center items-center gap-12 ml-[430px] black bg-red"
+      class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:ml-[430px] black bg-red"
     >
       <div
         class="flex justify-center items-center black bg-white z-50 rounded-[100%] w-32 h-32 font-mono text-xl"
@@ -56,7 +56,7 @@ import Header from '../../components/Header.svelte';
     </div>
 
     <div
-      class="flex flex-row justify-center items-center gap-12 mr-[430px] black bg-red"
+      class="flex flex-col-reverse lg:flex-row justify-center items-center gap-12 lg:mr-[430px] black bg-red"
     >
       <a href="" class="block p-6 w-max max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-700">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Noteworthy technology acquisitions 2021</h5>
@@ -70,7 +70,7 @@ import Header from '../../components/Header.svelte';
     </div>
 
     <div
-      class="flex flex-row justify-center items-center gap-12 ml-[430px] black bg-red"
+      class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:ml-[430px] black bg-red"
     >
       <div
         class="flex justify-center items-center black bg-white z-50 rounded-[100%] w-32 h-32 font-mono text-xl"
@@ -84,7 +84,7 @@ import Header from '../../components/Header.svelte';
     </div>
 
     <div
-      class="flex flex-row justify-center items-center gap-12 mr-[430px] black bg-red"
+      class="flex flex-col-reverse lg:flex-row justify-center items-center gap-12 lg:mr-[430px] black bg-red"
     >
       <a href="" class="block p-6 w-max max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-700">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Noteworthy technology acquisitions 2021</h5>
