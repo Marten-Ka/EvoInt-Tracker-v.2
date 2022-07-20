@@ -15,7 +15,7 @@
 	<div class={`w-1/2 max-w-2xl flex flex-col ${right_side && 'text-center'} gap-2`}>
 		<p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 font-bold uppercase text-gray-100">{title}</p>
 		{#if content}
-			<p class="text-2xl text-justify text-gray-400">{content}</p>
+			<p class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-justify">{content}</p>
 		{:else}
 			<slot name="content" />
 		{/if}

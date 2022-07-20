@@ -19,7 +19,7 @@
 
 <style lang="postcss">
 	header {
-		@apply font-evoint p-4 w-full flex items-center gap-5 bg-black text-gray-200;
+		@apply font-evoint p-4 w-full flex items-center gap-2 sm:gap-5 bg-black text-gray-200;
 	}
 
 	img {

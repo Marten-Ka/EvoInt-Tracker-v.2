@@ -12,7 +12,7 @@
 
 <footer >
     <div class="flex flex-col p-5 w-full">
-        <div class="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row w-full justify-around">
+        <div class="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row w-full gap-1 lg:gap-5 justify-around">
             <div class="flex flex-col  justify-center">
                 <div class="flex  justify-center"><img src="../../static/Logo.png" alt="EvoInt-Logo" width="220px" on:click={onHome} /></div>
                 <div class="vikus">Vikus-Viewer</div>
@@ -27,7 +27,7 @@
             
             <!-- Hier jetzt wie auf der GitHub-Seite eine Matrix von Links erstellen -->
             <div class="mt-20 h-full flex justify-center">
-                <div class="grid grid-cols-3  gap-y-4 gap-x-28 lg:gap-x-8 xl:gap-x-32">
+                <div class="grid grid-cols-3  gap-y-4 gap-x-24 lg:gap-x-8 xl:gap-x-32">
                     <div>
                         <a href="https://vikusviewer.fh-potsdam.de/">Impressum</a>
                     </div>
@@ -84,7 +84,7 @@
   }
 
   .vikusinfo {
-    @apply text-xl font-mono text-gray-400 mb-4 flex  justify-center;
+    @apply text-xl font-mono text-gray-400 mb-4 flex text-center  justify-center;
   }
 
 	img {

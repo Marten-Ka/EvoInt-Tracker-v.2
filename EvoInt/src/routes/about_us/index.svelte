@@ -215,7 +215,7 @@
 				<div
 					class="w-full flex p-6 justify-center bg-white items-center rounded-l-lg mb-6 lg:mb-0 mx-auto md:mx-0"
 				>
-					<img src="HWR.png" alt="HWR Logo" />
+					<img src="../../static/HWR.png" alt="HWR Logo" />
 				</div>
 				<div class="md:ml-6 place-self-center col-span-2 py-6 pr-6">
 					<p class="text-gray-300 text-xl text-justify mb-6">

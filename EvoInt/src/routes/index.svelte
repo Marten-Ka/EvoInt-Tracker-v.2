@@ -26,11 +26,11 @@
 
 <div class="flex flex-col text-center justify-center items-center mt-20">
 	<h1
-		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
+    class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none"
 	>
 		Entdecke die Evolution <br /> von künstlicher Intelligenz
 	</h1>
-	<h2 class="mt-2 mb-32 text-2xl font-semibold text-gray-400 uppercase">
+	<h2 class="mt-2 mb-20 text-center text-sm  sm:text-base md:text-lg lg:text-xl xl:text-2xl xl:text-3xl 2xl:text-3xl font-semibold text-gray-400 uppercase">
 		Wir nehmen dich mit auf eine Reise durch die Geschichte
 	</h2>
 	<div class="arrow">
@@ -71,13 +71,13 @@
 
 <div class="background-lightning" />
 
-<div id="page-content" class="section">
+<div id="page-content" class="section xl:p-12">
 	<InformationTile
 		title="Vikus Viewer"
 		content="Erlebe histrorische Daten auf einem Blick. Erkenne Verläufe, beobachte Trends und untersuche Änderungen."
-		class="mt-20"
+		class="mt-10 lg:mt-20"
 	>
-		<div slot="left_slot" class="mt-2 ml-4 flex gap-5">
+		<div slot="left_slot" class="mt-2 ml-4 flex justify-center  gap-5">
 			<Icon icon="bar-chart-2" size="32px" />
 			<Icon icon="trending-up" size="32px" />
 			<Icon icon="search" size="32px" />
@@ -88,14 +88,14 @@
 			</AnimationContainer>
 		</div>
 	</InformationTile>
-	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-20">
-		<div slot="content" class="text-gray-400 text-2xl">
+	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-10 lg:mt-20">
+		<div slot="content" class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-justify">
 			Daten ohne Kontext bringen meist keinen Nutzen. Dadurch haben wir es uns zur Aufgabe gemacht
 			einen Zusammenhang zwischen den großen Datenmengen zu schaffen. <br /> Durch NLP
 			<span class="font-mono text-xl">(Natural Language Processing)</span> analysieren wir verschiedenste
 			Trends in der Geschichte.
 		</div>
-		<div slot="left_slot" class="mt-2 ml-4 flex flex-row-reverse gap-5">
+		<div slot="left_slot" class="mt-2 ml-4 flex flex-row-reverse justify-center gap-5">
 			<Icon icon="list" size="32px" />
 			<Icon icon="layers" size="32px" />
 			<Icon icon="database" size="32px" />
@@ -108,7 +108,7 @@
 	</InformationTile>
 
 	<section class="my-32 p-12 text-gray-800 text-center w-[95%] bg-gray-800 rounded-xl">
-		<h2 class="text-5xl uppercase text-gray-100 font-bold mb-12 pb-4 text-center">
+		<h2 class="text-center text-base  md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl uppercase text-gray-100 font-bold mb-12 pb-4 text-center">
 			Neueste Artikel
 		</h2>
 
@@ -137,7 +137,7 @@
               </a>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center p-6">
+					<div class="flex flex-col justify-center p-2 md:p-6">
 						<h5 class="font-bold text-2xl mb-3">Machine Learning</h5>
 						<p class="text-gray-500 mb-4">
 							<small
@@ -184,7 +184,7 @@
               </a>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center p-6">
+					<div class="flex flex-col justify-center p-2 md:p-6">
 						<h5 class="font-bold text-2xl mb-3">Künstliche Intelligenz</h5>
 						<p class="text-gray-500 mb-4">
 							<small
@@ -231,7 +231,7 @@
               </a>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center p-6">
+					<div class="flex flex-col justify-center p-2 md:p-6">
 						<h5 class="font-bold text-2xl mb-3">Natural Language Processing</h5>
 						<p class="text-gray-500 mb-4">
 							<small

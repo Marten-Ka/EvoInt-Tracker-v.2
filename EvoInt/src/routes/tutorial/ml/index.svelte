@@ -716,7 +716,7 @@
 				</div>
 			</InformationTile>
 			<InformationTile title="Unsupervised Learning" right_side class="mt-20">
-				<div slot="content" class="text-gray-400 text-2xl text-justify">
+				<div slot="content" class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-justify">
           Beim Unsupervised Learning muss der Datensatz nicht maschinenlesbar gemacht oder von Entwicklern gekennzeichnet werden, sodass das Programm viel 
           größere Datensätze bearbeiten kann. Beim Unspervised Learning gibt es keine Gekennzeichnung, an denen das Programm abarbeiten, was zur Schaffung verborgener 
           Strukturen führt. Die Erstellung dieser verborgenen Strukturen hilft dem unbeaufsichtigten Lernen, sich an die Daten anzupassen, indem verborgene Strukturen dynamisch geändert werden.
