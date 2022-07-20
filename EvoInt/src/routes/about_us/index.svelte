@@ -8,7 +8,7 @@
 
 <div class="flex flex-col text-center justify-center items-center mt-20">
 	<AnimationContainer>
-		<h2 class="text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none">Wer wir sind.</h2>
+		<div class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none">Wer wir sind.</div>
 	</AnimationContainer>
 
 	<section class="p-8 max-w-4xl xl:max-w-6xl 2xl:max-w-7xl text-gray-800 text-center bg-gray-800 rounded-xl mt-12 mb-80">
@@ -206,12 +206,12 @@
 	</section>
 
 	<AnimationContainer>
-		<h2 class="text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none">Unsere Hochschule: Die HWR</h2>
+		<div class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none">Unsere Hochschule: Die HWR</div>
 	</AnimationContainer>
 
 	<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mt-12 mb-80">
 		<div class="block rounded-lg shadow-lg bg-gray-800 m-4">
-			<div class="grid grid-cols-3">
+			<div class="flex flex-col lg:grid lg:grid-cols-3">
 				<div
 					class="w-full flex p-6 justify-center bg-white items-center rounded-l-lg mb-6 lg:mb-0 mx-auto md:mx-0"
 				>
