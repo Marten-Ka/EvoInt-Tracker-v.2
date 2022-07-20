@@ -8,14 +8,14 @@
 <Header />
 
 <div class="flex flex-col text-center justify-center items-center mt-20">
-	<h1
-		class="mb-56 text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
+	<div
+		class="mb-56 headline text-center text-base  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
 		Wie funktioniert der EvoInt-Tracker?
-	</h1>
+</div>
 
 	<AnimationContainer>
-		<h2>Was ist <span class="text-sky-500">EvoInt</span>?</h2>
+		<p class="headline text-base  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]">Was ist <span class="text-sky-500">EvoInt</span>?</p>
 	</AnimationContainer>
 
 	<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mt-12 mb-80">
@@ -46,7 +46,7 @@
 	</div>
 
 	<AnimationContainer>
-		<h2>Wie funktioniert es?</h2>
+		<p class="headline text-base  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]">Wie funktioniert es?</p>
 	</AnimationContainer>
 
 	<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mt-12 mb-80">
@@ -76,7 +76,7 @@
 	</div>
 
 	<AnimationContainer>
-		<h2>Wie wird analysiert?</h2>
+		<p class="headline text-base  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]">Wie wird analysiert?</p>
 	</AnimationContainer>
 
 	<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mt-12 mb-80">
