@@ -213,11 +213,11 @@
 		<div class="block rounded-lg shadow-lg bg-gray-800 m-4">
 			<div class="flex flex-col lg:grid lg:grid-cols-3">
 				<div
-					class="w-full flex p-6 justify-center bg-white items-center rounded-l-lg mb-6 lg:mb-0 mx-auto md:mx-0"
+					class="w-full flex p-6 justify-center bg-white items-center rounded-t-lg lg:rounded-t-none lg:rounded-l-lg mb-6 lg:mb-0 mx-auto md:mx-0"
 				>
 					<img src="../../static/HWR.png" alt="HWR Logo" />
 				</div>
-				<div class="md:ml-6 place-self-center col-span-2 py-6 pr-6">
+				<div class="px-4 place-self-center col-span-2 py-6">
 					<p class="text-gray-300 text-xl text-justify mb-6">
 						Zu dem dualen Studiengang Informatik an der HWR Berlin gehört im vierten Semester
 						die Bearbeitung eines Studienprojektes von einem mehrköpfigen Team von Studenten.

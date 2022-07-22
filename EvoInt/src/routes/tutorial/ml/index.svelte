@@ -749,7 +749,7 @@
 
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
-				<div class="text-center w-1/2">
+				<div class="text-center w-3/4 ">
 					<h2 class=" text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center">4 Übersicht der wichtigsten ML Begriffe</h2>
 					<p class="text-2xl text-gray-400 mb-12">
             Hier wird auf einige wichtige Begriffe im Bereich ML eingegangen:

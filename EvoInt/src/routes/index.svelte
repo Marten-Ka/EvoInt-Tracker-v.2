@@ -107,7 +107,7 @@
 		</div>
 	</InformationTile>
 
-	<section class="my-32 p-12 text-gray-800 text-center w-[95%] bg-gray-800 rounded-xl">
+	<section class="my-32 p-4 md:p-12 text-gray-800 text-center w-[95%] bg-gray-800 rounded-xl">
 		<h2 class="text-center text-base  md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl uppercase text-gray-100 font-bold mb-12 pb-4 text-center">
 			Neueste Artikel
 		</h2>
@@ -138,14 +138,14 @@
 						</div>
 					</div>
 					<div class="flex flex-col justify-center p-2 md:p-6">
-						<h5 class="font-bold text-2xl mb-3">Machine Learning</h5>
-						<p class="text-gray-500 mb-4">
+						<h5 class="font-bold text-2xl mb-1 2xl:mb-3">Machine Learning</h5>
+						<p class="text-gray-500 mb-2 2xl:mb-4">
 							<small
 								>Veröffentlicht am <u>01.06.2022</u> von
 								<p class="text-gray-900">Hamid Omar</p></small
 							>
 						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
+						<p class="mb-4 pb-2 text-base 2xl:text-lg w-full 2xl:w-[75%] place-self-center">
 							Erfahre mehr rund um das Thema Machine Learning und wie es mit Künstlichen
 							Intelligenzen zusammenhängt.
 						</p>
@@ -185,14 +185,14 @@
 						</div>
 					</div>
 					<div class="flex flex-col justify-center p-2 md:p-6">
-						<h5 class="font-bold text-2xl mb-3">Künstliche Intelligenz</h5>
-						<p class="text-gray-500 mb-4">
+						<h5 class="font-bold text-2xl mb-1 2xl:mb-3">Künstliche Intelligenz</h5>
+						<p class="text-gray-500 mb-2 xl:mb-4">
 							<small
 								>veröffentlicht am <u>24.05.2022</u> von
 								<p class="text-gray-900">Robert Witzke</p></small
 							>
 						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
+						<p class="mb-4 pb-2 text-base 2xl:text-lg w-full 2xl:w-[75%] place-self-center">
 							Erfahre mehr rund um das Thema Künstliche Intelligenz - von der Begriffsklärung über
 							die Historie bis hin zu aktuellen Themen wie Deep Learning.
 						</p>
@@ -232,14 +232,14 @@
 						</div>
 					</div>
 					<div class="flex flex-col justify-center p-2 md:p-6">
-						<h5 class="font-bold text-2xl mb-3">Natural Language Processing</h5>
-						<p class="text-gray-500 mb-4">
+						<h5 class="font-bold text-2xl mb-1 2xl:mb-3">Natural Language Processing</h5>
+						<p class="text-gray-500 mb-2 2xl:mb-4">
 							<small
 								>Veröffentlicht am <u>21.06.2022</u> von
 								<p class="text-gray-900">Marten Kaffler</p>
 							</small>
 						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
+						<p class="mb-4 pb-2 text-base 2xl:text-lg w-full 2xl:w-[75%] place-self-center">
 							Erfahre mehr rund um das Thema Natural Language Processing und wie Computer unsere
 							natürliche Sprache verstehen und verarbeiten können.
 						</p>
