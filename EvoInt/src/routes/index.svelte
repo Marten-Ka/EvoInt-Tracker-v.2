@@ -77,14 +77,14 @@
 		content="Erlebe histrorische Daten auf einem Blick. Erkenne Verläufe, beobachte Trends und untersuche Änderungen."
 		class="mt-10 lg:mt-20"
 	>
-		<div slot="left_slot" class="mt-2 ml-4 flex justify-center  gap-5">
+		<div slot="left_slot" class="mt-2 flex justify-center  gap-5">
 			<Icon icon="bar-chart-2" size="32px" />
 			<Icon icon="trending-up" size="32px" />
 			<Icon icon="search" size="32px" />
 		</div>
 		<div slot="right_slot">
 			<AnimationContainer from_right>
-				<img src="../static/vikusViewer.png" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+				<img src="../static/vikusViewer.png" alt="vikus_viewer" class="rounded-3xl shadow-2xl px-4" />
 			</AnimationContainer>
 		</div>
 	</InformationTile>
@@ -95,14 +95,14 @@
 			<span class="font-mono text-xl">(Natural Language Processing)</span> analysieren wir verschiedenste
 			Trends in der Geschichte.
 		</div>
-		<div slot="left_slot" class="mt-2 ml-4 flex flex-row-reverse justify-center gap-5">
+		<div slot="left_slot" class="mt-2 flex flex-row-reverse justify-center gap-5">
 			<Icon icon="list" size="32px" />
 			<Icon icon="layers" size="32px" />
 			<Icon icon="database" size="32px" />
 		</div>
 		<div slot="right_slot">
 			<AnimationContainer>
-				<img src="../static/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+				<img src="../static/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl px-4" />
 			</AnimationContainer>
 		</div>
 	</InformationTile>
@@ -296,7 +296,7 @@
 	}
 
 	.section {
-		@apply absolute top-full w-full flex flex-col gap-y-60 items-center bg-gray-900;
+		@apply absolute top-full w-full flex flex-col gap-y-24 items-center bg-gray-900;
 	}
 
 	@keyframes -global-from-left {

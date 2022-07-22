@@ -711,7 +711,7 @@
 			>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img src="../../../static/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl w-96 sm:w-auto" />
+						<img src="../../../static/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl p-6" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -726,7 +726,7 @@
 						<img
 							src="../../../static/unsupervised.jpg"
 							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl w-96 sm:w-auto"
+							class="rounded-3xl shadow-2xl p-6"
 						/>
 					</AnimationContainer>
 				</div>
@@ -741,7 +741,7 @@
     >
       <div slot="right_slot">
         <AnimationContainer from_right>
-          <img src="../../../static/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl w-96 sm:w-auto" />
+          <img src="../../../static/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl p-6" />
         </AnimationContainer>
       </div>
     </InformationTile>
