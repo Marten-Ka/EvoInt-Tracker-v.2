@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class={`container w-full flex gap-12 flex-col xl:flex-row ${
+	class={`container xl:w-3/4 flex gap-12 flex-col xl:flex-row ${
 		right_side && 'flex-col xl:flex-row-reverse text-center'
 	} justify-between items-center text-center ${className}`}
 >

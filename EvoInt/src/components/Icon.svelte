@@ -2,7 +2,7 @@
 	import feather from 'feather-icons/dist/feather.js';
 
 	export let icon: string;
-	export let size: string = '24px';
+	export let size: string = "24px";
 	export let stroke_width: string = "2";
 	export let color: string = '#FFF';
 	export let fill_color: string = 'none';
@@ -42,13 +42,27 @@
 		hover_fill_color = fill_color;
 	}
 
-	if (!size) {
-		size = '24px';
-	}
+  
 
-	if (!hover_size) {
-		hover_size = size;
-	}
+  function giveSize() {
+    let w;
+    if (typeof window !== "undefined") {
+      w = window.innerWidth;
+    }
+
+    if (w < 640) {
+      size = "16px";
+    } else if (w < 768) {
+      size = "24px";
+    } else if (w < 1024) {
+      size = "28px";
+    } else if (w < 1280) {
+      size = "32px";
+    } else  {
+      size = "40px";
+    }
+  }
+
 
 	let cssClasses: string[] = [];
 	if (className) cssClasses.push(className);
@@ -112,6 +126,13 @@
 	}
 
 	$: {
+    giveSize();
+
+    if (!hover_size) {
+		  hover_size = size;
+	  }
+
+
 		if (hovering || componentHovering) onHover();
 		else onDehover();
 
@@ -145,6 +166,7 @@
 			iconSettings.fill = hover_fill_color;
 			if (hovering && componentHovering) svg = createSVG(icon, iconSettings);
 		}
+
 	}
 </script>
 
@@ -153,8 +175,9 @@
 	on:mouseenter={changeToHoverState}
 	on:mouseleave={changeToNoHoverState}
 	class={cssClasses.join(' ')}
+  id="icondiv"
 >
-	{@html svg}
+	{@html svg} 
 </div>
 
 <style lang="postcss">

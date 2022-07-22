@@ -35,15 +35,15 @@
 	</div>
 </div>
 
-<div class="flex flex-col  mt-32 w-fit ">
+<div class="flex flex-col  mt-32 w-full">
 	<div id="part-one" class="mt-32">
 		<h1 class="headline  text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 md:ml-18 lg:ml-24 uppercase text-gray-100">
 			1. Der Begriff der Machine Learning
 		</h1>
 
 		<section
-			class="flex flex-col place-content-start gap-16 mx-6 my-16 p-16 text-center md:text-left shadow-lg rounded-md bg-cover"
-			style="background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Others/background2.jpg)"
+			class="flex flex-col place-content-start gap-16 mx-2 lg:mx-6 my-16 p-8 lg:p-16 text-center md:text-left shadow-lg rounded-md bg-cover"
+			style="background-image: url(../../../static/background2.jpg)"
 		>
 			<div class="flex justify-start">
 				<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
@@ -59,12 +59,12 @@
 								/>
 							</div>
 							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6  text-center">
+								<p class="text-gray-500 text-base  sm:text-lg md:text-xl font-semibold italic mb-6  text-center">
 									"Maschinelles Lernen, Machine Learning (ML), ist ein Zweig der künstlichen Intelligenz (KI) und Computerwissenschaft, 
                   der sich auf die Verwendung von Daten und Algorithmen konzentriert, 
                   um die Art und Weise, wie Menschen lernen, zu imitieren und die Genauigkeit schrittweise zu verbessern."
 								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">IBM Cloud Education</p>
+								<p class="font-semibold text-base  sm:text-lg md:text-xl mb-2 text-gray-800">IBM Cloud Education</p>
 							</div>
 						</div>
 					</div>
@@ -85,10 +85,10 @@
 								/>
 							</div>
 							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6">
+								<p class="text-gray-500 text-base  sm:text-lg md:text-xl font-semibold italic mb-6">
 									"Maschinelles Lernen ist die Wissenschaft, Computer zum Handeln zu bringen, ohne explizit programmiert zu werden"
 								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">Andrew Ng</p>
+								<p class="font-semibold text-base  sm:text-lg md:text-xl mb-2 text-gray-800">Andrew Ng</p>
 								<p class="font-semibold text-gray-500 mb-0">Direktor des Labors für künstliche Intelligenz in Stanford</p>
 							</div>
 						</div>
@@ -110,11 +110,11 @@
 								/>
 							</div>
 							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6">
+								<p class="text-gray-500 text-base  sm:text-lg md:text-xl font-semibold italic mb-6">
 									"Maschinelles Lernen zielt darauf ab, Computer zu bauen, die lernen können, Entscheidungen zu treffen oder Aufgaben auszuführen, 
                   ohne dass ihnen explizit gesagt wird, wie sie das tun sollen"
 								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">Michael Wooldridge</p>
+								<p class="font-semibold text-base  sm:text-lg md:text-xl mb-2 text-gray-800">Michael Wooldridge</p>
 								<p class="font-semibold text-gray-500 mb-0">Professor für Informatik an der Universität Oxford</p>
 							</div>
 						</div>
@@ -125,7 +125,7 @@
 
 		<div class="flex flex-col justify-center items-center text-center">
 			<div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
-				<span class="text-2xl w-3/4 text-center leading-relaxed mb-6 text-gray-300">
+				<span class="text-base  sm:text-lg md:text-xl lg:text-2xl w-3/4 text-center leading-relaxed mb-6 text-gray-300">
 					Machine Learning, auf Deutsch: Machinelles Lernen, ist heute für viele Organisationen ein notwendiger Aspekt der modernen Geschäftswelt und Forschung. 
           Es verwendet Algorithmen und neuronale Netzwerkmodelle, um Computersysteme bei der schrittweisen Verbesserung ihrer Leistung zu unterstützen. 
           Diese Seite soll dazu dienen, einen Überblick rund um das Thema ML zu schaffen - von den Anfängen bis zur heutigen Zeit.
@@ -139,8 +139,8 @@
 			2. Die historische Entwicklung von ML
 		</h1>
 
-		<div class="flex flex-col items-center">
-			<ol class="border-l-2 border-blue-600">
+		<div class="flex flex-col items-center ml-[5%] w-[90%] sm:ml-0 sm:w-auto">
+			<ol class="border-l-2 border-blue-600 w-[inherit] sm:w-[inherit]">
 				<li>
 					<div class="md:flex flex-start">
 						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
@@ -699,7 +699,7 @@
       </span>
     </div>
 
-		<div class="flex flex-col w-full gap-y-60 items-center">
+		<div class="flex flex-col w-full gap-y-60 items-center ">
 			<InformationTile
 				title="Supervised Learning"
 				content="Beim Supervised Learning erhält der ML-Algorithmus einen kleinen und beschrifteten Trainingsdatensatz eines größeren Datensatzes, 
@@ -763,8 +763,8 @@
 					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
 						<Icon icon="tablet" size="24px" />
 					</div>
-					<h5 class="text-2xl font-bold mb-4">Deep Learning</h5>
-					<p class="text-xl text-justify text-gray-300 break-words">
+					<h5 class="text-lg  md:text-xl lg:text-2xl font-bold mb-4">Deep Learning</h5>
+					<p class="text-base  md:text-lg lg:text-xl text-justify text-gray-300 break-words">
 						Deep Learning ist eine Anwendung von ML. Deep-Learning-Netzwerke interpretieren Big Data, sowohl unstrukturiert als auch strukturiert, 
             und erkennen Muster in den Daten. Je mehr Daten sie trainieren und aus denen sie lernen können, desto fundierter und genauer werden ihre Entscheidungen sein.
             Ein reales Beispiel dafür wäre Chatbox, je mehr Daten es trainiert, desto besser funktioniert es.
@@ -775,8 +775,8 @@
 					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
 						<Icon icon="slack" size="24px" />
 					</div>
-					<h5 class="text-2xl font-bold mb-4">Neuronale Netzwerke</h5>
-					<p class="text-xl text-justify text-gray-300 break-words">
+					<h5 class="text-lg  md:text-xl lg:text-2xl font-bold mb-4">Neuronale Netzwerke</h5>
+					<p class="text-base  md:text-lg lg:text-xl text-justify text-gray-300 break-words">
             Neuronale Netze sind eng mit Deep Learning verwandt. Seine Aufgabe ist es, sequentielle Schichten von Neuronen zu erstellen, die das 
             Verständnis der von einer Maschine gesammelten Daten vertiefen, um eine genaue Analyse zu ermöglichen.
             Ein neuronales Netzwerk besteht aus Schichten von Knoten, denen dann durch Koeffizienten eine Gewichtung zugewiesen, 
@@ -788,8 +788,8 @@
 					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
 						<Icon icon="user" size="24px" />
 					</div>
-					<h5 class="text-2xl font-bold mb-4">Regression</h5>
-					<p class="text-xl text-justify text-gray-300 break-words">
+					<h5 class="text-lg  md:text-xl lg:text-2xl font-bold mb-4">Regression</h5>
+					<p class="text-base  md:text-lg lg:text-xl text-justify text-gray-300 break-words">
 						Regressionen in ML werden verwendet, um Beziehungen und Korrelationen zwischen verschiedenen Datentypen herzustellen.
             Regressionen können nützlich sein, wenn Ergebnisse basierend auf Daten in der Gegenwart vorhergesagt werden. Wenn sich 
             beispielsweise ein Produkt bei einer bestimmten Personengruppe gut verkauft, kann das Geschäft in Gebieten, in denen diese 
@@ -801,8 +801,8 @@
 					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
 						<Icon icon="users" size="24px" />
 					</div>
-					<h5 class="text-2xl font-bold mb-4">Clustering</h5>
-					<p class="text-xl text-justify text-gray-300 break-words">
+					<h5 class="text-lg  md:text-xl lg:text-2xl font-bold mb-4">Clustering</h5>
+					<p class="text-base  md:text-lg lg:text-xl text-justify text-gray-300 break-words">
 						Clustering, bei dem Datenpunkte nach Merkmalen und Attributen gruppiert werden, ist eine Form des unüberwachten Lernens.
             Clustering kann in mehreren Geschäftsbereichen verwendet werden, z. B. um Kundendemografie und Kaufverhalten in bestimmte 
             Segmente für Targeting und Produktpositionierung zu organisieren.

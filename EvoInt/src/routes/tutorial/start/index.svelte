@@ -27,10 +27,10 @@
 					<Icon icon="help-circle" size="32px" color="#000000" />
 				</div>
 				<div class="md:ml-6 place-self-center">
-					<p class="text-gray-700 text-2xl">
+					<p class="text-gray-700 text-base  sm:text-lg md:text-xl lg:text-2xl">
 						EvoInt ist ein Tracker zur interaktiven Visualisierung der historischen Entwicklung
 						von Intelligenz- und anderen Fachbegriffen in wissenschaftlichen Publikationen.
-						Machine Learning sowie verwandte Themen wie <span class="text-2xl font-mono"
+						Machine Learning sowie verwandte Themen wie <span class="text-base  sm:text-lg md:text-xl lg:text-2xl font-mono"
 							>Künstliche Intelligenzen, Natural Language Processing</span
 						>
 						sind mittlerweile etablierte Themengebiete der Informatik, die viel Aufmerksamkeit genießen.
@@ -58,7 +58,7 @@
 					<Icon icon="list" size="32px" color="#000000" />
 				</div>
 				<div class="md:ml-6 place-self-center">
-					<p class="text-gray-700 text-2xl">
+					<p class="text-gray-700 text-base  sm:text-lg md:text-xl lg:text-2xl">
 						Der Vikus-Viewer ist sowohl über die Startseite als auch über die Tutorial-Seite
 						erreichbar. In der animierten Darstellung befinden sich, nach Jahren unterteilt,
 						alle Paper der IJCAI, in denen Wörter passend zum Thema Machine Learning und
@@ -88,14 +88,14 @@
 					<Icon icon="activity" size="32px" color="#000000" />
 				</div>
 				<div class="md:ml-6 place-self-center">
-					<p class="text-gray-700 text-2xl">
+					<p class="text-gray-700 text-base  sm:text-lg md:text-xl lg:text-2xl">
 						Bisher werden die Datensätze aller Publikationen der IJCAI ausschließlich anhand der
 						Worthäufigkeit analysiert. Das heißt, dass bislang keine semantische Analyse
 						vorgenommen wird. Jedoch entkräftigt die fehlende Semantik die Aussage der
 						Datenanalyse nur eingeschränkt. Aspekte wie eine zunehmende Entwicklung hinsichtlich
 						der Anzahl von Papers sowie die sich ändernden auftretenden Wörtern in den Texten,
 						sind dennoch erkennbar. Trotzdem ist es zukünftig geplant, <span
-							class="text-2xl font-mono">Natural Language Processing</span>
+							class="text-base  sm:text-lg md:text-xl lg:text-2xl font-mono">Natural Language Processing</span>
 						zu integrieren, um auch semantische Aspekte der Textanalyse mitaufzunehmen und die Analyse
 						noch wertvoller zu machen.
 					</p>
