@@ -166,7 +166,7 @@
                   src="../../../static/samuel.jpeg"
                   alt="Turingmaschine"
                 />
-                <a href="https://medium.com/ibm-data-ai/the-first-of-its-kind-ai-model-samuels-checkers-playing-program-1b712fa4ab96" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                <a href="https://medium.com/ibm-data-ai/the-first-of-its-kind-ai-model-samuels-checkers-playing-program-1b712fa4ab96" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                   Quelle: Micro Medium
                 </a>
               </div>
@@ -234,7 +234,7 @@
                   src="../../../perceptron.gif"
                   alt="Perzeptron "
                 />
-                <a href="https://medium.com/towards-data-science/what-the-hell-is-perceptron-626217814f53" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://medium.com/towards-data-science/what-the-hell-is-perceptron-626217814f53" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Medium
                 </a>
               </div>
@@ -303,7 +303,7 @@
                   src="../../../static/neighbor.png"
                   alt="Der Nearest-Neighbor-Algorithmus"
                 />
-                <a href="https://towardsdatascience.com/similarity-search-with-ivfpq-9c6348fd4db3" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://towardsdatascience.com/similarity-search-with-ivfpq-9c6348fd4db3" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Towards Data Science
                 </a>
               </div>
@@ -370,7 +370,7 @@
                   src="../../../static/aiki.png"
                   alt="AI vs ML"
                 />
-                <a href="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Towards AI
                 </a>
               </div>
@@ -438,7 +438,7 @@
                   src="../../../static/boosting.jpg"
                   alt="Boosting"
                 />
-                <a href="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: ECMWF
                 </a>
               </div>
@@ -505,7 +505,7 @@
                   src="../../../static/speechrecog.jpg"
                   alt="Spracherkennung"
                 />
-                <a href="https://recfaces.com/articles/what-is-voice-recognition" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://recfaces.com/articles/what-is-voice-recognition" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Recfaces
                 </a>
               </div>
@@ -574,7 +574,7 @@
                   src="../../../static/facerecog.jpeg"
                   alt="Gesichtserkennung"
                 />
-                <a href="https://www.handelskraft.de/face-recognition-gruseltechnologie-oder-tor-zur-neuen-payment-welt/" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
+                <a href="https://www.handelskraft.de/face-recognition-gruseltechnologie-oder-tor-zur-neuen-payment-welt/" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
                   Quelle: Handelskraft
                 </a>
               </div>
@@ -642,7 +642,7 @@
                   src="../../../static/mljetzt.jpg"
                   alt="ML Jetzt vs Zukunft"
                 />
-                <a href="https://www.informatec.com/en/machine-learning" target="_blank" class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+                <a href="https://www.informatec.com/en/machine-learning" target="_blank" class="source opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                   Quelle: Informatec
                 </a>
               </div>
@@ -1149,4 +1149,11 @@
 
 <Footer />
 
-<style lang="postcss"></style>
+<style lang="postcss">
+  
+  @media only screen and (hover: none) and (pointer: coarse){
+    .source {
+      opacity: 80;
+    }
+  }
+</style>

@@ -132,7 +132,7 @@
 									style="background-color: rgba(251, 251, 251, 0.15)"
 								/>
 							</a>
-              <a href="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg" target="_blank" class="opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+              <a href="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg" target="_blank" class="source opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                 Quelle: Futura Science
               </a>
 						</div>
@@ -179,7 +179,7 @@
 									style="background-color: rgba(251, 251, 251, 0.15)"
 								/>
 							</a>
-              <a href="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg" target="_blank" class="opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+              <a href="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg" target="_blank" class="source opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                 Quelle: Planet Wissen
               </a>
 						</div>
@@ -226,7 +226,7 @@
 									style="background-color: rgba(251, 251, 251, 0.15)"
 								/>
 							</a>
-              <a href="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https:%2F%2Fblogs-images.forbes.com%2Fbernardmarr%2Ffiles%2F2019%2F06%2F5-Amazing-Examples-Of-Natural-Language-Processing-NLP-In-Practice-1200x639.jpeg" target="_blank" class="opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
+              <a href="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https:%2F%2Fblogs-images.forbes.com%2Fbernardmarr%2Ffiles%2F2019%2F06%2F5-Amazing-Examples-Of-Natural-Language-Processing-NLP-In-Practice-1200x639.jpeg" target="_blank" class="source opacity-0 bottom-0 left-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
                 Quelle: Forbes
               </a>
 						</div>
@@ -274,6 +274,13 @@
 	.arrow {
 		@apply bg-transparent;
 	}
+
+  @media only screen and (hover: none) and (pointer: coarse){
+    .source {
+      opacity: 80;
+    }
+  }
+
 	.wave-1 {
 		position: absolute;
 		bottom: 0;
