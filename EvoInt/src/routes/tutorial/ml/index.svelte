@@ -16,7 +16,7 @@
 </script>
 <Header />
 
-<div class="flex flex-col w-fit sm:w-auto  text-center justify-center items-center mt-20">
+<div class="flex flex-col  text-center justify-center items-center mt-20">
 	<h1
 		class="headline text-sm  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
@@ -699,7 +699,7 @@
       </span>
     </div>
 
-		<div class="flex flex-col w-full gap-y-60 items-center ">
+		<div class="flex flex-col w-[80%] sm:w-full ml-[10%] sm:ml-0 gap-y-60 items-center ">
 			<InformationTile
 				title="Supervised Learning"
 				content="Beim Supervised Learning erhält der ML-Algorithmus einen kleinen und beschrifteten Trainingsdatensatz eines größeren Datensatzes, 

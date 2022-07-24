@@ -76,7 +76,7 @@
 
 <style lang="postcss">
 	footer {
-		@apply font-evoint pt-12 pb-5 flex w-auto h-full flex items-center gap-5 border-t border-white border-opacity-20 bg-gray-900 text-gray-200;
+		@apply font-evoint pt-12 pb-5 flex w-full h-full flex items-center gap-5 border-t border-white border-opacity-20 bg-gray-900 text-gray-200;
 	}
 
   .vikus {
