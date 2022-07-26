@@ -35,6 +35,6 @@
 		@apply p-2 lg:p-5 flex items-center bg-black bg-opacity-20 border-2 border-transparent hover:border-gray-800 hover:scale-110 rounded-lg text-gray-300 md:uppercase md:font-bold transition-all duration-300 select-none;
 	}
 	.letter {
-		@apply p-0.5 text-xs sm:text-lg md:text-xl lg:text-3xl xl:text-5xl xl:text-4xl 2xl:text-6xl rounded-lg transition-all flex flex-col;
+		@apply p-0.5 text-xs sm:text-lg md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl rounded-lg transition-all flex flex-col;
 	}
 </style>

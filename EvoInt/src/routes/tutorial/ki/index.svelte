@@ -4,26 +4,30 @@
 	import Footer from '../../../components/Footer.svelte';
 	import Header from '../../../components/Header.svelte';
 	import InformationTile from '../../../components/InformationTile.svelte';
-	import Icon from '../../../components/Icon.svelte';
+	import QuoteCard from '../../../components/QuoteCard.svelte';
+	import HistoricalCard from '../../../components/HistoricalCard.svelte';
+	import OverviewSubCard from '../../../components/OverviewSubCard.svelte';
+	import ApplicationCard from '../../../components/ApplicationCard.svelte';
 
 	const redirects = [
-		{ text: '1. Der Begriff der Künstlichen Intelligenz', href: '#part-one', icon: 'terminal' },
-		{ text: '2. Die historische Entwicklung von KI', href: '#part-two', icon: 'terminal' },
-		{ text: '3. Die Arten von KI', href: '#part-three', icon: 'terminal' },
-		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-four', icon: 'terminal' },
-		{ text: '5. Anwendungsgebiete', href: '#part-five', icon: 'terminal' }
+		{ text: '1. Begriffsklärung', href: '#part-one', icon: 'terminal' },
+		{ text: '2. Historische Entwicklung', href: '#part-two', icon: 'terminal' },
+		{ text: '3. Arten von KI', href: '#part-three', icon: 'terminal' },
+		{ text: '4. Anwendungsgebiete', href: '#part-four', icon: 'terminal' }
 	];
 </script>
 
 <Header />
 
-<div class="flex flex-col text-center justify-center items-center mt-20">
+<div class="flex flex-col  text-center justify-center items-center mt-20">
 	<h1
-		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
+		class="headline text-sm  sm:text-lg md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
 	>
 		Künstliche Intelligenz
 	</h1>
-	<h2 class="mt-2 mb-32 text-3xl font-semibold text-gray-400 uppercase">
+	<h2
+		class="mt-2 mb-32 text-sm  sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-semibold text-gray-400 uppercase"
+	>
 		Von den Anfängen bis heute
 	</h2>
 
@@ -36,99 +40,59 @@
 	</div>
 </div>
 
-<div class="flex flex-col  mt-32">
+<div class="flex flex-col  mt-32 w-full">
 	<div id="part-one" class="mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			1. Der Begriff der Künstlichen Intelligenz
+		<h1
+			class="headline  text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 md:ml-18 lg:ml-24 uppercase text-gray-100"
+		>
+			1. Begriffsklärung
 		</h1>
 
 		<section
-			class="flex flex-col place-content-start gap-16 mx-6 my-16 p-16 text-center md:text-left shadow-lg rounded-md bg-cover"
-			style="background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Others/background2.jpg)"
+			class="flex flex-col place-content-start gap-16 mx-2 lg:mx-6 my-16 p-8 lg:p-16 text-center md:text-left shadow-lg rounded-md bg-cover"
+			style="background-image: url(../../../static/background2.jpg)"
 		>
-			<div class="flex justify-start">
-				<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
-					<div class="block p-6 rounded-lg shadow-lg bg-white m-4">
-						<div class="md:flex md:flex-row">
-							<div
-								class="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0"
-							>
-								<img
-									src="https://profile-images.xing.com/images/8532834afc356e7b294a609cc06ae98e-3/inis-ehrlich.1024x1024.jpg"
-									class="rounded-full shadow-md"
-									alt="Inis Ehrlich"
-								/>
-							</div>
-							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6">
-									"Die KI, einfach erklärt, ist der Versuch, menschliches Lernen und Denken auf den
-									Computer zu übertragen und ihm damit Intelligenz zu verleihen."
-								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">Inis Ehrlich</p>
-								<p class="font-semibold text-gray-500 mb-0">
-									Referentin für Künstliche Intelligenz
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<QuoteCard
+				img_link="../../../static/SebastianThrun.jpg"
+				img_source="https://www.swisslife.com/content/internet/com/de/home/hub/interview-sebastian-thrun/_jcr_content/parsys/testimonial/image.1619729008567.transform/1_1_2480w/Sebastian_Thrun_Biobox.jpg"
+				img_alt="Sebastian Thrun"
+				quote='"Niemand formuliert es so, aber für mich ist KI fast eine Geisteswissenschaft.
+				Es ist wirklich der Versuch, menschliche Intelligenz und Kognition zu verstehen."'
+				quote_source="https://www.anacision.de/de/aktuelles/kuenstliche-intelligenz-definition"
+				position="justify-start"
+				author="Sebastian Thrun"
+				sub_content="Ehemaliger Vizepräsident von Google"
+			/>
 
-			<div class="flex justify-end">
-				<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
-					<div class="block p-6 rounded-lg shadow-lg bg-white m-4">
-						<div class="md:flex md:flex-row">
-							<div
-								class="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0"
-							>
-								<img
-									src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/220px-John_McCarthy_Stanford.jpg"
-									class="rounded-full shadow-md"
-									alt="John McCartney"
-								/>
-							</div>
-							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6">
-									"Es ist die Wissenschaft und Technik der Herstellung intelligenter Maschinen,
-									insbesondere intelligenter Computerprogramme."
-								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">John McCartney</p>
-								<p class="font-semibold text-gray-500 mb-0">US-amerikanischer Informatiker</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<QuoteCard
+				img_link="../../../static/JohnMcCarthy.jpg"
+				img_source="https://www.spiegel.de/netzwelt/web/john-mccarthy-der-vater-der-rechner-cloud-ist-tot-a-793795.html"
+				img_alt="John McCarthy"
+				quote='"Es ist die Wissenschaft und Technik der Herstellung intelligenter Maschinen,
+				insbesondere intelligenter Computerprogramme."'
+				quote_source="https://www.unaique.net/blog/definition-kuenstliche-intelligenz/"
+				position="justify-end"
+				author="John McCarthy"
+				sub_content="US-amerikanischer Informatiker"
+			/>
 
-			<div class="flex justify-start">
-				<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
-					<div class="block p-6 rounded-lg shadow-lg bg-white m-4">
-						<div class="md:flex md:flex-row">
-							<div
-								class="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0"
-							>
-								<img
-									src="https://cdn.pixabay.com/photo/2014/01/27/18/13/europe-253311_1280.jpg"
-									class="rounded-full shadow-md"
-									alt="John McCartney"
-								/>
-							</div>
-							<div class="md:ml-6 place-self-center">
-								<p class="text-gray-500 text-xl font-semibold italic mb-6">
-									"Künstliche Intelligenz ist die Fähigkeit einer Maschine, menschliche Fähigkeiten
-									wie logisches Denken, Lernen, Planen und Kreativität zu imitieren."
-								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">Europäisches Parlament</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<QuoteCard
+				img_link="../../../static/EU.jpg"
+				img_alt="EU"
+				img_source="https://cdn.pixabay.com/photo/2014/01/27/18/13/europe-253311_1280.jpg"
+				quote='"Künstliche Intelligenz ist die Fähigkeit einer Maschine, menschliche Fähigkeiten
+				wie logisches Denken, Lernen, Planen und Kreativität zu imitieren."'
+				quote_source="https://www.europarl.europa.eu/news/de/headlines/society/20200827STO85804/was-ist-kunstliche-intelligenz-und-wie-wird-sie-genutzt"
+				position="justify-start"
+				author="Europäisches Parlament"
+			/>
 		</section>
 
-		<div class="flex flex-col justify-center items-center text-center">
-			<div class="flex flex-col mt-8 mb-12 justify-center items-center text-center">
-				<span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
+		<div class="flex flex-col justify-center items-center">
+			<div class="flex flex-col mt-8 mb-28 justify-center items-center">
+				<span
+					class="text-base  sm:text-lg md:text-xl lg:text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300"
+				>
 					Tatsächlich ist der Begriff der Künstlichen Intelligenz (KI) bisher nicht eindeutig
 					geklärt, weshalb es auch keine eindeutige Definition gibt. Das hängt sehr eng damit
 					zusammen, dass der Begriff der menschlichen Intelligenz ebenfalls nicht exakt definiert
@@ -137,687 +101,218 @@
 					Überblick rund um das Thema KI zu schaffen - von den Anfängen bis zur heutigen Zeit.
 				</span>
 			</div>
-			<div class="max-w-4xl p-4 mb-12 text-gray-800 bg-white rounded-lg shadow">
-				<div class="mb-2">
-					<div class="h-3 text-3xl text-left text-gray-600">“</div>
-					<p class="px-4 text-xl text-center text-gray-600">
-						KI ist wahrscheinlich das Beste oder das Schlimmste, was der Menschheit passieren kann.
-					</p>
-					<div class="h-3 text-3xl text-right text-gray-600">”</div>
-					<p class="px-4 text-md text-center text-gray-600">- Stephen Hawking</p>
-				</div>
-			</div>
 		</div>
 	</div>
 
 	<div id="part-two" class="mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			2. Die historische Entwicklung von KI
+		<h1
+			class="headline w- text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 uppercase text-gray-100"
+		>
+			2. Historische Entwicklung
 		</h1>
 
-		<div class="flex flex-col items-center">
-			<ol class="border-l-2 border-blue-600">
+		<div class="flex flex-col items-center ml-[5%] w-[90%] sm:ml-0 sm:w-auto">
+			<ol class="border-l-2 border-blue-600 w-[inherit] sm:w-[inherit]">
 				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://anthrowiki.at/images/thumb/a/ad/Model_of_a_Turing_machine.jpg/375px-Model_of_a_Turing_machine.jpg"
-									alt="Turingmaschine"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
-								>
-									Quelle: anthrowiki
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1936: Turingmaschine</div>
-								<p class="text-gray-700 text-base">
-									Alan Turing, ein britischer Mathematiker, legte 1936 schon den Grundstein für das,
-									was wir heute unter Künstlicher Intelligenz verstehen. Mit seinen Theorien konnte
-									er beweisen, dass eine Rechenmaschine (auch bezeichnet als "Turingmaschine") in
-									der Lage wäre, kognitive Prozesse auszuführen, sofern sich diese in mehrere kleine
-									Schritte zerlegen und algorithmisch darstellen lassen.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Alan Turing
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Grundstein der KI
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/Turingmaschine">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+					<HistoricalCard
+						img_link="../../../static/Turingmaschine.jpg"
+						img_alt="Turingmaschine"
+						source_link="https://anthrowiki.at/images/thumb/a/ad/Model_of_a_Turing_machine.jpg/375px-Model_of_a_Turing_machine.jpg"
+						source_text="Quelle: Anthrowiki"
+						heading="1936: Turingmaschine"
+						content='Alan Turing, ein britischer Mathematiker, legte 1936 schon den Grundstein für das,
+						was wir heute unter Künstlicher Intelligenz verstehen. Mit seinen Theorien konnte
+						er beweisen, dass eine Rechenmaschine (auch bezeichnet als "Turingmaschine") in
+						der Lage wäre, kognitive Prozesse auszuführen, sofern sich diese in mehrere kleine
+						Schritte zerlegen und algorithmisch darstellen lassen.'
+						tag_list={['Alan Turing', 'Grundstein der KI']}
+						button_link="https://de.wikipedia.org/wiki/Turingmaschine"
+					/>
 				</li>
 
 				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://cyfuture.com/blog/wp-content/uploads/2020/04/Dartmouth-Conference-in-1956.jpg"
-									alt="Dartmouth Conference"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: cyfuture
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1956: Der Begriff "KI" entsteht</div>
-								<p class="text-gray-700 text-base">
-									1956 treffen sich Wissenschaftler zu einer Konferenz am Dartmouth College im
-									US-Bundesstaat New Hampshire und debattieren über die Simulation von menschlicher
-									Intelligenz durch Maschinen. John McCartney schlägt dafür den Begriff "Künstliche
-									Intelligenz" vor. Während der Konferenz entsteht außerdem das erste KI-Programm
-									der Welt - der "Logic Theorist", der es schafft, mehrere mathematische Lehrsätze
-									zu beweisen.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Dartmouth Konferenz
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										John McCartney
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/Dartmouth_Conference">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://moodswag.com/wp-content/uploads/2020/09/Eliza.jpg"
-									alt="ELIZA"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: moodswag
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1966: Der erste Chatbot</div>
-								<p class="text-gray-700 text-base">
-									1966 entwickelt der deutsch-amerikanische Informatiker Joseph Weizenbaum vom
-									Massachusetts Institute of Technology das Computerprogramm "ELIZA", welches mit
-									Menschen kommunizieren kann. ELIZA kann mehrere Gesprächspartner simulieren, wie
-									beispielsweise einen Psychotherapeuten. Jedoch sind die genutzten Mittel zur
-									Simulation des Gesprächs noch recht rudimentär geskriptet.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Joseph Weizenbaum
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										ELIZA
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/ELIZA">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://www.bibliomedmanager.de/fileadmin/user_upload/alle-Portale/Bilder/TANGO/sp/2018/04/gettyimages_894319072.jpg"
-									alt="MYCIN"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: bibliomedmanager
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1972: KI gelangt in die Medizin</div>
-								<p class="text-gray-700 text-base">
-									Die KI ist für viele schon lange kein Fremdwort mehr, doch jetzt findet sie ihren
-									ersten Einsatz in der realen Welt. Das von Ted Shortlife an der Stanford
-									University entwickelte Expertensystem "MYCIN" wird zur Diagnose und Therapie von
-									Infektionskrankheiten eingesetzt. Doch auch wenn das System hohe Trefferquoten
-									erzielt, erlangte es nicht die Bedeutung in der Medizin, die man sich erhofft
-									hatte. Die Bereitschaft gegenüber solchen Systemen war schlicht zu gering, als
-									dass sich Ärzte auf dessen Diagnose verlassen wollten.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										MYCIN
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Medizin
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/Mycin_(Expertensystem)">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://fscl01.fonpit.de/userfiles/7611461/image/AI-artificial-intelligence-robot/AI-robot_12-w810h462.jpg"
-									alt="NETTalk"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: fonpit
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1986: Computer lernt sprechen</div>
-								<p class="text-gray-700 text-base">
-									Terrence J. Sejnowski und Charles Rosenberg bringen ihrem Programm "NETtalk"
-									mithilfe von Beispielsätzen und Phonemketten das Sprechen bei. „NETtalk“ kann
-									Wörter lesen und korrekt aussprechen sowie das Gelernte auf ihm unbekannte Wörter
-									anwenden. Aufgrund dieser Fähigkeit, die darauf beruht, dass das Programm mit
-									großen Datenmengen befüllt wird und daraus eigene Schlüsse zieht, gehört es
-									ebenfalls zu den frühen künstlichen neuronalen Netzen.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										NETtalk
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Neuronale Netze
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/NETtalk">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/220px-Deep_Blue.jpg"
-									alt="Deep Blue"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: wikimedia
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1997: KI schlägt Schachweltmeister</div>
-								<p class="text-gray-700 text-base">
-									Die KI "Deep Blue" der Firma IBM, welche für das Schach spielen konzipiert ist,
-									bezwingt 1997 den amtierenden Weltmeister Garry Kasparov. Damit ist der bisher von
-									Menschen dominierte Bereich des Schachs von einer KI übernommen worden. Dieser
-									historische Erfolg wird nur leicht von Kritikern getrübt, die einwerfen, dass
-									"Deep Blue" nicht durch kognitive Intelligenz, sondern durch das Berechnen aller
-									möglichen Züge gewonnen habe.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Deep Blue
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										KI im Schach
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/Deep_Blue">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+					<HistoricalCard
+						img_link="../../../static/DartmouthConference.jpg"
+						img_alt="Dartmouth Conference"
+						source_link="https://cyfuture.com/blog/wp-content/uploads/2020/04/Dartmouth-Conference-in-1956.jpg"
+						source_text="Quelle: Cyfuture"
+						heading="1956: Der Begriff KI entsteht"
+						content='1956 treffen sich Wissenschaftler zu einer Konferenz am Dartmouth College im
+						US-Bundesstaat New Hampshire und debattieren über die Simulation von menschlicher
+						Intelligenz durch Maschinen. John McCartney schlägt dafür den Begriff "Künstliche
+						Intelligenz" vor. Während der Konferenz entsteht außerdem das erste KI-Programm
+						der Welt - der "Logic Theorist", der es schafft, mehrere mathematische Lehrsätze
+						zu beweisen.'
+						tag_list={['Dartmouth Konferenz', 'John McCarthy']}
+						button_link="https://de.wikipedia.org/wiki/Dartmouth_Conference"
+					/>
 				</li>
 
 				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://www.tanikal.com/wp-content/uploads/2016/12/IBM-Logo-Wallpaper-HD.jpg"
-									alt="IBM"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
-								>
-									Quelle: tanikal
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">2011: "Watson" gewinnt Quizshow</div>
-								<p class="text-gray-700 text-base">
-									Das Computerprogramm "Watson" tritt 2011 in einer US-amerikanischen TV-Quizshow
-									gegen menschliche Mitspieler an und gewinnt die Show. Damit beweist die KI, dass
-									sie tatsächlich die natürliche Sprache versteht und eine schnellere
-									Reaktionsgeschwindigkeit als die Mitspieler hat.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Watson
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										IBM
-									</span>
-								</div>
-								<div>
-									<form action="https://de.wikipedia.org/wiki/Watson_(K%C3%BCnstliche_Intelligenz)">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+					<HistoricalCard
+						img_link="../../../static/ELIZA.jpg"
+						img_alt="ELIZA"
+						source_link="https://moodswag.com/wp-content/uploads/2020/09/Eliza.jpg"
+						source_text="Quelle: Moodswag"
+						heading="1966: Der erste Chatbot"
+						content='1966 entwickelt der deutsch-amerikanische Informatiker Joseph Weizenbaum vom
+						Massachusetts Institute of Technology das Computerprogramm "ELIZA", welches mit
+						Menschen kommunizieren kann. ELIZA kann mehrere Gesprächspartner simulieren, wie
+						beispielsweise einen Psychotherapeuten. Jedoch sind die genutzten Mittel zur
+						Simulation des Gesprächs noch recht rudimentär geskriptet.'
+						tag_list={['Joseph Weizenbaum', 'ELIZA']}
+						button_link="https://de.wikipedia.org/wiki/ELIZA"
+					/>
 				</li>
 
 				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://medsolut.com/wp-content/uploads/2021/05/20210506_MedSolut_AI_Daily-Life_Blog-Article.jpeg"
-									alt="KI im Alltag"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
-								>
-									Quelle: medsolut
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">2011-Heute: KI erreicht den Alltag</div>
-								<p class="text-gray-700 text-base">
-									In den letzten zehn Jahren haben die Wissenschaft und die Technikbranche enorme
-									Fortschritte im Bereich der KI gemacht. Diese bahnbrechenden Entwicklungen haben
-									der KI den Weg in den Alltag gebahnt: ob bei Google, in den sozialen Medien, Siri,
-									Cortana oder Alexa - überall tritt sie auf. Gesamte Unternehmen und private
-									Haushalte sind mittlerweile über KI-gesteuerte Systeme vernetzt und kommunizieren
-									miteinander, ohne dass die Endverbraucher davon etwas mitbekommen.
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										KI im Alltag
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Sprachassistenten
-									</span>
-								</div>
-								<div>
-									<form action="https://mixed.de/ki-im-alltag/">
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+					<HistoricalCard
+						img_link="../../../static/MYCIN.jpg"
+						img_alt="MYCIN"
+						source_link="https://www.bibliomedmanager.de/fileadmin/user_upload/alle-Portale/Bilder/TANGO/sp/2018/04/gettyimages_894319072.jpg"
+						source_text="Quelle: Bibliomedmanager"
+						heading="1972: KI gelangt in die Medizin"
+						content='Die KI ist für viele schon lange kein Fremdwort mehr, doch jetzt findet sie ihren
+						ersten Einsatz in der realen Welt. Das von Ted Shortlife an der Stanford
+						University entwickelte Expertensystem "MYCIN" wird zur Diagnose und Therapie von
+						Infektionskrankheiten eingesetzt. Doch auch wenn das System hohe Trefferquoten
+						erzielt, erlangte es nicht die Bedeutung in der Medizin, die man sich erhofft
+						hatte. Die Bereitschaft gegenüber solchen Systemen war schlicht zu gering, als
+						dass sich Ärzte auf dessen Diagnose verlassen wollten.'
+						tag_list={['MYCIN', 'Medizin']}
+						button_link="https://de.wikipedia.org/wiki/Mycin_(Expertensystem)"
+					/>
 				</li>
 
 				<li>
-					<div class="md:flex flex-start">
-						<div class="bg-blue-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3">
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								data-prefix="fas"
-								class="text-white w-3 h-3"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 448 512"
-							>
-								<path
-									fill="currentColor"
-									d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-								/>
-							</svg>
-						</div>
-						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-							<div class="relative group">
-								<img
-									class="w-full block h-auto"
-									src="https://www.verlagederzukunft.de/wp-content/uploads/2018/12/KI_Algemein_VdZ.jpg"
-									alt="KI der Zukunft"
-								/>
-								<div
-									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
-								>
-									Quelle: verlagederzukunft
-								</div>
-							</div>
-							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">20xx: Die KI der Zukunft</div>
-								<p class="text-gray-700 text-base">
-									Trotz der bahnbrechenden Entwicklung des vergangenen Jahrzehnts steckt die
-									Forschung der KI noch in ihren Anfängen. Das Ziel der Zukunft wird es sein, KI
-									zuverlässiger und sicherer in Bereichen wie dem autonomen Fahren, der Raumfahrt
-									und besonders in der Medizin zu gestalten. Bisher ist es außerdem nicht gelungen,
-									eine sogenannte "starke KI" zu schaffen, die ihr Wissen auf sehr viele Bereiche
-									übertragen und somit uns Menschen in jeder Hinsicht übertrumpfen kann. All das
-									birgt auch Gefahren, weshalb ethische Fragen zur Forschung und Entwicklung der KI
-									immer mehr in der Vordergrund rücken. Die primäre Frage ist und bleibt dabei
-									<span class="font-bold">"KI - Fluch oder Segen für den Menschen?"</span>
-								</p>
-							</div>
-							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
-								<div>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Starke KI
-									</span>
-									<span
-										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-									>
-										Ethik & Moral
-									</span>
-								</div>
-								<div>
-									<form
-										action="https://www.kaigondlach.de/artikel/wie-wird-kuenstliche-intelligenz-die-zukunft-veraendern/"
-									>
-										<button
-											type="submit"
-											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-											data-mdb-ripple="true"
-										>
-											Read more
-										</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+					<HistoricalCard
+						img_link="../../../static/NETTalk.jpg"
+						img_alt="NETtalk"
+						source_link="https://fscl01.fonpit.de/userfiles/7611461/image/AI-artificial-intelligence-robot/AI-robot_12-w810h462.jpg"
+						source_text="Quelle: Fonpit"
+						heading="1986: Computer lernt sprechen"
+						content='Terrence J. Sejnowski und Charles Rosenberg bringen ihrem Programm "NETtalk"
+						mithilfe von Beispielsätzen und Phonemketten das Sprechen bei. „NETtalk“ kann
+						Wörter lesen und korrekt aussprechen sowie das Gelernte auf ihm unbekannte Wörter
+						anwenden. Aufgrund dieser Fähigkeit, die darauf beruht, dass das Programm mit
+						großen Datenmengen befüllt wird und daraus eigene Schlüsse zieht, gehört es
+						ebenfalls zu den frühen künstlichen neuronalen Netzen.'
+						tag_list={['NETtalk', 'Neuronale Netze']}
+						button_link="https://de.wikipedia.org/wiki/NETtalk"
+					/>
+				</li>
+
+				<li>
+					<HistoricalCard
+						img_link="../../../static/DeepBlue.jpg"
+						img_alt="Deep Blue"
+						source_link="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/220px-Deep_Blue.jpg"
+						source_text="Quelle: Wikimedia"
+						heading="1997: KI schlägt Schachweltmeister"
+						content='Die KI "Deep Blue" der Firma IBM, welche für das Schach spielen konzipiert ist,
+						bezwingt 1997 den amtierenden Weltmeister Garry Kasparov. Damit ist der bisher von
+						Menschen dominierte Bereich des Schachs von einer KI übernommen worden. Dieser
+						historische Erfolg wird nur leicht von Kritikern getrübt, die einwerfen, dass
+						"Deep Blue" nicht durch kognitive Intelligenz, sondern durch das Berechnen aller
+						möglichen Züge gewonnen habe.'
+						tag_list={['Deep Blue', 'KI im Schach']}
+						button_link="https://de.wikipedia.org/wiki/Long_short-term_memory"
+					/>
+				</li>
+
+				<li>
+					<HistoricalCard
+						img_link="../../../static/IBM_KI.jpg"
+						img_alt="IBM"
+						source_link="https://www.tanikal.com/wp-content/uploads/2016/12/IBM-Logo-Wallpaper-HD.jpg"
+						source_text="Quelle: Tanikal"
+						heading="2011: 'Watson' gewinnt Quizshow"
+						content='Das Computerprogramm "Watson" tritt 2011 in einer US-amerikanischen TV-Quizshow
+						gegen menschliche Mitspieler an und gewinnt die Show. Damit beweist die KI, dass
+						sie tatsächlich die natürliche Sprache versteht und eine schnellere
+						Reaktionsgeschwindigkeit als die Mitspieler hat.'
+						tag_list={['Watson', 'IBM']}
+						button_link="https://de.wikipedia.org/wiki/Watson_(K%C3%BCnstliche_Intelligenz)"
+					/>
+				</li>
+
+				<li>
+					<HistoricalCard
+						img_link="../../../static/KI_im_Alltag.jpeg"
+						img_alt="KI im Alltag"
+						source_link="https://medsolut.com/wp-content/uploads/2021/05/20210506_MedSolut_AI_Daily-Life_Blog-Article.jpeg"
+						source_text="Quelle: Medsolut"
+						heading="2011-Heute: KI erreicht den Alltag"
+						content="In den letzten zehn Jahren haben die Wissenschaft und die Technikbranche enorme
+						Fortschritte im Bereich der KI gemacht. Diese bahnbrechenden Entwicklungen haben
+						der KI den Weg in den Alltag gebahnt: ob bei Google, in den sozialen Medien, Siri,
+						Cortana oder Alexa - überall tritt sie auf. Gesamte Unternehmen und private
+						Haushalte sind mittlerweile über KI-gesteuerte Systeme vernetzt und kommunizieren
+						miteinander, ohne dass die Endverbraucher davon etwas mitbekommen."
+						tag_list={['KI im Alltag', 'Sprachassistenten']}
+						button_link="https://mixed.de/ki-im-alltag/"
+					/>
+				</li>
+
+				<li>
+					<HistoricalCard
+						img_link="../../../static/KI_der_Zukunft.jpg"
+						img_alt="KI der Zukunft"
+						source_link="https://www.verlagederzukunft.de/wp-content/uploads/2018/12/KI_Algemein_VdZ.jpg"
+						source_text="Quelle: Verlage der Zukunft"
+						heading="20xx: Die KI der Zukunft"
+						content='Trotz der bahnbrechenden Entwicklung des vergangenen Jahrzehnts steckt die
+						Forschung der KI noch in ihren Anfängen. Das Ziel der Zukunft wird es sein, KI
+						zuverlässiger und sicherer in Bereichen wie dem autonomen Fahren, der Raumfahrt
+						und besonders in der Medizin zu gestalten. Bisher ist es außerdem nicht gelungen,
+						eine sogenannte "starke KI" zu schaffen, die ihr Wissen auf sehr viele Bereiche
+						übertragen und somit uns Menschen in jeder Hinsicht übertrumpfen kann. All das
+						birgt auch Gefahren, weshalb ethische Fragen zur Forschung und Entwicklung der KI
+						immer mehr in der Vordergrund rücken. Die primäre Frage ist und bleibt dabei "KI -
+						Fluch oder Segen für den Menschen?"'
+						tag_list={['Starke KI', 'Ethik & Moral']}
+						button_link="https://mixed.de/ki-im-alltag/"
+					/>
 				</li>
 			</ol>
 		</div>
 	</div>
 
 	<div id="part-three" class="mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			3. Die Arten von KI
+		<h1
+			class="headline  text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 uppercase text-gray-100"
+		>
+			3. Arten von KI
 		</h1>
 
-		<div class="flex flex-col w-full gap-y-60 items-center">
+		<div class="flex flex-col w-[80%] sm:w-full ml-[10%] sm:ml-0 gap-y-60 items-center ">
 			<InformationTile
 				title="Schwache KI"
-				content="Ein KI-System, das nur für die Ausführung einer bestimmten Aufgabe entwickelt und trainiert wurde.
-                Es benötigt meist zusätzliche menschliche Intervention und kann ihr Wissen nicht auf andere Bereiche ausweiten.
-                Beispiele aus dem Alltag sind Sprachassistenten wie Siri und Alexa oder Industrieroboter."
 				class="mt-20"
 			>
+				<div
+					slot="content"
+					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+				>
+					Ein KI-System, das nur für die Ausführung einer bestimmten Aufgabe entwickelt und trainiert wurde.
+					Es benötigt meist zusätzliche menschliche Intervention und kann ihr Wissen nicht auf andere Bereiche ausweiten.
+					Beispiele aus dem Alltag sind Sprachassistenten wie Siri und Alexa oder Industrieroboter.
+				</div>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img src="../../../static/siri.jpg" alt="siri" class="rounded-3xl shadow-2xl" />
+						<img
+							src="../../../static/siri.jpg"
+							alt="vikus_viewer"
+							class="rounded-3xl shadow-2xl"
+						/>
 					</AnimationContainer>
 				</div>
 			</InformationTile>
 			<InformationTile title="Starke KI" right_side class="mt-20">
-				<div slot="content" class="text-gray-400 text-2xl text-justify">
+				<div
+					slot="content"
+					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+				>
 					Auch bekannt als allgemeine künstliche Intelligenz kann die starke KI die kognitiven
 					Fähigkeiten des menschlichen Gehirns nachbilden. Somit kann sie auch unbekannte Aufgaben
 					lösen, indem sie Wissen aus anderen Bereichen anwendet und selbstständig eine Lösung
@@ -827,7 +322,7 @@
 				<div slot="right_slot">
 					<AnimationContainer>
 						<img
-							src="../../../static/Starke_KI.webp"
+							src="../../../static/Starke_KI.jpg"
 							alt="vikus_viewer"
 							class="rounded-3xl shadow-2xl"
 						/>
@@ -838,8 +333,10 @@
 
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
-				<div class="text-center w-1/2">
-					<h2 class="text-6xl font-bold mb-6 text-center">4 Typen von KI</h2>
+				<div class="text-center w-3/4 ">
+					<h2 class=" text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center">
+						4 Typen von KI
+					</h2>
 					<p class="text-2xl text-gray-400 mb-12">
 						In <a
 							class="text-blue-500 underline"
@@ -855,364 +352,153 @@
 			</div>
 
 			<div
-				class="grid bg-gray-700 rounded-2xl shadow-2xl p-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+				class="grid bg-gray-700 gap-12 rounded-2xl shadow-2xl p-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:gap-x-12"
 			>
-				<div class="mb-12 lg:mb-0">
-					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
-						<Icon icon="tablet" size="24px" />
-					</div>
-					<h5 class="text-2xl font-bold mb-4">1. Reaktive Maschinen (reactive machines)</h5>
-					<p class="text-xl text-justify text-gray-300">
-						Diese KI-Systeme besitzen keinen eigenen Speicher, aus dem sie Erfahrungen schöpfen
-						können, womit sie auch nur einem bestimmten Zweck dienen und aufgabenspezifisch sind.
-						Ein Beispiel dafür ist das vorhin aufgeführte, von IBM entwickelte Schachprogramm Deep
-						Blue. Dieses System kann Figuren auf dem Schachbrett erkennen und Vorhersagen treffen,
-						jedoch aber nicht aus früheren Erkenntnissen lernen.
-					</p>
-				</div>
+				<OverviewSubCard
+					icon="tablet"
+					icon_size="24px"
+					heading="1. Reaktive Maschinen (reactive machines)"
+					content="Diese KI-Systeme besitzen keinen eigenen Speicher, aus dem sie Erfahrungen schöpfen
+					können, womit sie auch nur einem bestimmten Zweck dienen und aufgabenspezifisch sind.
+					Ein Beispiel dafür ist das vorhin aufgeführte, von IBM entwickelte Schachprogramm Deep
+					Blue. Dieses System kann Figuren auf dem Schachbrett erkennen und Vorhersagen treffen,
+					jedoch aber nicht aus früheren Erkenntnissen lernen."
+				/>
 
-				<div class="mb-12 lg:mb-0">
-					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
-						<Icon icon="slack" size="24px" />
-					</div>
-					<h5 class="text-2xl font-bold mb-4">2. Begrenzte Speicherkapazität (Limited Memory)</h5>
-					<p class="text-xl text-justify text-gray-300">
-						Anders als die reaktiven Maschinen verfügen diese KI-System über einen Speicher ("ein
-						Gedächtnis"), mit welchem sie auf frühere Erfahrungen zurückgreifen und somit neue
-						Kenntnisse ziehen können. Solche Systeme kommen unter anderem in autonomen Fahrzeugen
-						zum Einsatz.
-					</p>
-				</div>
+				<OverviewSubCard
+					icon="slack"
+					icon_size="24px"
+					heading="2. Begrenzte Speicherkapazität (limited memory)"
+					content='Anders als die reaktiven Maschinen verfügen diese KI-Systeme über einen Speicher ("ein
+					Gedächtnis"), mit welchem sie auf frühere Erfahrungen zurückgreifen und somit neue
+					Kenntnisse ziehen können. Solche Systeme kommen unter anderem in autonomen Fahrzeugen
+					zum Einsatz.'
+				/>
 
-				<div class="mb-12 md:mb-0">
-					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
-						<Icon icon="user" size="24px" />
-					</div>
-					<h5 class="text-2xl font-bold mb-4">3. Theorie des Geistes (Theory of Mind)</h5>
-					<p class="text-xl text-justify text-gray-300">
-						Ab diesem Typ beginnt langsam der Übergang zur starken KI, denn solche KIs verfügen über
-						soziale Intelligenz und können somit Emotionen verstehen. Diese Art von KI wird in der
-						Lage sein, menschliche Absichten zu erkennen und Verhalten vorherzusagen, was es ihr
-						leichter machen wird, Bestandteil menschlicher Teams zu werden.
-					</p>
-				</div>
+				<OverviewSubCard
+					icon="user"
+					icon_size="24px"
+					heading="3. Theorie des Geistes (theory of mind)"
+					content='Dieser Typ ähnelt immer mehr einer starken KI, denn solche KIs verfügen über
+					soziale Intelligenz und können somit Emotionen verstehen. Diese Art von KI wird in der
+					Lage sein, menschliche Absichten zu erkennen und Verhalten vorherzusagen, was es ihr
+					leichter machen wird, Bestandteil menschlicher Teams zu werden.'
+				/>
 
-				<div class="mb-12 md:mb-0">
-					<div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block mb-6">
-						<Icon icon="users" size="24px" />
-					</div>
-					<h5 class="text-2xl font-bold mb-4">4. Selbstwahrnehmung</h5>
-					<p class="text-xl text-justify text-gray-300">
-						Künstliche Intelligenzen von diesem Typ besitzen mindestens eine Intelligenz auf
-						menschlichem Niveau und einen Sinn für sich selbst, was Ihnen ein eigenes Bewusstsein
-						gibt. Sie verstehen ihren eigenen aktuellen Zustand und können uns Menschen in vielen
-						Dingen übertreffen, was auch Gefahren birgt.
-					</p>
-				</div>
+				<OverviewSubCard
+					icon="users"
+					icon_size="24px"
+					heading="Selbstwahrnehmung"
+					content="Künstliche Intelligenzen von diesem Typ besitzen mindestens eine Intelligenz auf
+					menschlichem Niveau und einen Sinn für sich selbst, was Ihnen ein eigenes Bewusstsein
+					gibt. Sie verstehen ihren eigenen aktuellen Zustand und können uns Menschen in vielen
+					Dingen übertreffen, was auch Gefahren birgt."
+				/>
 			</div>
 		</section>
 	</div>
 
-	<div id="part-five" class="grid mt-32">
-		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-			5. Anwendungsgebiete
+	<div id="part-four" class="grid mt-32">
+		<h1
+			class="headline text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 ml-24 uppercase text-gray-100"
+		>
+			4. Anwendungsgebiete
 		</h1>
 
 		<div class="grid justify-center items-center justify-self-center w-3/4">
-			<div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Robotik.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Robotik</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
-							übernehmen sie beispielsweise einen Großteil der Fertigung in der Autobranche.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Suchmaschine.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Suchmaschinen</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
-							relevante Inhalte bereitzustellen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Sprachassistenten.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Sprachassistenten</h5>
+			<div
+				class="grid gap-12 m-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4"
+			>
+				<ApplicationCard
+					img_source="../../../static/Robotik.jpg"
+					img_alt="Robotik"
+					heading="Robotik"
+					content="Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
+					übernehmen sie beispielsweise einen Großteil der Fertigung in der Autobranche."
+					read_more_link="https://www.infineon.com/cms/de/discoveries/grundlagen-robotics/"
+				/>
 
-						<p class="mb-3 font-normal text-gray-400">
-							Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
-							natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
+				<ApplicationCard
+					img_source="../../../static/Suchmaschine.jpg"
+					img_alt="Suchmaschine"
+					heading="Suchmaschine"
+					content="KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
+					relevante Inhalte bereitzustellen."
+					read_more_link="https://kopfundstift.de/wie-funktioniert-eine-suchmaschine/"
+				/>
 
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Social_Media.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Social Media</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle KI-basiert.
-							Sie lernen von dem Nutzerverhalten und passen so den Feed an.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Spam-Filter.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Spam-Filter</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der Mail-Anbieter
-							gelöscht, bevor sie überhaupt in das Postfach gelangen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Personal_Content.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Persönliche Inhalte</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten im
-							Internet und schlagen so personalisierte Inhalte vor.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Chatbot.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Chatbot</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
-							wichtigsten Informationen des Kundenproblems erfragen und analysieren.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Content-Moderation.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Inhaltsverwaltung</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
-							Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und zu
-							löschen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Gesichtserkennung.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Gesichtserkennung</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
-							um Gesichter und weitere Informationen zu erkennen.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
-				<div
-					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-				>
-					<img class="rounded-t-lg h-full" src="../../../static/Mobilität.jpg" alt="" />
-					<div class="p-5  grid content-between row-span-2">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Mobilität</h5>
-						<p class="mb-3 font-normal text-gray-400">
-							Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer auch
-							mit Einparkhilfen oder dem Halten der Fahrspur.
-						</p>
-						<a
-							href="#part-one"
-							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-						>
-							Read more
-							<svg
-								class="ml-2 -mr-1 w-4 h-4"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									fill-rule="evenodd"
-									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd"
-								/></svg
-							>
-						</a>
-					</div>
-				</div>
+				<ApplicationCard
+					img_source="../../../static/Sprachassistenten.jpg"
+					img_alt="Sprachassistenten"
+					heading="Sprachassistenten"
+					content="Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
+					natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen."
+					read_more_link="https://www.thisisdmg.com/wie-funktionieren-sprachassistenten/"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Spam_Filter.jpg"
+					img_alt="Spam Filter"
+					heading="Spam Filter"
+					content="Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der Mail-Anbieter
+					gelöscht, bevor sie überhaupt in das Postfach gelangen."
+					read_more_link="https://de.wikipedia.org/wiki/Spamfilter"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Social_Media.jpg"
+					img_alt="Social Media"
+					heading="Social Media"
+					content="Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle KI-basiert.
+					Sie lernen von dem Nutzerverhalten und passen so den Feed an."
+					read_more_link="https://webcare.plus/algorithmen-social-media/"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Personal_Content.jpg"
+					img_alt="Personal Content"
+					heading="Personal Content"
+					content="Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten im
+					Internet und schlagen so personalisierte Inhalte vor."
+					read_more_link="https://www.welt.de/wirtschaft/webwelt/article160308665/So-funktioniert-personalisierte-Werbung-im-Internet.html"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Chatbot.jpg"
+					img_alt="Chatbot"
+					heading="Chatbot"
+					content="Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
+					wichtigsten Informationen des Kundenproblems erfragen und analysieren."
+					read_more_link="https://www.ibm.com/de-de/campaign/was-ist-ein-chatbot"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Content-Moderation.jpg"
+					img_alt="Inhaltsverwaltung"
+					heading="Inhaltsverwaltung"
+					content="Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
+					Herausforderungen. KIs untersützen dabei, Hasskomentare o.Ä. zu identifizieren und zu
+					löschen."
+					read_more_link="https://de.wikipedia.org/wiki/Content-Moderation"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Gesichtserkennung.jpg"
+					img_alt="Gesichtserkennung"
+					heading="Gesichtserkennung"
+					content="Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
+					um Gesichter und weitere Informationen zu erkennen."
+					read_more_link="https://www.galileo.tv/technik/gesichtserkennung-wie-sie-funktioniert-und-warum-sie-gefaehrlich-werden-kann/"
+				/>
+
+				<ApplicationCard
+					img_source="../../../static/Mobilität.jpg"
+					img_alt="Mobilität"
+					heading="Mobilität"
+					content="Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer auch
+					mit Einparkhilfen oder dem Halten der Fahrspur."
+					read_more_link="https://www.sueddeutsche.de/auto/verkehrssicherheit-so-weit-ist-das-autonome-fahren-1.3913983-2"
+				/>
 			</div>
 		</div>
 	</div>
@@ -1221,7 +507,7 @@
 		class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg"
 	>
 		<div
-			class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
+			class="text-3xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
 		>
 			<h1>
 				Support the <h1
@@ -1232,16 +518,16 @@
 			</h1>
 		</div>
 		<div class="flex flex-col md:flex-row md:max-w-xl ">
-			<div class="w-full text-center m-6 p-8">
+			<div class="w-auto text-center m-6 p-8">
 				<img
-					src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+					src="../../../../static/Robert.jfif"
 					class="rounded-full w-32 mb-4 mx-auto"
 					alt="Avatar"
 				/>
 				<h5 class="text-xl font-medium leading-tight mb-2">Robert Witzke</h5>
 				<p class="text-gray-500 mb-2">Web designer</p>
 				<ul class="list-inside flex mx-auto justify-center">
-					<a href="#!" class="px-2">
+					<a href="https://github.com/robertwitzke" class="px-2">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 496 512"
@@ -1253,19 +539,7 @@
 							/>
 						</svg>
 					</a>
-					<a href="#!" class="px-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512"
-							class="w-4 h-4 text-blue-600"
-						>
-							<path
-								fill="currentColor"
-								d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-							/>
-						</svg>
-					</a>
-					<a href="#!" class="px-2">
+					<a href="https://www.linkedin.com/in/robert-witzke-1b1414244" class="px-2">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 448 512"
@@ -1285,4 +559,5 @@
 
 <Footer />
 
-<style lang="postcss"></style>
+<style lang="postcss">
+</style>
