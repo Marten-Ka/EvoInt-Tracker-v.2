@@ -14,8 +14,12 @@ vikus-viewer-script/.DS_Store
 vikus-viewer-script/package-lock.json
 vikus-viewer-script/images/data
 
-#some-papers
-/some-papers
+#papers
+/papers
+
+#test in NLP
+/EvoInt/NLP/test.py
+/EvoInt/NLP/test2.py
 
 # evoint-scripts
 /evoint-scripts/.vscode

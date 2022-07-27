@@ -1,21 +1,10 @@
-from sentence_transformers import SentenceTransformer, util
-model = SentenceTransformer('all-mpnet-base-v2')
+import torch
 
-sentences1 = ['The cat sits outside',
-             'A man is playing guitar',
-             'The new movie is awesome']
+dict = {'https-www-ijcai-org-proceedings-2021-0575-pdf.pdf' : torch.Tensor([1, 2, 3, 4, 5, 6]),
+    'https-www-ijcai-org-proceedings-2021-0577-pdf.pdf' : torch.Tensor([7, 8, 9, 10, 11, 12])}
 
-sentences2 = ['The kitty is sitting in the garden',
-              'A woman watches TV',
-              'The new movie is so great']
+for file, value in dict.items():
+    #final_tensor = torch.stack(dict[file])
+    print("File: ", file, "Type: ", type(dict[file]), "Shape: ", dict[file].size())
 
-#Compute embedding for both lists
-embeddings1 = model.encode(sentences1, convert_to_tensor=True)
-embeddings2 = model.encode(sentences2, convert_to_tensor=True)
-
-#Compute cosine-similarities
-cosine_scores = util.cos_sim(embeddings1, embeddings2)
-
-#Output the pairs with their score
-for i in range(len(sentences1)):
-    print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
+print(list(dict.values()))
