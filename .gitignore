@@ -17,6 +17,9 @@ vikus-viewer-script/images/data
 #papers
 /papers
 
+#stopwords for nlp
+/stopwords
+
 #test in NLP
 /EvoInt/NLP/test.py
 /EvoInt/NLP/test2.py

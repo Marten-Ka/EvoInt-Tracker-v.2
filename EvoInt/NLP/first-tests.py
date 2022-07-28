@@ -1,13 +1,18 @@
+import datetime
 import glob
 import os
-import numpy as np
+from collections import defaultdict
+from urllib.error import ContentTooShortError
+
 import fitz
-import datetime
-from nltk import sent_tokenize
-from nltk.corpus import stopwords
 import nltk
-from sentence_transformers import SentenceTransformer, util
 import torch
+from nltk import pos_tag, sent_tokenize
+from nltk.corpus import stopwords
+from nltk.corpus import wordnet as wn
+from nltk.stem import WordNetLemmatizer
+from sentence_transformers import SentenceTransformer, util
+
 
 def get_abstract_of_pdf(pdf_path):
     doc = fitz.open(pdf_path)
@@ -56,20 +61,26 @@ def concat_pdf_section_text(node):
         for j in range(len(node['lines'][i]['spans'])):
             text += node['lines'][i]['spans'][j]['text'] + ' '
 
-    # maybe not a good idea, because "tracking-by-detection" --> "trackingbydetection"
-    # maybe check if last char in an span is '-'?
-    text = text.replace('-', ' ')
+    # '-' as line seperator causes '- ' in text -> replace it an keep '-' as word seperator
+    text = text.replace('- ', '')
     return text
 
 now = datetime.datetime.now()
-nltk.download('punkt')
-nltk.download('stopwords')
+nltk.download('punkt', 'stopwords','omw-1.4', 'averaged_perceptron_tagger')
 
 model = SentenceTransformer('all-mpnet-base-v2')
 
 stops =set(stopwords.words('english'))
 
-folder = r"C:\Users\GLJNI\Workspaces\EvoInt-Tracker-v.2\papers\2016-2021\10 aus 2021\*.pdf"
+lemmatizer = WordNetLemmatizer()
+
+#tag map for part-of-speech-tagging and lemmatization
+tag_map = defaultdict(lambda : wn.NOUN)
+tag_map['J'] = wn.ADJ
+tag_map['V'] = wn.VERB
+tag_map['R'] = wn.ADV
+
+folder = r"C:\Users\GLJNI\Workspaces\EvoInt-Tracker-v.2\papers\2016-2021\30\*.pdf"
 
 sent_embeddings_dict = {}
 doc_embeddings_dict = {}
@@ -80,15 +91,14 @@ for file in glob.glob(rf'{folder}'):
     contents = contents_raw.lower()
     contents = contents.split()
     contents = [word for word in contents if word not in stops]
+    contents = [lemmatizer.lemmatize(word, tag_map[tag[0]]) for word, tag in pos_tag(contents)]
     contents = ' '.join(contents)
-    print(contents)
     sentence_list = sent_tokenize(contents)
     sent_embeddings_dict.update({os.path.split(filepath)[1] : model.encode(sentence_list, convert_to_tensor=True, show_progress_bar=True)})
 
-
 for file, value in sent_embeddings_dict.items():
     doc_embeddings_dict.update({file : torch.mean(sent_embeddings_dict[file],dim=0)})
-    print("File: ", file, "Type: ", type(sent_embeddings_dict[file]), "Shape: ", sent_embeddings_dict[file].size())
+    #print("File: ", file, "Type: ", type(sent_embeddings_dict[file]), "Shape: ", sent_embeddings_dict[file].size())
 
 final_tensor = torch.stack(list(doc_embeddings_dict.values()))
 
@@ -97,7 +107,10 @@ cosine_scores = util.cos_sim(final_tensor, final_tensor)
 # print(final_tensor)
 # print(type(final_tensor))
 # print(final_tensor.size())
-print(cosine_scores)
+i = 1
+for item in cosine_scores:
+    print(i, item)
+    i = i + 1
 
 
 now2 = datetime.datetime.now()
