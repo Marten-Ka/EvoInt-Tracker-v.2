@@ -3,7 +3,7 @@
 
 	export let icon: string;
 	export let size: string = '24px';
-	export let stroke_width: string = "2";
+	export let stroke_width: string = '2';
 	export let color: string = '#FFF';
 	export let fill_color: string = 'none';
 	export let settings: object = {};
@@ -42,12 +42,23 @@
 		hover_fill_color = fill_color;
 	}
 
-	if (!size) {
-		size = '24px';
-	}
+	function giveSize() {
+		let w;
+		if (typeof window !== 'undefined') {
+			w = window.innerWidth;
+		}
 
-	if (!hover_size) {
-		hover_size = size;
+		if (w < 640) {
+			size = '16px';
+		} else if (w < 768) {
+			size = '24px';
+		} else if (w < 1024) {
+			size = '28px';
+		} else if (w < 1280) {
+			size = '32px';
+		} else {
+			size = '40px';
+		}
 	}
 
 	let cssClasses: string[] = [];
@@ -112,6 +123,12 @@
 	}
 
 	$: {
+		giveSize();
+
+		if (!hover_size) {
+			hover_size = size;
+		}
+
 		if (hovering || componentHovering) onHover();
 		else onDehover();
 
@@ -153,6 +170,7 @@
 	on:mouseenter={changeToHoverState}
 	on:mouseleave={changeToNoHoverState}
 	class={cssClasses.join(' ')}
+	id="icondiv"
 >
 	{@html svg}
 </div>

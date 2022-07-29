@@ -7,6 +7,7 @@
 	import InformationTile from '../components/InformationTile.svelte';
 	import AnimationContainer from '../components/AnimationContainer.svelte';
 	import Footer from '../components/Footer.svelte';
+	import ArticleCard from '../components/ArticleCard.svelte';
 
 	let name: string = 'Test';
 	let show: boolean = false;
@@ -26,11 +27,13 @@
 
 <div class="flex flex-col text-center justify-center items-center mt-20">
 	<h1
-		class="headline text-7xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)]"
+		class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-4xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none"
 	>
 		Entdecke die Evolution <br /> von künstlicher Intelligenz
 	</h1>
-	<h2 class="mt-2 mb-32 text-2xl font-semibold text-gray-400 uppercase">
+	<h2
+		class="mt-2 mb-20 text-center text-sm  sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold text-gray-400 uppercase"
+	>
 		Wir nehmen dich mit auf eine Reise durch die Geschichte
 	</h2>
 	<div class="arrow">
@@ -40,6 +43,9 @@
 			color="#111827CC"
 			size="192px"
 			class="hover:cursor-pointer hover:scale-105 transition-all duration-500 hover:translate-y-4"
+			onClick={() => {
+				goto('#page-content');
+			}}
 		/>
 	</div>
 </div>
@@ -70,179 +76,98 @@
 
 <div class="background-lightning" />
 
-<div class="section">
+<div id="page-content" class="section xl:p-12">
 	<InformationTile
 		title="Vikus Viewer"
-		content="Erlebe histrorische Daten auf einem Blick. Erkenne Verläufe, beobachte Trends und untersuche Änderungen."
-		class="mt-20"
+		content="Erlebe historische Daten auf einem Blick. Erkenne Verläufe, beobachte Trends und untersuche Änderungen."
+		class="mt-10 lg:mt-20"
 	>
-		<div slot="left_slot" class="mt-2 ml-4 flex gap-5">
+		<div slot="left_slot" class="mt-2 flex justify-center  gap-5">
 			<Icon icon="bar-chart-2" size="32px" />
 			<Icon icon="trending-up" size="32px" />
 			<Icon icon="search" size="32px" />
 		</div>
 		<div slot="right_slot">
 			<AnimationContainer from_right>
-				<img src="../static/vikusViewer.png" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+				<img
+					src="../static/vikusViewer.png"
+					alt="vikus_viewer"
+					class="rounded-3xl shadow-2xl px-4"
+				/>
 			</AnimationContainer>
 		</div>
 	</InformationTile>
-	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-20">
-		<div slot="content" class="text-gray-400 text-2xl">
+	<InformationTile title="Zusammenhänge schaffen" right_side class="mt-10 lg:mt-20">
+		<div
+			slot="content"
+			class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-justify"
+		>
 			Daten ohne Kontext bringen meist keinen Nutzen. Dadurch haben wir es uns zur Aufgabe gemacht
 			einen Zusammenhang zwischen den großen Datenmengen zu schaffen. <br /> Durch NLP
 			<span class="font-mono text-xl">(Natural Language Processing)</span> analysieren wir verschiedenste
 			Trends in der Geschichte.
 		</div>
-		<div slot="left_slot" class="mt-2 ml-4 flex flex-row-reverse gap-5">
+		<div slot="left_slot" class="mt-2 flex flex-row-reverse justify-center gap-5">
 			<Icon icon="list" size="32px" />
 			<Icon icon="layers" size="32px" />
 			<Icon icon="database" size="32px" />
 		</div>
 		<div slot="right_slot">
 			<AnimationContainer>
-				<img src="../static/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+				<img src="../static/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl px-4" />
 			</AnimationContainer>
 		</div>
 	</InformationTile>
 
-	<section class="my-32 p-12 text-gray-800 text-center w-[95%] bg-gray-800 rounded-xl">
-		<h2 class="text-5xl uppercase text-gray-100 font-bold mb-12 pb-4 text-center">
+	<section class="my-32 p-4 md:p-12 text-gray-800 text-center w-[95%] bg-gray-800 rounded-xl">
+		<h2
+			class="text-center text-base  md:text-xl lg:text-3xl xl:text-4xl uppercase text-gray-100 font-bold mb-12 pb-4"
+		>
 			Neueste Artikel
 		</h2>
 
 		<div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
-			<div class="mb-6 h-full lg:mb-0">
-				<div class="relative block bg-white rounded-lg shadow-lg">
-					<div class="flex justify-center">
-						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-						>
-							<img
-								src="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg"
-								class="h-72"
-								alt="KI"
-							/>
-							<a href="/tutorial/ki">
-								<div
-									class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-									style="background-color: rgba(251, 251, 251, 0.15)"
-								/>
-							</a>
-						</div>
-					</div>
-					<div class="flex flex-col justify-center p-6">
-						<h5 class="font-bold text-2xl mb-3">Künstliche Intelligenz</h5>
-						<p class="text-gray-500 mb-4">
-							<small
-								>veröffentlicht am <u>24.05.2022</u> von
-								<p class="text-gray-900">Robert Witzke</p></small
-							>
-						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
-							Erfahre mehr rund um das Thema Künstliche Intelligenz - von der Begriffsklärung über
-							die Historie bis hin zu aktuellen Themen wie Deep Learning.
-						</p>
-						<a
-							href="/tutorial/ki"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-							class="inline-block px-6 py-2.5 w-auto place-self-center bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-							>Read more</a
-						>
-					</div>
-				</div>
-			</div>
+			<ArticleCard
+				img_source="../../static/homeml.jpg"
+				img_height="h-72"
+				img_alt="ML"
+				reference="/tutorial/ml"
+				source_link="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg"
+				source_text="Quelle: Futura Science"
+				heading="Machine Learning"
+				publication_date="01.06.2022"
+				author="Hamid Omar"
+				content="Erfahre mehr rund um das Thema Machine Learning und wie es mit Künstlichen
+				Intelligenzen zusammenhängt."
+			/>
 
-			<div class="mb-6 lg:mb-0">
-				<div class="relative block bg-white rounded-lg shadow-lg">
-					<div class="flex justify-center">
-						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-						>
-							<img
-								src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/0/b/90b0048886_50162050_machine-learning1.jpg"
-								class="h-96"
-								alt="ML"
-							/>
-							<a href="/tutorial/ml">
-								<div
-									class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-									style="background-color: rgba(251, 251, 251, 0.15)"
-								/>
-							</a>
-						</div>
-					</div>
-					<div class="flex flex-col justify-center p-6">
-						<h5 class="font-bold text-2xl mb-3">Machine Learning</h5>
-						<p class="text-gray-500 mb-4">
-							<small
-								>Veröffentlicht am <u>01.06.2022</u> von
-								<p class="text-gray-900">Hamid Omar</p></small
-							>
-						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
-							Erfahre mehr rund um das Thema Machine Learning und wie es mit Künstlichen
-							Intelligenzen zusammenhängt.
-						</p>
-						<a
-							href="/tutorial/ml"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-							class="inline-block px-6 py-2.5 w-auto place-self-center bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-							>Read more</a
-						>
-					</div>
-				</div>
-			</div>
+			<ArticleCard
+				img_source="../../static/homeki.jpg"
+				img_height="h-96"
+				img_alt="KI"
+				reference="/tutorial/ki"
+				source_link="https://www.planet-wissen.de/sendungen/kuenstliche-intelligenz-roboter-104~_v-gseagaleriexl.jpg"
+				source_text="Quelle: Planet Wissen"
+				heading="Künstliche Intelligenz"
+				publication_date="25.07.2022"
+				author="Robert Witzke"
+				content="Erfahre mehr rund um das Thema Künstliche Intelligenz - von der Begriffsklärung über
+				die Historie bis hin zu den Arten von KI."
+			/>
 
-			<div class="mb-6 lg:mb-0">
-				<div class="relative block bg-white rounded-lg shadow-lg">
-					<div class="flex justify-center">
-						<div
-							class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-						>
-							<img
-								src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https:%2F%2Fblogs-images.forbes.com%2Fbernardmarr%2Ffiles%2F2019%2F06%2F5-Amazing-Examples-Of-Natural-Language-Processing-NLP-In-Practice-1200x639.jpeg"
-								class="h-72"
-								alt="NLP"
-							/>
-							<a href="/tutorial/nlp">
-								<div
-									class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-									style="background-color: rgba(251, 251, 251, 0.15)"
-								/>
-							</a>
-						</div>
-					</div>
-					<div class="flex flex-col justify-center p-6">
-						<h5 class="font-bold text-2xl mb-3">Natural Language Processing</h5>
-						<p class="text-gray-500 mb-4">
-							<small
-								>Veröffentlicht am <u>21.06.2022</u> von
-								<p class="text-gray-900">Marten Kaffler</p>
-							</small>
-						</p>
-						<p class="mb-4 pb-2 text-lg w-[75%] place-self-center">
-							Erfahre mehr rund um das Thema Natural Language Processing und wie Computer unsere
-							natürliche Sprache verstehen und verarbeiten können.
-						</p>
-						<a
-							href="/tutorial/nlp"
-							data-mdb-ripple="true"
-							data-mdb-ripple-color="light"
-							class="inline-block px-6 py-2.5 w-auto place-self-center bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-							>Read more</a
-						>
-					</div>
-				</div>
-			</div>
+			<ArticleCard
+				img_source="../../static/homenlp.jpeg"
+				img_height="h-72"
+				img_alt="NLP"
+				reference="/tutorial/nlp"
+				source_link="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https:%2F%2Fblogs-images.forbes.com%2Fbernardmarr%2Ffiles%2F2019%2F06%2F5-Amazing-Examples-Of-Natural-Language-Processing-NLP-In-Practice-1200x639.jpeg"
+				source_text="Quelle: Forbes"
+				heading="Natural Language Processing"
+				publication_date="01.08.2022"
+				author="Marten Kaffler"
+				content="Erfahre mehr rund um das Thema Natural Language Processing und wie Computer unsere
+				natürliche Sprache verstehen und verarbeiten können."
+			/>
 		</div>
 	</section>
 
@@ -264,6 +189,7 @@
 	.arrow {
 		@apply bg-transparent;
 	}
+
 	.wave-1 {
 		position: absolute;
 		bottom: 0;
@@ -286,7 +212,7 @@
 	}
 
 	.section {
-		@apply absolute top-full w-full flex flex-col gap-y-60 items-center bg-gray-900;
+		@apply absolute top-full w-full flex flex-col gap-y-24 items-center bg-gray-900;
 	}
 
 	@keyframes -global-from-left {
