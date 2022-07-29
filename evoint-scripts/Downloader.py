@@ -6,7 +6,7 @@ from subprocess import DEVNULL, STDOUT, check_call
 from pathlib import Path
 import fitz
 from datetime import datetime
-from slugify import slugify
+import base64
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
@@ -30,7 +30,6 @@ VIKUS_VIEWER_DATA_IMAGES_PATH = VIKUS_VIEWER_DATA_PATH + "images/"
 VIKUS_VIEWER_DATA_FULLTEXT_PATH = VIKUS_VIEWER_DATA_PATH + "fulltext/"
 VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH = VIKUS_VIEWER_DATA_FULLTEXT_PATH + "pdf/"
 
-global_id = 0
 debug = False
 
 
@@ -53,7 +52,7 @@ def get_years_with_downloaded_pdf_data() -> dict[str, int]:
     return years
 
 
-def get_year_folder_path(year):
+def get_year_folder_path(year) -> str:
     return f'{VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH}{year}/'
 
 
@@ -65,8 +64,12 @@ def delete_all_thumbnails():
     shutil.rmtree(THUMBNAIL_PATH)
 
 
-def get_thumbnail_count():
+def get_thumbnail_count() -> int:
     return len(os.listdir(THUMBNAIL_PATH))
+
+
+def encode(string) -> str:
+    return str(base64.urlsafe_b64encode(string.encode("utf-8")), "utf-8")
 
 
 def process_publication(title, authors, year, pdf_link):
@@ -79,9 +82,9 @@ def process_publication(title, authors, year, pdf_link):
     elif(isinstance(year, str) and len(year) == 2):
         year = "20" + year
 
-    publication_id = slugify(pdf_link)
+    publication_id = f'{encode(title)}'
 
-    if(debug):
+    if debug:
         encoded_title = title.encode('utf8')
         print(f'[{year}] - [{publication_id}] Creating publication "{encoded_title}" with authors ({authors}) (from {pdf_link})')
 
@@ -90,9 +93,9 @@ def process_publication(title, authors, year, pdf_link):
 
     download_publication(publication)
 
-    add_to_data_csv(publication)
     publication_to_thumbnail(publication)
     create_vikus_textures_and_sprites(publication)
+    add_to_data_csv(publication)
 
     return publication
 
@@ -131,7 +134,7 @@ def download_publication(publication):
 
     try:
 
-        if(debug):
+        if debug:
             print(f'\t- Downloading PDF file...')
 
         response = urlopen(publication.get_pdf_link())
@@ -170,7 +173,7 @@ def publication_to_thumbnail(publication):
                     print(
                         f'\t- Recreation of thumbnail required. Size of file is zero.')
 
-        if(debug):
+        if debug:
             print(f'\t- Creating thumbnail...')
 
         try:
@@ -200,7 +203,7 @@ def create_vikus_textures_and_sprites(publication):
             if debug:
                 print(f'\t- Recreation of sprite required. Size of file(s) is zero.')
 
-        if(debug):
+        if debug:
             print(f'\t- Creating sprite...')
 
         # stdout=DEVNULL hides the output of the script
@@ -246,61 +249,6 @@ def sprite_file_state(publication):
     return return_code
 
 
-def get_abstract_of_pdf(pdf_path):
-    doc = fitz.open(pdf_path)
-
-    abstract_header_pdf_number = None
-    abstract_text = ''
-
-    for page_number in range(doc.page_count):
-
-        page = doc.load_page(page_number)
-        page_dict = page.get_text('dict')
-        abstract_header_pdf_number = find_abstract_header_pdf_number(page_dict)
-        #print(f'PDF Number: {abstract_header_pdf_number}')
-        if abstract_header_pdf_number == None:
-            continue
-
-        # +1, because next node
-        abstract_text_node = page_dict['blocks'][abstract_header_pdf_number + 1]
-        abstract_text = concat_pdf_section_text(abstract_text_node)
-        break
-
-    if abstract_header_pdf_number == None:
-        return None
-
-    return abstract_text
-
-
-def find_abstract_header_pdf_number(page_dict):
-    for i in range(len(page_dict['blocks'])):
-
-        node = page_dict['blocks'][i]
-
-        if('lines' not in node or len(node['lines']) == 0):
-            return None
-        if('spans' not in node['lines'][0] or len(node['lines'][0]['spans']) == 0):
-            return None
-        if('text' not in node['lines'][0]['spans'][0]):
-            return None
-
-        if(node['lines'][0]['spans'][0]['text'].lower().strip() == 'abstract'):
-            return int(node['number'])
-
-
-def concat_pdf_section_text(node):
-    text = ''
-
-    for i in range(len(node['lines'])):
-        for j in range(len(node['lines'][i]['spans'])):
-            text += node['lines'][i]['spans'][j]['text'] + ' '
-
-    # maybe not a good idea, because "tracking-by-detection" --> "trackingbydetection"
-    # maybe check if last char in an span is '-'?
-    text = text.replace('-', '')
-    return text
-
-
 def clean_text(string):
     string = string.replace('\n', ' ').replace('\t', ' ').replace('  ', ' ').replace('&nbsp;', '').replace('&nbsp', '').replace(
         u'\ufffd', '').replace(u'\xa0', '').replace(u'\xe2', '').replace(u'\x80', '').replace(u'\x94', '').strip()
@@ -321,33 +269,8 @@ def clean_text(string):
     return string
 
 
-def test_extract_abstracts():
-
-    date = str(datetime.now())
-    date = date.replace(' ', 'T').replace(':', '-')
-
-    with open(f'./debug/extract_abstract_errors_{date}.txt', 'w') as file:
-        file.write(file_path + '\n')
-
-    for root, dirs, files in os.walk('D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf', topdown=True):
-        dirs.sort(reverse=True)
-        for name in files:
-            file_path = os.path.join(root, name)
-            file_path = file_path.replace('\\', '/')
-
-            abstract_text = get_abstract_of_pdf(file_path)
-
-            if abstract_text == None:
-                with open(f'./debug/extract_abstract_errors_{date}.txt', 'a') as file:
-                    file.write(file_path + '\n')
-
-
 if __name__ == '__main__':
-    test_extract_abstracts()
-# get_abstract_of_pdf('D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf/2020/0795.pdf')
-
-# not the full abstract
-# print(get_abstract_of_pdf('D:/Studium/Semester4/Studienprojekt/EvoInt-Tracker-v.2/vikus-viewer/data/fulltext/pdf/1995/8486.pdf'))
+    pass
 
 #
 # TODO:

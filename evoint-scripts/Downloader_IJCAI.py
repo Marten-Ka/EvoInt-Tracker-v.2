@@ -94,7 +94,6 @@ def get_available_volumes_per_year():
 
     return result
 
-
 def iterator_download_publications_for_year(year):
 
     year = str(year)
@@ -138,6 +137,11 @@ def iterator_download_publications_for_year(year):
                 if valid_publication:
                     yield process_publication(title, authors, year, current_link)
 
+def iterator_download_all_publications():
+    for year in get_supported_ijcai_years():
+        iterator = iterator_download_publications_for_year(year)
+        for publication in iterator:
+            yield publication
 
 def download_from_single_volume_years():
 

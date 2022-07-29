@@ -2,12 +2,11 @@
 
 import os
 import csv
+import sys
 import pandas as pd
 from pathlib import Path
 
 from Publication import publications, Publication
-from DataRow import data_rows, get_data_row, create_from_row, DataRow
-from slugify import slugify
 
 csv.field_size_limit(10000000)
 
@@ -68,14 +67,6 @@ def open_csv_file_reader():
     if csv_file == None:
         csv_file = open(get_data_csv_path(), 'r', encoding="utf-8")
         csv_file_reader = csv.reader(csv_file)
-
-        index = 0
-        for row in csv_file_reader:
-
-            if index > 0:
-                create_from_row(row)
-            index += 1
-
     else:
         csv_file.seek(0, 0)  # reset read and write position
 
@@ -89,30 +80,6 @@ def get_csv_file_reader():
     global csv_file_reader
     open_csv_file_reader()
     return csv_file_reader
-
-
-def get_data_rows():
-    open_csv_file_reader()
-    return data_rows
-
-
-def get_publication_information_by_link(link):
-
-    if len(get_data_rows()) == 0 or (len(publications) + 1) >= len(get_data_rows()):
-        return None
-
-    encoded_link = slugify(link)
-    data_row = get_data_row(encoded_link)
-
-    if data_row.get_pdf_link() == link:
-        return data_row
-    else:
-        print('NEED TO LOOK IN CSV-FILE', len(publications) + 1)
-        for row in get_csv_file_reader():
-            if row[6] == link:
-                return get_data_row(row[2])  # row[2] -> id
-
-    return None
 
 
 def write_data_csv_header(csv_writer):
@@ -132,18 +99,31 @@ def write_data_csv_header(csv_writer):
 
 def write_data_csv_row(csv_writer, publication):
 
-    temp_a = publication.get_path_to_pdf().split('/')[-5:]
-    display_path_to_pdf = '/'.join(temp_a)
-    keywords = ','.join(publication.keywords) if len(
-        publication.keywords) > 0 else 'None'
+    if not csv_contains(publication.id):
+        csv_writer.writerow(publication.to_csv_row())
 
-    data_row = get_data_row(publication.id)
 
-    if data_row == None:
-        data_row = DataRow(publication.id, publication.year, publication.title, publication.authors, 'None',
-                           keywords, publication.get_pdf_link(), display_path_to_pdf, publication.get_path_to_pdf())
+def csv_contains(id):
 
-    csv_writer.writerow(data_row.to_csv_row())
+    try:
+        df = pd.read_csv(get_data_csv_path())
+        result = df[df['id'] == id]
+        return not result.empty
+    except:
+        return False
+
+
+# Returns how many rows were deleted
+def remove_duplicate_entries_in_csv() -> int:
+
+    try:
+        df = pd.read_csv(get_data_csv_path())
+        row_count = df.shape[0]
+        df = df.drop_duplicates(subset=['id'])
+        df.to_csv(get_data_csv_path(), index=False)
+        return (row_count - df.shape[0])
+    except Exception as e:
+        print(e)
 
 
 def add_to_data_csv(publication):
@@ -156,8 +136,6 @@ def add_to_data_csv(publication):
 
         write_data_csv_row(csv_writer, publication)
 
-        # print(publication.id)
-
 
 def create_data_csv():
     with open(get_data_csv_path(), 'w', newline='', encoding="utf-8") as csvfile:
@@ -167,27 +145,3 @@ def create_data_csv():
 
         for publication in list(publications):
             write_data_csv_row(csv_writer, publication)
-
-
-def read_data_csv():
-    exit('EEEEEEEEEEEERROR')
-    with open(get_data_csv_path(), newline='') as csvfile:
-        csvreader = csv.DictReader(csvfile, delimiter=',', quotechar='"')
-        for line in csvreader:
-            Publication(pub_id=line['id'],
-                        title=line['_title'],
-                        authors=line['_authors'],
-                        year=line['year'],
-                        origin_path=line['_origin_path'],
-                        path_to_pdf=line['_path_to_pdf'])
-
-
-def restore_backup():
-    read_data_csv()
-
-# csv.field_size_limit(sys.maxsize)
-# sample()
-#
-#
-# save_backup()
-# restore_backup()

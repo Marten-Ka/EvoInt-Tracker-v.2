@@ -8,7 +8,7 @@ from pathlib import Path
 from alive_progress import alive_bar
 
 from Downloader import delete_year as downloader_remove_year, delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data
-from Downloader_IJCAI import iterator_download_publications_for_year, get_available_volumes_per_year, get_supported_ijcai_years
+from Downloader_IJCAI import iterator_download_publications_for_year, iterator_download_all_publications, get_supported_ijcai_years
 from Downloader_ECAI import ecai_iterator_process_all_publications
 from Downloader_AAAI import aaai_iterator_process_publications, get_supported_aaai_years
 from VikusWriter import clean_data_csv
@@ -205,7 +205,11 @@ def prompt_download():
             prompt_download()
             return
         else:
-            iterator = iterator_download_publications_for_year(year_answer)
+
+            if year_answer == 'All':
+                iterator = iterator_download_all_publications()
+            else:
+                iterator = iterator_download_publications_for_year(year_answer)
 
     elif source == 'ECAI':
         iterator = ecai_iterator_process_all_publications()
@@ -235,7 +239,7 @@ def prompt_year(years):
         'type': 'list',
         'name': 'year',
         'message': 'Select a year you want to download:',
-        'choices': years + [Separator(), 'Back']
+        'choices': years + ['All', Separator(), 'Back']
     })
     return answers['year']
 
