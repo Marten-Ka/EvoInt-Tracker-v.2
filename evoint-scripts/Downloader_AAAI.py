@@ -51,6 +51,13 @@ def process_single_publication(year, link):
     return process_publication(title, authors, year, pdf_link)
 
 
+def aaai_iterator_process_all_publications():
+    for year in get_supported_aaai_years():
+        iterator = aaai_iterator_process_publications(year)
+        for publication in iterator:
+            yield publication
+
+
 def aaai_iterator_process_publications(year):
 
     year = normalize_year(year)

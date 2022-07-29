@@ -65,7 +65,10 @@ def delete_all_thumbnails():
 
 
 def get_thumbnail_count() -> int:
-    return len(os.listdir(THUMBNAIL_PATH))
+    if Path(THUMBNAIL_PATH).is_dir():
+        return len(os.listdir(THUMBNAIL_PATH))
+    else:
+        return 0
 
 
 def encode(string) -> str:
