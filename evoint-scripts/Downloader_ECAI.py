@@ -8,6 +8,22 @@ URLS = ['https://digital.ecai2020.eu/accepted-papers-main-conference/',
         'https://digital.ecai2020.eu/accepted-papers-pais/']
 
 
+def ecai_iterator_process_all_publications():
+
+    for url in URLS:
+
+        print(f'[2020] - Processing publications from: {url}')
+
+        response = urlopen(url)
+        page_source = response.read()
+        soup = BeautifulSoup(page_source, 'html.parser')
+
+        link_tags = get_all_valid_link_tags(url)
+
+        for link in link_tags:
+            yield process_single_publication(link)
+
+
 def process_all_publications():
 
     for url in URLS:
@@ -39,48 +55,23 @@ def process_single_publication(link):
     return process_publication(title, authors, 2020, pdf_link)
 
 
-def ecai_iterator_process_all_publications():
-
-    link_tags = get_all_valid_link_tags()
-    return ECAIPublicationIterator(link_tags)
-
-
-def get_all_valid_link_tags():
+def get_all_valid_link_tags(url):
 
     link_tags = []
 
-    for url in URLS:
-        response = urlopen(url)
-        page_source = response.read()
-        soup = BeautifulSoup(page_source, 'html.parser')
+    response = urlopen(url)
+    page_source = response.read()
+    soup = BeautifulSoup(page_source, 'html.parser')
 
-        for link in soup.find_all('a'):
+    for link in soup.find_all('a'):
 
-            pdf_link = link.get('href')  # e.g. /papers/11_paper.pdf
+        pdf_link = link.get('href')  # e.g. /papers/11_paper.pdf
 
-            if(pdf_link == None):
-                continue
-            if(not pdf_link.startswith('/papers/')):
-                continue
+        if(pdf_link == None):
+            continue
+        if(not pdf_link.startswith('/papers/')):
+            continue
 
-            link_tags.append(link)
+        link_tags.append(link)
 
     return link_tags
-
-
-class ECAIPublicationIterator:
-    def __init__(self, link_tags):
-        self.data = link_tags
-        self.max_length = len(self.data)
-        self.count = 0
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.count < self.max_length:
-            publication = process_single_publication(self.data[self.count])
-            self.count = self.count + 1
-            return publication
-        else:
-            raise StopIteration

@@ -4,6 +4,7 @@ import fitz
 import re
 from collections import Counter
 from pathlib import Path
+import os
 
 publications = OrderedDict()
 KEYWORDS = [
@@ -64,14 +65,16 @@ KEYWORDS = [
 
 
 class Publication:
-    def __init__(self, publication_id, title, year, origin_path, path_to_pdf, authors=None):
+    def __init__(self, publication_id, title, year, origin_path, authors=None):
         self.id = publication_id
         self.title = title
         self.authors = authors
         self.keywords = []
         self.year = year
         self.origin_path = origin_path
-        self.path_to_pdf = path_to_pdf
+
+        self.path_to_pdf = os.path.join("../vikus-viewer/data/fulltext/pdf", str(
+            year), str(publication_id) + '.pdf')
 
         self.add_to_publications()
 

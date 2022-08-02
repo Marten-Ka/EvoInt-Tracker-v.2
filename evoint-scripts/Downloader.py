@@ -5,8 +5,10 @@ import shutil
 from subprocess import DEVNULL, STDOUT, check_call
 from pathlib import Path
 import fitz
-from datetime import datetime
-import base64
+from datetime import date, datetime
+from time import time
+import uuid
+import random
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
@@ -71,10 +73,6 @@ def get_thumbnail_count() -> int:
         return 0
 
 
-def encode(string) -> str:
-    return str(base64.urlsafe_b64encode(string.encode("utf-8")), "utf-8")
-
-
 def process_publication(title, authors, year, pdf_link):
 
     # if year = 18 --> make it to 2018
@@ -85,7 +83,9 @@ def process_publication(title, authors, year, pdf_link):
     elif(isinstance(year, str) and len(year) == 2):
         year = "20" + year
 
-    publication_id = f'{encode(title)}'
+    rd = random.Random()
+    rd.seed(title)
+    publication_id = str(uuid.UUID(int=rd.getrandbits(128), version=4))
 
     if debug:
         encoded_title = title.encode('utf8')
@@ -104,14 +104,11 @@ def process_publication(title, authors, year, pdf_link):
 
 
 def create_publication_object(publication_id, title, authors, year, current_link):
-    path_to_pdf = VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH + \
-        str(year) + '/' + str(publication_id) + '.pdf'
     return Publication(publication_id=publication_id,
                        title=title,
                        authors=authors,
                        year=year,
-                       origin_path=current_link,
-                       path_to_pdf=path_to_pdf)
+                       origin_path=current_link)
 
 
 def download_publication(publication):
@@ -130,6 +127,8 @@ def download_publication(publication):
         #
         file_size = os.path.getsize(publication.get_path_to_pdf())
         if file_size > 0:
+            if debug:
+                print(f'\t- PDF was already downloaded.')
             return
         else:
             if debug:
@@ -140,12 +139,16 @@ def download_publication(publication):
         if debug:
             print(f'\t- Downloading PDF file...')
 
+        start_time = time()
         response = urlopen(publication.get_pdf_link())
-        # TODO: path_to_pdf has to start at data/..., so add vikus-viewer/ here
         os.makedirs(get_year_folder_path(publication.year), exist_ok=True)
-        file = open(publication.get_path_to_pdf(), 'wb')
-        file.write(response.read())
-        file.close()
+
+        with open(publication.get_path_to_pdf(), 'wb') as file:
+            file.write(response.read())
+
+        if debug:
+            print(
+                f'\t- Successfully downloaded PDF in {time() - start_time}ms.')
 
     except HTTPError:
         print("Could not download PDF: " + publication.get_pdf_link())
@@ -170,6 +173,8 @@ def publication_to_thumbnail(publication):
             file_size = os.path.getsize(output_path)
 
             if file_size > 0:
+                if debug:
+                    print(f'\t- Thumbnail already exists.')
                 return
             else:
                 if debug:
@@ -180,14 +185,17 @@ def publication_to_thumbnail(publication):
             print(f'\t- Creating thumbnail...')
 
         try:
+
             page = convert_from_path(path, 200, first_page=1, last_page=1)
 
-            thumbnail_path = f'data/thumbnails/{publication.id}.png'
             try:
-                page[0].save(thumbnail_path, 'PNG')
+                page[0].save(output_path, 'PNG')
+
+                if debug:
+                    print(f'\t- Created thumbnail.')
             except:
                 print(
-                    f'\t- Could not save thumbnail to path: {thumbnail_path}')
+                    f'\t- Could not save thumbnail to path: {output_path}')
 
         except Exception as e:
             print(f'\t- Could not extract first page of PDF file.\n{e}')
@@ -200,18 +208,24 @@ def create_vikus_textures_and_sprites(publication):
     Path(directory_path).mkdir(parents=True, exist_ok=True)
 
     sprite_status = sprite_file_state(publication)
-    if sprite_status >= 0 and sprite_status <= 2:
+    if sprite_status == 0:
+        if debug:
+            print(f'\t- Sprites already exist.')
+    elif sprite_status == 1 or sprite_status == 2:
 
         if sprite_status == 2:
             if debug:
                 print(f'\t- Recreation of sprite required. Size of file(s) is zero.')
 
         if debug:
-            print(f'\t- Creating sprite...')
+            print(f'\t- Creating sprite (status: {sprite_status})...')
 
         # stdout=DEVNULL hides the output of the script
         check_call(["node", "../vikus-viewer-script/bin/textures",
                    f'data/thumbnails/{publication.id}.png', "--output", "../vikus-viewer/data/images", "--spriteSize", "90"], stdout=DEVNULL)  # , stderr=STDOUT)
+
+        if debug:
+            print(f'\t- Created sprites.')
 
     else:
         print(

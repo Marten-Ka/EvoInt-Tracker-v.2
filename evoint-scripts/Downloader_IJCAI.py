@@ -94,7 +94,8 @@ def get_available_volumes_per_year():
 
     return result
 
-def iterator_download_publications_for_year(year):
+
+def ijcai_iterator_process_publications_for_year(year):
 
     year = str(year)
     os.makedirs(VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH + year, exist_ok=True)
@@ -106,7 +107,7 @@ def iterator_download_publications_for_year(year):
         response = urlopen(volume_link)  # opens the URL
         page_source = response.read()
         soup = BeautifulSoup(page_source, 'html.parser')
-        print(f'[{year}] - Parsing website ({volume_link})...')
+        print(f'[{year}] - Processing publications from: {volume_link}')
 
         for link in soup.find_all('a'):
             current_link = link.get('href')
@@ -137,11 +138,13 @@ def iterator_download_publications_for_year(year):
                 if valid_publication:
                     yield process_publication(title, authors, year, current_link)
 
-def iterator_download_all_publications():
+
+def ijcai_iterator_process_all_publications():
     for year in get_supported_ijcai_years():
-        iterator = iterator_download_publications_for_year(year)
+        iterator = ijcai_iterator_process_publications_for_year(year)
         for publication in iterator:
             yield publication
+
 
 def download_from_single_volume_years():
 
@@ -318,8 +321,6 @@ def get_pdf_information(year, link_tag, origin_title):
             # Therefore we need to make a few checks.
             #
 
-            # print("----------------")
-
             title = clean_text(link_tag.text)
 
             link_parent = link_tag.find_parent('b')
@@ -340,18 +341,12 @@ def get_pdf_information(year, link_tag, origin_title):
                 else:
                     title_wrapper = link_parent.find_parent('p')
 
-            # print(link_tag.text)
-            # print(title_wrapper)
-
             author_wrapper = title_wrapper.find_next_sibling()
 
             if author_wrapper == None:
                 return False, title, []
 
             b_author_tag = author_wrapper.find('b')
-
-            # print(b_author_tag)
-            # print(author_wrapper)
 
             if b_author_tag == None:
                 authors = author_wrapper.text
@@ -375,22 +370,6 @@ def get_pdf_information(year, link_tag, origin_title):
             if(title == 'Henri Be ringer and Bruno de Backer.'):
                 return False, title, []
 
-            #
-            # Authors sometimes are seperated into two or more p-Tags
-            # Example for a structure:
-            #
-            #   <p>
-            #       <a href="...">TITLE</a>
-            #   </p>
-            #
-            #   <p>AUTHOR1, AUTHOR2</p>
-            #   <p>and AUTHOR3..52</p>
-            #
-            # We use the ".." plus a number (we don't know what the number is for)
-            # to identify if it is still a p-Tag with author information
-            # or whether it is the next section.
-            #
-
             current_tag = link_tag.find_parent('p')
 
             #
@@ -408,6 +387,22 @@ def get_pdf_information(year, link_tag, origin_title):
                 authors = remove_dots_and_numbers_at_end(authors)
 
             else:
+
+                #
+                # Authors sometimes are seperated into two or more p-Tags
+                # Example for a structure:
+                #
+                #   <p>
+                #       <a href="...">TITLE</a>
+                #   </p>
+                #
+                #   <p>AUTHOR1, AUTHOR2</p>
+                #   <p>and AUTHOR3..52</p>
+                #
+                # We use the ".." plus a number (we don't know what the number is for)
+                # to identify if it is still a p-Tag with author information
+                # or whether it is the next section.
+                #
 
                 raw_authors = ''
                 while(len(raw_authors) == 0 or not string_ends_with_dots_or_numbers(raw_authors)):

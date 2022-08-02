@@ -8,8 +8,8 @@ import shutil
 from pathlib import Path
 from alive_progress import alive_bar
 
-from Downloader import delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data
-from Downloader_IJCAI import iterator_download_publications_for_year, iterator_download_all_publications, get_supported_ijcai_years
+from Downloader import delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data, delete_year
+from Downloader_IJCAI import ijcai_iterator_process_all_publications, ijcai_iterator_process_publications_for_year, get_supported_ijcai_years
 from Downloader_ECAI import ecai_iterator_process_all_publications
 from Downloader_AAAI import aaai_iterator_process_all_publications, aaai_iterator_process_publications, get_supported_aaai_years
 from VikusWriter import clean_data_csv
@@ -17,7 +17,7 @@ from VikusWriter import clean_data_csv
 
 def iterator_download_all_publications():
     iterators = [aaai_iterator_process_all_publications,
-                 ecai_iterator_process_all_publications, iterator_download_all_publications]
+                 ecai_iterator_process_all_publications, ijcai_iterator_process_all_publications]
     for iterator_func in iterators:
         iterator = iterator_func()
         for publication in iterator:
@@ -71,8 +71,6 @@ def prompt_delete_options():
     csv_file_option_name = 'CSV file'
     if not Path('../vikus-viewer/data/data.csv').exists():
         csv_file_option_name += ' (does not exist)'
-
-    # TODO: disabled does not work
 
     choices.append(Choice('CSV file', csv_file_option_name,
                    Path('../vikus-viewer/data/data.csv').exists()))
@@ -178,7 +176,7 @@ def prompt_delete_year():
     })
 
     if confirm['delete'] == True:
-        downloader_remove_year(year)
+        delete_year(year)
         print(
             f'Successfully deleted {pdf_count} PDFs from year {year}!')
 
@@ -213,10 +211,10 @@ def prompt_download():
         'name': 'source',
         'message': 'Which data source?',
         'choices': [
+            'All',
             'IJCAI',
             'ECAI',
             'AAAI',
-            'All',
             Separator(),
             'Back'
         ]
@@ -242,7 +240,8 @@ def prompt_download():
             if year_answer == 'All':
                 iterator = iterator_download_all_publications()
             else:
-                iterator = iterator_download_publications_for_year(year_answer)
+                iterator = ijcai_iterator_process_publications_for_year(
+                    year_answer)
 
     elif source == 'ECAI':
         iterator = ecai_iterator_process_all_publications()

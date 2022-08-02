@@ -38,9 +38,7 @@ def process_single_publication(year, link):
         return None
 
     table_node = link.find_parent('td').find_parent('tr').find_parent('table')
-    # print(table_node)
     tr_nodes = table_node.find_all('tr')
-    # print(tr_nodes)
     title = tr_nodes[0].find('a').string
 
     # filter out generic organization PDFs
@@ -63,7 +61,7 @@ def aaai_iterator_process_publications(year):
     year = normalize_year(year)
     url = get_available_volumes_per_year()[year]
 
-    print(f'Processing publications from: {url}')
+    print(f'[{year}] - Processing publications from: {url}')
 
     response = urlopen(url)
     page_source = response.read()
