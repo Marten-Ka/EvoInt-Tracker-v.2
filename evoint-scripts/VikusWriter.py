@@ -2,7 +2,6 @@
 
 import os
 import csv
-import sys
 import pandas as pd
 from pathlib import Path
 
@@ -12,9 +11,17 @@ csv.field_size_limit(10000000)
 
 csv_file = None
 csv_file_reader = None
+csv_dataframe = None
 
 
-def get_data_csv_path():
+def get_csv_dataframe() -> pd.DataFrame:
+    global csv_dataframe
+    if csv_dataframe is None:
+        csv_dataframe = pd.read_csv(get_data_csv_path())
+    return csv_dataframe
+
+
+def get_data_csv_path() -> str:
 
     csv_path = '../vikus-viewer/data/data.csv'
     if not Path(csv_path).is_file():
@@ -24,16 +31,16 @@ def get_data_csv_path():
     return csv_path
 
 
-def check_file_empty(path_of_file):
+def check_file_empty(path_of_file) -> bool:
     # Checking if file exist and it is empty
     return os.path.exists(path_of_file) and os.stat(path_of_file).st_size == 0
 
 
-def check_file_exists_and_has_content(path_of_file):
+def check_file_exists_and_has_content(path_of_file) -> bool:
     return os.path.exists(path_of_file) and os.stat(path_of_file).st_size > 0
 
 
-def filter_empty_pdf_files(paths):
+def filter_empty_pdf_files(paths) -> list[bool]:
 
     result = []
     for path in paths:
@@ -44,11 +51,14 @@ def filter_empty_pdf_files(paths):
 def clean_data_csv():
 
     csv_file_path = get_data_csv_path()
+
     csv_file_size_before_filter = os.stat(csv_file_path).st_size
     df = pd.read_csv(csv_file_path, index_col=2)
     df = df[filter_empty_pdf_files(df._path_to_pdf)]
     df.to_csv(csv_file_path)
+
     csv_file_size_after_filter = os.stat(csv_file_path).st_size
+
     if csv_file_size_before_filter == csv_file_size_after_filter:
         print("There was nothing to clean in the data.csv-file.")
     elif csv_file_size_before_filter < csv_file_size_after_filter:
@@ -97,16 +107,23 @@ def write_data_csv_header(csv_writer):
                             ['_fulltext'])
 
 
-def write_data_csv_row(csv_writer, publication):
+def write_data_csv_row(csv_writer, publication: Publication):
 
     if not csv_contains(publication.id):
+        add_row_to_dataframe(publication)
         csv_writer.writerow(publication.to_csv_row())
 
 
-def csv_contains(id):
+def add_row_to_dataframe(publication: Publication):
+    global csv_dataframe
+    csv_dataframe = pd.concat(
+        [get_csv_dataframe(), publication.to_series().to_frame().T])
+
+
+def csv_contains(id) -> bool:
 
     try:
-        df = pd.read_csv(get_data_csv_path())
+        df = get_csv_dataframe()
         result = df[df['id'] == id]
         return not result.empty
     except:

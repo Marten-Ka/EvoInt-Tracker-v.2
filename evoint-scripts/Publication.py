@@ -3,8 +3,10 @@ from collections import OrderedDict
 import fitz
 import re
 from collections import Counter
-from pathlib import Path
 import os
+import pandas as pd
+import random
+import uuid
 
 publications = OrderedDict()
 KEYWORDS = [
@@ -65,8 +67,13 @@ KEYWORDS = [
 
 
 class Publication:
-    def __init__(self, publication_id, title, year, origin_path, authors=None):
-        self.id = publication_id
+    def __init__(self, title, year, origin_path, authors=None):
+
+        rd = random.Random()
+        # to ensure that a pdf with the same title, has the same uuid
+        rd.seed(title)
+        self.id = str(uuid.UUID(int=rd.getrandbits(128), version=4))
+
         self.title = title
         self.authors = authors
         self.keywords = []
@@ -74,7 +81,7 @@ class Publication:
         self.origin_path = origin_path
 
         self.path_to_pdf = os.path.join("../vikus-viewer/data/fulltext/pdf", str(
-            year), str(publication_id) + '.pdf')
+            year), str(self.id) + '.pdf')
 
         self.add_to_publications()
 
@@ -141,6 +148,20 @@ class Publication:
                 [f'{self.get_display_path_to_pdf()}'] +
                 [self.path_to_pdf] +
                 [f'{fulltext}'])
+
+    def to_series(self) -> pd.Series:
+        fulltext = self.fulltext()
+        data = [f'{self.get_keywords(fulltext)}',
+                self.year,
+                self.id,
+                self.title,
+                self.authors,
+                get_abstract_of_pdf(self.get_path_to_pdf()),
+                self.origin_path,
+                f'{self.get_display_path_to_pdf()}',
+                self.path_to_pdf,
+                f'{fulltext}']
+        return pd.Series(data)
 
 
 def get_abstract_of_pdf(pdf_path):

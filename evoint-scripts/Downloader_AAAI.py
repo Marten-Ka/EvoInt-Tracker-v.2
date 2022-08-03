@@ -9,18 +9,8 @@ from Downloader import process_publication, clean_text
 YEARS = [13, 14, 15, 17, 18]  # retrieved by testing the URLs
 
 
-def get_supported_aaai_years():
+def get_supported_aaai_years() -> list[str]:
     return [f'20{year}' for year in YEARS]
-
-
-def normalize_year(year):
-    if(len(str(year)) == 4):
-        year = year[-2:]
-
-    if isinstance(year, int) or year.isdigit():
-        return int(year)
-    else:
-        return None
 
 
 def process_single_publication(year, link):
@@ -61,7 +51,7 @@ def aaai_iterator_process_publications(year):
     year = normalize_year(year)
     url = get_available_volumes_per_year()[year]
 
-    print(f'[{year}] - Processing publications from: {url}')
+    print(f'[{get_full_year(year)}] - Processing publications from: {url}')
 
     response = urlopen(url)
     page_source = response.read()
@@ -82,16 +72,21 @@ def get_available_volumes_per_year():
     return urls
 
 
-def get_year_from_url(url):
-    match = re.search(r'HCOMP[0-9][0-9]', url)
+def normalize_year(year):
+    if(len(str(year)) == 4):
+        year = year[-2:]
 
-    if match == None:
-        return None
-
-    string = match.group()
-    year_string = string[-2:]  # last two chars
-
-    if year_string.isdigit():
-        return int(year_string)
+    if isinstance(year, int) or year.isdigit():
+        return int(year)
     else:
         return None
+
+
+def get_full_year(year):
+    if(len(str(year)) == 4):
+        return year
+
+    if(len(str(year)) < 4 and isinstance(year, int)):
+        return int(2000 + year)
+
+    return None

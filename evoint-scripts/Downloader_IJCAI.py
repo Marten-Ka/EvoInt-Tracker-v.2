@@ -5,27 +5,64 @@ from urllib.parse import urlparse, urljoin
 from urllib.request import urlopen
 
 from bs4 import BeautifulSoup
-from Downloader import process_publication, clean_text, VIKUS_VIEWER_DATA_PATH, VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH
+from Downloader import process_publication, clean_text, VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH
 
 IJCAI_URL = "https://www.ijcai.org/past_proceedings/"
 
 
-def is_link_to_volume(link: str):
-    year = link.split("/")[-1]
-    if not year:
-        year = link.split("/")[-2]
-    return year[:4].isdigit()
-
-
-def volume_link_to_year(volume_link):
-    year = volume_link.split("/")[-1][:4]  # example: 2021
-    if not year:
-        year = volume_link.split("/")[-2][:4]
-    return year
-
-
 def get_supported_ijcai_years() -> list[str]:
     return ["2021", "2020", "2019", "2018", "2017", "2016", "2015", "2013", "2011", "2009", "2007", "2005", "2003", "1999", "1997", "1995", "1993"]
+
+
+def ijcai_iterator_process_all_publications():
+    for year in get_supported_ijcai_years():
+        iterator = ijcai_iterator_process_publications_for_year(year)
+        for publication in iterator:
+            yield publication
+
+
+def ijcai_iterator_process_publications_for_year(year):
+
+    year = str(year)
+    os.makedirs(VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH + year, exist_ok=True)
+
+    volume_links = get_available_volumes_per_year()[year]
+    visited_links = []
+
+    for volume_link in volume_links:
+        response = urlopen(volume_link)  # opens the URL
+        page_source = response.read()
+        soup = BeautifulSoup(page_source, 'html.parser')
+        print(f'[{year}] - Processing publications from: {volume_link}')
+
+        for link in soup.find_all('a'):
+            current_link = link.get('href')
+
+            if volume_link not in current_link:
+                current_link = urljoin(volume_link, current_link)
+            if current_link.endswith('.pdf') and current_link not in visited_links:
+                visited_links.append(
+                    urljoin(volume_link, current_link))
+
+                if not urlparse(current_link).scheme:
+                    current_link = 'https://' + current_link
+
+                #
+                # This listed publication contains an
+                # a-Tag with the wrong link to the PDF.
+                #
+                if current_link == 'https://www.ijcai.org/proceedings/Papers/IJCAI07-107.pdf':
+                    current_link = 'https://www.ijcai.org/Proceedings/09/Papers/107.pdf'
+
+                title = clean_text(link.text)
+                if title == "here" or current_link == f'https://www.ijcai.org/proceedings/{year}/preface.pdf':
+                    continue
+
+                valid_publication, title, authors = get_pdf_information(
+                    int(year), link, title)
+
+                if valid_publication:
+                    yield process_publication(title, authors, year, current_link)
 
 #
 # Parses every available year in the given URL.
@@ -95,121 +132,18 @@ def get_available_volumes_per_year():
     return result
 
 
-def ijcai_iterator_process_publications_for_year(year):
-
-    year = str(year)
-    os.makedirs(VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH + year, exist_ok=True)
-
-    volume_links = get_available_volumes_per_year()[year]
-    visited_links = []
-
-    for volume_link in volume_links:
-        response = urlopen(volume_link)  # opens the URL
-        page_source = response.read()
-        soup = BeautifulSoup(page_source, 'html.parser')
-        print(f'[{year}] - Processing publications from: {volume_link}')
-
-        for link in soup.find_all('a'):
-            current_link = link.get('href')
-
-            if volume_link not in current_link:
-                current_link = urljoin(volume_link, current_link)
-            if current_link.endswith('.pdf') and current_link not in visited_links:
-                visited_links.append(
-                    urljoin(volume_link, current_link))
-
-                if not urlparse(current_link).scheme:
-                    current_link = 'https://' + current_link
-
-                #
-                # This listed publication contains an
-                # a-Tag with the wrong link to the PDF.
-                #
-                if current_link == 'https://www.ijcai.org/proceedings/Papers/IJCAI07-107.pdf':
-                    current_link = 'https://www.ijcai.org/Proceedings/09/Papers/107.pdf'
-
-                title = clean_text(link.text)
-                if title == "here" or current_link == f'https://www.ijcai.org/proceedings/{year}/preface.pdf':
-                    continue
-
-                valid_publication, title, authors = get_pdf_information(
-                    int(year), link, title)
-
-                if valid_publication:
-                    yield process_publication(title, authors, year, current_link)
+def is_link_to_volume(link: str) -> bool:
+    year = link.split("/")[-1]
+    if not year:
+        year = link.split("/")[-2]
+    return year[:4].isdigit()
 
 
-def ijcai_iterator_process_all_publications():
-    for year in get_supported_ijcai_years():
-        iterator = ijcai_iterator_process_publications_for_year(year)
-        for publication in iterator:
-            yield publication
-
-
-def download_from_single_volume_years():
-
-    if not Path(VIKUS_VIEWER_DATA_PATH + "data.csv").is_file():
-        with open(VIKUS_VIEWER_DATA_PATH + "data.csv", "w") as f:  # create file
-            pass
-
-    pdf_count_0722 = 0
-
-    available_volumes = get_available_volumes()
-    print('Parsing the following websites: ' + ', '.join(available_volumes))
-
-    for volume_link in available_volumes:
-
-        # example for volume_link: https://www.ijcai.org/proceedings/2021/
-        year = volume_link_to_year(volume_link)
-        os.makedirs(VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH + year, exist_ok=True)
-
-        visited_links = []
-        response = urlopen(volume_link)  # opens the URL
-        page_source = response.read()
-        soup = BeautifulSoup(page_source, 'html.parser')
-        print(f'[{year}] - Parsing website ({volume_link})...')
-
-        for link in soup.find_all('a'):
-            current_link = link.get('href')
-
-            if volume_link not in current_link:
-                current_link = urljoin(volume_link, current_link)
-            if current_link.endswith('.pdf') and current_link not in visited_links:
-                visited_links.append(
-                    urljoin(volume_link, current_link))
-
-                if not urlparse(current_link).scheme:
-                    current_link = 'https://' + current_link
-
-                #
-                # This listed publication contains an
-                # a-Tag with the wrong link to the PDF.
-                #
-                if current_link == 'https://www.ijcai.org/proceedings/Papers/IJCAI07-107.pdf':
-                    current_link = 'https://www.ijcai.org/Proceedings/09/Papers/107.pdf'
-
-                title = clean_text(link.text)
-                if title == "here" or current_link == f'https://www.ijcai.org/proceedings/{year}/preface.pdf':
-                    continue
-
-                valid_publication, title, authors = get_pdf_information(
-                    int(year), link, title)
-
-                if valid_publication:
-
-                    #
-                    # Skip the first entry with this title,
-                    # because it is an duplicate of the last entry.
-                    # This is an error on the website.
-                    #
-                    if title == "Self-Adaptive Swarm System (SASS)":
-                        pdf_count_0722 += 1
-                        if pdf_count_0722 == 1:
-                            continue
-
-                    process_publication(title, authors, year, current_link)
-
-        print(f'[{year}] - Loaded and downloaded all PDFs!')
+def volume_link_to_year(volume_link):
+    year = volume_link.split("/")[-1][:4]  # example: 2021
+    if not year:
+        year = volume_link.split("/")[-2][:4]
+    return year
 
 
 def get_pdf_information(year, link_tag, origin_title):
@@ -430,7 +364,7 @@ def get_pdf_information(year, link_tag, origin_title):
         return False, title, authors
 
 
-def authors_string_to_array(authors):
+def authors_string_to_array(authors) -> list[str]:
     authors = clean_text(authors)
 
     #
@@ -457,11 +391,11 @@ def authors_string_to_array(authors):
     return new_words
 
 
-def normalize_authors_string(authors):
+def normalize_authors_string(authors) -> str:
     return ' '.join(authors_string_to_array(authors))
 
 
-def remove_dots_and_numbers_at_end(text):
+def remove_dots_and_numbers_at_end(text) -> str:
 
     while(text[-1].isdigit() or text[-1] == '.' or text[-1] == ' '):
         text = text[0:-1]
@@ -469,6 +403,6 @@ def remove_dots_and_numbers_at_end(text):
     return text
 
 
-def string_ends_with_dots_or_numbers(text):
+def string_ends_with_dots_or_numbers(text) -> bool:
     text = text.strip()
     return text[-1].isdigit() or text[-1] == '.'

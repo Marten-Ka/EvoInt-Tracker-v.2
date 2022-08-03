@@ -2,13 +2,9 @@
 from urllib.request import urlopen
 import os
 import shutil
-from subprocess import DEVNULL, STDOUT, check_call
+from subprocess import DEVNULL, check_call
 from pathlib import Path
-import fitz
-from datetime import date, datetime
 from time import time
-import uuid
-import random
 
 from pdf2image import convert_from_path
 from urllib.error import HTTPError
@@ -73,7 +69,7 @@ def get_thumbnail_count() -> int:
         return 0
 
 
-def process_publication(title, authors, year, pdf_link):
+def process_publication(title, authors, year, pdf_link) -> Publication:
 
     # if year = 18 --> make it to 2018
     if(isinstance(year, int) and year < 1000):
@@ -83,16 +79,11 @@ def process_publication(title, authors, year, pdf_link):
     elif(isinstance(year, str) and len(year) == 2):
         year = "20" + year
 
-    rd = random.Random()
-    rd.seed(title)
-    publication_id = str(uuid.UUID(int=rd.getrandbits(128), version=4))
+    publication = create_publication_object(title, authors, year, pdf_link)
 
     if debug:
         encoded_title = title.encode('utf8')
-        print(f'[{year}] - [{publication_id}] Creating publication "{encoded_title}" with authors ({authors}) (from {pdf_link})')
-
-    publication = create_publication_object(
-        publication_id, title, authors, year, pdf_link)
+        print(f'[{year}] - [{publication.id}] Creating publication "{encoded_title}" with authors ({authors}) (from {pdf_link})')
 
     download_publication(publication)
 
@@ -103,9 +94,8 @@ def process_publication(title, authors, year, pdf_link):
     return publication
 
 
-def create_publication_object(publication_id, title, authors, year, current_link):
-    return Publication(publication_id=publication_id,
-                       title=title,
+def create_publication_object(title, authors, year, current_link) -> Publication:
+    return Publication(title=title,
                        authors=authors,
                        year=year,
                        origin_path=current_link)
@@ -158,13 +148,10 @@ def download_publication(publication):
 
 def publication_to_thumbnail(publication):
 
-    directory_path = 'data/thumbnails'
-
-    # Create thumbnail folder if it does NOT exist
-    Path(directory_path).mkdir(parents=True, exist_ok=True)
+    Path(THUMBNAIL_PATH).mkdir(parents=True, exist_ok=True)
 
     path = Path(publication.get_path_to_pdf())
-    output_path = Path('data/thumbnails/' + str(publication.id) + '.png')
+    output_path = Path(f'{THUMBNAIL_PATH}/{str(publication.id)}.png')
 
     # If the PDF file exists and the thumbnail does NOT exist, then create the thumbnail
     if path.is_file():
@@ -239,14 +226,13 @@ def create_vikus_textures_and_sprites(publication):
 #
 
 
-def sprite_file_state(publication):
+def sprite_file_state(publication) -> int:
 
     return_code = 0
 
-    base_directory_path = VIKUS_VIEWER_DATA_IMAGES_PATH
-    file_path_90 = f'{base_directory_path}tmp/90/{publication.id}.png'
-    file_path_1024 = f'{base_directory_path}1024/{publication.id}.jpg'
-    file_path_4096 = f'{base_directory_path}4096/{publication.id}.jpg'
+    file_path_90 = f'{VIKUS_VIEWER_DATA_IMAGES_PATH}tmp/90/{publication.id}.png'
+    file_path_1024 = f'{VIKUS_VIEWER_DATA_IMAGES_PATH}1024/{publication.id}.jpg'
+    file_path_4096 = f'{VIKUS_VIEWER_DATA_IMAGES_PATH}4096/{publication.id}.jpg'
 
     paths = [file_path_90, file_path_1024, file_path_4096]
 
@@ -266,7 +252,7 @@ def sprite_file_state(publication):
     return return_code
 
 
-def clean_text(string):
+def clean_text(string) -> str:
     string = string.replace('\n', ' ').replace('\t', ' ').replace('  ', ' ').replace('&nbsp;', '').replace('&nbsp', '').replace(
         u'\ufffd', '').replace(u'\xa0', '').replace(u'\xe2', '').replace(u'\x80', '').replace(u'\x94', '').strip()
 
@@ -288,11 +274,3 @@ def clean_text(string):
 
 if __name__ == '__main__':
     pass
-
-#
-# TODO:
-# - remove_year_data(year) # in data.csv
-# - remove_publication_data(id) # in data.csv
-#
-#
-#

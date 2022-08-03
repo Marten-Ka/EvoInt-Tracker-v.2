@@ -226,7 +226,6 @@ def prompt_download():
         return
 
     iterator = None
-    max_iterations = None
 
     if source == 'IJCAI':
 
@@ -245,7 +244,6 @@ def prompt_download():
 
     elif source == 'ECAI':
         iterator = ecai_iterator_process_all_publications()
-        max_iterations = iterator.max_length
 
     elif source == 'AAAI':
         year_answer = prompt_year(get_supported_aaai_years())
@@ -262,7 +260,7 @@ def prompt_download():
     elif source == 'All':
         iterator = iterator_download_all_publications()
 
-    with alive_bar(total=max_iterations, dual_line=True, title=f'Processing data from {source}') as bar:
+    with alive_bar(dual_line=True, title=f'Processing data from {source}') as bar:
         for publication in iterator:
             bar.text(
                 f'Processing publication: {publication.title}')

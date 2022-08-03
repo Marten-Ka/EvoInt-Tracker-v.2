@@ -14,10 +14,6 @@ def ecai_iterator_process_all_publications():
 
         print(f'[2020] - Processing publications from: {url}')
 
-        response = urlopen(url)
-        page_source = response.read()
-        soup = BeautifulSoup(page_source, 'html.parser')
-
         link_tags = get_all_valid_link_tags(url)
 
         for link in link_tags:
