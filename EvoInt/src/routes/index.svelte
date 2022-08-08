@@ -1,24 +1,11 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import Saos from 'saos';
-	import RedirectButton from '../components/RedirectButton.svelte';
 	import Header from '../components/Header.svelte';
 	import Icon from '../components/Icon.svelte';
 	import InformationTile from '../components/InformationTile.svelte';
 	import AnimationContainer from '../components/AnimationContainer.svelte';
 	import Footer from '../components/Footer.svelte';
 	import ArticleCard from '../components/ArticleCard.svelte';
-
-	let show: boolean = false;
-
-	function onClick() {
-		show = !show;
-	}
-
-	function navHelp() {
-		goto('/help');
-	}
-
 </script>
 
 <Header />
@@ -87,11 +74,7 @@
 		</div>
 		<div slot="right_slot">
 			<AnimationContainer from_right>
-				<img
-					src="../static/vikusViewer.png"
-					alt="vikus_viewer"
-					class="rounded-3xl shadow-2xl px-4"
-				/>
+				<img src="/vikusViewer.png" alt="vikus_viewer" class="rounded-3xl shadow-2xl px-4" />
 			</AnimationContainer>
 		</div>
 	</InformationTile>
@@ -112,7 +95,7 @@
 		</div>
 		<div slot="right_slot">
 			<AnimationContainer>
-				<img src="../static/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl px-4" />
+				<img src="/NLP.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl px-4" />
 			</AnimationContainer>
 		</div>
 	</InformationTile>
@@ -126,7 +109,7 @@
 
 		<div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
 			<ArticleCard
-				img_source="../../static/homeml.jpg"
+				img_source="/homeml.jpg"
 				img_height="h-72"
 				img_alt="ML"
 				reference="/tutorial/ml"
@@ -140,7 +123,7 @@
 			/>
 
 			<ArticleCard
-				img_source="../../static/homeki.jpg"
+				img_source="/homeki.jpg"
 				img_height="h-96"
 				img_alt="KI"
 				reference="/tutorial/ki"
@@ -154,7 +137,7 @@
 			/>
 
 			<ArticleCard
-				img_source="../../static/homenlp.jpeg"
+				img_source="/homenlp.jpeg"
 				img_height="h-72"
 				img_alt="NLP"
 				reference="/tutorial/nlp"

@@ -5,7 +5,6 @@
 	function onHome() {
 		goto('/');
 	}
-
 </script>
 
 <footer>
@@ -15,7 +14,7 @@
 		>
 			<div class="flex flex-col  justify-center">
 				<div class="flex  justify-center">
-					<img src="../../static/Logo.png" alt="EvoInt-Logo" width="220px" on:click={onHome} />
+					<img src="/Logo.png" alt="EvoInt-Logo" width="220px" on:click={onHome} />
 				</div>
 				<div class="vikus">Vikus-Viewer</div>
 				<div class="vikusinfo">Find out more about the Vikus-Viewer:</div>

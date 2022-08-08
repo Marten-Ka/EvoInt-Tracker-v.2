@@ -50,14 +50,14 @@
 
 		<section
 			class="flex flex-col place-content-start gap-16 mx-2 lg:mx-6 my-16 p-8 lg:p-16 text-center md:text-left shadow-lg rounded-md bg-cover"
-			style="background-image: url(../../../static/background2.jpg)"
+			style="background-image: url(/background2.jpg)"
 		>
 			<QuoteCard
-				img_link="../../../static/SebastianThrun.jpg"
+				img_link="/SebastianThrun.jpg"
 				img_source="https://www.swisslife.com/content/internet/com/de/home/hub/interview-sebastian-thrun/_jcr_content/parsys/testimonial/image.1619729008567.transform/1_1_2480w/Sebastian_Thrun_Biobox.jpg"
 				img_alt="Sebastian Thrun"
-				quote='"Niemand formuliert es so, aber für mich ist KI fast eine Geisteswissenschaft.
-				Es ist wirklich der Versuch, menschliche Intelligenz und Kognition zu verstehen."'
+				quote="Niemand formuliert es so, aber für mich ist KI fast eine Geisteswissenschaft.
+				Es ist wirklich der Versuch, menschliche Intelligenz und Kognition zu verstehen."
 				quote_source="https://www.anacision.de/de/aktuelles/kuenstliche-intelligenz-definition"
 				position="justify-start"
 				author="Sebastian Thrun"
@@ -65,11 +65,11 @@
 			/>
 
 			<QuoteCard
-				img_link="../../../static/JohnMcCarthy.jpg"
+				img_link="/JohnMcCarthy.jpg"
 				img_source="https://www.spiegel.de/netzwelt/web/john-mccarthy-der-vater-der-rechner-cloud-ist-tot-a-793795.html"
 				img_alt="John McCarthy"
-				quote='"Es ist die Wissenschaft und Technik der Herstellung intelligenter Maschinen,
-				insbesondere intelligenter Computerprogramme."'
+				quote="Es ist die Wissenschaft und Technik der Herstellung intelligenter Maschinen,
+				insbesondere intelligenter Computerprogramme."
 				quote_source="https://www.unaique.net/blog/definition-kuenstliche-intelligenz/"
 				position="justify-end"
 				author="John McCarthy"
@@ -77,11 +77,11 @@
 			/>
 
 			<QuoteCard
-				img_link="../../../static/EU.jpg"
+				img_link="/EU.jpg"
 				img_alt="EU"
 				img_source="https://cdn.pixabay.com/photo/2014/01/27/18/13/europe-253311_1280.jpg"
-				quote='"Künstliche Intelligenz ist die Fähigkeit einer Maschine, menschliche Fähigkeiten
-				wie logisches Denken, Lernen, Planen und Kreativität zu imitieren."'
+				quote="Künstliche Intelligenz ist die Fähigkeit einer Maschine, menschliche Fähigkeiten
+				wie logisches Denken, Lernen, Planen und Kreativität zu imitieren."
 				quote_source="https://www.europarl.europa.eu/news/de/headlines/society/20200827STO85804/was-ist-kunstliche-intelligenz-und-wie-wird-sie-genutzt"
 				position="justify-start"
 				author="Europäisches Parlament"
@@ -115,16 +115,16 @@
 			<ol class="border-l-2 border-blue-600 w-[inherit] sm:w-[inherit]">
 				<li>
 					<HistoricalCard
-						img_link="../../../static/Turingmaschine.jpg"
+						img_link="/Turingmaschine.jpg"
 						img_alt="Turingmaschine"
 						source_link="https://anthrowiki.at/images/thumb/a/ad/Model_of_a_Turing_machine.jpg/375px-Model_of_a_Turing_machine.jpg"
 						source_text="Quelle: Anthrowiki"
 						heading="1936: Turingmaschine"
-						content='Alan Turing, ein britischer Mathematiker, legte 1936 schon den Grundstein für das,
+						content="Alan Turing, ein britischer Mathematiker, legte 1936 schon den Grundstein für das,
 						was wir heute unter Künstlicher Intelligenz verstehen. Mit seinen Theorien konnte
-						er beweisen, dass eine Rechenmaschine (auch bezeichnet als "Turingmaschine") in
+						er beweisen, dass eine Rechenmaschine (auch bezeichnet als 'Turingmaschine') in
 						der Lage wäre, kognitive Prozesse auszuführen, sofern sich diese in mehrere kleine
-						Schritte zerlegen und algorithmisch darstellen lassen.'
+						Schritte zerlegen und algorithmisch darstellen lassen."
 						tag_list={['Alan Turing', 'Grundstein der KI']}
 						button_link="https://de.wikipedia.org/wiki/Turingmaschine"
 					/>
@@ -132,17 +132,17 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/DartmouthConference.jpg"
+						img_link="/DartmouthConference.jpg"
 						img_alt="Dartmouth Conference"
 						source_link="https://cyfuture.com/blog/wp-content/uploads/2020/04/Dartmouth-Conference-in-1956.jpg"
 						source_text="Quelle: Cyfuture"
 						heading="1956: Der Begriff KI entsteht"
-						content='1956 treffen sich Wissenschaftler zu einer Konferenz am Dartmouth College im
+						content="1956 treffen sich Wissenschaftler zu einer Konferenz am Dartmouth College im
 						US-Bundesstaat New Hampshire und debattieren über die Simulation von menschlicher
-						Intelligenz durch Maschinen. John McCartney schlägt dafür den Begriff "Künstliche
-						Intelligenz" vor. Während der Konferenz entsteht außerdem das erste KI-Programm
-						der Welt - der "Logic Theorist", der es schafft, mehrere mathematische Lehrsätze
-						zu beweisen.'
+						Intelligenz durch Maschinen. John McCartney schlägt dafür den Begriff 'Künstliche
+						Intelligenz' vor. Während der Konferenz entsteht außerdem das erste KI-Programm
+						der Welt - der 'Logic Theorist', der es schafft, mehrere mathematische Lehrsätze
+						zu beweisen."
 						tag_list={['Dartmouth Konferenz', 'John McCarthy']}
 						button_link="https://de.wikipedia.org/wiki/Dartmouth_Conference"
 					/>
@@ -150,16 +150,16 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/ELIZA.jpg"
+						img_link="/ELIZA.jpg"
 						img_alt="ELIZA"
 						source_link="https://moodswag.com/wp-content/uploads/2020/09/Eliza.jpg"
 						source_text="Quelle: Moodswag"
 						heading="1966: Der erste Chatbot"
-						content='1966 entwickelt der deutsch-amerikanische Informatiker Joseph Weizenbaum vom
-						Massachusetts Institute of Technology das Computerprogramm "ELIZA", welches mit
+						content="1966 entwickelt der deutsch-amerikanische Informatiker Joseph Weizenbaum vom
+						Massachusetts Institute of Technology das Computerprogramm 'ELIZA', welches mit
 						Menschen kommunizieren kann. ELIZA kann mehrere Gesprächspartner simulieren, wie
 						beispielsweise einen Psychotherapeuten. Jedoch sind die genutzten Mittel zur
-						Simulation des Gesprächs noch recht rudimentär geskriptet.'
+						Simulation des Gesprächs noch recht rudimentär geskriptet"
 						tag_list={['Joseph Weizenbaum', 'ELIZA']}
 						button_link="https://de.wikipedia.org/wiki/ELIZA"
 					/>
@@ -167,18 +167,18 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/MYCIN.jpg"
+						img_link="/MYCIN.jpg"
 						img_alt="MYCIN"
 						source_link="https://www.bibliomedmanager.de/fileadmin/user_upload/alle-Portale/Bilder/TANGO/sp/2018/04/gettyimages_894319072.jpg"
 						source_text="Quelle: Bibliomedmanager"
 						heading="1972: KI gelangt in die Medizin"
-						content='Die KI ist für viele schon lange kein Fremdwort mehr, doch jetzt findet sie ihren
+						content="Die KI ist für viele schon lange kein Fremdwort mehr, doch jetzt findet sie ihren
 						ersten Einsatz in der realen Welt. Das von Ted Shortlife an der Stanford
-						University entwickelte Expertensystem "MYCIN" wird zur Diagnose und Therapie von
+						University entwickelte Expertensystem 'MYCIN' wird zur Diagnose und Therapie von
 						Infektionskrankheiten eingesetzt. Doch auch wenn das System hohe Trefferquoten
 						erzielt, erlangte es nicht die Bedeutung in der Medizin, die man sich erhofft
 						hatte. Die Bereitschaft gegenüber solchen Systemen war schlicht zu gering, als
-						dass sich Ärzte auf dessen Diagnose verlassen wollten.'
+						dass sich Ärzte auf dessen Diagnose verlassen wollten."
 						tag_list={['MYCIN', 'Medizin']}
 						button_link="https://de.wikipedia.org/wiki/Mycin_(Expertensystem)"
 					/>
@@ -186,17 +186,17 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/NETTalk.jpg"
+						img_link="/NETTalk.jpg"
 						img_alt="NETtalk"
 						source_link="https://fscl01.fonpit.de/userfiles/7611461/image/AI-artificial-intelligence-robot/AI-robot_12-w810h462.jpg"
 						source_text="Quelle: Fonpit"
 						heading="1986: Computer lernt sprechen"
-						content='Terrence J. Sejnowski und Charles Rosenberg bringen ihrem Programm "NETtalk"
-						mithilfe von Beispielsätzen und Phonemketten das Sprechen bei. „NETtalk“ kann
+						content="Terrence J. Sejnowski und Charles Rosenberg bringen ihrem Programm 'NETtalk'
+						mithilfe von Beispielsätzen und Phonemketten das Sprechen bei. 'NETtalk' kann
 						Wörter lesen und korrekt aussprechen sowie das Gelernte auf ihm unbekannte Wörter
 						anwenden. Aufgrund dieser Fähigkeit, die darauf beruht, dass das Programm mit
 						großen Datenmengen befüllt wird und daraus eigene Schlüsse zieht, gehört es
-						ebenfalls zu den frühen künstlichen neuronalen Netzen.'
+						ebenfalls zu den frühen künstlichen neuronalen Netzen."
 						tag_list={['NETtalk', 'Neuronale Netze']}
 						button_link="https://de.wikipedia.org/wiki/NETtalk"
 					/>
@@ -204,17 +204,17 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/DeepBlue.jpg"
+						img_link="/DeepBlue.jpg"
 						img_alt="Deep Blue"
 						source_link="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/220px-Deep_Blue.jpg"
 						source_text="Quelle: Wikimedia"
 						heading="1997: KI schlägt Schachweltmeister"
-						content='Die KI "Deep Blue" der Firma IBM, welche für das Schach spielen konzipiert ist,
+						content="Die KI 'Deep Blue' der Firma IBM, welche für das Schach spielen konzipiert ist,
 						bezwingt 1997 den amtierenden Weltmeister Garry Kasparov. Damit ist der bisher von
 						Menschen dominierte Bereich des Schachs von einer KI übernommen worden. Dieser
 						historische Erfolg wird nur leicht von Kritikern getrübt, die einwerfen, dass
-						"Deep Blue" nicht durch kognitive Intelligenz, sondern durch das Berechnen aller
-						möglichen Züge gewonnen habe.'
+						'Deep Blue' nicht durch kognitive Intelligenz, sondern durch das Berechnen aller
+						möglichen Züge gewonnen habe."
 						tag_list={['Deep Blue', 'KI im Schach']}
 						button_link="https://de.wikipedia.org/wiki/Long_short-term_memory"
 					/>
@@ -222,15 +222,15 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/IBM_KI.jpg"
+						img_link="/IBM_KI.jpg"
 						img_alt="IBM"
 						source_link="https://www.tanikal.com/wp-content/uploads/2016/12/IBM-Logo-Wallpaper-HD.jpg"
 						source_text="Quelle: Tanikal"
 						heading="2011: 'Watson' gewinnt Quizshow"
-						content='Das Computerprogramm "Watson" tritt 2011 in einer US-amerikanischen TV-Quizshow
+						content="Das Computerprogramm 'Watson' tritt 2011 in einer US-amerikanischen TV-Quizshow
 						gegen menschliche Mitspieler an und gewinnt die Show. Damit beweist die KI, dass
 						sie tatsächlich die natürliche Sprache versteht und eine schnellere
-						Reaktionsgeschwindigkeit als die Mitspieler hat.'
+						Reaktionsgeschwindigkeit als die Mitspieler hat."
 						tag_list={['Watson', 'IBM']}
 						button_link="https://de.wikipedia.org/wiki/Watson_(K%C3%BCnstliche_Intelligenz)"
 					/>
@@ -238,7 +238,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/KI_im_Alltag.jpeg"
+						img_link="/KI_im_Alltag.jpeg"
 						img_alt="KI im Alltag"
 						source_link="https://medsolut.com/wp-content/uploads/2021/05/20210506_MedSolut_AI_Daily-Life_Blog-Article.jpeg"
 						source_text="Quelle: Medsolut"
@@ -256,20 +256,20 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/KI_der_Zukunft.jpg"
+						img_link="/KI_der_Zukunft.jpg"
 						img_alt="KI der Zukunft"
 						source_link="https://www.verlagederzukunft.de/wp-content/uploads/2018/12/KI_Algemein_VdZ.jpg"
 						source_text="Quelle: Verlage der Zukunft"
 						heading="20xx: Die KI der Zukunft"
-						content='Trotz der bahnbrechenden Entwicklung des vergangenen Jahrzehnts steckt die
+						content="Trotz der bahnbrechenden Entwicklung des vergangenen Jahrzehnts steckt die
 						Forschung der KI noch in ihren Anfängen. Das Ziel der Zukunft wird es sein, KI
 						zuverlässiger und sicherer in Bereichen wie dem autonomen Fahren, der Raumfahrt
 						und besonders in der Medizin zu gestalten. Bisher ist es außerdem nicht gelungen,
-						eine sogenannte "starke KI" zu schaffen, die ihr Wissen auf sehr viele Bereiche
+						eine sogenannte 'starke KI' zu schaffen, die ihr Wissen auf sehr viele Bereiche
 						übertragen und somit uns Menschen in jeder Hinsicht übertrumpfen kann. All das
 						birgt auch Gefahren, weshalb ethische Fragen zur Forschung und Entwicklung der KI
-						immer mehr in der Vordergrund rücken. Die primäre Frage ist und bleibt dabei "KI -
-						Fluch oder Segen für den Menschen?"'
+						immer mehr in der Vordergrund rücken. Die primäre Frage ist und bleibt dabei 'KI -
+						Fluch oder Segen für den Menschen?'"
 						tag_list={['Starke KI', 'Ethik & Moral']}
 						button_link="https://mixed.de/ki-im-alltag/"
 					/>
@@ -286,25 +286,19 @@
 		</h1>
 
 		<div class="flex flex-col w-[80%] sm:w-full ml-[10%] sm:ml-0 gap-y-60 items-center ">
-			<InformationTile
-				title="Schwache KI"
-				class="mt-20"
-			>
+			<InformationTile title="Schwache KI" class="mt-20">
 				<div
 					slot="content"
 					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
-					Ein KI-System, das nur für die Ausführung einer bestimmten Aufgabe entwickelt und trainiert wurde.
-					Es benötigt meist zusätzliche menschliche Intervention und kann ihr Wissen nicht auf andere Bereiche ausweiten.
-					Beispiele aus dem Alltag sind Sprachassistenten wie Siri und Alexa oder Industrieroboter.
+					Ein KI-System, das nur für die Ausführung einer bestimmten Aufgabe entwickelt und
+					trainiert wurde. Es benötigt meist zusätzliche menschliche Intervention und kann ihr
+					Wissen nicht auf andere Bereiche ausweiten. Beispiele aus dem Alltag sind
+					Sprachassistenten wie Siri und Alexa oder Industrieroboter.
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img
-							src="../../../static/siri.jpg"
-							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
-						/>
+						<img src="/siri.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -321,11 +315,7 @@
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer>
-						<img
-							src="../../../static/Starke_KI.jpg"
-							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
-						/>
+						<img src="/Starke_KI.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -369,20 +359,20 @@
 					icon="slack"
 					icon_size="24px"
 					heading="2. Begrenzte Speicherkapazität (limited memory)"
-					content='Anders als die reaktiven Maschinen verfügen diese KI-Systeme über einen Speicher ("ein
-					Gedächtnis"), mit welchem sie auf frühere Erfahrungen zurückgreifen und somit neue
+					content="Anders als die reaktiven Maschinen verfügen diese KI-Systeme über einen Speicher ('ein
+					Gedächtnis'), mit welchem sie auf frühere Erfahrungen zurückgreifen und somit neue
 					Kenntnisse ziehen können. Solche Systeme kommen unter anderem in autonomen Fahrzeugen
-					zum Einsatz.'
+					zum Einsatz."
 				/>
 
 				<OverviewSubCard
 					icon="user"
 					icon_size="24px"
 					heading="3. Theorie des Geistes (theory of mind)"
-					content='Dieser Typ ähnelt immer mehr einer starken KI, denn solche KIs verfügen über
+					content="Dieser Typ ähnelt immer mehr einer starken KI, denn solche KIs verfügen über
 					soziale Intelligenz und können somit Emotionen verstehen. Diese Art von KI wird in der
 					Lage sein, menschliche Absichten zu erkennen und Verhalten vorherzusagen, was es ihr
-					leichter machen wird, Bestandteil menschlicher Teams zu werden.'
+					leichter machen wird, Bestandteil menschlicher Teams zu werden."
 				/>
 
 				<OverviewSubCard
@@ -410,7 +400,7 @@
 				class="grid gap-12 m-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4"
 			>
 				<ApplicationCard
-					img_source="../../../static/Robotik.jpg"
+					img_source="/Robotik.jpg"
 					img_alt="Robotik"
 					heading="Robotik"
 					content="Besonders in der Industrie sind KI-gesteuerte Roboter weit verbreitet - hier
@@ -419,7 +409,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Suchmaschine.jpg"
+					img_source="/Suchmaschine.jpg"
 					img_alt="Suchmaschine"
 					heading="Suchmaschine"
 					content="KI ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
@@ -428,7 +418,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Sprachassistenten.jpg"
+					img_source="/Sprachassistenten.jpg"
 					img_alt="Sprachassistenten"
 					heading="Sprachassistenten"
 					content="Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
@@ -437,7 +427,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Spam_Filter.jpg"
+					img_source="/Spam_Filter.jpg"
 					img_alt="Spam Filter"
 					heading="Spam Filter"
 					content="Der größte Teil aller Spam-Mails wird schon von KI basierten Filtern der Mail-Anbieter
@@ -446,7 +436,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Social_Media.jpg"
+					img_source="/Social_Media.jpg"
 					img_alt="Social Media"
 					heading="Social Media"
 					content="Die Algorithmen hinter den Empfehlungssystemen von Social Media sind alle KI-basiert.
@@ -455,7 +445,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Personal_Content.jpg"
+					img_source="/Personal_Content.jpg"
 					img_alt="Personal Content"
 					heading="Personal Content"
 					content="Ob Werbungen oder vorgeschlagene Sucheinträge - KIs analysieren das Nutzerverhalten im
@@ -464,7 +454,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Chatbot.jpg"
+					img_source="/Chatbot.jpg"
 					img_alt="Chatbot"
 					heading="Chatbot"
 					content="Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
@@ -473,7 +463,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Content-Moderation.jpg"
+					img_source="/Content-Moderation.jpg"
 					img_alt="Inhaltsverwaltung"
 					heading="Inhaltsverwaltung"
 					content="Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
@@ -483,7 +473,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Gesichtserkennung.jpg"
+					img_source="/Gesichtserkennung.jpg"
 					img_alt="Gesichtserkennung"
 					heading="Gesichtserkennung"
 					content="Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen KIs zum Einsatz,
@@ -492,7 +482,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Mobilität.jpg"
+					img_source="/Mobilität.jpg"
 					img_alt="Mobilität"
 					heading="Mobilität"
 					content="Autonome Fahrzeuge sind nur die Spitze des Eisberges - KI unterstützt den Fahrer auch
@@ -519,11 +509,7 @@
 		</div>
 		<div class="flex flex-col md:flex-row md:max-w-xl ">
 			<div class="w-auto text-center m-6 p-8">
-				<img
-					src="../../../../static/Robert.jfif"
-					class="rounded-full w-32 mb-4 mx-auto"
-					alt="Avatar"
-				/>
+				<img src="/Robert.jfif" class="rounded-full w-32 mb-4 mx-auto" alt="Avatar" />
 				<h5 class="text-xl font-medium leading-tight mb-2">Robert Witzke</h5>
 				<p class="text-gray-500 mb-2">Web designer</p>
 				<ul class="list-inside flex mx-auto justify-center">

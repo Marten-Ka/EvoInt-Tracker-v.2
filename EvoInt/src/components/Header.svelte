@@ -7,14 +7,14 @@
 		goto('/');
 	}
 
-	let VIKUS_VIEWER_URL = ''
-	if(browser) {
-		VIKUS_VIEWER_URL = `${window.location.protocol}//${window.location.hostname}:8080/vikus_viewer`
+	let VIKUS_VIEWER_URL = '';
+	if (browser) {
+		VIKUS_VIEWER_URL = `${window.location.protocol}//${window.location.hostname}:8080/vikus_viewer`;
 	}
 </script>
 
 <header>
-	<img src="../../static/Logo.png" alt="EvoInt-Logo" width="159px" on:click={onHome} />
+	<img src="/Logo.png" alt="EvoInt-Logo" width="159px" on:click={onHome} />
 	<div id="navigation">
 		<NavigationButton text="Tutorial" href="/tutorial" />
 		<NavigationButton text="Über uns" href="/about_us" />

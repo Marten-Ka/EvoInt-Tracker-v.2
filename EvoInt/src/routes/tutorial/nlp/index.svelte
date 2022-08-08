@@ -11,9 +11,10 @@
 		{ text: '2. Die historische Entwicklung von ML', href: '#part-two', icon: 'terminal' },
 		{ text: '3. Die Arten von ML', href: '#part-three', icon: 'terminal' },
 		{ text: '4. Übersicht der wichtigsten Begriffe', href: '#part-three', icon: 'terminal' },
-    { text: '5. Anwendungsgebiete von ML', href: '#part-five', icon: 'terminal' },
+		{ text: '5. Anwendungsgebiete von ML', href: '#part-five', icon: 'terminal' }
 	];
 </script>
+
 <Header />
 
 <div class="flex flex-col text-center justify-center items-center mt-20">
@@ -53,7 +54,7 @@
 								class="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0"
 							>
 								<img
-									src="../../static/Manning_Hirschberg.png"
+									src="/Manning_Hirschberg.png"
 									class="rounded-full shadow-md"
 									alt="Hirschberg and Manning"
 								/>
@@ -63,7 +64,9 @@
 									"Die Verarbeitung natürlicher Sprache verwendet Computertechniken zum Lernen,
 									Verstehen und Produzieren von Inhalten in menschlicher Sprache."
 								</p>
-								<p class="font-semibold text-xl mb-2 text-gray-800">Julia Hirschberg & Christopher D. Manning</p>
+								<p class="font-semibold text-xl mb-2 text-gray-800">
+									Julia Hirschberg & Christopher D. Manning
+								</p>
 							</div>
 						</div>
 					</div>
@@ -85,10 +88,13 @@
 							</div>
 							<div class="md:ml-6 place-self-center">
 								<p class="text-gray-500 text-xl font-semibold italic mb-6">
-									"Maschinelles Lernen ist die Wissenschaft, Computer zum Handeln zu bringen, ohne explizit programmiert zu werden"
+									"Maschinelles Lernen ist die Wissenschaft, Computer zum Handeln zu bringen, ohne
+									explizit programmiert zu werden"
 								</p>
 								<p class="font-semibold text-xl mb-2 text-gray-800">Andrew Ng</p>
-								<p class="font-semibold text-gray-500 mb-0">Direktor des Labors für künstliche Intelligenz in Stanford</p>
+								<p class="font-semibold text-gray-500 mb-0">
+									Direktor des Labors für künstliche Intelligenz in Stanford
+								</p>
 							</div>
 						</div>
 					</div>
@@ -110,11 +116,14 @@
 							</div>
 							<div class="md:ml-6 place-self-center">
 								<p class="text-gray-500 text-xl font-semibold italic mb-6">
-									"Maschinelles Lernen zielt darauf ab, Computer zu bauen, die lernen können, Entscheidungen zu treffen oder Aufgaben auszuführen, 
-                  ohne dass ihnen explizit gesagt wird, wie sie das tun sollen"
+									"Maschinelles Lernen zielt darauf ab, Computer zu bauen, die lernen können,
+									Entscheidungen zu treffen oder Aufgaben auszuführen, ohne dass ihnen explizit
+									gesagt wird, wie sie das tun sollen"
 								</p>
 								<p class="font-semibold text-xl mb-2 text-gray-800">Michael Wooldridge</p>
-								<p class="font-semibold text-gray-500 mb-0">Professor für Informatik an der Universität Oxford</p>
+								<p class="font-semibold text-gray-500 mb-0">
+									Professor für Informatik an der Universität Oxford
+								</p>
 							</div>
 						</div>
 					</div>
@@ -125,9 +134,11 @@
 		<div class="flex flex-col justify-center items-center text-center">
 			<div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
 				<span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
-					Machine Learning, auf Deutsch: Machinelles Lernen, ist heute für viele Organisationen ein notwendiger Aspekt der modernen Geschäftswelt und Forschung. 
-          Es verwendet Algorithmen und neuronale Netzwerkmodelle, um Computersysteme bei der schrittweisen Verbesserung ihrer Leistung zu unterstützen. 
-          Diese Seite soll dazu dienen, einen Überblick rund um das Thema ML zu schaffen - von den Anfängen bis zur heutigen Zeit.
+					Machine Learning, auf Deutsch: Machinelles Lernen, ist heute für viele Organisationen ein
+					notwendiger Aspekt der modernen Geschäftswelt und Forschung. Es verwendet Algorithmen und
+					neuronale Netzwerkmodelle, um Computersysteme bei der schrittweisen Verbesserung ihrer
+					Leistung zu unterstützen. Diese Seite soll dazu dienen, einen Überblick rund um das Thema
+					ML zu schaffen - von den Anfängen bis zur heutigen Zeit.
 				</span>
 			</div>
 		</div>
@@ -159,24 +170,29 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
-                  alt="Turingmaschine"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
-                  Quelle: Micro Medium
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://miro.medium.com/max/1240/1*0tjOdBIu_T_Yf5wimlxK-A.jpeg"
+									alt="Turingmaschine"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
+								>
+									Quelle: Micro Medium
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1952: Samuel's Checker Player</div>
 								<p class="text-gray-700 text-base">
-									Arthur Samuel von IBM entwickelte 1952 ein Computerprogramm zum Damespiel für den IBM 701. Sein Entwurf beinhaltete eine Punktefunktion, 
-                  die die Positionen der Figuren auf dem Brett nutzte. Die Bewertungsfunktion versuchte, die Gewinnchancen jeder Seite zu messen.
-                  Samuel entwarf auch eine Reihe von Mechanismen, die es ihm ermöglichten, sein Programm zu verbessern. Bei dem, was Samuel Auswendiglernen nannte, 
-                  erinnerte sich sein Programm an alle Positionen, die es bereits gesehen hatte, und kombinierte dies mit den Werten der Belohnungsfunktion. 
-                  1952 prägte Arthur Samuel erstmals den Begriff „Machine Learning“.
+									Arthur Samuel von IBM entwickelte 1952 ein Computerprogramm zum Damespiel für den
+									IBM 701. Sein Entwurf beinhaltete eine Punktefunktion, die die Positionen der
+									Figuren auf dem Brett nutzte. Die Bewertungsfunktion versuchte, die Gewinnchancen
+									jeder Seite zu messen. Samuel entwarf auch eine Reihe von Mechanismen, die es ihm
+									ermöglichten, sein Programm zu verbessern. Bei dem, was Samuel Auswendiglernen
+									nannte, erinnerte sich sein Programm an alle Positionen, die es bereits gesehen
+									hatte, und kombinierte dies mit den Werten der Belohnungsfunktion. 1952 prägte
+									Arthur Samuel erstmals den Begriff „Machine Learning“.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -193,7 +209,9 @@
 									</span>
 								</div>
 								<div>
-									<form action="https://webdocs.cs.ualberta.ca/~jonathan/publications/ai_publications/samuel.pdf">
+									<form
+										action="https://webdocs.cs.ualberta.ca/~jonathan/publications/ai_publications/samuel.pdf"
+									>
 										<button
 											type="submit"
 											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -227,26 +245,32 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
-                  alt="Perzeptron "
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: Micro Medium
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://miro.medium.com/max/1400/1*eEKb2RxREV6-MtLz2DNWFQ.gif"
+									alt="Perzeptron "
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
+								>
+									Quelle: Micro Medium
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1957: Der Perzeptron</div>
 								<p class="text-gray-700 text-base">
-									1957 schuf Frank Rosenblatt Perzeptron, indem er Donald Hebbs Modell der Gehirnzellinteraktion mit Arthur Samuels 
-                  Bemühungen um Machine Learining kombinierte. Das Perzeptron war ursprünglich als Maschine geplant, nicht als Programm.
-                  Die Software wurde ursprünglich für den IBM 704 entwickelt und in einer speziell angefertigten Maschine namens Mark 1 Perceptron 
-                  installiert, die für die Bilderkennung konstruiert worden war. Dadurch wurden die Software und die Algorithmen übertragbar und für 
-                  andere Maschinen verfügbar.
-                  Obwohl das Perzeptron vielversprechend schien, konnte es viele Arten von visuellen Mustern nicht erkennen, was zu Frustration führte 
-                  und die Erforschung neuronaler Netzwerke blockierte. Es hat bei den Investoren zu Frustration geführt und Finanzierungen wurden zurückgenommen.
+									1957 schuf Frank Rosenblatt Perzeptron, indem er Donald Hebbs Modell der
+									Gehirnzellinteraktion mit Arthur Samuels Bemühungen um Machine Learining
+									kombinierte. Das Perzeptron war ursprünglich als Maschine geplant, nicht als
+									Programm. Die Software wurde ursprünglich für den IBM 704 entwickelt und in einer
+									speziell angefertigten Maschine namens Mark 1 Perceptron installiert, die für die
+									Bilderkennung konstruiert worden war. Dadurch wurden die Software und die
+									Algorithmen übertragbar und für andere Maschinen verfügbar. Obwohl das Perzeptron
+									vielversprechend schien, konnte es viele Arten von visuellen Mustern nicht
+									erkennen, was zu Frustration führte und die Erforschung neuronaler Netzwerke
+									blockierte. Es hat bei den Investoren zu Frustration geführt und Finanzierungen
+									wurden zurückgenommen.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -259,7 +283,7 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-                    Frank Rosenblatt
+										Frank Rosenblatt
 									</span>
 								</div>
 								<div>
@@ -296,24 +320,29 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
-                  alt="Der Nearest-Neighbor-Algorithmus"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: Micro Medium
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://miro.medium.com/max/875/1*og8l5NS5OaGVWNEZkvxYWQ.png"
+									alt="Der Nearest-Neighbor-Algorithmus"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
+								>
+									Quelle: Micro Medium
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">1967: Der Nearest Neighbor Algorithmus </div>
+								<div class="font-bold text-2xl mb-2">1967: Der Nearest Neighbor Algorithmus</div>
 								<p class="text-gray-700 text-base">
-									1967 wurde der Beginn der grundlegenden Mustererkennung durch die Konzeption des Nearest-Neighbor-Algorithmus erreicht. 
-                  Marcello Pelillo ist berühmt geworden, weil er die „Nearest-Neighbor-Regel“ erfunden hat. Dieser Algorithmus wurde zur 
-                  Kartierung von Routen verwendet und war einer der frühesten Algorithmen, die verwendet wurden, um eine Lösung für das 
-                  Problem des Handlungsreisenden zu finden, die effizienteste Route zu finden. Unter Verwendung dieser gibt ein Verkäufer 
-                  eine ausgewählte Stadt ein und lässt das Programm wiederholt die nächstgelegenen Städte besuchen, bis alle besucht wurden.
+									1967 wurde der Beginn der grundlegenden Mustererkennung durch die Konzeption des
+									Nearest-Neighbor-Algorithmus erreicht. Marcello Pelillo ist berühmt geworden, weil
+									er die „Nearest-Neighbor-Regel“ erfunden hat. Dieser Algorithmus wurde zur
+									Kartierung von Routen verwendet und war einer der frühesten Algorithmen, die
+									verwendet wurden, um eine Lösung für das Problem des Handlungsreisenden zu finden,
+									die effizienteste Route zu finden. Unter Verwendung dieser gibt ein Verkäufer eine
+									ausgewählte Stadt ein und lässt das Programm wiederholt die nächstgelegenen Städte
+									besuchen, bis alle besucht wurden.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -321,7 +350,7 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-                    Marcello Pelillo
+										Marcello Pelillo
 									</span>
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -363,25 +392,32 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
-                  alt="AI vs ML"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: CDN Images
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://cdn-images-1.medium.com/max/2600/1*Ggoe0CCCsTvO_Kg6f7dgEA.png"
+									alt="AI vs ML"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
+								>
+									Quelle: CDN Images
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1970er: KI und ML trennen sich</div>
 								<p class="text-gray-700 text-base">
-									In den späten 1970er und frühen 1980er Jahren konzentrierte sich die Forschung im Bereich der künstlichen Intelligenz mehr auf die 
-                  Verwendung logischer, wissensbasierter Ansätze als auf Algorithmen, und die Erforschung neuronaler Netzwerke wurde von Informatik- und KI-Forschern 
-                  aufgegeben. Dies führte zu einer Spaltung zwischen KI und Machine Learning, welche bis dahin als Trainingsprogramm für KI verwendet wurde.
-                  Das Ziel der ML-Industrie verlagerte sich von der Ausbildung für künstliche Intelligenz zur Lösung praktischer Probleme, wobei die ML-Industrie ihren 
-                  Fokus auf neuronale Netze behielt und dann in den 1990er Jahren florierte. Der größte Teil dieses Erfolgs war auf das Wachstum des Internets zurückzuführen, 
-                  das von der ständig wachsenden Verfügbarkeit digitaler Daten und der Möglichkeit profitierte, seine Dienste über das Internet zu teilen.
+									In den späten 1970er und frühen 1980er Jahren konzentrierte sich die Forschung im
+									Bereich der künstlichen Intelligenz mehr auf die Verwendung logischer,
+									wissensbasierter Ansätze als auf Algorithmen, und die Erforschung neuronaler
+									Netzwerke wurde von Informatik- und KI-Forschern aufgegeben. Dies führte zu einer
+									Spaltung zwischen KI und Machine Learning, welche bis dahin als Trainingsprogramm
+									für KI verwendet wurde. Das Ziel der ML-Industrie verlagerte sich von der
+									Ausbildung für künstliche Intelligenz zur Lösung praktischer Probleme, wobei die
+									ML-Industrie ihren Fokus auf neuronale Netze behielt und dann in den 1990er Jahren
+									florierte. Der größte Teil dieses Erfolgs war auf das Wachstum des Internets
+									zurückzuführen, das von der ständig wachsenden Verfügbarkeit digitaler Daten und
+									der Möglichkeit profitierte, seine Dienste über das Internet zu teilen.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -398,7 +434,9 @@
 									</span>
 								</div>
 								<div>
-									<form action="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6">
+									<form
+										action="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6"
+									>
 										<button
 											type="submit"
 											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -431,24 +469,30 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
-                  alt="Boosting"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: ECMWF
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
+									alt="Boosting"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
+								>
+									Quelle: ECMWF
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1990: Boosting-Algorithmen</div>
 								<p class="text-gray-700 text-base">
-									Boosting-Algorithmen reduzieren Vorurteile während des Supervised Learning und beinhalten ML-Algorithmen, die schwache Lernende in starke verwandeln. 
-                  Dieses Konzept wurde erstmals 1990 in einem Artikel mit dem Titel „The Strength of Weak Learnability“ von Robert Schapire vorgestellt. 
-                  Schapire argumentiert: „Eine Gruppe schwacher Lernender kann einen einzigen starken Lernenden hervorbringen.“ wobei schwache Lernende als Klassifikatoren 
-                  definiert werden, die nur geringfügig mit der wahren Klassifikation korrelieren, und ein starker Lernender leicht klassifiziert und gut auf die wahre 
-                  Klassifikation ausgerichtet ist. „Boosting“ gilt als notwendige Weiterentwicklung für die Evolution des maschinellen Lernens.
+									Boosting-Algorithmen reduzieren Vorurteile während des Supervised Learning und
+									beinhalten ML-Algorithmen, die schwache Lernende in starke verwandeln. Dieses
+									Konzept wurde erstmals 1990 in einem Artikel mit dem Titel „The Strength of Weak
+									Learnability“ von Robert Schapire vorgestellt. Schapire argumentiert: „Eine Gruppe
+									schwacher Lernender kann einen einzigen starken Lernenden hervorbringen.“ wobei
+									schwache Lernende als Klassifikatoren definiert werden, die nur geringfügig mit
+									der wahren Klassifikation korrelieren, und ein starker Lernender leicht
+									klassifiziert und gut auf die wahre Klassifikation ausgerichtet ist. „Boosting“
+									gilt als notwendige Weiterentwicklung für die Evolution des maschinellen Lernens.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -465,7 +509,9 @@
 									</span>
 								</div>
 								<div>
-									<form action="https://de.wikipedia.org/wiki/Boosting#:~:text=Boosting%20(engl.,einem%20einzigen%20guten%20Klassifikator%20verschmilzt.">
+									<form
+										action="https://de.wikipedia.org/wiki/Boosting#:~:text=Boosting%20(engl.,einem%20einzigen%20guten%20Klassifikator%20verschmilzt."
+									>
 										<button
 											type="submit"
 											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -498,25 +544,30 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
-                  alt="Spracherkennung"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: Recfaces
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://recfaces.com/wp-content/uploads/2021/06/voice-recognition-830x571.jpg"
+									alt="Spracherkennung"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
+								>
+									Quelle: Recfaces
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">1997: Spracherkennungssysteme</div>
 								<p class="text-gray-700 text-base">
-									1997 beschrieben Jürgen Schmidhuber und Sepp Hochreite ein neuronales Netzwerkmodell namens Long Short-Term Memory (LSTM), 
-                  das derzeit zum Trainieren vieler Spracherkennungssysteme verwendet wird. LSTM kann Aufgaben lernen, die die Erinnerung an Ereignisse 
-                  erfordern, die Tausende von diskreten Schritten zuvor stattgefunden haben.
-                  Im Jahr 2015 hatte das Spracherkennungsprogramm von Google Berichten zufolge einen signifikanten Leistungssprung von 49 Prozent, indem 
-                  es ein von Connectionist Temporal Classification (CTC) trainiertes LSTM verwendete, eine Art neuronaler Netzwerkausgabe und Bewertungsfunktion, 
-                  um Sequenzprobleme anzugehen, bei denen Zeit eine Variable ist.
+									1997 beschrieben Jürgen Schmidhuber und Sepp Hochreite ein neuronales
+									Netzwerkmodell namens Long Short-Term Memory (LSTM), das derzeit zum Trainieren
+									vieler Spracherkennungssysteme verwendet wird. LSTM kann Aufgaben lernen, die die
+									Erinnerung an Ereignisse erfordern, die Tausende von diskreten Schritten zuvor
+									stattgefunden haben. Im Jahr 2015 hatte das Spracherkennungsprogramm von Google
+									Berichten zufolge einen signifikanten Leistungssprung von 49 Prozent, indem es ein
+									von Connectionist Temporal Classification (CTC) trainiertes LSTM verwendete, eine
+									Art neuronaler Netzwerkausgabe und Bewertungsfunktion, um Sequenzprobleme
+									anzugehen, bei denen Zeit eine Variable ist.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -529,7 +580,7 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-                    Neuronale Netze
+										Neuronale Netze
 									</span>
 								</div>
 								<div>
@@ -567,24 +618,33 @@
 							</svg>
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
-              <div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
-                  alt="Gesichtserkennung"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1">
-                  Quelle: Handelskraft
-                </div>
-              </div>
+							<div class="relative group">
+								<img
+									class="w-full block h-auto"
+									src="https://www.handelskraft.de/wp-content/uploads/2020/08/face_recognition_head.jpeg"
+									alt="Gesichtserkennung"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1"
+								>
+									Quelle: Handelskraft
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
-								<div class="font-bold text-2xl mb-2">2006: Bessere Gesichtserkennungsalgorithmen</div>
+								<div class="font-bold text-2xl mb-2">
+									2006: Bessere Gesichtserkennungsalgorithmen
+								</div>
 								<p class="text-gray-700 text-base">
-									Gesichtserkennung ist eine Erkennungstechnik, die verwendet wird, um im Datensatz gespeicherte Gesichter zu erkennen. Es identifiziert ein Gesicht durch 
-                  Vergleichen und Analysieren von Mustern basierend auf Gesichtskonturen durch trainierte neuronale Netzwerkmodelle. Im Jahr 2006 führte die 
-                  Face Recognition Grand Challenge eine Bewertung der Gesichtserkennungsalgorithmen durch, und das Ergebnis der Bewertung ergab, dass die neuen Algorithmen 
-                  zehnmal genauer waren als die Gesichtserkennungsalgorithmen von 2002 und 100-mal genauer als die von 1995. Einige der Algorithmen waren dazu in der Lage 
-                  menschliche Teilnehmer bei der Erkennung von Gesichtern übertreffen und eineiige Zwillinge eindeutig identifizieren könnten.
+									Gesichtserkennung ist eine Erkennungstechnik, die verwendet wird, um im Datensatz
+									gespeicherte Gesichter zu erkennen. Es identifiziert ein Gesicht durch Vergleichen
+									und Analysieren von Mustern basierend auf Gesichtskonturen durch trainierte
+									neuronale Netzwerkmodelle. Im Jahr 2006 führte die Face Recognition Grand
+									Challenge eine Bewertung der Gesichtserkennungsalgorithmen durch, und das Ergebnis
+									der Bewertung ergab, dass die neuen Algorithmen zehnmal genauer waren als die
+									Gesichtserkennungsalgorithmen von 2002 und 100-mal genauer als die von 1995.
+									Einige der Algorithmen waren dazu in der Lage menschliche Teilnehmer bei der
+									Erkennung von Gesichtern übertreffen und eineiige Zwillinge eindeutig
+									identifizieren könnten.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -601,7 +661,9 @@
 									</span>
 								</div>
 								<div>
-									<form action="https://www.internetjustsociety.org/cosmonaut/facial-recognition-an-introduction">
+									<form
+										action="https://www.internetjustsociety.org/cosmonaut/facial-recognition-an-introduction"
+									>
 										<button
 											type="submit"
 											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -636,24 +698,31 @@
 						</div>
 						<div class="max-w-md rounded overflow-hidden shadow-lg ml-6 mb-6">
 							<div class="relative group">
-                <img
-                  class="w-full block h-auto"
-                  src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
-                  alt="ML Jetzt vs Zukunft"
-                />
-                <div class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 ">
-                  Quelle: Informatec
-                </div>
-              </div>
+								<img
+									class="w-full block h-auto"
+									src="	https://www.informatec.com/sites/default/files/image-seperator/machine-learning-separator-1.jpg"
+									alt="ML Jetzt vs Zukunft"
+								/>
+								<div
+									class="opacity-0 bottom-0 absolute text-left group-hover:opacity-80 w-full border-[0.5px] rounded-t bg-gray-200 text-gray-700 px-6 py-1 "
+								>
+									Quelle: Informatec
+								</div>
+							</div>
 							<div class="px-6 py-4 bg-gray-100">
 								<div class="font-bold text-2xl mb-2">2006-20xx: ML Jetzt vs. Zukunft</div>
 								<p class="text-gray-700 text-base">
-									Die Standford University definierte Machine Learning als „die Wissenschaft, Computer zum Handeln zu bringen, ohne explizit programmiert zu werden“. 
-                  ML war der Schlüssel für einige der bedeutendsten technologischen Fortschritte. Es wird für die neue Industrie der selbstfahrenden Fahrzeuge, 
-                  für die Erforschung der Galaxie und in Unternehmen eingesetzt. Einige häufige Aufgaben, die in der Geschäftswelt ML eingesetzt werden, sind: 
-                  Verkaufsdatenanalyse, Produktempfehlungen, dynamische Preisgestaltung und mehr.<br> Klar ist, dass ML auch in Zukunft im Mittelpunkt unseres Lebens stehen wird. 
-                  Google arbeitet derzeit an einem Projekt zum maschinellen Lernen mit einem Ansatz namens Feinabstimmung von Anweisungen. Sie zielen darauf ab, ein ML-Modell 
-                  zu trainieren, um Probleme bei der Verarbeitung natürlicher Sprache auf allgemeine Weise zu lösen.
+									Die Standford University definierte Machine Learning als „die Wissenschaft,
+									Computer zum Handeln zu bringen, ohne explizit programmiert zu werden“. ML war der
+									Schlüssel für einige der bedeutendsten technologischen Fortschritte. Es wird für
+									die neue Industrie der selbstfahrenden Fahrzeuge, für die Erforschung der Galaxie
+									und in Unternehmen eingesetzt. Einige häufige Aufgaben, die in der Geschäftswelt
+									ML eingesetzt werden, sind: Verkaufsdatenanalyse, Produktempfehlungen, dynamische
+									Preisgestaltung und mehr.<br /> Klar ist, dass ML auch in Zukunft im Mittelpunkt unseres
+									Lebens stehen wird. Google arbeitet derzeit an einem Projekt zum maschinellen Lernen
+									mit einem Ansatz namens Feinabstimmung von Anweisungen. Sie zielen darauf ab, ein ML-Modell
+									zu trainieren, um Probleme bei der Verarbeitung natürlicher Sprache auf allgemeine
+									Weise zu lösen.
 								</p>
 							</div>
 							<div class="flex flex-col gap-4 px-6 pt-4 pb-4 bg-gray-100">
@@ -666,11 +735,13 @@
 									<span
 										class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
 									>
-                    Autonomes Fahren
+										Autonomes Fahren
 									</span>
 								</div>
 								<div>
-									<form action="http://mlclass.stanford.edu/#:~:text=Machine%20learning%20is%20the%20science,understanding%20of%20the%20human%20genome.">
+									<form
+										action="http://mlclass.stanford.edu/#:~:text=Machine%20learning%20is%20the%20science,understanding%20of%20the%20human%20genome."
+									>
 										<button
 											type="submit"
 											class="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -692,11 +763,12 @@
 		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
 			3. Die Arten von ML
 		</h1>
-    <div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
-      <span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
-        Es gibt verschiedene Möglichkeiten, ML-Algorithmen zu trainieren, jede mit ihren eigenen Vor- und Nachteilen.
-      </span>
-    </div>
+		<div class="flex flex-col mt-8 mb-28 justify-center items-center text-center">
+			<span class="text-2xl w-3/4 text-justify leading-relaxed mb-6 text-gray-300">
+				Es gibt verschiedene Möglichkeiten, ML-Algorithmen zu trainieren, jede mit ihren eigenen
+				Vor- und Nachteilen.
+			</span>
+		</div>
 
 		<div class="flex flex-col w-full gap-y-60 items-center">
 			<InformationTile
@@ -710,48 +782,50 @@
 			>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img src="../../../static/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+						<img src="/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
 			<InformationTile title="Unsupervised Learning" right_side class="mt-20">
 				<div slot="content" class="text-gray-400 text-2xl text-justify">
-          Beim Unsupervised Learning muss der Datensatz nicht maschinenlesbar gemacht oder von Entwicklern gekennzeichnet werden, sodass das Programm viel 
-          größere Datensätze bearbeiten kann. Beim Unspervised Learning gibt es keine Gekennzeichnung, an denen das Programm abarbeiten, was zur Schaffung verborgener 
-          Strukturen führt. Die Erstellung dieser verborgenen Strukturen hilft dem unbeaufsichtigten Lernen, sich an die Daten anzupassen, indem verborgene Strukturen dynamisch geändert werden.
+					Beim Unsupervised Learning muss der Datensatz nicht maschinenlesbar gemacht oder von
+					Entwicklern gekennzeichnet werden, sodass das Programm viel größere Datensätze bearbeiten
+					kann. Beim Unspervised Learning gibt es keine Gekennzeichnung, an denen das Programm
+					abarbeiten, was zur Schaffung verborgener Strukturen führt. Die Erstellung dieser
+					verborgenen Strukturen hilft dem unbeaufsichtigten Lernen, sich an die Daten anzupassen,
+					indem verborgene Strukturen dynamisch geändert werden.
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer>
-						<img
-							src="../../../static/unsupervised.jpg"
-							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
-						/>
+						<img src="/unsupervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
-      <InformationTile
-      title="Reinforcement Learning"
-      content="Beim Reinforcement Learning handelt es sich um einen Algorithmus, der sich selbst verbessert und anhand einer Trial-and-Error-Methode aus neuen Situationen lernt.
+			<InformationTile
+				title="Reinforcement Learning"
+				content="Beim Reinforcement Learning handelt es sich um einen Algorithmus, der sich selbst verbessert und anhand einer Trial-and-Error-Methode aus neuen Situationen lernt.
       Es wird mit einem Interpreter und einem Belohnungssystem eingesetzt. Bei jeder Iteration des Algorithmus wird das Ausgabeergebnis an den Interpreter übergeben, der 
       entscheidet, ob das Ergebnis gültig ist oder nicht. Falls das Programm die richtige Lösung findet, akzeptiert der Interpreter die Lösung, indem er dem Algorithmus eine Belohnung bereitstellt. 
       Wenn das Ergebnis nicht gültig ist, muss der Algorithmus wiederholen, bis er ein besseres Ergebnis findet."
-      class="mt-20"
-    >
-      <div slot="right_slot">
-        <AnimationContainer from_right>
-          <img src="../../../static/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
-        </AnimationContainer>
-      </div>
-    </InformationTile>
+				class="mt-20"
+			>
+				<div slot="right_slot">
+					<AnimationContainer from_right>
+						<img src="/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
+					</AnimationContainer>
+				</div>
+			</InformationTile>
 		</div>
 
 		<section class="mb-32 mx-6 mt-48 text-gray-100 text-center bg-gray-800 rounded-2xl p-6">
 			<div class="flex justify-center">
 				<div class="text-center w-1/2">
-					<h2 class="text-6xl font-bold mb-6 text-center">4 Übersicht der wichtigsten ML Begriffe</h2>
+					<h2 class="text-6xl font-bold mb-6 text-center">
+						4 Übersicht der wichtigsten ML Begriffe
+					</h2>
 					<p class="text-2xl text-gray-400 mb-12">
-            Hier wird auf einige wichtige Begriffe im Bereich ML eingegangen:
+						Hier wird auf einige wichtige Begriffe im Bereich ML eingegangen:
+					</p>
 				</div>
 			</div>
 
@@ -764,9 +838,11 @@
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Deep Learning</h5>
 					<p class="text-xl text-justify text-gray-300">
-						Deep Learning ist eine Anwendung von ML. Deep-Learning-Netzwerke interpretieren Big Data, sowohl unstrukturiert als auch strukturiert, 
-            und erkennen Muster in den Daten. Je mehr Daten sie trainieren und aus denen sie lernen können, desto fundierter und genauer werden ihre Entscheidungen sein.
-            Ein reales Beispiel dafür wäre Chatbox, je mehr Daten es trainiert, desto besser funktioniert es.
+						Deep Learning ist eine Anwendung von ML. Deep-Learning-Netzwerke interpretieren Big
+						Data, sowohl unstrukturiert als auch strukturiert, und erkennen Muster in den Daten. Je
+						mehr Daten sie trainieren und aus denen sie lernen können, desto fundierter und genauer
+						werden ihre Entscheidungen sein. Ein reales Beispiel dafür wäre Chatbox, je mehr Daten
+						es trainiert, desto besser funktioniert es.
 					</p>
 				</div>
 
@@ -776,10 +852,11 @@
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Neuronale Netzwerke</h5>
 					<p class="text-xl text-justify text-gray-300">
-            Neuronale Netze sind eng mit Deep Learning verwandt. Seine Aufgabe ist es, sequentielle Schichten von Neuronen zu erstellen, die das 
-            Verständnis der von einer Maschine gesammelten Daten vertiefen, um eine genaue Analyse zu ermöglichen.
-            Ein neuronales Netzwerk besteht aus Schichten von Knoten, denen dann durch Koeffizienten eine Gewichtung zugewiesen, 
-            und das Netzwerk analysiert wird.
+						Neuronale Netze sind eng mit Deep Learning verwandt. Seine Aufgabe ist es, sequentielle
+						Schichten von Neuronen zu erstellen, die das Verständnis der von einer Maschine
+						gesammelten Daten vertiefen, um eine genaue Analyse zu ermöglichen. Ein neuronales
+						Netzwerk besteht aus Schichten von Knoten, denen dann durch Koeffizienten eine
+						Gewichtung zugewiesen, und das Netzwerk analysiert wird.
 					</p>
 				</div>
 
@@ -789,10 +866,11 @@
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Regression</h5>
 					<p class="text-xl text-justify text-gray-300">
-						Regressionen in ML werden verwendet, um Beziehungen und Korrelationen zwischen verschiedenen Datentypen herzustellen.
-            Regressionen können nützlich sein, wenn Ergebnisse basierend auf Daten in der Gegenwart vorhergesagt werden. Wenn sich 
-            beispielsweise ein Produkt bei einer bestimmten Personengruppe gut verkauft, kann das Geschäft in Gebieten, in denen diese 
-            Personen leben, mehr von diesem Produkt anbieten.
+						Regressionen in ML werden verwendet, um Beziehungen und Korrelationen zwischen
+						verschiedenen Datentypen herzustellen. Regressionen können nützlich sein, wenn
+						Ergebnisse basierend auf Daten in der Gegenwart vorhergesagt werden. Wenn sich
+						beispielsweise ein Produkt bei einer bestimmten Personengruppe gut verkauft, kann das
+						Geschäft in Gebieten, in denen diese Personen leben, mehr von diesem Produkt anbieten.
 					</p>
 				</div>
 
@@ -802,287 +880,265 @@
 					</div>
 					<h5 class="text-2xl font-bold mb-4">Clustering</h5>
 					<p class="text-xl text-justify text-gray-300">
-						Clustering, bei dem Datenpunkte nach Merkmalen und Attributen gruppiert werden, ist eine Form des unüberwachten Lernens.
-            Clustering kann in mehreren Geschäftsbereichen verwendet werden, z. B. um Kundendemografie und Kaufverhalten in bestimmte 
-            Segmente für Targeting und Produktpositionierung zu organisieren.
+						Clustering, bei dem Datenpunkte nach Merkmalen und Attributen gruppiert werden, ist eine
+						Form des unüberwachten Lernens. Clustering kann in mehreren Geschäftsbereichen verwendet
+						werden, z. B. um Kundendemografie und Kaufverhalten in bestimmte Segmente für Targeting
+						und Produktpositionierung zu organisieren.
 					</p>
 				</div>
 			</div>
 		</section>
 	</div>
 
-  <div id="part-five" class="grid mt-32">
-    <h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
-      5. Anwendungsgebiete
-    </h1>
+	<div id="part-five" class="grid mt-32">
+		<h1 class="headline text-4xl font-bold mb-12 ml-24 uppercase text-gray-100">
+			5. Anwendungsgebiete
+		</h1>
 
-    <div class="grid justify-center items-center justify-self-center w-3/4">
-      <div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img
-            class="rounded-t-lg h-full"
-            src="../../../static/Suchmaschine.jpg"
-            alt=""
-          />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Suchmaschinen
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              ML ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
-              relevante Inhalte bereitzustellen.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img class="rounded-t-lg h-full" src="../../../static/Sprachassistenten.jpg" alt="" />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Sprachassistenten
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
-              natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img
-            class="rounded-t-lg h-full"
-            src="../../../static/Empfehlungsdienste.jpg"
-            alt=""
-          />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Social Media
-            </h5>
+		<div class="grid justify-center items-center justify-self-center w-3/4">
+			<div class="grid gap-12 m-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Suchmaschine.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Suchmaschinen</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							ML ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
+							relevante Inhalte bereitzustellen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Sprachassistenten.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Sprachassistenten</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
+							natürlicher Sprachverarbeitung verstehen und so Aufgaben erfüllen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Empfehlungsdienste.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Social Media</h5>
 
-            <p class="mb-3 font-normal text-gray-400">
-              Die Algorithmen hinter den Empfehlungssystemen von Social Media werden alle
-              ML-basiert. Sie lernen von dem Nutzerverhalten und passen so den Feed an.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-      
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img class="rounded-t-lg h-full" src="../../../static/Personal_Content.jpg" alt="" />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Persönliche Inhalte
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              Ob Werbungen oder vorgeschlagene Sucheinträge - ML Algorithmen analysieren das Nutzerverhalten
-              im Internet und schlagen so personalisierte Inhalte vor.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img class="rounded-t-lg h-full" src="../../../static/Chatbot.jpg" alt="" />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Chatbot
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
-              wichtigsten Informationen des Kundenproblems erfragen und analysieren.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img class="rounded-t-lg h-full" src="../../../static/Content-Moderation.jpg" alt="" />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Inhaltsverwaltung
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
-              Herausforderungen. ML Algorithmen untersützen dabei, Hasskomentare o.Ä. zu identifizieren und
-              zu löschen.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-        <div
-        class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img class="rounded-t-lg h-full" src="../../../static/Gesichtserkennung.jpg" alt="" />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Gesichtserkennung
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen ML Algorithmen zum Einsatz,
-              um Gesichter und weitere Informationen zu erkennen.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-        <div
-          class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
-        >
-          <img class="rounded-t-lg h-full" src="../../../static/Mobilität.jpg" alt="" />
-          <div class="p-5  grid content-between row-span-2">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-              Mobilität
-            </h5>
-            <p class="mb-3 font-normal text-gray-400">
-              Autonome Fahrzeuge sind nur die Spitze des Eisberges - ML Algorithmen unterstützt den Fahrer
-              auch mit Einparkhilfen oder dem Halten der Fahrspur.
-            </p>
-            <a
-              href="#part-one"
-              class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                /></svg
-              >
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+						<p class="mb-3 font-normal text-gray-400">
+							Die Algorithmen hinter den Empfehlungssystemen von Social Media werden alle
+							ML-basiert. Sie lernen von dem Nutzerverhalten und passen so den Feed an.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
 
-	<div class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg">
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Personal_Content.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Persönliche Inhalte</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							Ob Werbungen oder vorgeschlagene Sucheinträge - ML Algorithmen analysieren das
+							Nutzerverhalten im Internet und schlagen so personalisierte Inhalte vor.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Chatbot.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Chatbot</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
+							wichtigsten Informationen des Kundenproblems erfragen und analysieren.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Content-Moderation.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Inhaltsverwaltung</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
+							Herausforderungen. ML Algorithmen untersützen dabei, Hasskomentare o.Ä. zu
+							identifizieren und zu löschen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Gesichtserkennung.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Gesichtserkennung</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen ML Algorithmen zum
+							Einsatz, um Gesichter und weitere Informationen zu erkennen.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+				<div
+					class="max-w-sm grid grid-rows-2 rounded-lg border shadow-md bg-gray-800 border-gray-700"
+				>
+					<img class="rounded-t-lg h-full" src="/Mobilität.jpg" alt="" />
+					<div class="p-5  grid content-between row-span-2">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Mobilität</h5>
+						<p class="mb-3 font-normal text-gray-400">
+							Autonome Fahrzeuge sind nur die Spitze des Eisberges - ML Algorithmen unterstützt den
+							Fahrer auch mit Einparkhilfen oder dem Halten der Fahrspur.
+						</p>
+						<a
+							href="#part-one"
+							class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+						>
+							Read more
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="flex gap-16 w-full place-self-center items-center justify-center bg-gray-100 shadow-lg"
+	>
 		<div
 			class="text-7xl font-sans leading-snug text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500 drop-shadow-lg"
 		>

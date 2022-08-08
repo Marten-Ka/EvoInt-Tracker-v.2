@@ -8,17 +8,23 @@
 
 <div class="flex flex-col text-center justify-center items-center mt-20">
 	<AnimationContainer>
-		<div class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none">Wer wir sind.</div>
+		<div
+			class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none"
+		>
+			Wer wir sind.
+		</div>
 	</AnimationContainer>
 
-	<section class="p-8 max-w-4xl xl:max-w-6xl 2xl:max-w-7xl text-gray-800 text-center bg-gray-800 rounded-xl mt-12 mb-80">
+	<section
+		class="p-8 max-w-4xl xl:max-w-6xl 2xl:max-w-7xl text-gray-800 text-center bg-gray-800 rounded-xl mt-12 mb-80"
+	>
 		<div class="grid gap-x-6 lg:gap-x-12 md:grid-cols-4 mt-16">
 			<div class="mb-24 md:mb-0">
 				<div class="rounded-lg shadow-lg h-full block bg-white">
 					<div class="flex justify-center">
 						<div class="flex justify-center" style="margin-top: -75px">
 							<img
-								src="../../../static/Robert.jfif"
+								src="/Robert.jfif"
 								class="rounded-full mx-auto shadow-lg"
 								alt=""
 								style="width: 150px"
@@ -96,7 +102,7 @@
 					<div class="flex justify-center">
 						<div class="flex justify-center" style="margin-top: -75px">
 							<img
-								src="../../../static/Marten.jfif"
+								src="/Marten.jfif"
 								class="rounded-full mx-auto shadow-lg"
 								alt=""
 								style="width: 150px"
@@ -141,7 +147,7 @@
 					<div class="flex justify-center">
 						<div class="flex justify-center" style="margin-top: -75px">
 							<img
-								src="../../../static/Hamid.jfif"
+								src="/Hamid.jfif"
 								class="rounded-full mx-auto shadow-lg"
 								alt=""
 								style="width: 150px"
@@ -194,7 +200,11 @@
 	</section>
 
 	<AnimationContainer>
-		<div class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none">Unsere Hochschule: Die HWR</div>
+		<div
+			class="headline text-center text-base  sm:text- md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-bold uppercase text-gray-100 [text-shadow:0_4px_8px_rgba(255,255,255,0.25)] select-none"
+		>
+			Unsere Hochschule: Die HWR
+		</div>
 	</AnimationContainer>
 
 	<div class="max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mt-12 mb-80">
@@ -203,23 +213,23 @@
 				<div
 					class="w-full flex p-6 justify-center bg-white items-center rounded-t-lg lg:rounded-t-none lg:rounded-l-lg mb-6 lg:mb-0 mx-auto md:mx-0"
 				>
-					<img src="../../static/HWR.png" alt="HWR Logo" />
+					<img src="/HWR.png" alt="HWR Logo" />
 				</div>
 				<div class="px-6 place-self-center col-span-2 py-8">
 					<p class="text-gray-300 text-xl text-justify mb-6">
-						Zu dem dualen Studiengang Informatik an der HWR Berlin gehört im vierten Semester
-						die Bearbeitung eines Studienprojektes von einem mehrköpfigen Team von Studenten.
-						Die Arbeit an der Webseite sowie die Implementierung und Erweiterung des
-						Vikus-Viewers finden im Rahmen dieses Projektes statt. An unserem Thema zur
-						Entwicklung des Begriffs der Künstlichen Intelligenz, bzw. EvoInt, wurde schon in
-						den Vorjahren gearbeitet. Dabei haben vorangegangene Studenten Daten von der IJCAI
-						analysiert und ausgewertet sowie in den Vikus-Viewer integriert, jedoch konnte man
-						diese Ergebnisse bisher nicht einsehen. Mit unserer von der HWR gehosteten Webseite
-						ändert sich das, denn nun ist es möglich, die Ergebnisse öffentlich aufzurufen und
-						interaktiv zu nutzen sowie sich einen Überblick zum Thema mithilfe der informativen
-						Seiten zu verschaffen. Das Thema der dazugehörigen Studienarbeit lautet "Weiterentwicklung 
-						eines Trackers zur interaktiven Visualisierung der historischen Entwicklung von Intelligenz- 
-						und anderen Fachbegriffen in wissenschaftlichen Publikationen.".
+						Zu dem dualen Studiengang Informatik an der HWR Berlin gehört im vierten Semester die
+						Bearbeitung eines Studienprojektes von einem mehrköpfigen Team von Studenten. Die Arbeit
+						an der Webseite sowie die Implementierung und Erweiterung des Vikus-Viewers finden im
+						Rahmen dieses Projektes statt. An unserem Thema zur Entwicklung des Begriffs der
+						Künstlichen Intelligenz, bzw. EvoInt, wurde schon in den Vorjahren gearbeitet. Dabei
+						haben vorangegangene Studenten Daten von der IJCAI analysiert und ausgewertet sowie in
+						den Vikus-Viewer integriert, jedoch konnte man diese Ergebnisse bisher nicht einsehen.
+						Mit unserer von der HWR gehosteten Webseite ändert sich das, denn nun ist es möglich,
+						die Ergebnisse öffentlich aufzurufen und interaktiv zu nutzen sowie sich einen Überblick
+						zum Thema mithilfe der informativen Seiten zu verschaffen. Das Thema der dazugehörigen
+						Studienarbeit lautet "Weiterentwicklung eines Trackers zur interaktiven Visualisierung
+						der historischen Entwicklung von Intelligenz- und anderen Fachbegriffen in
+						wissenschaftlichen Publikationen.".
 					</p>
 				</div>
 			</div>

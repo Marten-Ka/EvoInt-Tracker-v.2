@@ -51,27 +51,27 @@
 
 		<section
 			class="flex flex-col place-content-start gap-16 mx-2 lg:mx-6 my-16 p-8 lg:p-16 text-center md:text-left shadow-lg rounded-md bg-cover"
-			style="background-image: url(../../../static/background2.jpg)"
+			style="background-image: url(/background2.jpg)"
 		>
 			<QuoteCard
-				img_link="../../../static/ibm.svg"
+				img_link="/ibm.svg"
 				img_source="https://www.ibm.com/design/language/877b208e9d05b37650a70e55867861bd/core_gray60_on_white.svg"
 				img_alt="IBM Cloud Education"
-				quote='"Maschinelles Lernen, Machine Learning (ML), ist ein Zweig der künstlichen
+				quote="Maschinelles Lernen, Machine Learning (ML), ist ein Zweig der künstlichen
 				Intelligenz (KI) und Computerwissenschaft, der sich auf die Verwendung von Daten
 				und Algorithmen konzentriert, um die Art und Weise, wie Menschen lernen, zu
-				imitieren und die Genauigkeit schrittweise zu verbessern."'
+				imitieren und die Genauigkeit schrittweise zu verbessern."
 				quote_source="https://www.ibm.com/de-de/cloud/learn/machine-learning"
 				position="justify-start"
 				author="IBM Cloud Education"
 			/>
 
 			<QuoteCard
-				img_link="../../../static/AndrewNg.webp"
+				img_link="/AndrewNg.webp"
 				img_source="https://www.andrewng.org/static/c5eb39b8da664718384eefcbc915f5cd/25582/andrew-ng-homepage.webp"
 				img_alt="Andrew Ng"
-				quote='"Maschinelles Lernen ist die Wissenschaft, Computer zum Handeln zu bringen, ohne
-				explizit programmiert zu werden"'
+				quote="Maschinelles Lernen ist die Wissenschaft, Computer zum Handeln zu bringen, ohne
+				explizit programmiert zu werden"
 				quote_source="http://mlclass.stanford.edu/#:~:text=Machine%20learning%20is%20the%20science,understanding%20of%20the%20human%20genome."
 				position="justify-end"
 				author="Andrew Ng"
@@ -79,12 +79,12 @@
 			/>
 
 			<QuoteCard
-				img_link="../../../static/MichaelWooldridge.jpg"
+				img_link="/MichaelWooldridge.jpg"
 				img_alt="Michael Wooldridge"
 				img_source="https://www.cs.ox.ac.uk/files/8605//PTAIT_20161031_0020%20%282%29.jpg"
-				quote='"Maschinelles Lernen zielt darauf ab, Computer zu bauen, die lernen können,
+				quote="Maschinelles Lernen zielt darauf ab, Computer zu bauen, die lernen können,
 				Entscheidungen zu treffen oder Aufgaben auszuführen, ohne dass ihnen explizit
-				gesagt wird, wie sie das tun sollen"'
+				gesagt wird, wie sie das tun sollen"
 				quote_source="https://www.cs.ox.ac.uk/research/ai_ml/"
 				position="justify-start"
 				author="Michael Wooldridge"
@@ -118,7 +118,7 @@
 			<ol class="border-l-2 border-blue-600 w-[inherit] sm:w-[inherit]">
 				<li>
 					<HistoricalCard
-						img_link="../../../static/samuel.jpeg"
+						img_link="/samuel.jpeg"
 						img_alt="Samuel"
 						source_link="https://medium.com/ibm-data-ai/the-first-of-its-kind-ai-model-samuels-checkers-playing-program-1b712fa4ab96"
 						source_text="Quelle: Micro Medium"
@@ -138,7 +138,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/perceptron.gif"
+						img_link="/perceptron.gif"
 						img_alt="Perzeptron"
 						source_link="https://medium.com/towards-data-science/what-the-hell-is-perceptron-626217814f53"
 						source_text="Quelle: Medium"
@@ -161,7 +161,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/neighbor.png"
+						img_link="/neighbor.png"
 						img_alt="Neighbor"
 						source_link="https://towardsdatascience.com/similarity-search-with-ivfpq-9c6348fd4db3"
 						source_text="Quelle: Towards Data Science"
@@ -181,7 +181,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/aiki.png"
+						img_link="/aiki.png"
 						img_alt="AI vs KI"
 						source_link="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6"
 						source_text="Quelle: Towards AI"
@@ -204,7 +204,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/boosting.jpg"
+						img_link="/boosting.jpg"
 						img_alt="Boosting"
 						source_link="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
 						source_text="Quelle: ECMWF"
@@ -225,7 +225,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/speechrecog.jpg"
+						img_link="/speechrecog.jpg"
 						img_alt="Spracherkennung"
 						source_link="https://recfaces.com/articles/what-is-voice-recognition"
 						source_text="Quelle: Recfaces"
@@ -246,7 +246,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/facerecog.jpeg"
+						img_link="/facerecog.jpeg"
 						img_alt="Gesichtserkennung"
 						source_link="https://www.handelskraft.de/face-recognition-gruseltechnologie-oder-tor-zur-neuen-payment-welt/"
 						source_text="Quelle: Handelskraft"
@@ -268,7 +268,7 @@
 
 				<li>
 					<HistoricalCard
-						img_link="../../../static/mljetzt.jpg"
+						img_link="/mljetzt.jpg"
 						img_alt="ML Jetzt vs Zukunft"
 						source_link="https://www.informatec.com/en/machine-learning"
 						source_text="Quelle: Informatec"
@@ -306,27 +306,23 @@
 		</div>
 
 		<div class="flex flex-col w-[80%] sm:w-full ml-[10%] sm:ml-0 gap-y-60 items-center">
-			<InformationTile
-				title="Supervised Learning"
-				class="mt-20"
-			>
+			<InformationTile title="Supervised Learning" class="mt-20">
 				<div
 					slot="content"
 					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
-					Beim Supervised Learning erhält der ML-Algorithmus einen kleinen und beschrifteten Trainingsdatensatz eines größeren Datensatzes, 
-					mit dem er arbeiten kann. Dies soll dem Algorithmus eine Grundidee des Problems, der Lösung und der zu behandelnden Datenpunkte geben. 
-					Der Algorithmus findet dann Beziehungen zwischen den gegebenen Parametern und hat eine Vorstellung davon, wie die Daten funktionieren und 
-					die Beziehung zwischen Eingabe und Ausgabe. Dann wird es auf dem endgültigen Datensatz eingesetzt, wo der Algorithmus mehr lernt und neue 
-					Muster und Beziehungen entdeckt, während er sich auf dem endgültigen Datensatz trainiert.
+					Beim Supervised Learning erhält der ML-Algorithmus einen kleinen und beschrifteten
+					Trainingsdatensatz eines größeren Datensatzes, mit dem er arbeiten kann. Dies soll dem
+					Algorithmus eine Grundidee des Problems, der Lösung und der zu behandelnden Datenpunkte
+					geben. Der Algorithmus findet dann Beziehungen zwischen den gegebenen Parametern und hat
+					eine Vorstellung davon, wie die Daten funktionieren und die Beziehung zwischen Eingabe und
+					Ausgabe. Dann wird es auf dem endgültigen Datensatz eingesetzt, wo der Algorithmus mehr
+					lernt und neue Muster und Beziehungen entdeckt, während er sich auf dem endgültigen
+					Datensatz trainiert.
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img
-							src="../../../static/supervised.jpg"
-							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
-						/>
+						<img src="/supervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -344,34 +340,27 @@
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer>
-						<img
-							src="../../../static/unsupervised.jpg"
-							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
-						/>
+						<img src="/unsupervised.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
-			<InformationTile
-				title="Reinforcement Learning"
-				class="mt-20"
-			>
+			<InformationTile title="Reinforcement Learning" class="mt-20">
 				<div
 					slot="content"
 					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
-					Beim Reinforcement Learning handelt es sich um einen Algorithmus, der sich selbst verbessert und anhand einer Trial-and-Error-Methode aus neuen Situationen lernt.
-					Es wird mit einem Interpreter und einem Belohnungssystem eingesetzt. Bei jeder Iteration des Algorithmus wird das Ausgabeergebnis an den Interpreter übergeben, der 
-					entscheidet, ob das Ergebnis gültig ist oder nicht. Falls das Programm die richtige Lösung findet, akzeptiert der Interpreter die Lösung, indem er dem Algorithmus eine Belohnung bereitstellt. 
-					Wenn das Ergebnis nicht gültig ist, muss der Algorithmus wiederholen, bis er ein besseres Ergebnis findet.
+					Beim Reinforcement Learning handelt es sich um einen Algorithmus, der sich selbst
+					verbessert und anhand einer Trial-and-Error-Methode aus neuen Situationen lernt. Es wird
+					mit einem Interpreter und einem Belohnungssystem eingesetzt. Bei jeder Iteration des
+					Algorithmus wird das Ausgabeergebnis an den Interpreter übergeben, der entscheidet, ob das
+					Ergebnis gültig ist oder nicht. Falls das Programm die richtige Lösung findet, akzeptiert
+					der Interpreter die Lösung, indem er dem Algorithmus eine Belohnung bereitstellt. Wenn das
+					Ergebnis nicht gültig ist, muss der Algorithmus wiederholen, bis er ein besseres Ergebnis
+					findet.
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
-						<img
-							src="../../../static/reward.jpg"
-							alt="vikus_viewer"
-							class="rounded-3xl shadow-2xl"
-						/>
+						<img src="/reward.jpg" alt="vikus_viewer" class="rounded-3xl shadow-2xl" />
 					</AnimationContainer>
 				</div>
 			</InformationTile>
@@ -450,7 +439,7 @@
 				class="grid gap-12 m-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4"
 			>
 				<ApplicationCard
-					img_source="../../../static/Suchmaschine.jpg"
+					img_source="/Suchmaschine.jpg"
 					img_alt="Suchmaschine"
 					heading="Suchmaschinen"
 					content="ML ermöglicht es uns, die riesigen Datenmengen des Internets zu erforschen und
@@ -459,7 +448,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Sprachassistenten.jpg"
+					img_source="/Sprachassistenten.jpg"
 					img_alt="Sprachassistenten"
 					heading="Sprachassistenten"
 					content="Sprachassistenten können die aufgenommenen Geräusche in Wörter übersetzen, diese mit
@@ -468,7 +457,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Social_Media.jpg"
+					img_source="/Social_Media.jpg"
 					img_alt="Social Media"
 					heading="Social Media"
 					content="Die Algorithmen hinter den Empfehlungssystemen von Social Media werden alle
@@ -477,7 +466,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Personal_Content.jpg"
+					img_source="/Personal_Content.jpg"
 					img_alt="Persönliche Inhalte"
 					heading="Persönliche Inhalte"
 					content="Ob Werbungen oder vorgeschlagene Sucheinträge - ML Algorithmen analysieren das
@@ -486,7 +475,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Chatbot.jpg"
+					img_source="/Chatbot.jpg"
 					img_alt="Chatbot"
 					heading="Chatbot"
 					content="Besonders beim Kundenservice und -support setzen Unternehmen auf Chatbots, die die
@@ -495,7 +484,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Content-Moderation.jpg"
+					img_source="/Content-Moderation.jpg"
 					img_alt="Inhaltsverwaltung"
 					heading="Inhaltsverwaltung"
 					content="Die Inhaltsverwaltung in den sozialen Medien stellt die Anbieter vor große
@@ -505,7 +494,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Gesichtserkennung.jpg"
+					img_source="/Gesichtserkennung.jpg"
 					img_alt="Gesichtserkennung"
 					heading="Gesichtserkennung"
 					content="Sowohl in Smartphone-Kameras als auch in Überwachungskameras kommen ML Algorithmen zum
@@ -514,7 +503,7 @@
 				/>
 
 				<ApplicationCard
-					img_source="../../../static/Mobilität.jpg"
+					img_source="/Mobilität.jpg"
 					img_alt="Mobilität"
 					heading="Mobilität"
 					content="Autonome Fahrzeuge sind nur die Spitze des Eisberges - ML Algorithmen unterstützt den
@@ -541,11 +530,7 @@
 		</div>
 		<div class="flex flex-col md:flex-row md:max-w-xl ">
 			<div class="w-auto text-center m-6 p-8">
-				<img
-					src="../../../static/Hamid.jfif"
-					class="rounded-full w-32 mb-4 mx-auto"
-					alt="Avatar"
-				/>
+				<img src="/Hamid.jfif" class="rounded-full w-32 mb-4 mx-auto" alt="Avatar" />
 				<h5 class="text-xl font-medium leading-tight mb-2">Hamid Omar</h5>
 				<p class="text-gray-500 mb-2">Web designer</p>
 				<ul class="list-inside flex mx-auto justify-center">
