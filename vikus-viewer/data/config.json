@@ -2,7 +2,7 @@
   "project": {
     "name": "EvoIntTracker",
     "quality": 1
- },
+  },
   "loader": {
     "info": "data/info.md",
     "timeline": "data/timeline.csv",
@@ -75,12 +75,6 @@
       },
       {
         "name": "Fulltext",
-        "source": "_display_path_to_pdf",
-        "display": "column",
-        "type": "link"
-      },
-      {
-        "name": "Fulltext on ..",
         "source": "_origin_path",
         "display": "column",
         "type": "link"
