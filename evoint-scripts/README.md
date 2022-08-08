@@ -4,6 +4,7 @@
   - Go into the folder
   - Open the console in the folder
   - Type "npm install"
+  - If you are currently in the sharpsheet-folder, additionally type "npm run build"
 
 # Step 2:
 
