@@ -55,6 +55,7 @@ def main():
 
 def prompt_clean_csv():
     print('This action will delete entries of publications, if the associated PDF file does not exist anymore.')
+    print('Furthermore it will delete duplicate entries.')
     answers = prompt({
         'type': 'confirm',
         'name': 'clean',
@@ -237,7 +238,7 @@ def prompt_download():
         else:
 
             if year_answer == 'All':
-                iterator = iterator_download_all_publications()
+                iterator = ijcai_iterator_process_all_publications()
             else:
                 iterator = ijcai_iterator_process_publications_for_year(
                     year_answer)

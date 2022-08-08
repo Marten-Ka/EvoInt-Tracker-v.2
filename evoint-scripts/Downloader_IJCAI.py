@@ -1,8 +1,10 @@
 
 import os
 from pathlib import Path
+from time import time
 from urllib.parse import urlparse, urljoin
 from urllib.request import urlopen
+import time
 
 from bs4 import BeautifulSoup
 from Downloader import process_publication, clean_text, VIKUS_VIEWER_DATA_FULLTEXT_PDF_PATH
@@ -41,6 +43,7 @@ def ijcai_iterator_process_publications_for_year(year):
             if volume_link not in current_link:
                 current_link = urljoin(volume_link, current_link)
             if current_link.endswith('.pdf') and current_link not in visited_links:
+
                 visited_links.append(
                     urljoin(volume_link, current_link))
 
@@ -55,6 +58,7 @@ def ijcai_iterator_process_publications_for_year(year):
                     current_link = 'https://www.ijcai.org/Proceedings/09/Papers/107.pdf'
 
                 title = clean_text(link.text)
+
                 if title == "here" or current_link == f'https://www.ijcai.org/proceedings/{year}/preface.pdf':
                     continue
 
@@ -204,9 +208,11 @@ def get_pdf_information(year, link_tag, origin_title):
 
             if len(a_tags) >= 2:
 
+                if origin_title == "2013 Conference Organization / xxviii" or origin_title == "2013 Program Committee / xxix":
+                    return False, origin_title, []
+
                 abstract_a_tag = None
                 title_a_tag = None
-
                 if year == 2013 or year == 2011:
                     abstract_a_tag = a_tags[1]
                     title_a_tag = a_tags[0]
@@ -365,6 +371,10 @@ def get_pdf_information(year, link_tag, origin_title):
 
 
 def authors_string_to_array(authors) -> list[str]:
+
+    if authors == None or len(authors) == 0:
+        return ''
+
     authors = clean_text(authors)
 
     #

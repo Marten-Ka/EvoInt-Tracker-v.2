@@ -13,22 +13,33 @@ csv_file = None
 csv_file_reader = None
 csv_dataframe = None
 
+CSV_PATH = '../vikus-viewer/data/data.csv'
+
 
 def get_csv_dataframe() -> pd.DataFrame:
     global csv_dataframe
     if csv_dataframe is None:
-        csv_dataframe = pd.read_csv(get_data_csv_path())
+        try:
+            csv_dataframe = pd.read_csv(get_data_csv_path())
+        except:
+            csv_dataframe = pd.DataFrame({'keywords': [], 'year': [], 'id': [], '_title': [], '_authors': [], '_abstract': [
+            ], '_origin_path': [], '_display_path_to_pdf': [], '_path_to_pdf': [], '_fulltext': []})
     return csv_dataframe
 
 
 def get_data_csv_path() -> str:
 
-    csv_path = '../vikus-viewer/data/data.csv'
-    if not Path(csv_path).is_file():
-        with open(csv_path, 'w') as f:
-            pass
+    create_csv_file()
 
-    return csv_path
+    global CSV_PATH
+    return CSV_PATH
+
+
+def create_csv_file():
+    global CSV_PATH
+    if not Path(CSV_PATH).is_file():
+        with open(CSV_PATH, 'w') as f:
+            pass
 
 
 def check_file_empty(path_of_file) -> bool:
@@ -56,6 +67,8 @@ def clean_data_csv():
     df = pd.read_csv(csv_file_path, index_col=2)
     df = df[filter_empty_pdf_files(df._path_to_pdf)]
     df.to_csv(csv_file_path)
+
+    remove_duplicate_entries_in_csv()
 
     csv_file_size_after_filter = os.stat(csv_file_path).st_size
 
@@ -115,6 +128,7 @@ def write_data_csv_row(csv_writer, publication: Publication):
 
 
 def add_row_to_dataframe(publication: Publication):
+    create_csv_file()
     global csv_dataframe
     csv_dataframe = pd.concat(
         [get_csv_dataframe(), publication.to_series().to_frame().T])
@@ -162,3 +176,15 @@ def create_data_csv():
 
         for publication in list(publications):
             write_data_csv_row(csv_writer, publication)
+
+
+if __name__ == "__main__":
+    if False:
+        try:
+            df = pd.read_csv(get_data_csv_path())
+            print(df.columns)
+            row_count = df.shape[0]
+            df = df.loc[:, df.dtypes == str]
+            print(row_count, df.shape[0])
+        except Exception as e:
+            print("Error:", e)

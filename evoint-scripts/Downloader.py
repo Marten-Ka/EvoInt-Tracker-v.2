@@ -253,6 +253,10 @@ def sprite_file_state(publication) -> int:
 
 
 def clean_text(string) -> str:
+
+    if string == None or len(string) == 0:
+        return ''
+
     string = string.replace('\n', ' ').replace('\t', ' ').replace('  ', ' ').replace('&nbsp;', '').replace('&nbsp', '').replace(
         u'\ufffd', '').replace(u'\xa0', '').replace(u'\xe2', '').replace(u'\x80', '').replace(u'\x94', '').strip()
 
