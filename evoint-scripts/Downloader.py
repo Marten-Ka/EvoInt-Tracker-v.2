@@ -251,6 +251,8 @@ def sprite_file_state(publication) -> int:
 
     return return_code
 
+def create_spritesheets():
+    check_call(["node", "../sharpsheet/bin/sharpsheet", "../vikus-viewer/data/images/tmp/90/*.png", "--outputPath", "../vikus-viewer/data/images/sprites/"], stdout=DEVNULL)  # , stderr=STDOUT)
 
 def clean_text(string) -> str:
 

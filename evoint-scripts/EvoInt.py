@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 from alive_progress import alive_bar
 
-from Downloader import delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data, delete_year
+from Downloader import delete_all_thumbnails, get_thumbnail_count, get_years_with_downloaded_pdf_data, delete_year, create_spritesheets
 from Downloader_IJCAI import ijcai_iterator_process_all_publications, ijcai_iterator_process_publications_for_year, get_supported_ijcai_years
 from Downloader_ECAI import ecai_iterator_process_all_publications
 from Downloader_AAAI import aaai_iterator_process_all_publications, aaai_iterator_process_publications, get_supported_aaai_years
@@ -33,6 +33,7 @@ def main():
             'message': 'What do you want to do?',
             'choices': [
                 'Start downloading',
+                'Create spritesheets',
                 'Delete data',
                 'Clean CSV file',
                 Separator(),
@@ -45,6 +46,8 @@ def main():
 
     if answers['action'] == 'Start downloading':
         prompt_download()
+    elif answers['action'] == 'Create spritesheets':
+        prompt_create_spritesheets()
     elif answers['action'] == 'Delete data':
         prompt_delete_options()
     elif answers['action'] == 'Clean CSV file':
@@ -52,6 +55,9 @@ def main():
     elif answers['action'] == 'Exit':
         exit()
 
+def prompt_create_spritesheets():
+    create_spritesheets()
+    main()
 
 def prompt_clean_csv():
     print('This action will delete entries of publications, if the associated PDF file does not exist anymore.')
@@ -79,7 +85,7 @@ def prompt_delete_options():
     choices.append(
         Choice('Thumbnails', f'Thumbnails ({get_thumbnail_count()}x)'))
 
-    choices.extend(["PDF files", "Sprites", Separator(), "Back"])
+    choices.extend(["PDF files", "Sprites", "Spritesheets", Separator(), "Back"])
 
     questions = {
         'type': 'list',
@@ -204,7 +210,6 @@ def prompt_delete_sprites():
             print(e)
 
     prompt_delete_options()
-
 
 def prompt_download():
     answers = prompt({

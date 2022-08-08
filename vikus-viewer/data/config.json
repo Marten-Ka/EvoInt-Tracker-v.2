@@ -10,7 +10,7 @@
     "tsne": "data/tsne.csv",
     "textures": {
       "medium": {
-        "size": 256,
+        "size": 90,
         "url": "data/images/sprites/spritesheet.json"
       },
       "detail": {
