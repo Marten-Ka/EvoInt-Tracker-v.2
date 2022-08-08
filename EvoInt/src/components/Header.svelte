@@ -1,10 +1,15 @@
 <script>
 	import { goto } from '$app/navigation';
-
+	import { browser } from '$app/env';
 	import NavigationButton from './NavigationButton.svelte';
 
 	function onHome() {
 		goto('/');
+	}
+
+	let VIKUS_VIEWER_URL = ''
+	if(browser) {
+		VIKUS_VIEWER_URL = `${window.location.protocol}//${window.location.hostname}:8080/vikus_viewer`
 	}
 </script>
 
@@ -14,6 +19,7 @@
 		<NavigationButton text="Tutorial" href="/tutorial" />
 		<NavigationButton text="Über uns" href="/about_us" />
 		<NavigationButton text="Timeline" href="/timeline" />
+		<NavigationButton text="Vikus-Viewer" href={VIKUS_VIEWER_URL} />
 	</div>
 </header>
 
