@@ -59,6 +59,9 @@ def ijcai_iterator_process_publications_for_year(year):
                     
                 if year == '2007' and current_link == 'https://www.ijcai.org/Proceedings/07/Papers/139.pdf':
                     continue
+                
+                if year == '1999' and current_link == 'https://www.ijcai.org/Proceedings/99-2/Papers/017A%20-%201.pdf':
+                    continue
 
                 title = clean_text(link.text)
 
