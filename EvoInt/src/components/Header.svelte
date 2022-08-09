@@ -15,7 +15,7 @@
 
 <header>
 	<img src="/logo.png" alt="EvoInt-Logo" width="159px" on:click={onHome} />
-	<div id="navigation">
+	<div class="flex flex-wrap" id="navigation">
 		<NavigationButton text="Tutorial" href="/tutorial" />
 		<NavigationButton text="Über uns" href="/about_us" />
 		<NavigationButton text="Timeline" href="/timeline" />
