@@ -56,6 +56,9 @@ def ijcai_iterator_process_publications_for_year(year):
                 #
                 if current_link == 'https://www.ijcai.org/proceedings/Papers/IJCAI07-107.pdf':
                     current_link = 'https://www.ijcai.org/Proceedings/09/Papers/107.pdf'
+                    
+                if year == '2007' and current_link == 'https://www.ijcai.org/Proceedings/07/Papers/139.pdf':
+                    continue
 
                 title = clean_text(link.text)
 
