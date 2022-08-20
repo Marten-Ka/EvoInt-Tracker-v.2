@@ -1,10 +1,13 @@
-import torch
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('all-mpnet-base-v2')
 
-dict = {'https-www-ijcai-org-proceedings-2021-0575-pdf.pdf' : torch.Tensor([1, 2, 3, 4, 5, 6]),
-    'https-www-ijcai-org-proceedings-2021-0577-pdf.pdf' : torch.Tensor([7, 8, 9, 10, 11, 12])}
+#Our sentences we like to encode
+sentences = ['This framework generates embeddings for each input sentence',
+    'Sentences are passed as a list of string.', 
+    'The quick brown fox jumps over the lazy dog.']
 
-for file, value in dict.items():
-    #final_tensor = torch.stack(dict[file])
-    print("File: ", file, "Type: ", type(dict[file]), "Shape: ", dict[file].size())
+#Sentences are encoded by calling model.encode()
+sentence_embeddings = model.encode(sentences)
 
-print(list(dict.values()))
+#Print the embeddings
+print(len(sentence_embeddings[0]))

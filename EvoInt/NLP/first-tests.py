@@ -2,17 +2,20 @@ import datetime
 import glob
 import os
 from collections import defaultdict
-from urllib.error import ContentTooShortError
+from tkinter import N
 
 import fitz
 import nltk
 import torch
+import pandas
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA 
+from sklearn.preprocessing import StandardScaler
 from nltk import pos_tag, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet as wn
 from nltk.stem import WordNetLemmatizer
 from sentence_transformers import SentenceTransformer, util
-
 
 def get_abstract_of_pdf(pdf_path):
     doc = fitz.open(pdf_path)
@@ -25,7 +28,6 @@ def get_abstract_of_pdf(pdf_path):
         page = doc.load_page(page_number)
         page_dict = page.get_text('dict')
         abstract_header_pdf_number = find_abstract_header_pdf_number(page_dict)
-        #print(f'PDF Number: {abstract_header_pdf_number}')
         if abstract_header_pdf_number == None:
             continue
 
@@ -80,7 +82,8 @@ tag_map['J'] = wn.ADJ
 tag_map['V'] = wn.VERB
 tag_map['R'] = wn.ADV
 
-folder = r"C:\Users\GLJNI\Workspaces\EvoInt-Tracker-v.2\papers\2016-2021\30\*.pdf"
+folder = input("Enter a path to a folder containing papers\nEnter the path without quotation marks\n")
+folder += "\*.pdf"
 
 sent_embeddings_dict = {}
 doc_embeddings_dict = {}
@@ -94,6 +97,7 @@ for file in glob.glob(rf'{folder}'):
     contents = [lemmatizer.lemmatize(word, tag_map[tag[0]]) for word, tag in pos_tag(contents)]
     contents = ' '.join(contents)
     sentence_list = sent_tokenize(contents)
+    print(sentence_list)
     sent_embeddings_dict.update({os.path.split(filepath)[1] : model.encode(sentence_list, convert_to_tensor=True, show_progress_bar=True)})
 
 for file, value in sent_embeddings_dict.items():
@@ -102,15 +106,25 @@ for file, value in sent_embeddings_dict.items():
 
 final_tensor = torch.stack(list(doc_embeddings_dict.values()))
 
-cosine_scores = util.cos_sim(final_tensor, final_tensor)
+x = StandardScaler().fit_transform(final_tensor)
 
-# print(final_tensor)
-# print(type(final_tensor))
-# print(final_tensor.size())
-i = 1
-for item in cosine_scores:
-    print(i, item)
-    i = i + 1
+pca = PCA(n_components=2)
+principal_components = pca.fit_transform(x)
+principal_df = pandas.DataFrame(data=principal_components, columns= ['x', 'y'])
+
+principal_df.to_csv("tsne(NLP).csv", sep=",")
+# principal_df.plot(x='x', y='y', style='o')
+# for k, v in principal_df.iterrows():
+#     plt.annotate(k, v)
+
+# plt.show()
+
+# cosine_scores = util.cos_sim(final_tensor, final_tensor)
+
+# i = 1
+# for item in cosine_scores:
+#     print(i, item)
+#     i = i + 1
 
 
 now2 = datetime.datetime.now()
