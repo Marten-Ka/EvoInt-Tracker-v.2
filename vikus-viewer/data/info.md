@@ -1,6 +1,6 @@
 # EvoInt – Tracker
 
-Die Visualisierung zeigt den Bestand der Publikationen der **International Joint Conference on Artificial Intelligence** entlang einer thematischen und zeitlichen Einordnung.
+Die Visualisierung zeigt den Bestand der Publikationen der **International Joint Conference on Artificial Intelligence**, **European Conference on Artifical Intelligence** und **Association for the Advancement of Artifical Intelligence** entlang einer thematischen und zeitlichen Einordnung.
 
 ![tags](img/infobar_tags.svg)
 
@@ -13,4 +13,3 @@ Die **Publikationen** sind entlang einer Zeitleiste entsprechend ihrer Entstehun
 ![time](img/infobar_scroll.svg)
 
 Zoomen Sie mit Ihrem Touchpad oder Scrollrad in den Bereich der Zeichnungen und Zeitleiste, um mehr Details zu sehen. Klicken und ziehen Sie den Hintergrund, um den Sichtbereich zu verschieben.
-
