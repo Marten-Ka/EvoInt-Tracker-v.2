@@ -15,7 +15,7 @@ from nltk import pos_tag, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet as wn
 from nltk.stem import WordNetLemmatizer
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers import SentenceTransformer
 
 def get_abstract_of_pdf(pdf_path):
     doc = fitz.open(pdf_path)
@@ -87,45 +87,40 @@ folder += "\*.pdf"
 
 sent_embeddings_dict = {}
 doc_embeddings_dict = {}
+i = 1
 
 for file in glob.glob(rf'{folder}'):
+    print(i)
+    i += 1
     filepath = os.path.normpath(file)
     contents_raw = get_abstract_of_pdf(file)
+    if contents_raw == None:
+        continue
     contents = contents_raw.lower()
     contents = contents.split()
     contents = [word for word in contents if word not in stops]
     contents = [lemmatizer.lemmatize(word, tag_map[tag[0]]) for word, tag in pos_tag(contents)]
     contents = ' '.join(contents)
     sentence_list = sent_tokenize(contents)
-    print(sentence_list)
     sent_embeddings_dict.update({os.path.split(filepath)[1] : model.encode(sentence_list, convert_to_tensor=True, show_progress_bar=True)})
 
 for file, value in sent_embeddings_dict.items():
     doc_embeddings_dict.update({file : torch.mean(sent_embeddings_dict[file],dim=0)})
     #print("File: ", file, "Type: ", type(sent_embeddings_dict[file]), "Shape: ", sent_embeddings_dict[file].size())
 
-final_tensor = torch.stack(list(doc_embeddings_dict.values()))
+final_tensors = torch.stack(list(doc_embeddings_dict.values()))
 
-x = StandardScaler().fit_transform(final_tensor)
+x = StandardScaler().fit_transform(final_tensors)
 
 pca = PCA(n_components=2)
 principal_components = pca.fit_transform(x)
 principal_df = pandas.DataFrame(data=principal_components, columns= ['x', 'y'])
 
-principal_df.to_csv("tsne(NLP).csv", sep=",")
-# principal_df.plot(x='x', y='y', style='o')
-# for k, v in principal_df.iterrows():
-#     plt.annotate(k, v)
+#principal_df.to_csv("tsne(NLP).csv", sep=",")
 
-# plt.show()
+principal_df.plot(x='x', y='y', style='o')
 
-# cosine_scores = util.cos_sim(final_tensor, final_tensor)
-
-# i = 1
-# for item in cosine_scores:
-#     print(i, item)
-#     i = i + 1
-
+plt.show()
 
 now2 = datetime.datetime.now()
 time = now2-now
