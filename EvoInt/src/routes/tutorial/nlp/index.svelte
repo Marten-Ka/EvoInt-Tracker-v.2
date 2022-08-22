@@ -119,174 +119,67 @@
 			<ol class="border-l-2 border-blue-600 w-[inherit] sm:w-[inherit]">
 				<li>
 					<HistoricalCard
-						img_link="/Samuel.jpeg"
-						img_alt="Samuel"
-						source_link="https://medium.com/ibm-data-ai/the-first-of-its-kind-ai-model-samuels-checkers-playing-program-1b712fa4ab96"
-						source_text="Quelle: Micro Medium"
-						heading="1952: Samuel's Checker Player"
-						content="Arthur Samuel von IBM entwickelte 1952 ein Computerprogramm zum Damespiel für den
-						IBM 701. Sein Entwurf beinhaltete eine Punktefunktion, die die Positionen der
-						Figuren auf dem Brett nutzte. Die Bewertungsfunktion versuchte, die Gewinnchancen
-						jeder Seite zu messen. Samuel entwarf auch eine Reihe von Mechanismen, die es ihm
-						ermöglichten, sein Programm zu verbessern. Bei dem, was Samuel Auswendiglernen
-						nannte, erinnerte sich sein Programm an alle Positionen, die es bereits gesehen
-						hatte, und kombinierte dies mit den Werten der Belohnungsfunktion. 1952 prägte
-						Arthur Samuel erstmals den Begriff „Machine Learning“."
-						tag_list={['Arthur Samuel', 'Grundstein der ML']}
-						button_link="https://webdocs.cs.ualberta.ca/~jonathan/publications/ai_publications/samuel.pdf"
+						img_link="/grammar.jpg"
+						img_alt="Grammar"
+						source_link="https://mediax.stanford.edu/wp-content/uploads/2018/11/Rich_Dynamic_Treebank_Main.jpg"
+						source_text="Quelle: DataVersity"
+						heading="NLP Begins"
+						content="1957 veröffentlichte Noam Chomsky ein Buch, in dem er frühere linguistische Konzepte revolutionierte und zu dem 
+						Schluss kam, dass die Satzstruktur geändert werden müsste, damit ein Computer eine Sprache verstehen kann. Infolgedessen 
+						schuf er einen neuen Grammatikstil namens Phasenstrukturgrammatik. Dieser Grammatikstil würde Sätze methodisch in ein 
+						computerverständliches Format übersetzen."
+						tag_list={['Noam CHomsky', 'Phrase-Structure Grammar']}
+						button_link="https://www.dataversity.net/a-brief-history-of-natural-language-processing-nlp/#"
 					/>
 				</li>
 
 				<li>
 					<HistoricalCard
-						img_link="/perceptron.gif"
+						img_link="/ELIZA_conversation.png"
 						img_alt="Perzeptron"
-						source_link="https://medium.com/towards-data-science/what-the-hell-is-perceptron-626217814f53"
-						source_text="Quelle: Medium"
-						heading="1957: Der Perzeptron"
-						content="1957 schuf Frank Rosenblatt Perzeptron, indem er Donald Hebbs Modell der
-						Gehirnzellinteraktion mit Arthur Samuels Bemühungen um Machine Learining
-						kombinierte. Das Perzeptron war ursprünglich als Maschine geplant, nicht als
-						Programm. Die Software wurde ursprünglich für den IBM 704 entwickelt und in einer
-						speziell angefertigten Maschine namens Mark 1 Perceptron installiert, die für die
-						Bilderkennung konstruiert worden war. Dadurch wurden die Software und die
-						Algorithmen übertragbar und für andere Maschinen verfügbar. Obwohl das Perzeptron
-						vielversprechend schien, konnte es viele Arten von visuellen Mustern nicht
-						erkennen, was zu Frustration führte und die Erforschung neuronaler Netzwerke
-						blockierte. Es hat bei den Investoren zu Frustration geführt und Finanzierungen
-						wurden zurückgenommen."
-						tag_list={['Bilderkennung', 'Frank Rosenblatt']}
-						button_link="https://de.wikipedia.org/wiki/Perzeptron"
+						source_link="https://en.wikipedia.org/wiki/ELIZA#/media/File:ELIZA_conversation.png"
+						source_text="Quelle: Wikipedia"
+						heading="1964: Birth of ELIZA"
+						content="1964 gründete der U.S. National Research Council (NRC) das Automatic Language Processing Advisory Committee oder ALPAC. 
+						Dieses Komitee wurde beauftragt, den Fortschritt der Forschung zur Verarbeitung natürlicher Sprache zu bewerten.
+						Im selben Jahr wurde ELIZA entwickelt, ein „maschinengeschriebener“ Kommentar- und Antwortprozess, der mithilfe von Reflexionstechniken 
+						einen Psychiater imitieren sollte. Die Art und Weise, wie es seine Arbeit erledigte, bestand darin, Sätze neu anzuordnen und relativ 
+						einfache Grammatikregeln zu befolgen, aber es gab kein Verständnis seitens des Computers.
+						Nach einigen Jahren und Investitionen in Millionenhöhe galt die KI- und NLP-Forschung als tot."
+						tag_list={['ELIZA', 'NRC']}
+						button_link="https://en.wikipedia.org/wiki/ELIZA"
 					/>
 				</li>
 
 				<li>
 					<HistoricalCard
-						img_link="/neighbor.png"
-						img_alt="Neighbor"
-						source_link="https://towardsdatascience.com/similarity-search-with-ivfpq-9c6348fd4db3"
-						source_text="Quelle: Towards Data Science"
-						heading="1967: Der Nearest Neighbor Algorithmus"
-						content="1967 wurde der Beginn der grundlegenden Mustererkennung durch die Konzeption des
-						Nearest-Neighbor-Algorithmus erreicht. Marcello Pelillo ist berühmt geworden, weil
-						er die „Nearest-Neighbor-Regel“ erfunden hat. Dieser Algorithmus wurde zur
-						Kartierung von Routen verwendet und war einer der frühesten Algorithmen, die
-						verwendet wurden, um eine Lösung für das Problem des Handlungsreisenden zu finden,
-						die effizienteste Route zu finden. Unter Verwendung dieser gibt ein Verkäufer eine
-						ausgewählte Stadt ein und lässt das Programm wiederholt die nächstgelegenen Städte
-						besuchen, bis alle besucht wurden."
-						tag_list={['Marcello Pelillo', 'Der Nearest-Neighbour-Algorithmus']}
-						button_link="https://de.wikipedia.org/wiki/Nearest-Neighbor-Heuristik"
+						img_link="/neural.png"
+						img_alt="neural model"
+						source_link="https://www.eidosmedia.com/blog/technology/machine-learning-size-isn-t-everything"
+						source_text="Quelle: DataVersity"
+						heading="Neural Net Models"
+						content="Bis in die 1980er Jahre verwendeten die meisten NLP-Systeme komplexe, „handgeschriebene“ Regeln. Aber in den späten 1980er Jahren 
+						kam es zu einer Revolution im NLP. Dies war sowohl das Ergebnis der stetigen Steigerung der Rechenleistung als auch der Umstellung auf 
+						maschinelle Lernalgorithmen. In den 1980er Jahren war IBM für die Entwicklung mehrerer erfolgreicher, komplizierter statistischer Modelle 
+						verantwortlich. Gegenwärtig gelten neuronale Netzmodelle als Spitzenreiter in Forschung und Entwicklung im NLP-Verständnis der Text- und Sprachgenerierung."
+						tag_list={['neural net models', 'IBM']}
+						button_link="https://www.dataversity.net/a-brief-history-of-natural-language-processing-nlp/#"
 					/>
 				</li>
 
 				<li>
 					<HistoricalCard
-						img_link="/aiki.png"
-						img_alt="AI vs KI"
-						source_link="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6"
-						source_text="Quelle: Towards AI"
-						heading="1970er: KI und ML trennen sich"
-						content="In den späten 1970er und frühen 1980er Jahren konzentrierte sich die Forschung im
-						Bereich der künstlichen Intelligenz mehr auf die Verwendung logischer,
-						wissensbasierter Ansätze als auf Algorithmen, und die Erforschung neuronaler
-						Netzwerke wurde von Informatik- und KI-Forschern aufgegeben. Dies führte zu einer
-						Spaltung zwischen KI und Machine Learning, welche bis dahin als Trainingsprogramm
-						für KI verwendet wurde. Das Ziel der ML-Industrie verlagerte sich von der
-						Ausbildung für künstliche Intelligenz zur Lösung praktischer Probleme, wobei die
-						ML-Industrie ihren Fokus auf neuronale Netze behielt und dann in den 1990er Jahren
-						florierte. Der größte Teil dieses Erfolgs war auf das Wachstum des Internets
-						zurückzuführen, das von der ständig wachsenden Verfügbarkeit digitaler Daten und
-						der Möglichkeit profitierte, seine Dienste über das Internet zu teilen."
-						tag_list={['Künstliche Intelligenz', 'Machine Learning']}
-						button_link="https://towardsai.net/p/machine-learning/differences-between-ai-and-machine-learning-1255b182fc6"
-					/>
-				</li>
-
-				<li>
-					<HistoricalCard
-						img_link="/boosting.jpg"
-						img_alt="Boosting"
-						source_link="https://www.ecmwf.int/sites/default/files/Ai-image-deep-net-v3-690px.jpg"
-						source_text="Quelle: ECMWF"
-						heading="1990: Boosting-Algorithmen"
-						content="Boosting-Algorithmen reduzieren Vorurteile während des Supervised Learning und
-						beinhalten ML-Algorithmen, die schwache Lernende in starke verwandeln. Dieses
-						Konzept wurde erstmals 1990 in einem Artikel mit dem Titel „The Strength of Weak
-						Learnability“ von Robert Schapire vorgestellt. Schapire argumentiert: „Eine Gruppe
-						schwacher Lernender kann einen einzigen starken Lernenden hervorbringen.“ wobei
-						schwache Lernende als Klassifikatoren definiert werden, die nur geringfügig mit
-						der wahren Klassifikation korrelieren, und ein starker Lernender leicht
-						klassifiziert und gut auf die wahre Klassifikation ausgerichtet ist. „Boosting“
-						gilt als notwendige Weiterentwicklung für die Evolution des maschinellen Lernens."
-						tag_list={['Supervised Learning', 'Robert Schapire']}
-						button_link="https://de.wikipedia.org/wiki/Boosting#:~:text=Boosting%20(engl.,einem%20einzigen%20guten%20Klassifikator%20verschmilzt."
-					/>
-				</li>
-
-				<li>
-					<HistoricalCard
-						img_link="/speechrecog.jpg"
-						img_alt="Spracherkennung"
-						source_link="https://recfaces.com/articles/what-is-voice-recognition"
-						source_text="Quelle: Recfaces"
-						heading="1997: Spracherkennungssysteme"
-						content="1997 beschrieben Jürgen Schmidhuber und Sepp Hochreite ein neuronales
-						Netzwerkmodell namens Long Short-Term Memory (LSTM), das derzeit zum Trainieren
-						vieler Spracherkennungssysteme verwendet wird. LSTM kann Aufgaben lernen, die die
-						Erinnerung an Ereignisse erfordern, die Tausende von diskreten Schritten zuvor
-						stattgefunden haben. Im Jahr 2015 hatte das Spracherkennungsprogramm von Google
-						Berichten zufolge einen signifikanten Leistungssprung von 49 Prozent, indem es ein
-						von Connectionist Temporal Classification (CTC) trainiertes LSTM verwendete, eine
-						Art neuronaler Netzwerkausgabe und Bewertungsfunktion, um Sequenzprobleme
-						anzugehen, bei denen Zeit eine Variable ist."
-						tag_list={['Google Spracherkennung', 'Neuronale Netze']}
-						button_link="https://de.wikipedia.org/wiki/Long_short-term_memory"
-					/>
-				</li>
-
-				<li>
-					<HistoricalCard
-						img_link="/facerecog.jpeg"
-						img_alt="Gesichtserkennung"
-						source_link="https://www.handelskraft.de/face-recognition-gruseltechnologie-oder-tor-zur-neuen-payment-welt/"
-						source_text="Quelle: Handelskraft"
-						heading="2006: Bessere Gesichtserkennungsalgorithmen"
-						content="Gesichtserkennung ist eine Erkennungstechnik, die verwendet wird, um im Datensatz
-						gespeicherte Gesichter zu erkennen. Es identifiziert ein Gesicht durch Vergleichen
-						und Analysieren von Mustern basierend auf Gesichtskonturen durch trainierte
-						neuronale Netzwerkmodelle. Im Jahr 2006 führte die Face Recognition Grand
-						Challenge eine Bewertung der Gesichtserkennungsalgorithmen durch, und das Ergebnis
-						der Bewertung ergab, dass die neuen Algorithmen zehnmal genauer waren als die
-						Gesichtserkennungsalgorithmen von 2002 und 100-mal genauer als die von 1995.
-						Einige der Algorithmen waren dazu in der Lage menschliche Teilnehmer bei der
-						Erkennung von Gesichtern übertreffen und eineiige Zwillinge eindeutig
-						identifizieren könnten."
-						tag_list={['Gesichtserkennung', 'Neuronales Netzwerkmodell']}
-						button_link="https://www.internetjustsociety.org/cosmonaut/facial-recognition-an-introduction"
-					/>
-				</li>
-
-				<li>
-					<HistoricalCard
-						img_link="/mljetzt.jpg"
-						img_alt="ML Jetzt vs Zukunft"
-						source_link="https://www.informatec.com/en/machine-learning"
-						source_text="Quelle: Informatec"
-						heading="2006-20xx: ML Jetzt vs. Zukunft"
-						content="Die Standford University definierte Machine Learning als „die Wissenschaft,
-						Computer zum Handeln zu bringen, ohne explizit programmiert zu werden“. ML war der
-						Schlüssel für einige der bedeutendsten technologischen Fortschritte. Es wird für
-						die neue Industrie der selbstfahrenden Fahrzeuge, für die Erforschung der Galaxie
-						und in Unternehmen eingesetzt. Einige häufige Aufgaben, die in der Geschäftswelt
-						ML eingesetzt werden, sind: Verkaufsdatenanalyse, Produktempfehlungen, dynamische
-						Preisgestaltung und mehr. Klar ist, dass ML auch in Zukunft im Mittelpunkt unseres
-						Lebens stehen wird. Google arbeitet derzeit an einem Projekt zum maschinellen Lernen
-						mit einem Ansatz namens Feinabstimmung von Anweisungen. Sie zielen darauf ab, ein ML-Modell
-						zu trainieren, um Probleme bei der Verarbeitung natürlicher Sprache auf allgemeine
-						Weise zu lösen."
-						tag_list={['Geschäftswelt', 'Autonomes Fahren', 'Technologie']}
-						button_link="http://mlclass.stanford.edu/#:~:text=Machine%20learning%20is%20the%20science,understanding%20of%20the%20human%20genome."
+						img_link="/siri.webp"
+						img_alt="Siri"
+						source_link="https://mashable.com/article/how-to-set-up-siri"
+						source_text="Quelle: DataVersity"
+						heading="2000er: Spracherkennung"
+						content="Apples Siri wurde 2011 als einer der weltweit ersten erfolgreichen NLP/KI-Assistenten bekannt, die von allgemeinen Verbrauchern verwendet wurden. 
+						Innerhalb von Siri wandelt das Modul zur automatischen Spracherkennung die Wörter in digital interpretierte Konzepte um. Das Sprachbefehlssystem gleicht 
+						diese Konzepte dann mit vordefinierten Befehlen ab und initiiert bestimmte Aktionen im Gerät. Trotz all dieser Verbesserungen sind unsere modernen KIs jedoch 
+						immer noch nicht in der Lage, den Test von Alan Turing zu bestehen, und klingen derzeit nicht wie echte Menschen."
+						tag_list={['Siri', 'Alan Turing']}
+						button_link="https://www.dataversity.net/a-brief-history-of-natural-language-processing-nlp/#"
 					/>
 				</li>
 			</ol>
