@@ -159,7 +159,7 @@
 						Massachusetts Institute of Technology das Computerprogramm 'ELIZA', welches mit
 						Menschen kommunizieren kann. ELIZA kann mehrere Gesprächspartner simulieren, wie
 						beispielsweise einen Psychotherapeuten. Jedoch sind die genutzten Mittel zur
-						Simulation des Gesprächs noch recht rudimentär geskriptet"
+						Simulation des Gesprächs noch recht rudimentär geskriptet."
 						tag_list={['Joseph Weizenbaum', 'ELIZA']}
 						button_link="https://de.wikipedia.org/wiki/ELIZA"
 					/>
@@ -178,7 +178,7 @@
 						Infektionskrankheiten eingesetzt. Doch auch wenn das System hohe Trefferquoten
 						erzielt, erlangte es nicht die Bedeutung in der Medizin, die man sich erhofft
 						hatte. Die Bereitschaft gegenüber solchen Systemen war schlicht zu gering, als
-						dass sich Ärzte auf dessen Diagnose verlassen wollten."
+						dass sich Ärzte auf deren Diagnose verlassen wollten."
 						tag_list={['MYCIN', 'Medizin']}
 						button_link="https://de.wikipedia.org/wiki/Mycin_(Expertensystem)"
 					/>
@@ -268,7 +268,7 @@
 						eine sogenannte 'starke KI' zu schaffen, die ihr Wissen auf sehr viele Bereiche
 						übertragen und somit uns Menschen in jeder Hinsicht übertrumpfen kann. All das
 						birgt auch Gefahren, weshalb ethische Fragen zur Forschung und Entwicklung der KI
-						immer mehr in der Vordergrund rücken. Die primäre Frage ist und bleibt dabei 'KI -
+						immer mehr in den Vordergrund rücken. Die primäre Frage ist und bleibt dabei 'KI -
 						Fluch oder Segen für den Menschen?'"
 						tag_list={['Starke KI', 'Ethik & Moral']}
 						button_link="https://mixed.de/ki-im-alltag/"
@@ -289,7 +289,7 @@
 			<InformationTile title="Schwache KI" class="mt-20">
 				<div
 					slot="content"
-					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+					class="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
 					Ein KI-System, das nur für die Ausführung einer bestimmten Aufgabe entwickelt und
 					trainiert wurde. Es benötigt meist zusätzliche menschliche Intervention und kann ihr
@@ -305,7 +305,7 @@
 			<InformationTile title="Starke KI" right_side class="mt-20">
 				<div
 					slot="content"
-					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+					class="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
 					Auch bekannt als allgemeine künstliche Intelligenz kann die starke KI die kognitiven
 					Fähigkeiten des menschlichen Gehirns nachbilden. Somit kann sie auch unbekannte Aufgaben
@@ -342,7 +342,7 @@
 			</div>
 
 			<div
-				class="grid bg-gray-700 gap-12 rounded-2xl shadow-2xl p-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:gap-x-12"
+				class="grid bg-gray-700 gap-12 rounded-2xl shadow-2xl p-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 lg:gap-x-12"
 			>
 				<OverviewSubCard
 					icon="tablet"
@@ -511,7 +511,7 @@
 			<div class="w-auto text-center m-6 p-8">
 				<img src="/Robert.jfif" class="rounded-full w-32 mb-4 mx-auto" alt="Avatar" />
 				<h5 class="text-xl font-medium leading-tight mb-2">Robert Witzke</h5>
-				<p class="text-gray-500 mb-2">Web designer</p>
+				<p class="text-gray-500 mb-2">Frontend Developer</p>
 				<ul class="list-inside flex mx-auto justify-center">
 					<a href="https://github.com/robertwitzke" class="px-2">
 						<svg

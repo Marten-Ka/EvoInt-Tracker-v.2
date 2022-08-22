@@ -118,7 +118,7 @@
 			<ol class="border-l-2 border-blue-600 w-[inherit] sm:w-[inherit]">
 				<li>
 					<HistoricalCard
-						img_link="/samuel.jpeg"
+						img_link="/Samuel.jpeg"
 						img_alt="Samuel"
 						source_link="https://medium.com/ibm-data-ai/the-first-of-its-kind-ai-model-samuels-checkers-playing-program-1b712fa4ab96"
 						source_text="Quelle: Micro Medium"
@@ -143,17 +143,16 @@
 						source_link="https://medium.com/towards-data-science/what-the-hell-is-perceptron-626217814f53"
 						source_text="Quelle: Medium"
 						heading="1957: Der Perzeptron"
-						content="1957 schuf Frank Rosenblatt Perzeptron, indem er Donald Hebbs Modell der
+						content="1957 schuf Frank Rosenblatt den Perzeptron, indem er Donald Hebbs Modell der
 						Gehirnzellinteraktion mit Arthur Samuels Bemühungen um Machine Learining
-						kombinierte. Das Perzeptron war ursprünglich als Maschine geplant, nicht als
+						kombinierte. Der Perzeptron war ursprünglich als Maschine geplant, nicht als
 						Programm. Die Software wurde ursprünglich für den IBM 704 entwickelt und in einer
 						speziell angefertigten Maschine namens Mark 1 Perceptron installiert, die für die
 						Bilderkennung konstruiert worden war. Dadurch wurden die Software und die
-						Algorithmen übertragbar und für andere Maschinen verfügbar. Obwohl das Perzeptron
-						vielversprechend schien, konnte es viele Arten von visuellen Mustern nicht
+						Algorithmen übertragbar und für andere Maschinen verfügbar. Obwohl der Perzeptron
+						vielversprechend schien, konnte er viele Arten von visuellen Mustern nicht
 						erkennen, was zu Frustration führte und die Erforschung neuronaler Netzwerke
-						blockierte. Es hat bei den Investoren zu Frustration geführt und Finanzierungen
-						wurden zurückgenommen."
+						blockierte. Aufgrund dessen nahmen viele Investoren die Finanzierungen zurück."
 						tag_list={['Bilderkennung', 'Frank Rosenblatt']}
 						button_link="https://de.wikipedia.org/wiki/Perzeptron"
 					/>
@@ -170,8 +169,8 @@
 						Nearest-Neighbor-Algorithmus erreicht. Marcello Pelillo ist berühmt geworden, weil
 						er die „Nearest-Neighbor-Regel“ erfunden hat. Dieser Algorithmus wurde zur
 						Kartierung von Routen verwendet und war einer der frühesten Algorithmen, die
-						verwendet wurden, um eine Lösung für das Problem des Handlungsreisenden zu finden,
-						die effizienteste Route zu finden. Unter Verwendung dieser gibt ein Verkäufer eine
+						verwendet wurden, um eine Lösung für das Problem des Handlungsreisenden, also
+						die effizienteste Route entlang eines Weges, zu finden. Unter Verwendung dieser gibt ein Verkäufer eine
 						ausgewählte Stadt ein und lässt das Programm wiederholt die nächstgelegenen Städte
 						besuchen, bis alle besucht wurden."
 						tag_list={['Marcello Pelillo', 'Der Nearest-Neighbour-Algorithmus']}
@@ -187,12 +186,12 @@
 						source_text="Quelle: Towards AI"
 						heading="1970er: KI und ML trennen sich"
 						content="In den späten 1970er und frühen 1980er Jahren konzentrierte sich die Forschung im
-						Bereich der künstlichen Intelligenz mehr auf die Verwendung logischer,
-						wissensbasierter Ansätze als auf Algorithmen, und die Erforschung neuronaler
+						Bereich der Künstlichen Intelligenz mehr auf die Verwendung logischer,
+						wissensbasierter Ansätze als auf Algorithmen Die Erforschung neuronaler
 						Netzwerke wurde von Informatik- und KI-Forschern aufgegeben. Dies führte zu einer
 						Spaltung zwischen KI und Machine Learning, welche bis dahin als Trainingsprogramm
 						für KI verwendet wurde. Das Ziel der ML-Industrie verlagerte sich von der
-						Ausbildung für künstliche Intelligenz zur Lösung praktischer Probleme, wobei die
+						Ausbildung für Künstliche Intelligenz zur Lösung praktischer Probleme, wobei die
 						ML-Industrie ihren Fokus auf neuronale Netze behielt und dann in den 1990er Jahren
 						florierte. Der größte Teil dieses Erfolgs war auf das Wachstum des Internets
 						zurückzuführen, das von der ständig wachsenden Verfügbarkeit digitaler Daten und
@@ -213,10 +212,10 @@
 						beinhalten ML-Algorithmen, die schwache Lernende in starke verwandeln. Dieses
 						Konzept wurde erstmals 1990 in einem Artikel mit dem Titel „The Strength of Weak
 						Learnability“ von Robert Schapire vorgestellt. Schapire argumentiert: „Eine Gruppe
-						schwacher Lernender kann einen einzigen starken Lernenden hervorbringen.“ wobei
+						schwacher Lernender kann einen einzigen starken Lernenden hervorbringen.“. Wobei
 						schwache Lernende als Klassifikatoren definiert werden, die nur geringfügig mit
-						der wahren Klassifikation korrelieren, und ein starker Lernender leicht
-						klassifiziert und gut auf die wahre Klassifikation ausgerichtet ist. „Boosting“
+						der wahren Klassifikation korrelieren und ein starker Lernender hingegen leicht
+						klassifiziert werden kann und gut auf die wahre Klassifikation ausgerichtet ist. „Boosting“
 						gilt als notwendige Weiterentwicklung für die Evolution des maschinellen Lernens."
 						tag_list={['Supervised Learning', 'Robert Schapire']}
 						button_link="https://de.wikipedia.org/wiki/Boosting#:~:text=Boosting%20(engl.,einem%20einzigen%20guten%20Klassifikator%20verschmilzt."
@@ -255,7 +254,7 @@
 						gespeicherte Gesichter zu erkennen. Es identifiziert ein Gesicht durch Vergleichen
 						und Analysieren von Mustern basierend auf Gesichtskonturen durch trainierte
 						neuronale Netzwerkmodelle. Im Jahr 2006 führte die Face Recognition Grand
-						Challenge eine Bewertung der Gesichtserkennungsalgorithmen durch, und das Ergebnis
+						Challenge eine Bewertung der Gesichtserkennungsalgorithmen durch und das Ergebnis
 						der Bewertung ergab, dass die neuen Algorithmen zehnmal genauer waren als die
 						Gesichtserkennungsalgorithmen von 2002 und 100-mal genauer als die von 1995.
 						Einige der Algorithmen waren dazu in der Lage menschliche Teilnehmer bei der
@@ -277,8 +276,8 @@
 						Computer zum Handeln zu bringen, ohne explizit programmiert zu werden“. ML war der
 						Schlüssel für einige der bedeutendsten technologischen Fortschritte. Es wird für
 						die neue Industrie der selbstfahrenden Fahrzeuge, für die Erforschung der Galaxie
-						und in Unternehmen eingesetzt. Einige häufige Aufgaben, die in der Geschäftswelt
-						ML eingesetzt werden, sind: Verkaufsdatenanalyse, Produktempfehlungen, dynamische
+						und in Unternehmen eingesetzt. Einige häufige Aufgaben, für die ML in der Geschäftswelt
+						eingesetzt wird, sind: Verkaufsdatenanalyse, Produktempfehlungen, dynamische
 						Preisgestaltung und mehr. Klar ist, dass ML auch in Zukunft im Mittelpunkt unseres
 						Lebens stehen wird. Google arbeitet derzeit an einem Projekt zum maschinellen Lernen
 						mit einem Ansatz namens Feinabstimmung von Anweisungen. Sie zielen darauf ab, ein ML-Modell
@@ -309,16 +308,15 @@
 			<InformationTile title="Supervised Learning" class="mt-20">
 				<div
 					slot="content"
-					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+					class="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
 					Beim Supervised Learning erhält der ML-Algorithmus einen kleinen und beschrifteten
 					Trainingsdatensatz eines größeren Datensatzes, mit dem er arbeiten kann. Dies soll dem
 					Algorithmus eine Grundidee des Problems, der Lösung und der zu behandelnden Datenpunkte
 					geben. Der Algorithmus findet dann Beziehungen zwischen den gegebenen Parametern und hat
-					eine Vorstellung davon, wie die Daten funktionieren und die Beziehung zwischen Eingabe und
-					Ausgabe. Dann wird es auf dem endgültigen Datensatz eingesetzt, wo der Algorithmus mehr
-					lernt und neue Muster und Beziehungen entdeckt, während er sich auf dem endgültigen
-					Datensatz trainiert.
+					eine Vorstellung davon, wie die Daten funktionieren und welche Beziehung zwischen Eingabe und
+					Ausgabe besteht. Dann wird es auf den endgültigen Datensatz angewandt, wodurch der Algorithmus mehr
+					lernt und neue Muster und Beziehungen entdeckt, womit er immer weiter trainiert wird.
 				</div>
 				<div slot="right_slot">
 					<AnimationContainer from_right>
@@ -329,12 +327,12 @@
 			<InformationTile title="Unsupervised Learning" right_side class="mt-20">
 				<div
 					slot="content"
-					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+					class="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
 					Beim Unsupervised Learning muss der Datensatz nicht maschinenlesbar gemacht oder von
 					Entwicklern gekennzeichnet werden, sodass das Programm viel größere Datensätze bearbeiten
-					kann. Beim Unspervised Learning gibt es keine Gekennzeichnung, an denen das Programm
-					abarbeiten, was zur Schaffung verborgener Strukturen führt. Die Erstellung dieser
+					kann. Beim Unspervised Learning gibt es keine Kennzeichnungen, die das Programm
+					abarbeitet, was zur Schaffung verborgener Strukturen führt. Die Erstellung dieser
 					verborgenen Strukturen hilft dem unbeaufsichtigten Lernen, sich an die Daten anzupassen,
 					indem verborgene Strukturen dynamisch geändert werden.
 				</div>
@@ -347,7 +345,7 @@
 			<InformationTile title="Reinforcement Learning" class="mt-20">
 				<div
 					slot="content"
-					class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
+					class="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl text-justify"
 				>
 					Beim Reinforcement Learning handelt es sich um einen Algorithmus, der sich selbst
 					verbessert und anhand einer Trial-and-Error-Methode aus neuen Situationen lernt. Es wird
@@ -379,7 +377,7 @@
 			</div>
 
 			<div
-				class="grid bg-gray-700 gap-12 rounded-2xl shadow-2xl p-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:gap-x-12"
+				class="grid bg-gray-700 gap-12 rounded-2xl shadow-2xl p-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 lg:gap-x-12"
 			>
 				<OverviewSubCard
 					icon="tablet"
@@ -387,16 +385,15 @@
 					heading="Deep Learning"
 					content="Deep Learning ist eine Anwendung von ML. Deep-Learning-Netzwerke interpretieren Big
 					Data, sowohl unstrukturiert als auch strukturiert, und erkennen Muster in den Daten. Je
-					mehr Daten sie trainieren und aus denen sie lernen können, desto fundierter und genauer
-					werden ihre Entscheidungen sein. Ein reales Beispiel dafür wäre Chatbox, je mehr Daten
-					es trainiert, desto besser funktioniert es."
+					mehr sie an Daten trainiert werden und je mehr sie aus ihnen lernen können, desto fundierter und genauer
+					werden ihre Entscheidungen sein. Ein reales Beispiel dafür wären Chatbots."
 				/>
 
 				<OverviewSubCard
 					icon="slack"
 					icon_size="24px"
 					heading="Neuronale Netzwerke"
-					content="Neuronale Netze sind eng mit Deep Learning verwandt. Seine Aufgabe ist es, sequentielle
+					content="Neuronale Netze sind eng mit Deep Learning verwandt. Ihre Aufgabe ist es, sequentielle
 					Schichten von Neuronen zu erstellen, die das Verständnis der von einer Maschine
 					gesammelten Daten vertiefen, um eine genaue Analyse zu ermöglichen. Ein neuronales
 					Netzwerk besteht aus Schichten von Knoten, denen dann durch Koeffizienten eine
@@ -506,7 +503,7 @@
 					img_source="/Mobilität.jpg"
 					img_alt="Mobilität"
 					heading="Mobilität"
-					content="Autonome Fahrzeuge sind nur die Spitze des Eisberges - ML Algorithmen unterstützt den
+					content="Autonome Fahrzeuge sind nur die Spitze des Eisberges - ML Algorithmen unterstützen den
 					Fahrer auch mit Einparkhilfen oder dem Halten der Fahrspur."
 					read_more_link="https://www.sueddeutsche.de/auto/verkehrssicherheit-so-weit-ist-das-autonome-fahren-1.3913983-2"
 				/>
@@ -532,7 +529,7 @@
 			<div class="w-auto text-center m-6 p-8">
 				<img src="/Hamid.jfif" class="rounded-full w-32 mb-4 mx-auto" alt="Avatar" />
 				<h5 class="text-xl font-medium leading-tight mb-2">Hamid Omar</h5>
-				<p class="text-gray-500 mb-2">Web designer</p>
+				<p class="text-gray-500 mb-2">Frontend Developer</p>
 				<ul class="list-inside flex mx-auto justify-center">
 					<a href="https://github.com/hamidomar000m" class="px-2">
 						<svg

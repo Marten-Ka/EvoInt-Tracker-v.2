@@ -10,7 +10,7 @@
 	<img class="rounded-t-lg h-full" src={img_source} alt={img_alt} />
 	<div class="p-5 grid content-between row-span-2">
 		<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{heading}</h5>
-		<p class="mb-3 font-normal text-gray-300">{content}</p>
+		<p class="mb-3 font-normal text-lg text-gray-300">{content}</p>
 		<a
 			href={read_more_link}
 			class="inline-flex items-center w-fit py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"

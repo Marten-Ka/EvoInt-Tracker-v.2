@@ -69,7 +69,7 @@
 					<div class="flex justify-center">
 						<div class="flex justify-center" style="margin-top: -75px">
 							<img
-								src="https://static.smplf.io/wordpress/uploads/sites/12/nerd.jpeg"
+								src="/Denis.jpg"
 								class="rounded-full mx-auto shadow-lg"
 								alt=""
 								style="width: 150px"
@@ -111,7 +111,7 @@
 					</div>
 					<div class="p-6">
 						<h5 class="text-lg font-bold mb-4">Marten Kaffler</h5>
-						<p class="mb-6">Frontend Developer</p>
+						<p class="mb-6">Backend Developer</p>
 						<ul class="list-inside flex mx-auto justify-center">
 							<a href="https://github.com/Marten-Ka" class="px-2">
 								<svg
@@ -156,7 +156,7 @@
 					</div>
 					<div class="p-6">
 						<h5 class="text-lg font-bold mb-4">Hamid Omar</h5>
-						<p class="mb-6">Web Designer</p>
+						<p class="mb-6">Frontend Developer</p>
 						<ul class="list-inside flex mx-auto justify-center">
 							<a href="https://github.com/hamidomar000m" class="px-2">
 								<svg

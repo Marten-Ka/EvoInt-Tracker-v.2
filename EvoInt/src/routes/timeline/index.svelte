@@ -14,7 +14,7 @@
 			position="flex-col-reverse"
 			date="19.01.2022"
 			heading="Bekanntgabe des Studienprojektes"
-			content="Am 19.01. fand die erste Besprechung zu allgemeinen Informationen über und Abläufen des Studienprojekts statt,
+			content="Am 19.01. fand die erste Besprechung zu allgemeinen Informationen und Abläufen des Studienprojekts statt,
 			in der ebenfalls Meetings für genauere Diskussionen zu den einzelnen Themen ausgemacht wurden."
 		/>
 
@@ -23,7 +23,7 @@
 			date="20.01.2022"
 			heading="Aufgabenbesprechung"
 			content="In einem ausführlicheren Meeting mit der betreuenden Professorin wurde besprochen, wie das schon begonnene
-			Studienprojekt erweitert werden kann und welche Aufgaben anstehen"
+			Studienprojekt erweitert werden könnte und welche Aufgaben anstehen."
 		/>
 
 		<TimelineCard
@@ -64,7 +64,7 @@
 			date="11.06.2022"
 			heading="Code-Refactoring"
 			content="Die Optimierung und das Aufräumen des Codes wurde am 01.06. fertiggestellt, womit der Download und die Analyse
-			der Paper deutlich nutzerfreundlicher und effektiver sind."
+			der Papers nun deutlich nutzerfreundlicher und effektiver sind."
 		/>
 
 		<TimelineCard
@@ -72,6 +72,29 @@
 			date="26.07.2022"
 			heading="Webseite"
 			content="Am 26.07. wurde die Webseite fertiggestellt, die nun gehostet werden sollte."
+		/>
+
+		<TimelineCard
+			position="flex-col-reverse"
+			date="11.08.2022"
+			heading="Hosting"
+			content="Nachdem die HWR einen Server zur Verfügung gestellt hatte, konnte die Webseite erfolgreich auf diesem gehostet werden.
+			Der Zugriff geschieht über das private Netzwerk der Hochschule."
+		/>
+
+		<TimelineCard
+			position="flex-col"
+			date="19.08.2022"
+			heading="NLP"
+			content="Der inhaltliche Vergleich der wissenschaftlichen Fachliteraturen mithilfe von NLP wurde fertiggestellt. Die
+			Ergebnisse dessen sind verschiedene Grafiken und Matrizen, die die Ähnlichkeit verschiedener Papers visualisieren."
+		/>
+
+		<TimelineCard
+			position="flex-col-reverse"
+			date="23.08.2022"
+			heading="Abgabe der Studienarbeit"
+			content="Am 23.08.2022 fand die Abgabe der finalen Version der Studienarbeit statt, die einige Tage zuvor beendet wurde."
 		/>
 	</div>
 </div>
