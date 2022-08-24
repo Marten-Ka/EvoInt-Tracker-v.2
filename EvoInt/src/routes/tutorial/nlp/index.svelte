@@ -373,7 +373,7 @@
 				Support the <h1
 					class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 drop-shadow-lg"
 				>
-					author!
+					authors!
 				</h1>
 			</h1>
 		</div>

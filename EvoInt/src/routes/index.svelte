@@ -145,7 +145,7 @@
 				source_text="Quelle: Forbes"
 				heading="Natural Language Processing"
 				publication_date="01.08.2022"
-				author="Marten Kaffler"
+				author="Robert Witzke und Hamid Omar"
 				content="Erfahre mehr rund um das Thema Natural Language Processing und wie Computer unsere
 				natürliche Sprache verstehen und verarbeiten können."
 			/>
